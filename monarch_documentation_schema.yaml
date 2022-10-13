@@ -1,0 +1,45 @@
+name: monarch-documentation-schema
+title: monarch-documentation-schema
+description: |-
+  Technical documentation for all Monarch applications, packages, services and related projects.
+license: GNU GPL v3.0
+
+imports:
+  - linkml:types
+
+classes:
+
+  Resource:
+    description: >-
+      A generic grouping for any identifiable entity
+    slots:
+      - id
+      - name
+      - description
+    class_uri: schema:Thing
+        
+  ResourceCollection:
+    tree_root: true
+    description: >-
+      A holder for Resource objects
+    attributes:
+      entries:
+        range: Resource
+        multivalued: true
+        inlined: true
+
+slots:
+  id:
+    identifier: true
+    slot_uri: schema:identifier
+    range: uriorcurie
+    description: A unique identifier for a resource
+  name:
+    slot_uri: schema:name
+    description: A human-readable name for a resource
+  description:
+    slot_uri: schema:description
+    description: A human-readable description for a resource
+    
+enums:
+

@@ -1,0 +1,14 @@
+repositories:
+  monarch-initiative:
+    - monarch-ingest
+    - cat-merge
+    - closurizer
+    - monarch-gene-mapping
+    - kghub-downloader
+    - monarch-file-server
+    - koza
+    - monarch-plater-docker
+    - jenkins
+    - monarch-py
+    - monarch-api
+    - monarch-ingest-dashboard

@@ -1,4 +1,4 @@
-site_name: Mondo Disease Ontology Ingest
+site_name: Monarch Technical Documentation
 theme: material
 nav:
   - Getting started: index.md
@@ -18,7 +18,7 @@ nav:
       - Contributing: contributing.md
   - Reference:
     - Developers:
-      - Workdlows: developer/workflows.md
+      - Workflows: developer/workflows.md
     - Mondo sources:
       - Overview: sources.md
       - DO: sources/doid.md
