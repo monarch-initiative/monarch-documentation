@@ -20,3 +20,5 @@ for repo, response in repo_responses.items():
     repo_info[repo] = {key: value for key, value in response.items() if key in keep_keys}
     for key in request_keys:
         repo_info[repo][key] = requests.get(repo_responses[repo][key + "_url"]).json()
+
+# for files, we should pull in the download.yaml from each repository using the contents_url key from the response.
