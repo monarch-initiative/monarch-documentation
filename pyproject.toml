@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "Monarch-Technical-Documentation"
+version = "0.1.1"
+description = ""
+authors = [
+    "Monarch Initiative <info@monarchinitiative.org>",
+    "Glass Elsarboukh <glass@tislab.org>",
+    "Tim Putman <tim@tislab.org>",
+    "Kevin Schaper <kevin@tislab.org>",
+    "Corey Cox <corey@tislab.org>"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.11"
+requests = "^2.28.1"
+PyYAML = "^6.0"
+PyGithub = "^1.55"
+linkml = "^1.3.7"
+click = "8.0.4"
+cruft = "^2.11.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+
+[tool.poetry.scripts]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
