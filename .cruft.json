@@ -1,0 +1,27 @@
+{
+  "template": "https://github.com/linkml/linkml-project-cookiecutter",
+  "commit": "6f53e5cd62bb88c21fbfdaa4a8b74fb0713f11a6",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "monarch-technical-documentation",
+      "__project_slug": "monarch_technical_documentation",
+      "github_org": "monarch-initiative",
+      "__source_path": "src/monarch_technical_documentation/schema/monarch_technical_documentation.yaml",
+      "project_description": "Technical documentation for all Monarch applications, packages, services and related projects.",
+      "full_name": "Glass Elsarboukh",
+      "email": "glass@tislab.org",
+      "__author": "Glass Elsarboukh <glass@tislab.org>",
+      "license": "GNU GPL v3.0",
+      "main_schema_class": "Resource",
+      "create_python_classes": "No",
+      "use_schemasheets": "No",
+      "google_sheet_id": "1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ",
+      "google_sheet_tabs": "personinfo enums",
+      "__google_sheet_module": "personinfo_enums",
+      "github_token_for_pypi_deployment": "PYPI_PASSWORD",
+      "_template": "https://github.com/linkml/linkml-project-cookiecutter"
+    }
+  },
+  "directory": null
+}

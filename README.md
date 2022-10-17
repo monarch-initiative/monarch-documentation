@@ -7,7 +7,36 @@ The Monarch initiative knowledge graph (Monarch KG) is created using a constella
 # Organization
 This repository will host the higher-order structure documentation of the Monarch Intiative Knowledge Graph Tools and as a build platform for integrating all of the documentation of each of requisite resources used to construct the Monarch Intiative Knowledge Graph and make it useable to others. This project consists of the following tools to build and deploy the Monarch Initiative Technical Documentation.
 
- - Monarch Technical Documentation LinkML Schema - Describes the Schema for the Monarch Technical Documentation
- - Monarch Technical Documentation Yaml - Yaml file using the LinkML Schema describing connections of Monarch Initiative resources.
+ - [Monarch Technical Documentation LinkML Schema]() - Describes the Schema for the Monarch Technical Documentation
+ - [Monarch Technical Documentation Yaml]() - Yaml file using the LinkML Schema describing connections of Monarch Initiative resources.
  - Monarch Repositories Yaml - Yaml file detailing the repositories for each software resource.
  - Technical Documentation Script - Python script to pull documentation from resources to aggregate in GitHub Monarch Technical Documentation pages.
+
+Technical documentation for all Monarch applications, packages, services and related projects.
+
+## Website
+
+* [https://monarch-initiative.github.io/monarch-technical-documentation](https://monarch-initiative.github.io/monarch-technical-documentation)
+
+## Repository Structure
+
+* [examples/](examples/) - example data
+* [project/](project/) - project files (do not edit these)
+* [src/](src/) - source files (edit these)
+    * [monarch_technical_documentation](src/monarch_technical_documentation)
+        * [schema](src/monarch_technical_documentation/schema) -- LinkML schema (edit this)
+
+
+## Developer Documentation
+
+<details>
+Use the `make` command to generate project artefacts:
+
+- `make all`: make everything
+- `make deploy`: deploys site
+
+</details>
+
+## Credits
+
+this project was made with [linkml-project-cookiecutter](https://github.com/linkml/linkml-project-cookiecutter)
