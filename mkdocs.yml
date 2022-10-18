@@ -1,11 +1,30 @@
-site_name: "monarch-technical-documentation"
+site_name: "Monarch Technical Documentation"
+site_url: 'https://monarch-initiative.github.io/monarch-technical-documentation/'
+
+repo_name: 'monarch-technical-documentation'
+repo_url: 'https://github.com/monarch-initiative/monarch-technical-documentation'
+
 theme:
-  name: material
-#  palette:
-#    scheme: slate
-#    primary: cyan
-  features:
-    - content.tabs.link
+    name: 'material'
+    docs_dir: docs/
+    logo: 'images/monarch-initiative2.png'
+    favicon:
+        'images/favicon.ico'
+    features:
+        - navigation.expand
+        - navigation.instant
+        - navigation.tracking
+        - navigation.tabs
+        - navigation.tabs.sticky
+        - content.tabs.link
+    palette:
+        scheme: 'slate'
+        primary: 'teal'
+        accent: 'purple'
+    font:
+        text: 'Roboto'
+        #code: 'Fira Mono'
+    
 plugins:
   - search
   - mermaid2
@@ -13,8 +32,13 @@ nav:
 #  - Home: home.md
   - Index: index.md
   - About: about.md
-site_url: https://monarch-initiative.github.io/monarch-technical-documentation
-repo_url: https://github.com/monarch-initiative/monarch-technical-documentation
+
+extra:
+  social:
+    - icon: 'fontawesome/solid/house'
+      link: 'https://monarchinitiative.org'
+    - icon: 'fontawesome/brands/github-alt'
+      link: 'https://github.com/monarch-initiative'
 
 # Uncomment this block to enable use of Google Analytics. 
 # Replace the property value with your own ID.
