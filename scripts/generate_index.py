@@ -1,8 +1,8 @@
 import requests
 import yaml
+import os
 from pathlib import Path
 from github import Github
-import github
 
 ### TODO:
 # - For files, we should pull in the download.yaml from each repository using the contents_url key from the response.
@@ -14,7 +14,7 @@ resource_file = Path(f"{src_dir}/data/resources.yaml")
 with open(resource_file, "r") as yaml_file:
     resources = yaml.safe_load(yaml_file)
 
-token = "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"
+token = os.getenv('GITHUB_TOKEN')
 g = Github(token)
 
 repo_reference = resources.get("repositories")
@@ -46,14 +46,10 @@ repo_list = ""
 for repo_name in repo_info:
     repo = repo_info[repo_name]
     repo_list += f"""
-[{repo['full_name']}]() - {repo['description']}  
-    - GitHub: {repo['html_url']}  
+- [{repo['name']}]({repo['html_url']}) - {repo['description']}  
+"""
 
-    """
-
-
-page_contents = f"""
-# Monarch Initiative - Technical Documentation
+page_contents = f"""# Monarch Initiative - Technical Documentation
 
 **Welcome to the Monarch Initiative Technical Documentation!**  
 
@@ -65,7 +61,6 @@ Here you can find information about the connections between the Monarch Intiativ
 <PLACEHOLDER: Tims lucid chart can go here>
 
 ### Monarch Initiative Repositories
-
 {repo_list}
 
 """
