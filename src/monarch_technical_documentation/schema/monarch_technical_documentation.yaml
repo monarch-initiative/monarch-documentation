@@ -2,7 +2,15 @@ name: monarch-documentation-schema
 title: monarch-documentation-schema
 description: |-
   Technical documentation for all Monarch applications, packages, services and related projects.
+id: https://w3id.org/monarch-initiative/monarch-technical-documentation
 license: GNU GPL v3.0
+
+prefixes:
+  mtd: https://w3id.org/monarch-initiative/monarch-technical-documentation/
+  linkml: https://w3id.org/linkml/
+  biolink: https://w3id.org/biolink/
+  schema: http://schema.org/
+  PATO: http://purl.obolibrary.org/obo/PATO_
 
 imports:
   - linkml:types
@@ -28,6 +36,13 @@ classes:
         multivalued: true
         inlined: true
 
+  Repository:
+    is_a: Resource
+    slot:
+      - depends_on
+      - repo_url
+      - organization
+
 slots:
   id:
     identifier: true
@@ -40,6 +55,16 @@ slots:
   description:
     slot_uri: schema:description
     description: A human-readable description for a resource
-    
+  depends_on:
+    slot_uri: mtd:depends_on
+    description: A list of packages a resource depends on
+    domain: Repository
+    range: Repository
+  repo_url:
+    slot_uri: mtd:repo_url
+    description: (str) URL to 
+    # range: linkml:uri
+  organization:
+    slot_uri: mtd:organization
+  
 enums:
-
