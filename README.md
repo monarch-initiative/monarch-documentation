@@ -5,7 +5,7 @@ Technical documentation for all Monarch applications, packages, services and rel
 [See the docs here](https://monarch-initiative.github.io/monarch-technical-documentation)
 
 ## Overview
-The Monarch Initiative Knowledge Graph (Monarch KG) is created using a constellation of tools and packages created by the Monarch Initiative team and our collaboratores.  
+The Monarch Initiative Knowledge Graph (Monarch KG) is created using a constellation of tools and packages created by the Monarch Initiative team and our collaborators.  
 This repository exists to document the connections between the Monarch Intiative tools and how they are used to create the Monarch Graph.  
 The intent of this repository is to serve as the source of truth for documentation of the project overall, containing information and documentation for each repository,  
 as well as documentation for how the different software tools are used together.

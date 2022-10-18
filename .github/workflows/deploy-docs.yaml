@@ -1,7 +1,9 @@
-name: Auto-deployment of Documentation
+name: Deploy Mkdocs to GitHub Pages
 on:
   push:
-    branches: [ main ]
+    branches: 
+      - main
+      - generate-index
 
 jobs:
   build-docs:
@@ -12,20 +14,21 @@ jobs:
       with:
         fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
     
-    - name: Set up Python 3.
-      uses: actions/setup-python@v3
+    - name: Set up Python 3
+      uses: actions/setup-python@main
       with:
-        python-version: 3.9
+        python-version: '3.x'
 
-    - name: Install Poetry.
+    - name: Install Poetry
       uses: snok/install-poetry@v1.3
 
     - name: Install dependencies.
-      run: poetry install -E docs
+      run: poetry install
     
     - name: Build documentation.
       run: |
         mkdir -p docs
         touch docs/.nojekyll
+        poetry run python scripts/generate_index.py
         poetry run gen-doc -d docs src/monarch_technical_documentation/schema/monarch_technical_documentation.yaml
         poetry run mkdocs gh-deploy

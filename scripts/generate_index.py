@@ -1,34 +1,74 @@
 import requests
 import yaml
+from pathlib import Path
 from github import Github
+import github
 
-with open("resources.yaml", "r") as yaml_file:
+### TODO:
+# - For files, we should pull in the download.yaml from each repository using the contents_url key from the response.
+# - Before this is ready for any serious building, or even testing, we will need to setup proper GitHub API Auth
+
+src_dir = Path(f"{Path(__file__).parent.parent}/src")
+resource_file = Path(f"{src_dir}/data/resources.yaml")
+
+with open(resource_file, "r") as yaml_file:
     resources = yaml.safe_load(yaml_file)
 
+token = "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"
+g = Github(token)
 
-# TODO: Before this is ready for any serious building, or even testing, we will need to setup proper GitHub API Auth
-# login = requests.get('https://api.github.com/search/repositories?q=github+api', auth=("amc-corey-cox", "token"))
-auth_token = "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"
-auth_header = {"Authorization": "Bearer " + auth_token}
-# login = requests.get('https://api.github.com/search/repositories?q=github+api', headers=auth_header)
-
-repositories = resources.get("repositories")
-repo_responses = {}
-for user in repositories.keys():
-    for repo in repositories.get(user):
-        full_repo_name = user + "/" + repo
-        request_url = "https://api.github.com/repos/" + full_repo_name
-        repo_responses[full_repo_name] = requests.get(request_url, headers=auth_header).json()
+repo_reference = resources.get("repositories")
+repos = {}
+for user in repo_reference.keys():
+    for repo in repo_reference.get(user):
+        r = g.get_repo(f"{user}/{repo}")
+        repos[f"{user}/{repo}"] = r
 
 repo_info = {}
-keep_keys = ["name", "full_name", "html_url", "description", "homepage", "language"]
-request_keys = ["contributors", "languages", "contents", "issues", "labels", "releases", "deployments"]
-for repo, response in repo_responses.items():
-    repo_info[repo] = {key: value for key, value in response.items() if key in keep_keys}
-    for key in request_keys:
-        repo_info[repo][key] = requests.get(repo_responses[repo][key + "_url"]).json()
+for repo_name, repo in repos.items():
+    repo_info[repo.full_name] = {
+        "name": repo.name,
+        "full_name": repo.full_name,
+        "html_url": repo.html_url,
+        "description": repo.description,
+        "homepage": repo.homepage,
+        "language": repo.language,
+        "contributors_url": repo.contributors_url,
+        "languages_url": repo.languages_url,
+        "contents_url": repo.contents_url,
+        "issues_url": repo.issues_url,
+        "labels_url": repo.labels_url,
+        "releases_url": repo.releases_url,
+        "deployments_url": repo.deployments_url
+    }
+
+repo_list = ""
+for repo_name in repo_info:
+    repo = repo_info[repo_name]
+    repo_list += f"""
+[{repo['full_name']}]() - {repo['description']}  
+    - GitHub: {repo['html_url']}  
+
+    """
+
+
+page_contents = f"""
+# Monarch Initiative - Technical Documentation
+
+**Welcome to the Monarch Initiative Technical Documentation!**  
+
+The Monarch Initiative Knowledge Graph (Monarch KG) is created using a constellation of tools and packages created by the Monarch Initiative team and our collaborators.  
+Here you can find information about the connections between the Monarch Intiative tools and how they are used to create the Monarch Graph.  
+
+### Monarch Initiative Software Infrastructure
+
+<PLACEHOLDER: Tims lucid chart can go here>
+
+### Monarch Initiative Repositories
+
+{repo_list}
+
+"""
 
 with open('docs/index.md', 'w') as outfile:
-    yaml.dump(repo_info, outfile, default_flow_style=False)
-
-# for files, we should pull in the download.yaml from each repository using the contents_url key from the response.
+    outfile.write(page_contents)
