@@ -7,7 +7,7 @@ from github import Github
 ### TODO:
 # - For files, we should pull in the download.yaml from each repository using the contents_url key from the response.
 # - Before this is ready for any serious building, or even testing, we will need to setup proper GitHub API Auth
-
+docs_dir = Path(f"{Path(__file__).parent.parent}/docs") 
 src_dir = Path(f"{Path(__file__).parent.parent}/src")
 resource_file = Path(f"{src_dir}/data/resources.yaml")
 
@@ -50,5 +50,5 @@ Here you can find information about the connections between the Monarch Intiativ
 
 """
 
-with open('docs/index.md', 'w') as outfile:
+with open(f"{docs_dir}/index.md", "w") as outfile:
     outfile.write(page_contents)

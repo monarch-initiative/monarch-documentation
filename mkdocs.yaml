@@ -28,10 +28,6 @@ theme:
 plugins:
   - search
   - mermaid2
-nav:
-#  - Home: home.md
-  - Index: index.md
-  - About: about.md
 
 extra:
   social:
