@@ -30,7 +30,7 @@ for repo_name, repo in repos.items():
         "name": repo.name,
         "full_name": repo.full_name,
         "html_url": repo.html_url,
-        "description": repo.description,
+        "description": repo.description if repo.description is not None else "No description found",
         "homepage": repo.homepage,
         "language": repo.language,
         "contributors_url": repo.contributors_url,
@@ -56,11 +56,14 @@ page_contents = f"""# Monarch Initiative - Technical Documentation
 The Monarch Initiative Knowledge Graph (Monarch KG) is created using a constellation of tools and packages created by the Monarch Initiative team and our collaborators.  
 Here you can find information about the connections between the Monarch Intiative tools and how they are used to create the Monarch Graph.  
 
-### Monarch Initiative Software Infrastructure
+## Monarch Software Infrastructure
 
-<PLACEHOLDER: Tims lucid chart can go here>
+(Insert a description of the various "sub-workflows" within the overall Monarch pipeline)
 
-### Monarch Initiative Repositories
+(Placeholder image)
+<img src='images/docs-coming-soon.jpg' width=420, style='display: block; margin-left: auto; margin-right: auto; width: 60%;'>
+
+### Repositories
 {repo_list}
 
 """

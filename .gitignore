@@ -1,6 +1,13 @@
-/docs/
 /project/docs/
 /tmp/
+
+# Keep static resources, ignore generated files
+/docs/**
+!/docs/images/
+!/docs/.nojekyll
+
+
+### Standard ignores
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
