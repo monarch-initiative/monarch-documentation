@@ -1,9 +1,8 @@
-name: Deploy Mkdocs to GitHub Pages
+name: Build and Deploy Docs to GitHub Pages
 on:
   push:
-    branches: 
-      - main
-      - generate-index
+    branches: [ main ]
+
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -27,8 +26,10 @@ jobs:
     - name: Install Dependencies.
       run: poetry install
     
-    - name: Build Documentation.
-      run: make build-docs
+    - name: Build and Deploy Documentation.
+      run: |
+      make build-docs
+      poetry run mkdocs gh-deploy
 
-    - name: Deploy
-      run: poetry run mkdocs gh-deploy
+    # - name: Deploy to Pages
+    #   run: poetry run mkdocs gh-deploy

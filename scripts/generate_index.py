@@ -24,29 +24,11 @@ for user in repo_reference.keys():
         r = g.get_repo(f"{user}/{repo}")
         repos[f"{user}/{repo}"] = r
 
-repo_info = {}
-for repo_name, repo in repos.items():
-    repo_info[repo.full_name] = {
-        "name": repo.name,
-        "full_name": repo.full_name,
-        "html_url": repo.html_url,
-        "description": repo.description if repo.description is not None else "No description found",
-        "homepage": repo.homepage,
-        "language": repo.language,
-        "contributors_url": repo.contributors_url,
-        "languages_url": repo.languages_url,
-        "contents_url": repo.contents_url,
-        "issues_url": repo.issues_url,
-        "labels_url": repo.labels_url,
-        "releases_url": repo.releases_url,
-        "deployments_url": repo.deployments_url
-    }
-
 repo_list = ""
-for repo_name in repo_info:
-    repo = repo_info[repo_name]
+for repo_name in repos.keys():
+    repo = repos[repo_name]
     repo_list += f"""
-- [{repo['name']}]({repo['html_url']}) - {repo['description']}  
+- [{repo.name}]({repo.html_url}) - {repo.description}  
 """
 
 page_contents = f"""# Monarch Initiative - Technical Documentation
