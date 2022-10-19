@@ -28,8 +28,8 @@ jobs:
     
     - name: Build and Deploy Documentation.
       run: |
-      make build-docs
-      poetry run mkdocs gh-deploy
+        make build-docs
+        poetry run mkdocs gh-deploy
 
     # - name: Deploy to Pages
     #   run: poetry run mkdocs gh-deploy
