@@ -2,47 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://monarch-initiative.github.io/monarch-technical-documentation/</loc>
-         <lastmod>2022-10-19</lastmod>
+         <lastmod>2022-10-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Resource/</loc>
-         <lastmod>2022-10-19</lastmod>
+         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Documentation-Schema/</loc>
+         <lastmod>2022-10-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/ResourceCollection/</loc>
-         <lastmod>2022-10-19</lastmod>
+         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Documentation-Schema/Resource/</loc>
+         <lastmod>2022-10-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/description/</loc>
-         <lastmod>2022-10-19</lastmod>
+         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Documentation-Schema/ResourceCollection/</loc>
+         <lastmod>2022-10-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/entries/</loc>
-         <lastmod>2022-10-19</lastmod>
+         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Documentation-Schema/description/</loc>
+         <lastmod>2022-10-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/id/</loc>
-         <lastmod>2022-10-19</lastmod>
+         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Documentation-Schema/entries/</loc>
+         <lastmod>2022-10-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/monarch-documentation-schema/</loc>
-         <lastmod>2022-10-19</lastmod>
+         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Documentation-Schema/id/</loc>
+         <lastmod>2022-10-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/name/</loc>
-         <lastmod>2022-10-19</lastmod>
+         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Documentation-Schema/monarch-documentation-schema/</loc>
+         <lastmod>2022-10-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/types/</loc>
-         <lastmod>2022-10-19</lastmod>
+         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Documentation-Schema/name/</loc>
+         <lastmod>2022-10-20</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Documentation-Schema/types/</loc>
+         <lastmod>2022-10-20</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
