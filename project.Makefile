@@ -18,4 +18,4 @@ genschemadoc: $(DOCDIR)
 	$(RUN) gen-doc -d $(DOCDIR)/Documentation-Schema $(SOURCE_SCHEMA_PATH)
 
 build-docs: genpython genschemadoc genindex
-	@rm $(DOCDIR)/about.md
+	@rm -f $(DOCDIR)/Documentation-Schema/about.md
