@@ -29,6 +29,17 @@ plugins:
   - search
   - mermaid2
 
+markdown_extensions:
+  - def_list # list support
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.keys
+  - attr_list
+  - pymdownx.betterem:
+      smart_enable: all
+
 extra:
   social:
     - icon: 'fontawesome/solid/house'
