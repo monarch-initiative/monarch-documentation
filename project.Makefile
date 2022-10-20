@@ -14,5 +14,8 @@ genindex:
 	@echo ""
 	$(RUN) python scripts/generate_index.py
 
-build-docs: genpython gendoc genindex
-	@rm $(DOCDIR)/about.md
+genschemadoc: $(DOCDIR)
+	$(RUN) gen-doc -d $(DOCDIR)/Documentation-Schema $(SOURCE_SCHEMA_PATH)
+
+build-docs: genpython genschemadoc genindex
+	@rm -f $(DOCDIR)/Documentation-Schema/about.md
