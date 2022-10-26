@@ -7,6 +7,8 @@
 !/docs/.nojekyll
 !/docs/Repositories/.gitkeep
 
+/doc-env/
+
 ### Standard ignores
 
 # Byte-compiled / optimized / DLL files
