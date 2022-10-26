@@ -1,33 +1,21 @@
-import requests
-import yaml
-import os
 from pathlib import Path
-from github import Github
+from utils import get_repos
+from log import get_logger
+log = get_logger(__name__)
 
-### TODO:
-# - For files, we should pull in the download.yaml from each repository using the contents_url key from the response.
-# - Before this is ready for any serious building, or even testing, we will need to setup proper GitHub API Auth
+log.info("Generating index page...")
+
+# Get resource files and set paths
 docs_dir = Path(f"{Path(__file__).parent.parent}/docs") 
 src_dir = Path(f"{Path(__file__).parent.parent}/src")
 resource_file = Path(f"{src_dir}/data/resources.yaml")
 
-with open(resource_file, "r") as yaml_file:
-    resources = yaml.safe_load(yaml_file)
+repos = get_repos(resource_file)
 
-token = os.getenv('GITHUB_TOKEN')
-g = Github(token)
-
-repo_reference = resources.get("repositories")
-repos = {}
-for user in repo_reference.keys():
-    for repo in repo_reference.get(user):
-        r = g.get_repo(f"{user}/{repo}")
-        repos[f"{user}/{repo}"] = r
-
-repo_list = ""
+repos_str = ""
 for repo_name in repos.keys():
     repo = repos[repo_name]
-    repo_list += f"""
+    repos_str += f"""
 - [{repo.name}]({repo.html_url}) - {repo.description}  
 """
 
@@ -46,7 +34,7 @@ Here you can find information about the connections between the Monarch Intiativ
 <img src='images/docs-coming-soon.jpg' width=420, style='display: block; margin-left: auto; margin-right: auto; width: 60%;'>
 
 ### Repositories
-{repo_list}
+{repos_str}
 
 """
 

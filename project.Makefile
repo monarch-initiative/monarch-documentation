@@ -3,19 +3,16 @@
 .INCLUDE : Makefile
 
 genpython:
-	@echo ""
-	@echo "Generating Python datamodel from project schema..."
-	@echo ""
 	$(RUN) gen-python $(SOURCE_SCHEMA_PATH) > $(PYMODEL)/monarch_technical_documentation.py
 
 genindex:
-	@echo ""
-	@echo "Generating index.md..."
-	@echo ""
 	$(RUN) python scripts/generate_index.py
+
+genrepodocs:
+	$(RUN) python scripts/generate_repo_pages.py
 
 genschemadoc: $(DOCDIR)
 	$(RUN) gen-doc -d $(DOCDIR)/Documentation-Schema $(SOURCE_SCHEMA_PATH)
 
-build-docs: genpython genschemadoc genindex
+build-docs: genpython genschemadoc genindex genrepodocs
 	@rm -f $(DOCDIR)/Documentation-Schema/about.md
