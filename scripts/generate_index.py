@@ -16,12 +16,11 @@ repos_str = ""
 for repo_name in repos.keys():
     repo = repos[repo_name]
     repos_str += f"""
-- [{repo.name}]({repo.html_url}) - {repo.description}  
+- [{repo.name}](./Repositories/{repo.name}) - {repo.description}  
 """
 
-page_contents = f"""# Monarch Initiative - Technical Documentation
-
-**Welcome to the Monarch Initiative Technical Documentation!**  
+page_contents = f"""
+## Monarch Technical Documentation
 
 The Monarch Initiative Knowledge Graph (Monarch KG) is created using a constellation of tools and packages created by the Monarch Initiative team and our collaborators.  
 Here you can find information about the connections between the Monarch Intiative tools and how they are used to create the Monarch Graph.  

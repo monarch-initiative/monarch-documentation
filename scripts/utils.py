@@ -89,14 +89,14 @@ Monarch Dependencies
 
 | Package | Version |
 | --- | --- |
-{''.join(row(monarch_deps))}"""
+{''.join(row(monarch_deps))}""" if len(monarch_deps) > 0 else ""
 
     other_dep_table = f"""
 External Dependencies
 
 | Package | Version |
 | --- | --- |
-{''.join(row(other_deps))}"""
+{''.join(row(other_deps))}""" if len(other_deps) > 0 else ""
 
     dep_table = f"{monarch_dep_table}\n{other_dep_table}"
     return dep_table
@@ -110,11 +110,13 @@ def build_repo_page(repo: github.Repository.Repository) -> str:
     page_contents = f"""
 # {repo.name}
 
-### Description
+### Details
 
-**Language**: {repo.language}
-
-{repo.description}
+| | | 
+|---|---| 
+| GitHub | [{repo.full_name}]({repo.html_url}) |  
+| Language | {repo.language} |  
+| Description | {repo.description} |
 """
 
     # Get dependencies and readme
