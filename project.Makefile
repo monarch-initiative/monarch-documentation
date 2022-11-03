@@ -19,3 +19,12 @@ genschemadoc: $(DOCDIR)
 
 build-docs: genpython genschemadoc genindex
 	@rm -f $(DOCDIR)/Documentation-Schema/about.md
+
+############################################
+### Provisional Monarch Asset Registry #####
+############################################
+
+src/docs/registry.md: registry/monarch_registry.md.jinja2 registry/monarch-registry.yml
+	j2 $^ > $@
+
+
