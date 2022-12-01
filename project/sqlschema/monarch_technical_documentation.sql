@@ -1,77 +1,77 @@
 
 
-CREATE TABLE "Address" (
-	street TEXT, 
-	city TEXT, 
-	postal_code TEXT, 
-	PRIMARY KEY (street, city, postal_code)
-);
-
-CREATE TABLE "NamedThing" (
+CREATE TABLE "DataAsset" (
 	id TEXT NOT NULL, 
 	name TEXT, 
 	description TEXT, 
-	image TEXT, 
+	grant VARCHAR(15), 
+	documentation TEXT, 
+	monarch_contribution VARCHAR(4), 
+	download TEXT, 
+	category VARCHAR(15), 
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE "Organization" (
+CREATE TABLE "Download" (
+	url TEXT, 
+	release_status TEXT, 
+	file_format TEXT, 
+	PRIMARY KEY (url, release_status, file_format)
+);
+
+CREATE TABLE "Resource" (
 	id TEXT NOT NULL, 
 	name TEXT, 
 	description TEXT, 
-	image TEXT, 
-	mission_statement TEXT, 
-	founding_date TEXT, 
+	grant VARCHAR(15), 
+	documentation TEXT, 
+	monarch_contribution VARCHAR(4), 
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE "Person" (
+CREATE TABLE "ResourceRegistry" (
 	id TEXT NOT NULL, 
 	name TEXT, 
 	description TEXT, 
-	image TEXT, 
-	primary_email TEXT, 
-	birth_date TEXT, 
-	age_in_years INTEGER, 
-	current_address TEXT, 
+	grant VARCHAR(15), 
+	monarch_contribution VARCHAR(4), 
+	data TEXT, 
+	standards TEXT, 
+	tools TEXT, 
 	PRIMARY KEY (id)
 );
 
-CREATE TABLE "Registry" (
-	persons TEXT, 
-	organizations TEXT, 
-	PRIMARY KEY (persons, organizations)
+CREATE TABLE "Standard" (
+	id TEXT NOT NULL, 
+	name TEXT, 
+	description TEXT, 
+	grant VARCHAR(15), 
+	documentation TEXT, 
+	monarch_contribution VARCHAR(4), 
+	category VARCHAR(13), 
+	PRIMARY KEY (id)
 );
 
-CREATE TABLE "Relationship" (
-	started_at_time DATE, 
-	ended_at_time DATE, 
-	related_to TEXT, 
-	type TEXT, 
-	PRIMARY KEY (started_at_time, ended_at_time, related_to, type)
+CREATE TABLE "Tool" (
+	id TEXT NOT NULL, 
+	name TEXT, 
+	description TEXT, 
+	grant VARCHAR(15), 
+	documentation TEXT, 
+	monarch_contribution VARCHAR(4), 
+	url TEXT, 
+	PRIMARY KEY (id)
 );
 
-CREATE TABLE "FamilialRelationship" (
-	started_at_time DATE, 
-	ended_at_time DATE, 
-	related_to TEXT NOT NULL, 
-	type VARCHAR(10) NOT NULL, 
-	"Person_id" TEXT, 
-	PRIMARY KEY (started_at_time, ended_at_time, related_to, type, "Person_id"), 
-	FOREIGN KEY(related_to) REFERENCES "Person" (id), 
-	FOREIGN KEY("Person_id") REFERENCES "Person" (id)
-);
-
-CREATE TABLE "Organization_aliases" (
-	backref_id TEXT, 
-	aliases TEXT, 
-	PRIMARY KEY (backref_id, aliases), 
-	FOREIGN KEY(backref_id) REFERENCES "Organization" (id)
-);
-
-CREATE TABLE "Person_aliases" (
-	backref_id TEXT, 
-	aliases TEXT, 
-	PRIMARY KEY (backref_id, aliases), 
-	FOREIGN KEY(backref_id) REFERENCES "Person" (id)
+CREATE TABLE "Documentation" (
+	id TEXT NOT NULL, 
+	name TEXT, 
+	description TEXT, 
+	grant VARCHAR(15), 
+	documentation TEXT, 
+	monarch_contribution VARCHAR(4), 
+	url TEXT, 
+	"ResourceRegistry_id" TEXT, 
+	PRIMARY KEY (id), 
+	FOREIGN KEY("ResourceRegistry_id") REFERENCES "ResourceRegistry" (id)
 );

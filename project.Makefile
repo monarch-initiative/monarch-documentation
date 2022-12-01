@@ -24,7 +24,12 @@ build-docs: genpython genschemadoc genindex
 ### Provisional Monarch Asset Registry #####
 ############################################
 
-src/docs/registry.md: registry/monarch_registry.md.jinja2 registry/monarch-registry.yml
+src/docs/registry.md: registry/monarch_registry.md.jinja2 src/data/resources.yaml
 	j2 $^ > $@
 
 
+src/docs/registry_2.md: $(SOURCE_SCHEMA_PATH) src/data/resources.yaml
+	$(RUN) linkml-convert -f yaml -C ResourceRegistry -t ttl -s $^
+
+validate-registry: $(SOURCE_SCHEMA_PATH) src/data/resources.yaml
+	$(RUN) linkml-validate --target-class ResourceRegistry -s $^

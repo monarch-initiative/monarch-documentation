@@ -1,9 +1,8 @@
-BASE <https://w3id.org/my_org/my_datamodel/>
+BASE <https://w3id.org/monarch-initiative/monarch-technical-documentation/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX linkml: <https://w3id.org/linkml/>
 PREFIX schema: <http://schema.org/>
-PREFIX prov: <http://www.w3.org/ns/prov#>
 
 
 linkml:String xsd:string
@@ -36,91 +35,75 @@ linkml:Objectidentifier IRI
 
 linkml:Nodeidentifier NONLITERAL
 
-<https://w3id.org/my_org/my_datamodelAddress> CLOSED {
-    (  $<https://w3id.org/my_org/my_datamodelAddress_tes> (  <https://w3id.org/my_org/my_datamodelstreet> @linkml:String ? ;
-          <https://w3id.org/my_org/my_datamodelcity> @linkml:String ? ;
-          <https://w3id.org/my_org/my_datamodelpostal_code> @linkml:String ?
+<DataAsset> CLOSED {
+    (  $<DataAsset_tes> (  &<Resource_tes> ;
+          rdf:type [ schema:Thing ] ? ;
+          <download> @linkml:String ? ;
+          <category> @<DataAssetEnum> ?
        ) ;
-       rdf:type [ schema:PostalAddress ] ?
+       rdf:type [ <DataAsset> ]
     )
 }
 
-<https://w3id.org/my_org/my_datamodelFamilialRelationship> CLOSED {
-    (  $<https://w3id.org/my_org/my_datamodelFamilialRelationship_tes> (  &<https://w3id.org/my_org/my_datamodelRelationship_tes> ;
-          rdf:type [ <https://w3id.org/my_org/my_datamodelRelationship> ] ? ;
-          <https://w3id.org/my_org/my_datamodeltype> @<https://w3id.org/my_org/my_datamodelFamilialRelationshipType> ;
-          <https://w3id.org/my_org/my_datamodelrelated_to> @<https://w3id.org/my_org/my_datamodelPerson>
+<Documentation> CLOSED {
+    (  $<Documentation_tes> (  &<Resource_tes> ;
+          rdf:type [ schema:Thing ] ? ;
+          <url> @linkml:Uri ?
        ) ;
-       rdf:type [ <https://w3id.org/my_org/my_datamodelFamilialRelationship> ] ?
+       rdf:type [ <Documentation> ]
     )
 }
 
-<https://w3id.org/my_org/my_datamodelHasAliases> {
-    (  $<https://w3id.org/my_org/my_datamodelHasAliases_tes> <https://w3id.org/my_org/my_datamodelaliases> @linkml:String * ;
-       rdf:type [ <https://w3id.org/my_org/my_datamodelHasAliases> ] ?
+<Download> CLOSED {
+    (  $<Download_tes> (  <url> @linkml:String ? ;
+          <release_status> @linkml:String ? ;
+          <file_format> @linkml:String ?
+       ) ;
+       rdf:type [ <Download> ] ?
     )
 }
 
-<https://w3id.org/my_org/my_datamodelNamedThing>  (
+<Resource>  (
     CLOSED {
-       (  $<https://w3id.org/my_org/my_datamodelNamedThing_tes> (  schema:name @linkml:String ? ;
+       (  $<Resource_tes> (  schema:name @linkml:String ? ;
              schema:description @linkml:String ? ;
-             schema:image @linkml:String ?
+             <grant> @<GrantEnum> ? ;
+             <documentation> @linkml:Uri ? ;
+             <monarch_contribution> @<MonarchContributionEnum> ?
           ) ;
-          rdf:type [ <https://w3id.org/my_org/my_datamodelNamedThing> ]
+          rdf:type [ schema:Thing ]
        )
-    } OR @<https://w3id.org/my_org/my_datamodelOrganization> OR @<https://w3id.org/my_org/my_datamodelPerson>
+    } OR @<DataAsset> OR @<Documentation> OR @<ResourceRegistry> OR @<Standard> OR @<Tool>
 )
 
-<https://w3id.org/my_org/my_datamodelOrganization> CLOSED {
-    (  $<https://w3id.org/my_org/my_datamodelOrganization_tes> (  &<https://w3id.org/my_org/my_datamodelNamedThing_tes> ;
-          rdf:type [ <https://w3id.org/my_org/my_datamodelNamedThing> ] ? ;
-          &<https://w3id.org/my_org/my_datamodelHasAliases_tes> ;
-          rdf:type [ <https://w3id.org/my_org/my_datamodelHasAliases> ] ? ;
-          <https://w3id.org/my_org/my_datamodelmission_statement> @linkml:String ? ;
-          <https://w3id.org/my_org/my_datamodelfounding_date> @linkml:String ? ;
-          <https://w3id.org/my_org/my_datamodelaliases> @linkml:String *
+<ResourceRegistry> CLOSED {
+    (  $<ResourceRegistry_tes> (  &<Resource_tes> ;
+          rdf:type [ schema:Thing ] ? ;
+          <data> @<DataAsset> * ;
+          <standards> @<DataAsset> * ;
+          <tools> @<DataAsset> * ;
+          <documentation> @<Documentation> *
        ) ;
-       rdf:type [ schema:Organization ]
+       rdf:type [ <ResourceRegistry> ]
     )
 }
 
-<https://w3id.org/my_org/my_datamodelPerson> CLOSED {
-    (  $<https://w3id.org/my_org/my_datamodelPerson_tes> (  &<https://w3id.org/my_org/my_datamodelNamedThing_tes> ;
-          rdf:type [ <https://w3id.org/my_org/my_datamodelNamedThing> ] ? ;
-          &<https://w3id.org/my_org/my_datamodelHasAliases_tes> ;
-          rdf:type [ <https://w3id.org/my_org/my_datamodelHasAliases> ] ? ;
-          schema:email @linkml:String ? ;
-          schema:birthDate @linkml:String ? ;
-          <https://w3id.org/my_org/my_datamodelage_in_years> @linkml:Integer ? ;
-          <https://w3id.org/my_org/my_datamodelcurrent_address> @<https://w3id.org/my_org/my_datamodelAddress> ? ;
-          <https://w3id.org/my_org/my_datamodelhas_familial_relationships>
-          @<https://w3id.org/my_org/my_datamodelFamilialRelationship> * ;
-          <https://w3id.org/my_org/my_datamodelaliases> @linkml:String *
+<Standard> CLOSED {
+    (  $<Standard_tes> (  &<Resource_tes> ;
+          rdf:type [ schema:Thing ] ? ;
+          <category> @<StandardEnum> ?
        ) ;
-       rdf:type [ schema:Person ]
+       rdf:type [ <Standard> ]
     )
 }
 
-<https://w3id.org/my_org/my_datamodelRegistry> CLOSED {
-    (  $<https://w3id.org/my_org/my_datamodelRegistry_tes> (  <https://w3id.org/my_org/my_datamodelpersons>
-          @<https://w3id.org/my_org/my_datamodelPerson> * ;
-          <https://w3id.org/my_org/my_datamodelorganizations> @<https://w3id.org/my_org/my_datamodelOrganization> *
+<Tool> CLOSED {
+    (  $<Tool_tes> (  &<Resource_tes> ;
+          rdf:type [ schema:Thing ] ? ;
+          <url> @linkml:Uri ?
        ) ;
-       rdf:type [ <https://w3id.org/my_org/my_datamodelRegistry> ] ?
+       rdf:type [ <Tool> ]
     )
 }
-
-<https://w3id.org/my_org/my_datamodelRelationship>  (
-    CLOSED {
-       (  $<https://w3id.org/my_org/my_datamodelRelationship_tes> (  prov:startedAtTime @linkml:Date ? ;
-             prov:endedAtTime @linkml:Date ? ;
-             <https://w3id.org/my_org/my_datamodelrelated_to> @linkml:String ? ;
-             <https://w3id.org/my_org/my_datamodeltype> @linkml:String ?
-          ) ;
-          rdf:type [ <https://w3id.org/my_org/my_datamodelRelationship> ] ?
-       )
-    } OR @<https://w3id.org/my_org/my_datamodelFamilialRelationship>
-)
 
 
