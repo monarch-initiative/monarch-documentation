@@ -13,7 +13,7 @@
 
 | Standard | Category | Docs | Contribution | Grants |
 | ------ | ----- | ----- | ----- | ----- |
-{% for d in standards %}| [{{ d.name }}]({{ d.id }}) | {{ d.category }} | [Docs]({{ d.documentation|default("") }}) | {{ d.monarch_contribution|default("") }} | {% for grant in d.grants %}[{{ grant.name }}]({{ grant.url }}) {% endfor %} |
+{% for d in standards %}| [{{ d.name }}]({{ d.id }}) | {{ d.category }} | [Docs]({{ d.documentation|default("") }}) | {{ d.monarch_contribution|default("") }} | {{ d.grants }} |
 {% endfor %}
 
 ## Tools and Services developed or significantly supported by the Monarch Initiative

@@ -25,7 +25,7 @@ build-docs: genpython genschemadoc genindex
 ############################################
 
 src/docs/registry.md: registry/monarch_registry.md.jinja2 src/data/resources.yaml
-	j2 $^ > $@
+	$(RUN) j2 $^ > $@
 
 
 src/docs/registry_2.md: $(SOURCE_SCHEMA_PATH) src/data/resources.yaml
