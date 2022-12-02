@@ -21,8 +21,8 @@ theme:
         scheme: 'slate'
         primary: 'teal'
         accent: 'purple'
-    font:
-        text: 'Roboto'
+    # font:
+    #     text: 'Roboto'
         #code: 'Fira Mono'
     
 plugins:

@@ -5,6 +5,9 @@
 /docs/**
 !/docs/images/
 !/docs/.nojekyll
+!/docs/Repositories/.gitkeep
+
+/doc-env/
 
 ### Standard ignores
 
