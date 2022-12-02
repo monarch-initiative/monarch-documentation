@@ -1,3 +1,4 @@
+id: https://w3id.org/monarch-initiative/monarch-technical-documentation
 name: monarch-documentation-schema
 title: monarch-documentation-schema
 description: |-
@@ -10,7 +11,9 @@ prefixes:
   linkml: https://w3id.org/linkml/
   biolink: https://w3id.org/biolink/
   schema: http://schema.org/
-  PATO: http://purl.obolibrary.org/obo/PATO_
+
+default_prefix: mtd
+default_range: string
 
 imports:
   - linkml:types
@@ -24,17 +27,80 @@ classes:
       - id
       - name
       - description
+      - grants
+      - documentation
+      - monarch_contribution
     class_uri: schema:Thing
-        
-  ResourceCollection:
-    tree_root: true
+
+  DataAsset:
+    description: A data asset.
+    slots:
+      - download
+      - category
+    slot_usage:
+      category:
+        range: data_asset_enum
+    is_a: Resource
+
+  Standard:
+    description: A reference to a repository.
+    slots:
+      - category
+    slot_usage:
+      category:
+        range: standard_enum
+    is_a: Resource
+
+  Tool:
+    description: A reference to a repository.
+    slots:
+      - url
+      - repository
+      - category
+    slot_usage:
+      category:
+          range: tool_asset_enum
+    is_a: Resource
+
+  Documentation:
+    description: A reference to a repository.
+    slots:
+      - url
+      - repository
+      - category
+    slot_usage:
+        category:
+            range: documentation_asset_enum
+    is_a: Resource
+
+  #ResourceCollection:
+  #  tree_root: true
+  #  description: >-
+  #    A holder for Resource objects
+  #  attributes:
+  #    entries:
+  #      range: Resource
+  #      multivalued: true
+  #      inlined: true
+
+  ResourceRegistry:
     description: >-
-      A holder for Resource objects
+      A registry of different types of data assets
+    slots:
+      - data
+      - standards
+      - tools
+      - documentations
+      - repositories
+    is_a: Resource
+
+  Download:
+    description: >-
+      A downloadable asset, i.e. a data file, an software component, etc.
     attributes:
-      entries:
-        range: Resource
-        multivalued: true
-        inlined: true
+      url:
+      release_status:
+      file_format:
 
   Repository:
     is_a: Resource
@@ -55,6 +121,54 @@ slots:
   description:
     slot_uri: schema:description
     description: A human-readable description for a resource
+  download:
+    description: The web location this asset can be obtained from.
+    range: Download
+  grants:
+    description: The grant used to finance the production of an asset.
+    range: grant_enum
+    multivalued: true
+  release_status:
+    description: The maturity of the asset, e.g. whether it is under development, or public.
+    range: release_status_enum
+  repository:
+    description: The repository associated with this resource
+    range: uriorcurie
+  file_format:
+    description: The format of the file.
+    range: file_format_enum
+  url:
+    description: A web location
+    range: uriorcurie
+  category:
+    description: Monarch asset category. This allows grouping related assets (like data assets) together in sensible categories.
+    range: string
+  documentation:
+    description: A URL to the documentation about this asset.
+    range: uriorcurie
+  monarch_contribution:
+    description: The role the Monarch Initiative plays in the maintainence of this asset.
+    range: monarch_contribution_enum
+  data:
+    range: DataAsset
+    multivalued: true
+    inlined_as_list: true
+  standards:
+    range: Standard
+    multivalued: true
+    inlined_as_list: true
+  tools:
+    range: Tool
+    multivalued: true
+    inlined_as_list: true
+  documentations:
+    range: Documentation
+    multivalued: true
+    inlined_as_list: true
+  repositories:
+    range: Resource
+    multivalued: true
+    inlined_as_list: true
   depends_on:
     slot_uri: mtd:depends_on
     description: A list of packages a resource depends on
@@ -66,5 +180,47 @@ slots:
     # range: linkml:uri
   organization:
     slot_uri: mtd:organization
-  
+
+
 enums:
+  release_status_enum:
+    permissible_values:
+      public:
+      development snapshot:
+  file_format_enum:
+    permissible_values:
+      tsv:
+      csv:
+      ttl:
+      json:
+      rdfxml:
+  standard_enum:
+    permissible_values:
+      Ontology:
+      Data Standard:
+      Data Exchange:
+  data_asset_enum:
+    permissible_values:
+      Biomedical Data:
+      Knowledge Graph Ingestibles:
+  tool_asset_enum:
+    permissible_values:
+      Clinical Diagnosis:
+      Ontology Maintenance:
+      Ontology Use:
+      Mapping:
+      Data Curation:
+  documentation_asset_enum:
+    permissible_values:
+      Technical Documentation:
+  monarch_contribution_enum:
+    permissible_values:
+      Lead:
+      Co-Lead:
+  grant_enum:
+    permissible_values:
+      Phenomics First:
+        description: The Phenomics First Grant
+      Monarch R24:
+      HPO:
+      Exomiser:

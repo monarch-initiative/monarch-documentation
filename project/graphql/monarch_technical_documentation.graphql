@@ -1,68 +1,80 @@
-type Address
+type DataAsset
   {
-    street: String
-    city: String
-    postalCode: String
-  }
-
-type FamilialRelationship
-  {
-    startedAtTime: Date
-    endedAtTime: Date
-    relatedTo: String
-    type: FamilialRelationshipType!
-    relatedTo: Person!
-  }
-
-interface HasAliases
-  {
-    aliases: [String]
-  }
-
-type NamedThing
-  {
-    id: String!
+    id: Uriorcurie!
     name: String
     description: String
-    image: String
+    grants: [GrantEnum]
+    documentation: Uriorcurie
+    monarchContribution: MonarchContributionEnum
+    download: String
+    category: DataAssetEnum
   }
 
-type Organization implements HasAliases
+type Documentation
   {
-    id: String!
+    id: Uriorcurie!
     name: String
     description: String
-    image: String
-    missionStatement: String
-    foundingDate: String
-    aliases: [String]
+    grants: [GrantEnum]
+    documentation: Uriorcurie
+    monarchContribution: MonarchContributionEnum
+    url: Uriorcurie
+    repository: Uriorcurie
+    category: DocumentationAssetEnum
   }
 
-type Person implements HasAliases
+type Download
   {
-    id: String!
+    url: String
+    releaseStatus: String
+    fileFormat: String
+  }
+
+type Resource
+  {
+    id: Uriorcurie!
     name: String
     description: String
-    image: String
-    primaryEmail: String
-    birthDate: String
-    ageInYears: Integer
-    currentAddress: Address
-    hasFamilialRelationships: [FamilialRelationship]
-    aliases: [String]
+    grants: [GrantEnum]
+    documentation: Uriorcurie
+    monarchContribution: MonarchContributionEnum
   }
 
-type Registry
+type ResourceRegistry
   {
-    persons: [Person]
-    organizations: [Organization]
+    id: Uriorcurie!
+    name: String
+    description: String
+    grants: [GrantEnum]
+    monarchContribution: MonarchContributionEnum
+    data: [DataAsset]
+    standards: [Standard]
+    tools: [Tool]
+    documentation: [Documentation]
+    repositories: [Resource]
   }
 
-type Relationship
+type Standard
   {
-    startedAtTime: Date
-    endedAtTime: Date
-    relatedTo: String
-    type: String
+    id: Uriorcurie!
+    name: String
+    description: String
+    grants: [GrantEnum]
+    documentation: Uriorcurie
+    monarchContribution: MonarchContributionEnum
+    category: StandardEnum
+  }
+
+type Tool
+  {
+    id: Uriorcurie!
+    name: String
+    description: String
+    grants: [GrantEnum]
+    documentation: Uriorcurie
+    monarchContribution: MonarchContributionEnum
+    url: Uriorcurie
+    repository: Uriorcurie
+    category: ToolAssetEnum
   }
 
