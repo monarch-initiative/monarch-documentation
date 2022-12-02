@@ -3,7 +3,6 @@ name: monarch-documentation-schema
 title: monarch-documentation-schema
 description: |-
   Technical documentation for all Monarch applications, packages, services and related projects.
-id: https://w3id.org/monarch-initiative/monarch-technical-documentation
 license: GNU GPL v3.0
 
 prefixes:
@@ -73,6 +72,13 @@ classes:
             range: documentation_asset_enum
     is_a: Resource
 
+  Repository:
+    is_a: Resource
+    slot:
+      - depends_on
+      - repo_url
+      - organization
+
   #ResourceCollection:
   #  tree_root: true
   #  description: >-
@@ -101,13 +107,6 @@ classes:
       url:
       release_status:
       file_format:
-
-  Repository:
-    is_a: Resource
-    slot:
-      - depends_on
-      - repo_url
-      - organization
 
 slots:
   id:
