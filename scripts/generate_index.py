@@ -12,6 +12,18 @@ resource_file = Path(f"{src_dir}/data/resources.yaml")
 
 repos = get_repos(resource_file)
 
+token = os.getenv('GITHUB_TOKEN')
+g = Github(token)
+
+repo_reference = resources.get("repositories")
+repos = {}
+for repo in repo_reference:
+    repo_url = repo['id']
+    if repo_url.startswith("https://github.com/"):
+        repo_id = repo_url.replace("https://github.com/","")
+        r = g.get_repo(repo_id)
+        repos[repo_id] = r
+
 repos_str = ""
 for repo_name in repos.keys():
     repo = repos[repo_name]
