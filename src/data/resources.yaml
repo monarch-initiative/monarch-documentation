@@ -1,14 +1,174 @@
+id: https://monarchinitiative.org/registry
+title: Monarch Tool, Standard and Data Registry
+description: |
+  The Monarch Tool, Standard and Data Registry aims at providing a centralised view over
+  the diverse ecosystem of tools, data and standards that Monarch supports.
+data:
+  - id: http://purl.obolibrary.org/obo/hp/hpoa/phenotype.hpoa
+    download:
+      - url: http://purl.obolibrary.org/obo/hp/hpoa/phenotype.hpoa
+        release: public
+        format: tsv
+    category: Biomedical Data
+    documentation: https://hpo-annotation-qc.readthedocs.io/en/latest/annotationFormat.html#phenotype-hpoa-format
+    name: HPOA - Disease Annotations
+    monarch_contribution: Lead
+  - id: http://purl.obolibrary.org/obo/hp/hpoa/phenotype_to_genes.txt
+    download:
+      - url: http://purl.obolibrary.org/obo/hp/hpoa/phenotype_to_genes.txt
+        release: public
+        format: tsv
+    category: Biomedical Data
+    documentation: https://hpo.jax.org/app/download/annotation
+    name: HPOA - Phenotype to Gene Associations
+    monarch_contribution: Lead
+  - id: http://purl.obolibrary.org/obo/hp/hpoa/genes_to_phenotype.txt
+    download:
+      - url: http://purl.obolibrary.org/obo/hp/hpoa/genes_to_phenotype.txt
+        release: public
+        format: tsv
+    category: Biomedical Data
+    documentation: https://hpo.jax.org/app/download/annotation
+    name: HPOA - Gene to Phenotype Associations
+    monarch_contribution: Lead
+  - id: https://data.monarchinitiative.org/monarch-kg/hpoa
+    download:
+      - url: https://data.monarchinitiative.org/monarch-kg-dev/latest/rdf/hpoa_disease_phenotype.nt.gz
+        release: dev
+        format: nt.gz
+    category: Knowledge Graph Ingestibles
+    documentation: https://monarch-initiative.github.io/monarch-ingest/Sources/HPOA/
+    name: HPOA Knowledge Graph Ingestible
+  - id: https://data.monarchinitiative.org/monarch-kg/alliance
+    download:
+      - url: https://data.monarchinitiative.org/monarch-kg-dev/latest/rdf/alliance.nt.gz
+        release: dev
+        format: nt.gz
+    category: Knowledge Graph Ingestibles
+    documentation: https://monarch-initiative.github.io/monarch-ingest/Sources/Alliance/
+    name: Alliance Knowledge Graph Ingestible
+    monarch_contribution: Lead
+standards:
+  - id: https://standards.monarchinitiative.org/phenopackets
+    name: Phenopackets
+    monarch_contribution: Lead
+    category: Data Exchange
+    grants: Phenomics First
+  - id: https://standards.monarchinitiative.org/sssom
+    name: Simple Standard for Ontology Mappings (SSSOM)
+    monarch_contribution: Lead
+    category: Data Exchange
+    grants: Phenomics First
+  - id: http://purl.obolibrary.org/obo/mondo.owl
+    documentation: https://mondo.readthedocs.io/
+    name: Mondo Disease Ontology
+    monarch_contribution: Lead
+    category: Ontology
+    grants: Phenomics First
+  - id: http://purl.obolibrary.org/obo/maxo.owl
+    name: Medical Action Ontology
+    monarch_contribution: Lead
+    category: Ontology
+    grants: Phenomics First
+  - id: http://purl.obolibrary.org/obo/ecto.owl
+    documentation: https://github.com/EnvironmentOntology/environmental-exposure-ontology
+    name: Environmental Exposure Ontology
+    monarch_contribution: Lead
+    category: Ontology
+    grants: Phenomics First
+  - id: http://purl.obolibrary.org/obo/oba.owl
+    name: Ontology of biological Attributes
+    monarch_contribution: Lead
+    category: Ontology
+    grants: Phenomics First
+  - id: http://purl.obolibrary.org/obo/uberon.owl
+    name: Uberon Anatomy Ontology
+    monarch_contribution: Co-Lead
+    category: Ontology
+    grants: Phenomics First
+tools:
+  - id: https://tools.monarchinitiative.org/exomiser
+    name: Exomiser
+    monarch_contribution: Lead
+    category: Clinical Diagnosis
+  - id: https://monarchinitiative.org/
+    name: Monarch UI
+    category: Clinical Diagnosis
+    repository: https://github.com/monarch-initiative/monarch-ui
+    monarch_contribution: Lead
+  - id: https://tools.monarchinitiative.org/odk
+    name: Ontology Development Kit (ODK)
+    category: Ontology Maintenance
+    description: A toolkit and workflow system for managing the ontology life-cycle.
+    monarch_contribution: Lead
+    documentation: https://github.com/INCATools/ontology-development-kit
+  - id: https://tools.monarchinitiative.org/oak
+    name: Ontology Access Kit (OAK)
+    category: Ontology Use
+    description: A python toolkit for accessing and visualising ontologies.
+    monarch_contribution: Lead
+    documentation: https://github.com/INCATools/ontology-development-kit
+  - id: https://tools.monarchinitiative.org/sssom-toolkit
+    name: SSSOM Toolkit
+    category: Mapping
+    description: A python toolkit for processing SSSOM mapping files.
+    monarch_contribution: Lead
+    documentation: https://mapping-commons.github.io/sssom-py
+  - id: https://tools.monarchinitiative.org/ols
+    url: https://ols.monarchinitiative.org/
+    name: Monarch Ontology Lookup Service
+    category: Ontology Use
+    description: An instance of EBI's OLS for hosting Monarch-specific development snapshots of ontologies.
+    monarch_contribution: Lead
+    repository: https://github.com/monarch-initiative/ontotools-docker
+  - id: https://tools.monarchinitiative.org/poet
+    url: https://poet.jax.org/
+    name: POET
+    category: Data Curation
+    repository: https://github.com/TheJacksonLaboratory/POET
+  - id: https://tools.monarchinitiative.org/lirical
+    url: https://lirical.readthedocs.io
+    name: LIRICAL
+    category: Clinical Diagnosis
+    documentation: https://lirical.readthedocs.io/en/latest/
+    repository: https://github.com/TheJacksonLaboratory/LIRICAL/
+documentation:
+  - id: https://monarch-initiative.github.io/monarch-ingest
+    name: Monarch Ingest Documentation
+    repository: https://github.com/monarch-initiative/monarch-ingest
+  - id: https://koza.monarchinitiative.org/
+    name: Koza Framework Documentation
+  - id: https://linkml.io/linkml-model/docs/
+    name: LinkML model documentation
+    repository: https://github.com/linkml/linkml-model
+  - id: https://oboacademy.github.io/obook/
+    name: OBO Academy
+    description: A resource for self-paced training of Semantic Engineers.
+    repository: https://github.com/OBOAcademy/obook/
 repositories:
-  monarch-initiative:
-    - monarch-ingest
-    - cat-merge
-    - closurizer
-    - monarch-gene-mapping
-    - kghub-downloader
-    - monarch-file-server
-    - koza
-    - monarch-plater-docker
-    - jenkins
-    - monarch-py
-    - monarch-api
-    - monarch-ingest-dashboard
+  - id: https://github.com/INCATools/ontology-development-kit
+    name: ODK
+  - id: https://github.com/monarch-initiative/monarch-ingest
+    name: Monarch Ingest
+  - id: https://github.com/monarch-initiative/cat-merge
+    name: CAT Merge
+  - id: https://github.com/monarch-initiative/closurizer
+    name: Closurizer
+  - id: https://github.com/monarch-initiative/monarch-gene-mapping
+    name: Monarch Gene Mapping
+  - id: https://github.com/monarch-initiative/kghub-downloader
+    name: ODK
+  - id: https://github.com/monarch-initiative/monarch-file-server
+    name: Monarch File Server
+  - id: https://github.com/monarch-initiative/koza
+    name: Koza
+  - id: https://github.com/monarch-initiative/monarch-plater-docker
+    name: Monarch Plater Docker
+  - id: https://github.com/monarch-initiative/jenkins
+    name: Jenkins
+  - id: https://github.com/monarch-initiative/monarch-py
+    name: Monarch Python Toolkit
+  - id: https://github.com/monarch-initiative/monarch-api
+    name: Monarch API
+  - id: https://github.com/monarch-initiative/monarch-ingest-dashboard
+    name: Monarch Ingest Dashboard

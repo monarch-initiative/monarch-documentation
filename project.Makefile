@@ -19,3 +19,17 @@ genschemadoc: $(DOCDIR)
 
 build-docs: genpython genschemadoc genindex
 	@rm -f $(DOCDIR)/Documentation-Schema/about.md
+
+############################################
+### Provisional Monarch Asset Registry #####
+############################################
+
+src/docs/registry.md: registry/monarch_registry.md.jinja2 src/data/resources.yaml
+	$(RUN) j2 $^ > $@
+
+
+src/docs/registry_2.md: $(SOURCE_SCHEMA_PATH) src/data/resources.yaml
+	$(RUN) linkml-convert -f yaml -C ResourceRegistry -t ttl -s $^
+
+validate-registry: $(SOURCE_SCHEMA_PATH) src/data/resources.yaml
+	$(RUN) linkml-validate --target-class ResourceRegistry -s $^

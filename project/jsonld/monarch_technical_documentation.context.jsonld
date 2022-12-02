@@ -1,76 +1,85 @@
 {
-   "_comments": "Auto generated from monarch_technical_documentation.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-09-06T10:01:44\n    Schema: my_datamodel\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://w3id.org/my_org/my_datamodel\n    description: Enter a detailed description of your project here\n    license: https://creativecommons.org/publicdomain/zero/1.0/\n    ",
+   "_comments": "Auto generated from monarch_technical_documentation.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-12-01T08:05:58\n    Schema: monarch-documentation-schema\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://w3id.org/monarch-initiative/monarch-technical-documentation\n    description: Technical documentation for all Monarch applications, packages, services and related projects.\n    license: GNU GPL v3.0\n    ",
    "@context": {
-      "PATO": {
-         "@id": "http://purl.obolibrary.org/obo/PATO_",
-         "@prefix": true
-      },
       "biolink": "https://w3id.org/biolink/",
-      "famrel": "http://example.org/famrel/",
       "linkml": "https://w3id.org/linkml/",
-      "my_datamodel": {
-         "@id": "https://w3id.org/my_org/my_datamodel",
-         "@prefix": true
-      },
-      "prov": "http://www.w3.org/ns/prov#",
+      "mtd": "https://w3id.org/monarch-initiative/monarch-technical-documentation/",
       "schema": "http://schema.org/",
-      "@vocab": "https://w3id.org/my_org/my_datamodel",
-      "age_in_years": {
-         "@type": "xsd:integer"
-      },
-      "birth_date": {
-         "@id": "schema:birthDate"
-      },
-      "current_address": {
-         "@type": "@id"
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "@vocab": "https://w3id.org/monarch-initiative/monarch-technical-documentation/",
+      "category": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         }
       },
       "description": {
          "@id": "schema:description"
       },
-      "employed_at": {
+      "documentation": {
          "@type": "@id"
       },
-      "ended_at_time": {
-         "@type": "xsd:date",
-         "@id": "prov:endedAtTime"
-      },
-      "has_familial_relationships": {
+      "download": {
          "@type": "@id"
+      },
+      "file_format": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         }
+      },
+      "grants": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         }
       },
       "id": "@id",
-      "image": {
-         "@id": "schema:image"
-      },
-      "is_current": {
-         "@type": "xsd:boolean"
+      "monarch_contribution": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         }
       },
       "name": {
          "@id": "schema:name"
       },
-      "primary_email": {
-         "@id": "schema:email"
+      "release_status": {
+         "@context": {
+            "@vocab": "@null",
+            "text": "skos:notation",
+            "description": "skos:prefLabel",
+            "meaning": "@id"
+         }
       },
-      "organizations": {
+      "repository": {
          "@type": "@id"
       },
-      "persons": {
+      "data": {
          "@type": "@id"
       },
-      "related_to": {
+      "repositories": {
          "@type": "@id"
       },
-      "started_at_time": {
-         "@type": "xsd:date",
-         "@id": "prov:startedAtTime"
+      "standards": {
+         "@type": "@id"
       },
-      "Address": {
-         "@id": "schema:PostalAddress"
+      "tools": {
+         "@type": "@id"
       },
-      "Organization": {
-         "@id": "schema:Organization"
+      "url": {
+         "@type": "@id"
       },
-      "Person": {
-         "@id": "schema:Person"
+      "Resource": {
+         "@id": "schema:Thing"
       }
    }
 }
