@@ -1,9 +1,0 @@
-{
-   "biolink": "https://w3id.org/biolink/",
-   "linkml": "https://w3id.org/linkml/",
-   "mtd": "https://w3id.org/monarch-initiative/monarch-technical-documentation/",
-   "schema": "http://schema.org/",
-   "Resource": {
-      "@id": "schema:Thing"
-   }
-}

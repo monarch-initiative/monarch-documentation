@@ -1,8 +1,8 @@
+id: https://w3id.org/monarch-initiative/monarch-technical-documentation
 name: monarch-documentation-schema
 title: monarch-documentation-schema
 description: |-
   Technical documentation for all Monarch applications, packages, services and related projects.
-id: https://w3id.org/monarch-initiative/monarch-technical-documentation
 license: GNU GPL v3.0
 
 prefixes:
@@ -10,6 +10,9 @@ prefixes:
   linkml: https://w3id.org/linkml/
   biolink: https://w3id.org/biolink/
   schema: http://schema.org/
+
+default_prefix: mtd
+default_range: string
 
 imports:
   - linkml:types
@@ -30,37 +33,43 @@ classes:
 
   DataAsset:
     description: A data asset.
-    attributes:
-      download:
+    slots:
+      - download
+      - category
+    slot_usage:
       category:
         range: data_asset_enum
     is_a: Resource
 
   Standard:
     description: A reference to a repository.
-    attributes:
+    slots:
+      - category
+    slot_usage:
       category:
         range: standard_enum
     is_a: Resource
 
   Tool:
     description: A reference to a repository.
-    attributes:
-      category:
-        range: tool_asset_enum
     slots:
       - url
       - repository
+      - category
+    slot_usage:
+      category:
+          range: tool_asset_enum
     is_a: Resource
-  
+
   Documentation:
     description: A reference to a repository.
-    attributes:
-      category:
-        range: documentation_asset_enum
     slots:
       - url
       - repository
+      - category
+    slot_usage:
+        category:
+            range: documentation_asset_enum
     is_a: Resource
 
   #ResourceCollection:
@@ -76,27 +85,12 @@ classes:
   ResourceRegistry:
     description: >-
       A registry of different types of data assets
-    attributes:
-      data:
-        range: DataAsset
-        multivalued: true
-        inlined_as_list: true
-      standards:
-        range: Standard
-        multivalued: true
-        inlined_as_list: true
-      tools:
-        range: Tool
-        multivalued: true
-        inlined_as_list: true
-      documentation:
-        range: Documentation
-        multivalued: true
-        inlined_as_list: true
-      repositories:
-        range: Resource
-        multivalued: true
-        inlined_as_list: true
+    slots:
+      - data
+      - standards
+      - tools
+      - documentations
+      - repositories
     is_a: Resource
 
   Download:
@@ -147,6 +141,26 @@ slots:
   monarch_contribution:
     description: The role the Monarch Initiative plays in the maintainence of this asset.
     range: monarch_contribution_enum
+  data:
+    range: DataAsset
+    multivalued: true
+    inlined_as_list: true
+  standards:
+    range: Standard
+    multivalued: true
+    inlined_as_list: true
+  tools:
+    range: Tool
+    multivalued: true
+    inlined_as_list: true
+  documentations:
+    range: Documentation
+    multivalued: true
+    inlined_as_list: true
+  repositories:
+    range: Resource
+    multivalued: true
+    inlined_as_list: true
 
 
 enums:
