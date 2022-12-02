@@ -18,7 +18,8 @@ genschemadoc: $(DOCDIR)
 	$(RUN) gen-doc -d $(DOCDIR)/Documentation-Schema $(SOURCE_SCHEMA_PATH)
 
 build-docs: genpython genschemadoc genindex gen-monarch-overview
-	@rm -f $(DOCDIR)/Documentation-Schema/about.md
+	cp src/docs/registry.md docs/registry
+	cp src/docs/about.md docs/about.md
 
 ############################################
 ### Provisional Monarch Asset Registry #####
