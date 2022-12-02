@@ -19,10 +19,12 @@ g = Github(token)
 
 repo_reference = resources.get("repositories")
 repos = {}
-for user in repo_reference.keys():
-    for repo in repo_reference.get(user):
-        r = g.get_repo(f"{user}/{repo}")
-        repos[f"{user}/{repo}"] = r
+for repo in repo_reference:
+    repo_url = repo['id']
+    if repo_url.startswith("https://github.com/"):
+        repo_id = repo_url.replace("https://github.com/","")
+        r = g.get_repo(repo_id)
+        repos[repo_id] = r
 
 repo_list = ""
 for repo_name in repos.keys():
