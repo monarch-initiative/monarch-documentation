@@ -20,11 +20,14 @@ def get_repos(resource_file: Path = monarch_resource_file):
 
     # Make dict of repositories by name
     repo_list = resources.get("repositories")
+   
     repos = {}
-    for user in repo_list.keys():
-        for repo in repo_list.get(user):
-            r = g.get_repo(f"{user}/{repo}")
-            repos[f"{repo}"] = r
+    for repo in repo_list:
+        repo_url = repo['id']
+        if repo_url.startswith("https://github.com/"):
+            repo_id = repo_url.replace("https://github.com/","")
+            r = g.get_repo(repo_id)
+            repos[repo_id] = r
     return repos
 
 def get_readme(repo):

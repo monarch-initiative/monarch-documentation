@@ -62,7 +62,7 @@ classes:
     is_a: Resource
 
   Documentation:
-    description: A reference to a repository.
+    description: A reference to a documentation page.
     slots:
       - url
       - repository
@@ -73,8 +73,9 @@ classes:
     is_a: Resource
 
   Repository:
+    description: A reference to a version control repository.
     is_a: Resource
-    slot:
+    slots:
       - depends_on
       - repo_url
       - organization

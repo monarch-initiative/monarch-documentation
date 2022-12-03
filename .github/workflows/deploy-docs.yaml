@@ -1,7 +1,7 @@
 name: Build and Deploy Docs to GitHub Pages
 on:
   push:
-    branches: [ main, gen-repo-page ]
+    branches: [ main ]
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

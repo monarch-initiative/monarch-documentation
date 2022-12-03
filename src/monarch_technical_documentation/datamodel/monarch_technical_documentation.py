@@ -1,5 +1,5 @@
 # Auto generated from monarch_technical_documentation.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-12-02T20:44:33
+# Generation date: 2022-12-03T14:47:36
 # Schema: monarch-documentation-schema
 #
 # id: https://w3id.org/monarch-initiative/monarch-technical-documentation
@@ -59,6 +59,10 @@ class ToolId(ResourceId):
 
 
 class DocumentationId(ResourceId):
+    pass
+
+
+class RepositoryId(ResourceId):
     pass
 
 
@@ -206,7 +210,7 @@ class Tool(Resource):
 @dataclass
 class Documentation(Resource):
     """
-    A reference to a repository.
+    A reference to a documentation page.
     """
     _inherited_slots: ClassVar[List[str]] = []
 
@@ -234,6 +238,41 @@ class Documentation(Resource):
 
         if self.category is not None and not isinstance(self.category, DocumentationAssetEnum):
             self.category = DocumentationAssetEnum(self.category)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass
+class Repository(Resource):
+    """
+    A reference to a version control repository.
+    """
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = MTD.Repository
+    class_class_curie: ClassVar[str] = "mtd:Repository"
+    class_name: ClassVar[str] = "Repository"
+    class_model_uri: ClassVar[URIRef] = MTD.Repository
+
+    id: Union[str, RepositoryId] = None
+    depends_on: Optional[Union[str, RepositoryId]] = None
+    repo_url: Optional[str] = None
+    organization: Optional[str] = None
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, RepositoryId):
+            self.id = RepositoryId(self.id)
+
+        if self.depends_on is not None and not isinstance(self.depends_on, RepositoryId):
+            self.depends_on = RepositoryId(self.depends_on)
+
+        if self.repo_url is not None and not isinstance(self.repo_url, str):
+            self.repo_url = str(self.repo_url)
+
+        if self.organization is not None and not isinstance(self.organization, str):
+            self.organization = str(self.organization)
 
         super().__post_init__(**kwargs)
 
@@ -473,6 +512,15 @@ slots.documentations = Slot(uri=MTD.documentations, name="documentations", curie
 
 slots.repositories = Slot(uri=MTD.repositories, name="repositories", curie=MTD.curie('repositories'),
                    model_uri=MTD.repositories, domain=None, range=Optional[Union[Dict[Union[str, ResourceId], Union[dict, Resource]], List[Union[dict, Resource]]]])
+
+slots.depends_on = Slot(uri=MTD.depends_on, name="depends_on", curie=MTD.curie('depends_on'),
+                   model_uri=MTD.depends_on, domain=Repository, range=Optional[Union[str, RepositoryId]])
+
+slots.repo_url = Slot(uri=MTD.repo_url, name="repo_url", curie=MTD.curie('repo_url'),
+                   model_uri=MTD.repo_url, domain=None, range=Optional[str])
+
+slots.organization = Slot(uri=MTD.organization, name="organization", curie=MTD.curie('organization'),
+                   model_uri=MTD.organization, domain=None, range=Optional[str])
 
 slots.download__url = Slot(uri=MTD.url, name="download__url", curie=MTD.curie('url'),
                    model_uri=MTD.download__url, domain=None, range=Optional[str])
