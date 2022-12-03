@@ -1,5 +1,7 @@
 import os
 from pathlib import Path
+import github
+import yaml
 from utils import get_repos
 from log import get_logger
 log = get_logger(__name__)
@@ -14,7 +16,10 @@ resource_file = Path(f"{src_dir}/data/resources.yaml")
 repos = get_repos(resource_file)
 
 token = os.getenv('GITHUB_TOKEN')
-g = Github(token)
+g = github.Github(token)
+
+with open(resource_file, "r") as yaml_file:
+    resources = yaml.safe_load(yaml_file)
 
 repo_reference = resources.get("repositories")
 repos = {}
