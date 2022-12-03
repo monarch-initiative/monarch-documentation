@@ -72,6 +72,13 @@ classes:
             range: documentation_asset_enum
     is_a: Resource
 
+  Repository:
+    is_a: Resource
+    slot:
+      - depends_on
+      - repo_url
+      - organization
+
   #ResourceCollection:
   #  tree_root: true
   #  description: >-
@@ -161,6 +168,17 @@ slots:
     range: Resource
     multivalued: true
     inlined_as_list: true
+  depends_on:
+    slot_uri: mtd:depends_on
+    description: A list of packages a resource depends on
+    domain: Repository
+    range: Repository
+  repo_url:
+    slot_uri: mtd:repo_url
+    description: (str) URL to 
+    # range: linkml:uri
+  organization:
+    slot_uri: mtd:organization
 
 
 enums:
