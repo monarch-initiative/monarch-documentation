@@ -31,7 +31,7 @@ for repo in repo_reference:
             r = g.get_repo(repo_id)
             repos[repo_id] = r
         except:
-            log.warn(f"{repo_url} could not be retrieved with GitHub API.")
+            log.exception(f"{repo_url} could not be retrieved with GitHub API.")
 
 
 repos_str = ""
