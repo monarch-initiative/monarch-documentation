@@ -207,22 +207,6 @@
   
 
       
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../Repositories/cat-merge/" class="md-tabs__link">
-        Repositories
-      </a>
-    </li>
-  
-
-      
     </ul>
   </div>
 </nav>
@@ -986,222 +970,6 @@
   
 
     
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4">
-          Repositories
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Repositories" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Repositories
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Repositories/cat-merge/" class="md-nav__link">
-        cat-merge
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Repositories/closurizer/" class="md-nav__link">
-        closurizer
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Repositories/jenkins/" class="md-nav__link">
-        jenkins
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Repositories/kghub-downloader/" class="md-nav__link">
-        kghub-downloader
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Repositories/koza/" class="md-nav__link">
-        koza
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Repositories/monarch-api/" class="md-nav__link">
-        monarch-api
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Repositories/monarch-file-server/" class="md-nav__link">
-        monarch-file-server
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Repositories/monarch-gene-mapping/" class="md-nav__link">
-        monarch-gene-mapping
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Repositories/monarch-ingest-dashboard/" class="md-nav__link">
-        monarch-ingest-dashboard
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Repositories/monarch-ingest/" class="md-nav__link">
-        monarch-ingest
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Repositories/monarch-plater-docker/" class="md-nav__link">
-        monarch-plater-docker
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Repositories/monarch-py/" class="md-nav__link">
-        monarch-py
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Repositories/ontology-development-kit/" class="md-nav__link">
-        ontology-development-kit
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -1384,9 +1152,15 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../grants/">grants</a></td>
-<td>0..* <br/> <a href="../GrantEnum/">GrantEnum</a></td>
-<td>The grant used to finance the production of an asset</td>
+<td><a href="../monarch_contribution/">monarch_contribution</a></td>
+<td>0..1 <br/> <a href="../MonarchContributionEnum/">MonarchContributionEnum</a></td>
+<td>The role the Monarch Initiative plays in the maintainence of this asset</td>
+<td><a href="../Resource/">Resource</a></td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> NONE</td>
+<td>A human-readable description for a resource</td>
 <td><a href="../Resource/">Resource</a></td>
 </tr>
 <tr>
@@ -1396,27 +1170,21 @@
 <td><a href="../Resource/">Resource</a></td>
 </tr>
 <tr>
+<td><a href="../grants/">grants</a></td>
+<td>0..* <br/> <a href="../GrantEnum/">GrantEnum</a></td>
+<td>The grant used to finance the production of an asset</td>
+<td><a href="../Resource/">Resource</a></td>
+</tr>
+<tr>
 <td><a href="../name/">name</a></td>
 <td>0..1 <br/> NONE</td>
 <td>A human-readable name for a resource</td>
 <td><a href="../Resource/">Resource</a></td>
 </tr>
 <tr>
-<td><a href="../monarch_contribution/">monarch_contribution</a></td>
-<td>0..1 <br/> <a href="../MonarchContributionEnum/">MonarchContributionEnum</a></td>
-<td>The role the Monarch Initiative plays in the maintainence of this asset</td>
-<td><a href="../Resource/">Resource</a></td>
-</tr>
-<tr>
 <td><a href="../id/">id</a></td>
 <td>1..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
 <td>A unique identifier for a resource</td>
-<td><a href="../Resource/">Resource</a></td>
-</tr>
-<tr>
-<td><a href="../description/">description</a></td>
-<td>0..1 <br/> NONE</td>
-<td>A human-readable description for a resource</td>
 <td><a href="../Resource/">Resource</a></td>
 </tr>
 </tbody>
