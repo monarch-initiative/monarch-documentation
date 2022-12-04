@@ -13,19 +13,30 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | [HPOA - Gene to Phenotype Associations](http://purl.obolibrary.org/obo/hp/hpoa/genes_to_phenotype.txt) | Biomedical Data | [Docs](https://hpo.jax.org/app/download/annotation) | Lead |
 | [HPOA Knowledge Graph Ingestible](https://data.monarchinitiative.org/monarch-kg/hpoa) | Knowledge Graph Ingestibles | [Docs](https://monarch-initiative.github.io/monarch-ingest/Sources/HPOA/) |  |
 | [Alliance Knowledge Graph Ingestible](https://data.monarchinitiative.org/monarch-kg/alliance) | Knowledge Graph Ingestibles | [Docs](https://monarch-initiative.github.io/monarch-ingest/Sources/Alliance/) | Lead |
+| [KG Covid-10](https://github.com/Knowledge-Graph-Hub/kg-covid-19) | Knowledge Graph | [Docs]() | Lead |
+| [ECO KG](https://github.com/Knowledge-Graph-Hub/eco-kg) | Knowledge Graph | [Docs]() | Lead |
+| [KG IDG](https://github.com/Knowledge-Graph-Hub/kg-idg) | Knowledge Graph | [Docs]() | Lead |
+| [KG Phenio](https://github.com/Knowledge-Graph-Hub/kg-phenio) | Knowledge Graph | [Docs]() | Lead |
+| [KG OBO](https://github.com/Knowledge-Graph-Hub/kg-obo) | Knowledge Graph | [Docs]() | Lead |
+| [KG Microbe](https://github.com/Knowledge-Graph-Hub/kg-microbe) | Knowledge Graph | [Docs]() | Lead |
+| [SRI Reference KG](https://github.com/Knowledge-Graph-Hub/sri-reference-kg) | Knowledge Graph | [Docs]() | Lead |
 
 
 ## Standards developed or significantly supported by the Monarch Initiative
 
 | Standard | Category | Docs | Contribution | Grants |
 | ------ | ----- | ----- | ----- | ----- |
+| [Knowledge Graph Change Language](https://github.com/INCATools/kgcl) | Ontology Curation | [Docs]() | Lead | Bosch Gift |
 | [Phenopackets](https://standards.monarchinitiative.org/phenopackets) | Data Exchange | [Docs]() | Lead | Phenomics First |
 | [Simple Standard for Ontology Mappings (SSSOM)](https://standards.monarchinitiative.org/sssom) | Data Exchange | [Docs]() | Lead | Phenomics First |
 | [Mondo Disease Ontology](http://purl.obolibrary.org/obo/mondo.owl) | Ontology | [Docs](https://mondo.readthedocs.io/) | Lead | Phenomics First |
+| [The Unified Phenotype Ontology (uPheno)](https://github.com/obophenotype/upheno-dev) | Ontology | [Docs]() | Lead | Phenomics First |
 | [Medical Action Ontology](http://purl.obolibrary.org/obo/maxo.owl) | Ontology | [Docs]() | Lead | Phenomics First |
 | [Environmental Exposure Ontology](http://purl.obolibrary.org/obo/ecto.owl) | Ontology | [Docs](https://github.com/EnvironmentOntology/environmental-exposure-ontology) | Lead | Phenomics First |
 | [Ontology of biological Attributes](http://purl.obolibrary.org/obo/oba.owl) | Ontology | [Docs]() | Lead | Phenomics First |
 | [Uberon Anatomy Ontology](http://purl.obolibrary.org/obo/uberon.owl) | Ontology | [Docs]() | Co-Lead | Phenomics First |
+| [Phenomics Integrated Ontology (PHENIO)](https://github.com/monarch-initiative/phenio) | Ontology | [Docs]() | Lead | Phenomics First |
+| [Dead simple owl design pattern (DOS-DP) exchange format](https://github.com/INCATools/dead_simple_owl_design_patterns) | Data Exchange | [Docs]() | Lead | Phenomics First |
 
 
 ## Tools and Services developed or significantly supported by the Monarch Initiative
@@ -40,6 +51,11 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | [Monarch Ontology Lookup Service](https://tools.monarchinitiative.org/ols) | Ontology Use |
 | [POET](https://tools.monarchinitiative.org/poet) | Data Curation |
 | [LIRICAL](https://tools.monarchinitiative.org/lirical) | Clinical Diagnosis |
+| [obographviz](https://github.com/INCATools/obographviz) | Ontology Use |
+| [ubergraph](https://github.com/INCATools/ubergraph) | Ontology Use |
+| [whelk](https://github.com/balhoff/whelk) | Ontology Use |
+| [robot](https://github.com/ontodev/robot) | Ontology Use |
+| [Data Harmonizer](https://github.com/cidgoh/DataHarmonizer) | Data Curation |
 
 
 ## Documentation resources relevant to work by the Monarch Initiative

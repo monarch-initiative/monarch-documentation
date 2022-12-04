@@ -26,8 +26,11 @@ def get_repos(resource_file: Path = monarch_resource_file):
         repo_url = repo['id']
         if repo_url.startswith("https://github.com/"):
             repo_id = repo_url.replace("https://github.com/","")
-            r = g.get_repo(repo_id)
-            repos[repo_id] = r
+            try:
+                r = g.get_repo(repo_id)
+                repos[repo_id] = r
+            except:
+                logger.warn(f"{repo_url} could not be retrieved with GitHub API.")
     return repos
 
 def get_readme(repo):

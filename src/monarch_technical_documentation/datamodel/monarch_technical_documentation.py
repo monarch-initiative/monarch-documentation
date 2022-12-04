@@ -1,5 +1,5 @@
 # Auto generated from monarch_technical_documentation.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-12-03T14:47:36
+# Generation date: 2022-12-04T12:28:37
 # Schema: monarch-documentation-schema
 #
 # id: https://w3id.org/monarch-initiative/monarch-technical-documentation
@@ -397,6 +397,8 @@ class DataAssetEnum(EnumDefinitionImpl):
                 PermissibleValue(text="Biomedical Data") )
         setattr(cls, "Knowledge Graph Ingestibles",
                 PermissibleValue(text="Knowledge Graph Ingestibles") )
+        setattr(cls, "Knowledge Graph",
+                PermissibleValue(text="Knowledge Graph") )
 
 class ToolAssetEnum(EnumDefinitionImpl):
 
@@ -431,6 +433,7 @@ class DocumentationAssetEnum(EnumDefinitionImpl):
 class MonarchContributionEnum(EnumDefinitionImpl):
 
     Lead = PermissibleValue(text="Lead")
+    Contributor = PermissibleValue(text="Contributor")
 
     _defn = EnumDefinition(
         name="MonarchContributionEnum",

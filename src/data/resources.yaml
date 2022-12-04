@@ -48,7 +48,40 @@ data:
     documentation: https://monarch-initiative.github.io/monarch-ingest/Sources/Alliance/
     name: Alliance Knowledge Graph Ingestible
     monarch_contribution: Lead
+  - id: https://github.com/Knowledge-Graph-Hub/kg-covid-19
+    name: KG Covid-10
+    monarch_contribution: Lead
+    category: Knowledge Graph
+  - id: https://github.com/Knowledge-Graph-Hub/eco-kg
+    name: ECO KG
+    category: Knowledge Graph
+    monarch_contribution: Lead
+  - id: https://github.com/Knowledge-Graph-Hub/kg-idg
+    name: KG IDG
+    category: Knowledge Graph
+    monarch_contribution: Lead
+  - id: https://github.com/Knowledge-Graph-Hub/kg-phenio
+    name: KG Phenio
+    category: Knowledge Graph
+    monarch_contribution: Lead
+  - id: https://github.com/Knowledge-Graph-Hub/kg-obo
+    name: KG OBO
+    category: Knowledge Graph
+    monarch_contribution: Lead
+  - id: https://github.com/Knowledge-Graph-Hub/kg-microbe
+    name: KG Microbe
+    category: Knowledge Graph
+    monarch_contribution: Lead
+  - id: https://github.com/Knowledge-Graph-Hub/sri-reference-kg
+    name: SRI Reference KG
+    category: Knowledge Graph
+    monarch_contribution: Lead
 standards:
+  - id: https://github.com/INCATools/kgcl
+    name: Knowledge Graph Change Language
+    monarch_contribution: Lead
+    category: Ontology Curation
+    grants: Bosch Gift
   - id: https://standards.monarchinitiative.org/phenopackets
     name: Phenopackets
     monarch_contribution: Lead
@@ -62,6 +95,11 @@ standards:
   - id: http://purl.obolibrary.org/obo/mondo.owl
     documentation: https://mondo.readthedocs.io/
     name: Mondo Disease Ontology
+    monarch_contribution: Lead
+    category: Ontology
+    grants: Phenomics First
+  - id: https://github.com/obophenotype/upheno-dev
+    name: The Unified Phenotype Ontology (uPheno)
     monarch_contribution: Lead
     category: Ontology
     grants: Phenomics First
@@ -85,6 +123,16 @@ standards:
     name: Uberon Anatomy Ontology
     monarch_contribution: Co-Lead
     category: Ontology
+    grants: Phenomics First
+  - id: https://github.com/monarch-initiative/phenio
+    name: Phenomics Integrated Ontology (PHENIO)
+    monarch_contribution: Lead
+    category: Ontology
+    grants: Phenomics First
+  - id: https://github.com/INCATools/dead_simple_owl_design_patterns
+    name: Dead simple owl design pattern (DOS-DP) exchange format
+    monarch_contribution: Lead
+    category: Data Exchange
     grants: Phenomics First
 tools:
   - id: https://tools.monarchinitiative.org/exomiser
@@ -131,7 +179,31 @@ tools:
     name: LIRICAL
     category: Clinical Diagnosis
     documentation: https://lirical.readthedocs.io/en/latest/
-    repository: https://github.com/TheJacksonLaboratory/LIRICAL/
+    repository: https://github.com/TheJacksonLaboratory/LIRICAL
+  - id: https://github.com/INCATools/obographviz
+    name: obographviz
+    category: Ontology Use
+    documentation: https://github.com/INCATools/obographviz#readme
+    repository: https://github.com/INCATools/obographviz
+  - id: https://github.com/INCATools/ubergraph
+    name: ubergraph
+    category: Ontology Use
+    repository: https://github.com/INCATools/ubergraph
+  - id: https://github.com/balhoff/whelk
+    name: whelk
+    category: Ontology Use
+    repository: https://github.com/balhoff/whelk
+  - id: https://github.com/ontodev/robot
+    name: robot
+    category: Ontology Use
+    documentation: https://robot.obolibrary.org
+    monarch_contribution: Contributor
+    repository: https://github.com/ontodev/robot
+  - id: https://github.com/cidgoh/DataHarmonizer
+    name: Data Harmonizer
+    category: Data Curation
+    monarch_contribution: Contributor
+    repository: https://github.com/cidgoh/DataHarmonizer
 documentation:
   - id: https://monarch-initiative.github.io/monarch-ingest
     name: Monarch Ingest Documentation
@@ -157,7 +229,7 @@ repositories:
   - id: https://github.com/monarch-initiative/monarch-gene-mapping
     name: Monarch Gene Mapping
   - id: https://github.com/monarch-initiative/kghub-downloader
-    name: ODK
+    name: Ontology Development Kit (ODK)
   - id: https://github.com/monarch-initiative/monarch-file-server
     name: Monarch File Server
   - id: https://github.com/monarch-initiative/koza
@@ -172,3 +244,70 @@ repositories:
     name: Monarch API
   - id: https://github.com/monarch-initiative/monarch-ingest-dashboard
     name: Monarch Ingest Dashboard
+  - id: https://github.com/Knowledge-Graph-Hub/universalizer
+    name: Universalizer
+  - id: https://github.com/balhoff/arachne
+    name: Arachne Reasoner
+  - id: https://github.com/biolink/biolink-model
+    name: Biolink Model
+  - id: https://github.com/biolink/biolink-model-toolkit
+    name: Biolink Model Toolkit
+  - id: https://github.com/INCATools/boomer
+    name: boomer
+  - id: https://github.com/INCATools/dosdp-tools
+    name: DOSDP Tools
+  - id: https://github.com/INCATools/semantic-sql
+    name: Semantic SQL
+  - id: https://github.com/exomiser/Exomiser
+    name: exomiser
+  - id: https://github.com/monarch-initiative/pheval.exomiser
+    name: PhEval Exomiser Runner
+  - id: https://github.com/monarch-initiative/pheval
+    name: PhEval
+  - id: https://github.com/obophenotype/human-phenotype-ontology
+    name: The Human Phenotype Ontology (HPO)
+  - id: https://github.com/TheJacksonLaboratory/hpo-web
+    name: hpo.jax.org (Website)
+  - id: https://github.com/Knowledge-Graph-Hub/knowledge-graph-hub.github.io
+    name: KG Hub
+  - id: https://github.com/biolink/kgx
+    name: Knowledge Graph Exchange (KGX) Format
+  - id: https://github.com/biolink/kgx
+    name: KGX Tools
+  - id: https://github.com/linkml/linkml-runtime
+    name: LinkML Runtime Toolkit
+  - id: https://github.com/TheJacksonLaboratory/LIRICAL
+    name: LIRICAL
+  - id: https://github.com/monarch-initiative/monarch-ui
+    name: Monarch UI
+  - id: https://github.com/monarch-initiative/mondo
+    name: mondo
+  - id: https://github.com/Knowledge-Graph-Hub/neat-ml
+    name: Network Embedding All the Things (NEAT)
+  - id: https://github.com/INCATools/ontology-access-kit
+    name: Ontology Access Kit (OAK)
+  - id: https://github.com/INCATools/oakx-grape
+    name: oakx-grape
+  - id: https://github.com/TheJacksonLaboratory/Phenomiser
+    name: Phenomiser
+  - id: https://github.com/phenopackets/phenopacket-schema
+    name: Phenopackets Schema
+  - id: Phenopackets Tools
+    name: Phenopackets
+  - id: https://github.com/TheJacksonLaboratory/POET
+    name: POET
+  - id: https://github.com/linkml/prefixmaps
+    name: prefixmaps
+  - id: https://github.com/INCATools/relation-graph
+    name: relation-graph
+  - id: https://github.com/Knowledge-Graph-Hub/semsim
+    name: KG Hub Semantic Similarity Toolkit
+  - id: https://github.com/mapping-commons/sssom
+    name: A Simple Standard for Ontological Mappings (SSSOM)
+  - id: https://github.com/mapping-commons/sssom-py
+    name: sssom-py
+  - id: https://github.com/obophenotype/upheno-dev
+    name: upheno
+  
+
+  

@@ -203,6 +203,7 @@ enums:
     permissible_values:
       Biomedical Data:
       Knowledge Graph Ingestibles:
+      Knowledge Graph:
   tool_asset_enum:
     permissible_values:
       Clinical Diagnosis:
@@ -217,6 +218,7 @@ enums:
     permissible_values:
       Lead:
       Co-Lead:
+      Contributor:
   grant_enum:
     permissible_values:
       Phenomics First:
@@ -224,3 +226,4 @@ enums:
       Monarch R24:
       HPO:
       Exomiser:
+      Bosch Gift:

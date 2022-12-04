@@ -27,8 +27,12 @@ for repo in repo_reference:
     repo_url = repo['id']
     if repo_url.startswith("https://github.com/"):
         repo_id = repo_url.replace("https://github.com/","")
-        r = g.get_repo(repo_id)
-        repos[repo_id] = r
+        try:
+            r = g.get_repo(repo_id)
+            repos[repo_id] = r
+        except:
+            log.warn(f"{repo_url} could not be retrieved with GitHub API.")
+
 
 repos_str = ""
 for repo_name in repos.keys():
