@@ -31,7 +31,7 @@ jobs:
         make build-docs
         poetry run mkdocs gh-deploy --force
       env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
     # - name: Deploy to Pages
     #   run: poetry run mkdocs gh-deploy
