@@ -49,7 +49,7 @@ data:
     name: Alliance Knowledge Graph Ingestible
     monarch_contribution: Lead
   - id: https://github.com/Knowledge-Graph-Hub/kg-covid-19
-    name: KG Covid-10
+    name: KG Covid-19
     monarch_contribution: Lead
     category: Knowledge Graph
   - id: https://github.com/Knowledge-Graph-Hub/eco-kg
