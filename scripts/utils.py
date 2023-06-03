@@ -57,14 +57,14 @@ def get_dependencies(repo: github.Repository.Repository) -> dict:
         return None
 
     # Check if project uses poetry or flit
-    if 'flit' in pyproject['tool'].keys():
+    if 'tool' in pyproject and 'flit' in pyproject['tool'].keys():
         deps = {}
         deplist = pyproject['tool']['flit']['metadata']['requires']
         for dep in deplist:
             d = dep.split()
             deps[d[0]] = ''.join(d[1:])
         # dev_deps = pyproject['tool']['flit']['metadata']['requires-extra']['dev']
-    elif 'poetry' in pyproject['tool'].keys():
+    elif 'tool' in pyproject and 'poetry' in pyproject['tool'].keys():
         deps = pyproject['tool']['poetry']['dependencies']
         # dev_deps =  pyproject['tool']['poetry']['dev-dependencies']
     else:
