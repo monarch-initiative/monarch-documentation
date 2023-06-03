@@ -161,7 +161,7 @@ tools:
     category: Ontology Use
     description: A python toolkit for accessing and visualising ontologies.
     monarch_contribution: Lead
-    documentation: https://github.com/INCATools/ontology-development-kit
+    documentation: https://incatools.github.io/ontology-access-kit/
   - id: https://tools.monarchinitiative.org/sssom-toolkit
     name: SSSOM Toolkit
     category: Mapping
