@@ -134,6 +134,12 @@ standards:
     monarch_contribution: Lead
     category: Data Exchange
     grants: Phenomics First
+  - id: https://github.com/monarch-initiative/babelon
+    name: Babelon
+    category: Data Exchange
+    documentation: https://monarch-initiative.github.io/babelon/
+    monarch_contribution: Lead
+    repository: https://github.com/monarch-initiative/babelon
 tools:
   - id: https://tools.monarchinitiative.org/exomiser
     name: Exomiser
@@ -204,6 +210,40 @@ tools:
     category: Data Curation
     monarch_contribution: Contributor
     repository: https://github.com/cidgoh/DataHarmonizer
+  - id: https://github.com/monarch-initiative/ontogpt
+    name: OntoGPT
+    category: Data Curation
+    documentation: https://monarch-initiative.github.io/ontogpt/
+    monarch_contribution: Lead
+    repository: https://github.com/monarch-initiative/ontogpt
+  - id: https://github.com/monarch-initiative/semsimian
+    name: semsimian
+    category: Mapping
+    monarch_contribution: Lead
+    repository: https://github.com/monarch-initiative/semsimian
+  - id: https://github.com/monarch-initiative/monarch-py
+    name: OntoGPT
+    category: Data Curation
+    documentation: https://monarch-initiative.github.io/monarch-py/
+    monarch_contribution: Lead
+    repository: https://github.com/monarch-initiative/monarch-py
+  - id: https://github.com/monarch-initiative/babelon
+    name: Babelon Toolkit
+    category: Data Curation
+    documentation: https://monarch-initiative.github.io/babelon/
+    monarch_contribution: Lead
+    repository: https://github.com/monarch-initiative/babelon
+  - id: https://github.com/monarch-initiative/C2S2
+    name: C2S2
+    category: Data Curation
+    monarch_contribution: Lead
+    repository: https://github.com/monarch-initiative/C2S2
+  - id: https://github.com/monarch-initiative/fenominal
+    name: Fenominal
+    category: Data Curation
+    documentation: https://monarch-initiative.github.io/fenominal/
+    monarch_contribution: Lead
+    repository: https://github.com/monarch-initiative/fenominal
 documentation:
   - id: https://monarch-initiative.github.io/monarch-ingest
     name: Monarch Ingest Documentation
@@ -308,6 +348,21 @@ repositories:
     name: sssom-py
   - id: https://github.com/obophenotype/upheno-dev
     name: upheno
+  - id: https://github.com/monarch-initiative/ontogpt
+    name: ontogpt
+  - id: https://github.com/monarch-initiative/semsimian
+    name: semsimian
+  - id: https://github.com/monarch-initiative/babelon
+    name: Babelon
+  - id: https://github.com/monarch-initiative/C2S2
+    name: C2S2
+  - id: https://github.com/monarch-initiative/loinc2hpoAnnotation
+    name: Loinc2HPO
+  - id: https://github.com/monarch-initiative/pyphetools
+    name: Python Phenopacket Tools
+  - id: https://github.com/monarch-initiative/fenominal
+    name: Fenominal
+  
   
 
   
