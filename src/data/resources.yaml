@@ -222,7 +222,7 @@ tools:
     monarch_contribution: Lead
     repository: https://github.com/monarch-initiative/semsimian
   - id: https://github.com/monarch-initiative/monarch-py
-    name: OntoGPT
+    name: Monarch Python Toolkit
     category: Data Curation
     documentation: https://monarch-initiative.github.io/monarch-py/
     monarch_contribution: Lead
@@ -233,11 +233,6 @@ tools:
     documentation: https://monarch-initiative.github.io/babelon/
     monarch_contribution: Lead
     repository: https://github.com/monarch-initiative/babelon
-  - id: https://github.com/monarch-initiative/C2S2
-    name: C2S2
-    category: Data Curation
-    monarch_contribution: Lead
-    repository: https://github.com/monarch-initiative/C2S2
   - id: https://github.com/monarch-initiative/fenominal
     name: Fenominal
     category: Data Curation
@@ -354,8 +349,6 @@ repositories:
     name: semsimian
   - id: https://github.com/monarch-initiative/babelon
     name: Babelon
-  - id: https://github.com/monarch-initiative/C2S2
-    name: C2S2
   - id: https://github.com/monarch-initiative/loinc2hpoAnnotation
     name: Loinc2HPO
   - id: https://github.com/monarch-initiative/pyphetools
