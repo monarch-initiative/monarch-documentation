@@ -1,0 +1,31 @@
+# {{ title }}
+
+{{ description }}
+
+## Datasets developed by the Monarch Initiative
+
+| Dataset | Category | Docs | Contribution |
+| ------ | ----- | ----- | ----- |
+{% for d in data %}| [{{ d.name }}]({{ d.id }}) | {{ d.category }} | [Docs]({{ d.documentation|default("") }}) | {{ d.monarch_contribution|default("") }} |
+{% endfor %}
+
+## Standards developed or significantly supported by the Monarch Initiative
+
+| Standard | Category | Docs | Contribution | Grants |
+| ------ | ----- | ----- | ----- | ----- |
+{% for d in standards %}| [{{ d.name }}]({{ d.id }}) | {{ d.category }} | [Docs]({{ d.documentation|default("") }}) | {{ d.monarch_contribution|default("") }} | {{ d.grants }} |
+{% endfor %}
+
+## Tools and Services developed or significantly supported by the Monarch Initiative
+
+| Tool or Service | Category |
+| ------ | ----- |
+{% for d in tools %}| [{{ d.name }}]({{ d.id }}) | {{ d.category|default("") }} |
+{% endfor %}
+
+## Documentation resources relevant to work by the Monarch Initiative
+
+| Documentation | Description |
+| ------ | ----- |
+{% for d in documentation %}| [{{ d.name }}]({{ d.id }}) | {{ d.description|default("") }} |
+{% endfor %}
