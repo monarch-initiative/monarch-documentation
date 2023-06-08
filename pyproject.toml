@@ -22,6 +22,7 @@ cruft = "^2.11.1"
 mkdocs-material = "^8.2.8"
 mkdocs-mermaid2-plugin = "^0.6.0"
 j2cli = "^0.3.10"
+loguru = "*"
 
 [tool.poetry.extras]
 j2cli = ["yaml"]

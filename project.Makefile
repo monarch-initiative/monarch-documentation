@@ -3,22 +3,22 @@
 .INCLUDE : Makefile
 
 genpython:
-	$(RUN) gen-python $(SOURCE_SCHEMA_PATH) > $(PYMODEL)/monarch_technical_documentation.py
+	@$(RUN) gen-python $(SOURCE_SCHEMA_PATH) > $(PYMODEL)/monarch_technical_documentation.py
 
 genindex:
-	$(RUN) python scripts/generate_index.py
+	@$(RUN) python scripts/generate_index.py
 
 genrepodocs:
-	$(RUN) python scripts/generate_repo_pages.py
+	@$(RUN) python scripts/generate_repo_pages.py
 
 geningestdoc:
-	$(RUN) python scripts/generate_ingest_page.py
+	@$(RUN) python scripts/generate_ingest_page.py
 
 genschemadoc: $(DOCDIR)
-	$(RUN) gen-doc -d $(DOCDIR)/Documentation-Schema $(SOURCE_SCHEMA_PATH)
+	@$(RUN) gen-doc -d $(DOCDIR)/Documentation-Schema $(SOURCE_SCHEMA_PATH)
 
-build-docs: genpython genschemadoc genindex genrepodocs gen-monarch-overview
-	cp src/docs/registry.md docs/registry.md
+build-docs: genindex genpython genschemadoc genrepodocs geningestdoc gen-monarch-overview
+	@cp -r src/docs/* docs/
 
 ############################################
 ### Provisional Monarch Asset Registry #####

@@ -13,7 +13,7 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | [HPOA - Gene to Phenotype Associations](http://purl.obolibrary.org/obo/hp/hpoa/genes_to_phenotype.txt) | Biomedical Data | [Docs](https://hpo.jax.org/app/download/annotation) | Lead |
 | [HPOA Knowledge Graph Ingestible](https://data.monarchinitiative.org/monarch-kg/hpoa) | Knowledge Graph Ingestibles | [Docs](https://monarch-initiative.github.io/monarch-ingest/Sources/HPOA/) |  |
 | [Alliance Knowledge Graph Ingestible](https://data.monarchinitiative.org/monarch-kg/alliance) | Knowledge Graph Ingestibles | [Docs](https://monarch-initiative.github.io/monarch-ingest/Sources/Alliance/) | Lead |
-| [KG Covid-10](https://github.com/Knowledge-Graph-Hub/kg-covid-19) | Knowledge Graph | [Docs]() | Lead |
+| [KG Covid-19](https://github.com/Knowledge-Graph-Hub/kg-covid-19) | Knowledge Graph | [Docs]() | Lead |
 | [ECO KG](https://github.com/Knowledge-Graph-Hub/eco-kg) | Knowledge Graph | [Docs]() | Lead |
 | [KG IDG](https://github.com/Knowledge-Graph-Hub/kg-idg) | Knowledge Graph | [Docs]() | Lead |
 | [KG Phenio](https://github.com/Knowledge-Graph-Hub/kg-phenio) | Knowledge Graph | [Docs]() | Lead |
@@ -37,6 +37,7 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | [Uberon Anatomy Ontology](http://purl.obolibrary.org/obo/uberon.owl) | Ontology | [Docs]() | Co-Lead | Phenomics First |
 | [Phenomics Integrated Ontology (PHENIO)](https://github.com/monarch-initiative/phenio) | Ontology | [Docs]() | Lead | Phenomics First |
 | [Dead simple owl design pattern (DOS-DP) exchange format](https://github.com/INCATools/dead_simple_owl_design_patterns) | Data Exchange | [Docs]() | Lead | Phenomics First |
+| [Babelon](https://github.com/monarch-initiative/babelon) | Data Exchange | [Docs](https://monarch-initiative.github.io/babelon/) | Lead |  |
 
 
 ## Tools and Services developed or significantly supported by the Monarch Initiative
@@ -56,6 +57,11 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | [whelk](https://github.com/balhoff/whelk) | Ontology Use |
 | [robot](https://github.com/ontodev/robot) | Ontology Use |
 | [Data Harmonizer](https://github.com/cidgoh/DataHarmonizer) | Data Curation |
+| [OntoGPT](https://github.com/monarch-initiative/ontogpt) | Data Curation |
+| [semsimian](https://github.com/monarch-initiative/semsimian) | Mapping |
+| [Monarch Python Toolkit](https://github.com/monarch-initiative/monarch-py) | Data Curation |
+| [Babelon Toolkit](https://github.com/monarch-initiative/babelon) | Data Curation |
+| [Fenominal](https://github.com/monarch-initiative/fenominal) | Data Curation |
 
 
 ## Documentation resources relevant to work by the Monarch Initiative

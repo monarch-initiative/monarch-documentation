@@ -1,8 +1,8 @@
 from pathlib import Path
-from log import get_logger
-log = get_logger(__name__)
 
-log.info("Generating Ingest Principles page...")
+from loguru import logger
+
+logger.info("Generating Ingest Principles page...")
 
 # Get resource files and set paths
 docs_dir = Path(f"{Path(__file__).parent.parent}/docs") 
