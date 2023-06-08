@@ -11,6 +11,9 @@ genindex:
 genrepodocs:
 	$(RUN) python scripts/generate_repo_pages.py
 
+geningestdoc:
+	$(RUN) python scripts/generate_ingest_page.py
+
 genschemadoc: $(DOCDIR)
 	$(RUN) gen-doc -d $(DOCDIR)/Documentation-Schema $(SOURCE_SCHEMA_PATH)
 

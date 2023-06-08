@@ -55,6 +55,7 @@ Here you can find information about the connections between the Monarch Intiativ
 <img src='images/docs-coming-soon.jpg' width=420, style='display: block; margin-left: auto; margin-right: auto; width: 60%;'>
 
 ### Repositories
+
 {repos_str}
 
 """

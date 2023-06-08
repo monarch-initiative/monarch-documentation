@@ -10,6 +10,7 @@ log.info("Generating repository pages...")
 docs_dir = Path(f"{Path(__file__).parent.parent}/docs") 
 src_dir = Path(f"{Path(__file__).parent.parent}/src")
 resource_file = Path(f"{src_dir}/data/resources.yaml")
+out_dir = Path(f"{docs_dir}/Repositories")
 
 repos = get_repos(resource_file)
 
@@ -20,6 +21,6 @@ for repo_name in repos:
     
     page_contents = build_repo_page(repo)
 
-    Path(f"{docs_dir}/Repositories").mkdir(parents=True, exist_ok=True)
-    with open(f"{docs_dir}/Repositories/{repo.name}.md", "w") as outfile:
+    out_dir.mkdir(parents=True, exist_ok=True)
+    with open(f"{out_dir}/{repo.name}.md", "w") as outfile:
             outfile.write(page_contents)
