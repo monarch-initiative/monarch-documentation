@@ -18,12 +18,21 @@ theme:
         - navigation.tabs.sticky
         - content.tabs.link
     palette:
-        scheme: 'slate'
-        primary: 'teal'
-        accent: 'purple'
-    # font:
-    #     text: 'Roboto'
-        #code: 'Fira Mono'
+      - scheme: default
+        primary: indigo
+        accent: indigo
+        toggle:
+          icon: material/brightness-2
+          name: Switch to dark mode
+      - scheme: slate
+        primary: indigo
+        accent: indigo
+        toggle:
+          icon: material/brightness-7
+          name: Switch to light mode
+    font:
+        text: 'Source Sans Pro'
+        code: 'Source Sans Pro Mono'
     
 plugins:
   - search

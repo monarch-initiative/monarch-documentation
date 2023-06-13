@@ -1,10 +1,12 @@
+from datetime import datetime
 import os
 from pathlib import Path
+import time
+
 import tomllib, yaml
 import github
-from log import get_logger
+from loguru import logger
 
-logger = get_logger(__name__)
 
 # Initialize GitHub connection
 token = os.getenv('GITHUB_TOKEN')
@@ -13,6 +15,11 @@ g = github.Github(token)
 src_dir = Path(f"{Path(__file__).parent.parent}/src")
 monarch_resource_file = Path(f"{src_dir}/data/resources.yaml")
 
+
+def get_repo(repo_name: str) -> github.Repository.Repository:
+    """Returns a GitHub Repository object"""
+    repo = g.get_repo(repo_name)
+    return repo
 
 def get_repos(resource_file: Path = monarch_resource_file):
     with open(resource_file, "r") as yaml_file:
@@ -29,15 +36,28 @@ def get_repos(resource_file: Path = monarch_resource_file):
             try:
                 r = g.get_repo(repo_id)
                 repos[repo_id] = r
-            except:
-                logger.warn(f"{repo_url} could not be retrieved with GitHub API.")
+                time.sleep(0.1) # GitHub API rate limit is 10 requests per minute
+            except Exception as e:
+                logger.warning(f"{repo_url} could not be retrieved with GitHub API - {e}")
+
     return repos
+
+def _get_repo_info(repo_id) -> dict:
+    try:
+        repo_info = g.get_repo(repo_id)
+    except github.GithubException as e:
+        search_rate_limit = g.get_rate_limit().search
+        wait_time = search_rate_limit.reset - datetime.utcnow()
+        logger.warning(f"GitHub API rate limit exceeded - waiting {wait_time} seconds")
+        time.sleep(wait_time.total_seconds() + 10)
+        repo_info = g.get_repo(repo_id)
+    return repo_info
 
 def get_readme(repo):
     try:
         readme = repo.get_contents('README.md').decoded_content.decode('UTF-8')
     except* github.UnknownObjectException as e:
-        logger.warn(f"Repo \"{repo.name}\" does not appear to have a README.md")
+        logger.warning(f"Repo \"{repo.name}\" does not appear to have a README.md")
         readme = None
     return readme
 
@@ -50,7 +70,7 @@ def get_dependencies(repo: github.Repository.Repository) -> dict:
         project_toml = repo.get_contents('pyproject.toml').decoded_content.decode('UTF-8')
         pyproject = tomllib.loads(project_toml)
     except* github.UnknownObjectException as e:
-        logger.warn(f"Repo \"{repo.name}\" does not appear to have a pyproject.toml")
+        logger.warning(f"Repo \"{repo.name}\" does not appear to have a pyproject.toml")
         pyproject = None
 
     if pyproject is None:
@@ -68,7 +88,7 @@ def get_dependencies(repo: github.Repository.Repository) -> dict:
         deps = pyproject['tool']['poetry']['dependencies']
         # dev_deps =  pyproject['tool']['poetry']['dev-dependencies']
     else:
-        logger.warn(f"Repo \"{repo.name}\" does not use Poetry or Flit - dependencies cannot be generated.")
+        logger.warning(f"Repo \"{repo.name}\" does not use Poetry or Flit - dependencies cannot be generated.")
         return None
 
     return deps
@@ -137,3 +157,13 @@ def build_repo_page(repo: github.Repository.Repository) -> str:
     if readme is not None:
         page_contents += f"\n### Documentation \n\n{readme}"
     return page_contents
+
+
+def get_repo_file(repo: github.Repository.Repository, filepath: str) -> str:
+    """Returns a string of the contents of a file in a GitHub Repository"""
+    try:
+        file_contents = repo.get_contents(filepath).decoded_content.decode('UTF-8')
+    except* github.UnknownObjectException as e:
+        logger.warning(f"Repo \"{repo.name}\" does not appear to have the file: {filepath}")
+        file_contents = None
+    return file_contents

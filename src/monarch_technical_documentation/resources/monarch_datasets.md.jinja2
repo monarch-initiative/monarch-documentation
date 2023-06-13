@@ -1,0 +1,8 @@
+# Datasets
+
+This page contains a list of datasets developed by the Monarch Initiative
+
+| Dataset | Category | Docs | Contribution |
+| ------ | ----- | ----- | ----- |
+{% for d in data %}| [{{ d.name }}]({{ d.id }}) | {{ d.category }} | [Docs]({{ d.documentation|default("") }}) | {{ d.monarch_contribution|default("") }} |
+{% endfor %}

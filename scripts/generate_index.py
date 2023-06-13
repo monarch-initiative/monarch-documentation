@@ -1,12 +1,14 @@
 import os
 from pathlib import Path
+
+from loguru import logger
 import github
 import yaml
-from utils import get_repos
-from log import get_logger
-log = get_logger(__name__)
 
-log.info("Generating index page...")
+from utils import get_repos
+
+
+logger.info("Generating index page...")
 
 # Get resource files and set paths
 docs_dir = Path(f"{Path(__file__).parent.parent}/docs") 
@@ -31,14 +33,14 @@ for repo in repo_reference:
             r = g.get_repo(repo_id)
             repos[repo_id] = r
         except:
-            log.exception(f"{repo_url} could not be retrieved with GitHub API.")
+            logger.exception(f"{repo_url} could not be retrieved with GitHub API.")
 
 
-repos_str = ""
+repos_table = ""
 for repo_name in repos.keys():
     repo = repos[repo_name]
-    repos_str += f"""
-- [{repo.name}](./Repositories/{repo.name}) - {repo.description}  
+    repos_table += f"""
+| [{repo.name}](./Repositories/{repo.name}) | {repo.description} |  
 """
 
 page_contents = f"""
@@ -55,7 +57,9 @@ Here you can find information about the connections between the Monarch Intiativ
 <img src='images/docs-coming-soon.jpg' width=420, style='display: block; margin-left: auto; margin-right: auto; width: 60%;'>
 
 ### Repositories
-{repos_str}
+
+| Repository | Description |
+{repos_table}
 
 """
 

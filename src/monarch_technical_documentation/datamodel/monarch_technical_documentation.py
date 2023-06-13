@@ -1,5 +1,5 @@
 # Auto generated from monarch_technical_documentation.yaml by pythongen.py version: 0.9.0
-# Generation date: 2022-12-04T12:28:37
+# Generation date: 2023-06-13T12:37:10
 # Schema: monarch-documentation-schema
 #
 # id: https://w3id.org/monarch-initiative/monarch-technical-documentation
@@ -460,6 +460,8 @@ class GrantEnum(EnumDefinitionImpl):
                                  description="The Phenomics First Grant") )
         setattr(cls, "Monarch R24",
                 PermissibleValue(text="Monarch R24") )
+        setattr(cls, "Bosch Gift",
+                PermissibleValue(text="Bosch Gift") )
 
 # Slots
 class slots:
