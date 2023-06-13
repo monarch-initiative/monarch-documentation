@@ -1,0 +1,2253 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://monarch-initiative.github.io/monarch-technical-documentation/Repositories/kgx/">
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>kgx - Monarch Technical Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i%7CSource+Sans+Pro+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Source Sans Pro";--md-code-font:"Source Sans Pro Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kgx" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Monarch Technical Documentation" class="md-header__button md-logo" aria-label="Monarch Technical Documentation" data-md-component="logo">
+      
+  <img src="../../images/monarch-initiative2.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Monarch Technical Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              kgx
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2Z"/></svg>
+            </label>
+          
+        
+          
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/monarch-initiative/monarch-technical-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    monarch-technical-documentation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../registry/" class="md-tabs__link">
+      Monarch Tool, Standard and Data Registry
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Documentation-Schema/" class="md-tabs__link">
+        Documentation Schema
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Ingest%20Principles/" class="md-tabs__link">
+        Ingest Principles
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Exomiser/" class="md-tabs__link md-tabs__link--active">
+        Repositories
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Monarch Technical Documentation" class="md-nav__button md-logo" aria-label="Monarch Technical Documentation" data-md-component="logo">
+      
+  <img src="../../images/monarch-initiative2.png" alt="logo">
+
+    </a>
+    Monarch Technical Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/monarch-initiative/monarch-technical-documentation" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    monarch-technical-documentation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../registry/" class="md-nav__link">
+        Monarch Tool, Standard and Data Registry
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Documentation Schema
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Documentation Schema" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Documentation Schema
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/" class="md-nav__link">
+        monarch-documentation-schema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/DataAsset/" class="md-nav__link">
+        Class: DataAsset
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/DataAssetEnum/" class="md-nav__link">
+        Enum: DataAssetEnum
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/Documentation/" class="md-nav__link">
+        Class: Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/DocumentationAssetEnum/" class="md-nav__link">
+        Enum: DocumentationAssetEnum
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/Download/" class="md-nav__link">
+        Class: Download
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/FileFormatEnum/" class="md-nav__link">
+        Enum: FileFormatEnum
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/GrantEnum/" class="md-nav__link">
+        Enum: GrantEnum
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/MonarchContributionEnum/" class="md-nav__link">
+        Enum: MonarchContributionEnum
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/ReleaseStatusEnum/" class="md-nav__link">
+        Enum: ReleaseStatusEnum
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/Repository/" class="md-nav__link">
+        Class: Repository
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/Resource/" class="md-nav__link">
+        Class: Resource
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/ResourceRegistry/" class="md-nav__link">
+        Class: ResourceRegistry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/Standard/" class="md-nav__link">
+        Class: Standard
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/StandardEnum/" class="md-nav__link">
+        Enum: StandardEnum
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/Tool/" class="md-nav__link">
+        Class: Tool
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/ToolAssetEnum/" class="md-nav__link">
+        Enum: ToolAssetEnum
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/category/" class="md-nav__link">
+        Slot: category
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/data/" class="md-nav__link">
+        Slot: data
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/depends_on/" class="md-nav__link">
+        Slot: depends_on
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/description/" class="md-nav__link">
+        Slot: description
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/documentation/" class="md-nav__link">
+        Slot: documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/documentations/" class="md-nav__link">
+        Slot: documentations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/download/" class="md-nav__link">
+        Slot: download
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/file_format/" class="md-nav__link">
+        Slot: file_format
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/grants/" class="md-nav__link">
+        Slot: grants
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/id/" class="md-nav__link">
+        Slot: id
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/monarch-documentation-schema/" class="md-nav__link">
+        monarch-documentation-schema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/monarch_contribution/" class="md-nav__link">
+        Slot: monarch_contribution
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/name/" class="md-nav__link">
+        Slot: name
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/organization/" class="md-nav__link">
+        Slot: organization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/release_status/" class="md-nav__link">
+        Slot: release_status
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/repo_url/" class="md-nav__link">
+        Slot: repo_url
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/repositories/" class="md-nav__link">
+        Slot: repositories
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/repository/" class="md-nav__link">
+        Slot: repository
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/standards/" class="md-nav__link">
+        Slot: standards
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/tools/" class="md-nav__link">
+        Slot: tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/types/" class="md-nav__link">
+        types
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Documentation-Schema/url/" class="md-nav__link">
+        Slot: url
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Ingest Principles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Ingest Principles" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Ingest Principles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ingest%20Principles/" class="md-nav__link">
+        Ingest Principles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ingest%20Principles/modeling-principles/" class="md-nav__link">
+        Modeling Principles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Repositories
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Repositories" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Repositories
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Exomiser/" class="md-nav__link">
+        Exomiser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LIRICAL/" class="md-nav__link">
+        LIRICAL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../POET/" class="md-nav__link">
+        POET
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Phenomiser/" class="md-nav__link">
+        Phenomiser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arachne/" class="md-nav__link">
+        arachne
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../babelon/" class="md-nav__link">
+        babelon
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../biolink-model-toolkit/" class="md-nav__link">
+        biolink-model-toolkit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../biolink-model/" class="md-nav__link">
+        biolink-model
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../boomer/" class="md-nav__link">
+        boomer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cat-merge/" class="md-nav__link">
+        cat-merge
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../closurizer/" class="md-nav__link">
+        closurizer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dosdp-tools/" class="md-nav__link">
+        dosdp-tools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fenominal/" class="md-nav__link">
+        fenominal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hpo-web/" class="md-nav__link">
+        hpo-web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../human-phenotype-ontology/" class="md-nav__link">
+        human-phenotype-ontology
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jenkins/" class="md-nav__link">
+        jenkins
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kghub-downloader/" class="md-nav__link">
+        kghub-downloader
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          kgx
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        kgx
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../knowledge-graph-hub.github.io/" class="md-nav__link">
+        knowledge-graph-hub.github.io
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../koza/" class="md-nav__link">
+        koza
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linkml-runtime/" class="md-nav__link">
+        linkml-runtime
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../loinc2hpoAnnotation/" class="md-nav__link">
+        loinc2hpoAnnotation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monarch-app/" class="md-nav__link">
+        monarch-app
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monarch-file-server/" class="md-nav__link">
+        monarch-file-server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monarch-gene-mapping/" class="md-nav__link">
+        monarch-gene-mapping
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monarch-ingest-dashboard/" class="md-nav__link">
+        monarch-ingest-dashboard
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monarch-ingest/" class="md-nav__link">
+        monarch-ingest
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monarch-ontology-dashboard/" class="md-nav__link">
+        monarch-ontology-dashboard
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monarch-plater-docker/" class="md-nav__link">
+        monarch-plater-docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monarch-py/" class="md-nav__link">
+        monarch-py
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monarch-ui/" class="md-nav__link">
+        monarch-ui
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mondo/" class="md-nav__link">
+        mondo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../neat-ml/" class="md-nav__link">
+        neat-ml
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../oakx-grape/" class="md-nav__link">
+        oakx-grape
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontogpt/" class="md-nav__link">
+        ontogpt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontology-access-kit/" class="md-nav__link">
+        ontology-access-kit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontology-development-kit/" class="md-nav__link">
+        ontology-development-kit
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../phenopacket-schema/" class="md-nav__link">
+        phenopacket-schema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pheval.exomiser/" class="md-nav__link">
+        pheval.exomiser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pheval/" class="md-nav__link">
+        pheval
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prefixmaps/" class="md-nav__link">
+        prefixmaps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pyphetools/" class="md-nav__link">
+        pyphetools
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relation-graph/" class="md-nav__link">
+        relation-graph
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semantic-sql/" class="md-nav__link">
+        semantic-sql
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semsim/" class="md-nav__link">
+        semsim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semsimian/" class="md-nav__link">
+        semsimian
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sssom-py/" class="md-nav__link">
+        sssom-py
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sssom/" class="md-nav__link">
+        sssom
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../universalizer/" class="md-nav__link">
+        universalizer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upheno-dev/" class="md-nav__link">
+        upheno-dev
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#details" class="md-nav__link">
+    Details
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/monarch-initiative/monarch-technical-documentation/edit/master/docs/Repositories/kgx.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="kgx">kgx</h1>
+<h3 id="details">Details</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GitHub</td>
+<td><a href="https://github.com/biolink/kgx">biolink/kgx</a></td>
+</tr>
+<tr>
+<td>Language</td>
+<td>Python</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>KGX is a Python library for exchanging Knowledge Graphs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dependencies">Dependencies</h3>
+<p>External Dependencies</p>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>python</td>
+<td>^3.9</td>
+</tr>
+<tr>
+<td>linkml</td>
+<td>^1.5.0</td>
+</tr>
+<tr>
+<td>linkml-runtime</td>
+<td>^1.5.0</td>
+</tr>
+<tr>
+<td>Sphinx</td>
+<td>*</td>
+</tr>
+<tr>
+<td>python-dateutil</td>
+<td>^2.8.1</td>
+</tr>
+<tr>
+<td>prefixcommons</td>
+<td>^0.1.4</td>
+</tr>
+<tr>
+<td>docutils</td>
+<td>^0.18.1</td>
+</tr>
+<tr>
+<td>networkx</td>
+<td>^2.8</td>
+</tr>
+<tr>
+<td>SPARQLWrapper</td>
+<td>^1.8.2</td>
+</tr>
+<tr>
+<td>pandas</td>
+<td>^1.0.3</td>
+</tr>
+<tr>
+<td>pytest</td>
+<td>*</td>
+</tr>
+<tr>
+<td>mypy</td>
+<td>*</td>
+</tr>
+<tr>
+<td>rdflib</td>
+<td>^6.3.1</td>
+</tr>
+<tr>
+<td>Click</td>
+<td>*</td>
+</tr>
+<tr>
+<td>neo4j</td>
+<td>^4.4.10</td>
+</tr>
+<tr>
+<td>pyyaml</td>
+<td>*</td>
+</tr>
+<tr>
+<td>prologterms</td>
+<td>^0.0.6</td>
+</tr>
+<tr>
+<td>shexjsg</td>
+<td>*</td>
+</tr>
+<tr>
+<td>terminaltables</td>
+<td>^3.1.0</td>
+</tr>
+<tr>
+<td>stringcase</td>
+<td>^1.2.0</td>
+</tr>
+<tr>
+<td>validators</td>
+<td>^0.20.0</td>
+</tr>
+<tr>
+<td>cachetools</td>
+<td>^5.0.0</td>
+</tr>
+<tr>
+<td>ordered-set</td>
+<td>^4.0.2</td>
+</tr>
+<tr>
+<td>docker</td>
+<td>^6.0.0</td>
+</tr>
+<tr>
+<td>jsonlines</td>
+<td>^3.1.0</td>
+</tr>
+<tr>
+<td>jsonstreams</td>
+<td>^0.6.0</td>
+</tr>
+<tr>
+<td>ijson</td>
+<td>^3.1.3</td>
+</tr>
+<tr>
+<td>deprecation</td>
+<td>^2.1.0</td>
+</tr>
+<tr>
+<td>recommonmark</td>
+<td>*</td>
+</tr>
+<tr>
+<td>tox</td>
+<td>^3.0</td>
+</tr>
+<tr>
+<td>bmt</td>
+<td>^1.0.15</td>
+</tr>
+<tr>
+<td>inflection</td>
+<td>^0.5.1</td>
+</tr>
+<tr>
+<td>closurizer</td>
+<td>^0.1.7</td>
+</tr>
+</tbody>
+</table>
+<h3 id="documentation">Documentation</h3>
+<h1 id="knowledge-graph-exchange">Knowledge Graph Exchange</h1>
+<p><a href=""><img alt="Python" src="https://img.shields.io/badge/python-3.9+-blue.svg" /></a>
+<img alt="Run tests" src="https://github.com/biolink/kgx/workflows/Run%20tests/badge.svg" /><a href="https://kgx.readthedocs.io/en/latest/?badge=latest"><img alt="Documentation Status" src="https://readthedocs.org/projects/kgx/badge/?version=latest" /></a>
+<a href="https://sonarcloud.io/dashboard?id=biolink_kgx"><img alt="Quality Gate Status" src="https://sonarcloud.io/api/project_badges/measure?project=biolink_kgx&amp;metric=alert_status" /></a>
+<a href="https://sonarcloud.io/dashboard?id=biolink_kgx"><img alt="Maintainability Rating" src="https://sonarcloud.io/api/project_badges/measure?project=biolink_kgx&amp;metric=sqale_rating" /></a>
+<a href="https://sonarcloud.io/dashboard?id=biolink_kgx"><img alt="Coverage" src="https://sonarcloud.io/api/project_badges/measure?project=biolink_kgx&amp;metric=coverage" /></a>
+<a href="https://img.shields.io/pypi/v/kgx"><img alt="PyPI" src="https://img.shields.io/pypi/v/kgx" /></a>
+<a href="https://hub.docker.com/r/biolink/kgx"><img alt="Docker" src="https://img.shields.io/static/v1?label=Docker&amp;message=biolink/kgx:latest&amp;color=orange&amp;logo=docker" /></a></p>
+<p>KGX (Knowledge Graph Exchange) is a Python library and set of command line utilities for exchanging
+Knowledge Graphs (KGs) that conform to or are aligned to the <a href="https://biolink.github.io/biolink-model/">Biolink Model</a>.</p>
+<p>The core datamodel is a <a href="https://neo4j.com/developer/graph-database/">Property Graph</a> (PG), represented
+internally in Python using a <a href="https://networkx.github.io/documentation/stable/reference/classes/generated/networkx.MultiDiGraph.edges.html">networkx MultiDiGraph model</a>.</p>
+<p>KGX allows conversion to and from:</p>
+<ul>
+<li>RDF serializations (read/write) and SPARQL endpoints (read)</li>
+<li>Neo4j endpoints (read) or Neo4j dumps (write)</li>
+<li>CSV/TSV and JSON (see <a href="./data-preparation.md">associated data formats</a> and <a href="./examples/scripts/load_csv_to_neo4j.py">example script to load CSV/TSV to Neo4j</a>)</li>
+<li>Reasoner Standard API format</li>
+<li>OBOGraph JSON format</li>
+</ul>
+<p>KGX will also provide validation, to ensure the KGs are conformant to the Biolink Model: making sure nodes are
+categorized using Biolink classes, edges are labeled using valid Biolink relationship types, and valid properties are used.</p>
+<p>Internal representation is a property graph, specifically a networkx MultiDiGraph.</p>
+<p>The structure of this graph is expected to conform to the Biolink Model standard, as specified in the <a href="specification/kgx-format.md">KGX format specification</a>.</p>
+<p>In addition to the main code-base, KGX also provides a series of <a href="https://kgx.readthedocs.io/en/latest/examples.html#using-kgx-cli">command line operations</a>.</p>
+<h3 id="example-usage">Example usage</h3>
+<p>Validate:
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>run<span class="w"> </span>kgx<span class="w"> </span>validate<span class="w"> </span>-i<span class="w"> </span>tsv<span class="w"> </span>tests/resources/merge/test2_nodes.tsv<span class="w"> </span>tests/resources/merge/test2_edges.tsv
+</code></pre></div></p>
+<p>Merge:
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>run<span class="w"> </span>kgx<span class="w"> </span>merge<span class="w"> </span>—merge-config<span class="w"> </span>tests/resources/test-merge.yaml<span class="w"> </span>
+</code></pre></div></p>
+<p>Graph Summary:
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>run<span class="w"> </span>kgx<span class="w"> </span>graph-summary<span class="w"> </span>-i<span class="w"> </span>tests/resources/graph_nodes.tsv<span class="w">  </span>-o<span class="w"> </span>summary.txt
+</code></pre></div></p>
+<p>Transform:
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>run<span class="w"> </span>kgx<span class="w"> </span>transform<span class="w"> </span>—transform-config<span class="w"> </span>tests/resources/test-transform-tsv-rdf.yaml
+</code></pre></div></p>
+<h3 id="error-detection-and-reporting">Error Detection and Reporting</h3>
+<p>Non-redundant JSON-formatted structured error logging is now provided in KGX Transformer, Validator, GraphSummary and MetaKnowledgeGraph operations.  See the various unit tests for the general design pattern (using the Validator as an example here):</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">kgx.validator</span> <span class="kn">import</span> <span class="n">Validator</span>
+<span class="kn">from</span> <span class="nn">kgx.transformer</span> <span class="kn">import</span> <span class="n">Transformer</span>
+
+<span class="n">Validator</span><span class="o">.</span><span class="n">set_biolink_model</span><span class="p">(</span><span class="s2">&quot;2.11.0&quot;</span><span class="p">)</span>
+
+<span class="c1"># Validator assumes the currently set Biolink Release</span>
+<span class="n">validator</span> <span class="o">=</span> <span class="n">Validator</span><span class="p">()</span>
+
+<span class="n">transformer</span> <span class="o">=</span> <span class="n">Transformer</span><span class="p">(</span><span class="n">stream</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">transformer</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span>
+    <span class="n">input_args</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;filename&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;graph_nodes.tsv&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;graph_edges.tsv&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;tsv&quot;</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="n">output_args</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;null&quot;</span>
+    <span class="p">},</span>
+    <span class="n">inspector</span><span class="o">=</span><span class="n">validator</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Both the Validator and the Transformer can independently capture errors</span>
+
+<span class="c1"># The Validator, from the overall semantics of the graph...</span>
+<span class="c1"># Here, we just report severe Errors from the Validator (no Warnings)</span>
+<span class="n">validator</span><span class="o">.</span><span class="n">write_report</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;validation_errors.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">),</span> <span class="s2">&quot;Error&quot;</span><span class="p">)</span>
+
+<span class="c1"># The Transformer, from the syntax of the input files... </span>
+<span class="c1"># Here, we catch *all* Errors and Warnings (by not providing a filter)</span>
+<span class="n">transformer</span><span class="o">.</span><span class="n">write_report</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">&quot;input_errors.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">))</span>
+</code></pre></div>
+<p>The JSON error outputs will look something like this:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;ERROR&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;MISSING_EDGE_PROPERTY&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;Required edge property &#39;id&#39; is missing&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;A:123-&gt;X:1&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;B:456-&gt;Y:2&quot;</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;Required edge property &#39;object&#39; is missing&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;A:123-&gt;X:1&quot;</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;Required edge property &#39;predicate&#39; is missing&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;A:123-&gt;X:1&quot;</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;Required edge property &#39;subject&#39; is missing&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;A:123-&gt;X:1&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;B:456-&gt;Y:2&quot;</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;WARNING&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;DUPLICATE_NODE&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;Node &#39;id&#39; duplicated in input data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;MONDO:0010011&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="s2">&quot;REACT:R-HSA-5635838&quot;</span>
+<span class="w">          </span><span class="p">]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>This system reduces the significant redundancies of earlier line-oriented KGX  logging text output files, in that graph entities with the same class of error are simply aggregated in lists of names/identifiers at the leaf level of the JSON structure.</p>
+<p>The top level JSON tags originate from the <code>MessageLevel</code> class and the second level tags from the <code>ErrorType</code> class in the <a href="kgx/error_detection.py">error_detection</a> module, while the third level messages are hard coded as <code>log_error</code> method messages in the code.  </p>
+<p>It is likely that additional error conditions within KGX can be efficiently captured and reported in the future using this general framework.</p>
+<h2 id="installation">Installation</h2>
+<h4 id="installing-from-pypi">Installing from PyPI</h4>
+<p>KGX is available on PyPI and can be installed using
+<a href="https://pip.pypa.io/en/stable/installing/">pip</a> as follows,</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>kgx
+</code></pre></div>
+<p>To install a particular version of KGX, be sure to specify the version number,</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">kgx</span><span class="o">==</span><span class="m">0</span>.5.0
+</code></pre></div>
+<h4 id="installing-from-github">Installing from GitHub</h4>
+<p>Clone the GitHub repository and then install,</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/biolink/kgx
+<span class="nb">cd</span><span class="w"> </span>kgx
+poetry<span class="w"> </span>install
+</code></pre></div>
+<h3 id="setting-up-a-testing-environment-for-neo4j">Setting up a testing environment for Neo4j</h3>
+<p>This release of KGX supports graph source and sink transactions with the 4.3 release of Neo4j.</p>
+<p>KGX has a suite of tests that rely on Docker containers to run Neo4j specific tests.</p>
+<p>To set up the required containers, first install <a href="https://docs.docker.com/get-docker/">Docker</a>
+on your local machine.</p>
+<p>Once Docker is up and running, run the following commands:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--rm<span class="w"> </span>--name<span class="w"> </span>kgx-neo4j-integration-test<span class="w"> </span>-p<span class="w"> </span><span class="m">7474</span>:7474<span class="w"> </span>-p<span class="w"> </span><span class="m">7687</span>:7687<span class="w"> </span>--env<span class="w"> </span><span class="nv">NEO4J_AUTH</span><span class="o">=</span>neo4j/test<span class="w"> </span>neo4j:4.3
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--rm<span class="w"> </span>--name<span class="w"> </span>kgx-neo4j-unit-test<span class="w"> </span>-p<span class="w"> </span><span class="m">8484</span>:7474<span class="w"> </span>-p<span class="w"> </span><span class="m">8888</span>:7687<span class="w"> </span>--env<span class="w"> </span><span class="nv">NEO4J_AUTH</span><span class="o">=</span>neo4j/test<span class="w"> </span>neo4j:4.3
+</code></pre></div>
+<p><strong>Note:</strong> Setting up the Neo4j container is optional. If there is no container set up
+then the tests that rely on them are skipped.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../kghub-downloader/" class="md-footer__link md-footer__link--prev" aria-label="Previous: kghub-downloader" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              kghub-downloader
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../knowledge-graph-hub.github.io/" class="md-footer__link md-footer__link--next" aria-label="Next: knowledge-graph-hub.github.io" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              knowledge-graph-hub.github.io
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://monarchinitiative.org" target="_blank" rel="noopener" title="monarchinitiative.org" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40h-16c-1.1 0-2.2 0-3.3-.1-1.4.1-2.8.1-4.2.1H392c-22.1 0-40-17.9-40-40v-88c0-17.7-14.3-32-32-32h-64c-17.7 0-32 14.3-32 32v88c0 22.1-17.9 40-40 40h-55.9c-1.5 0-3-.1-4.5-.2-1.2.1-2.4.2-3.6.2h-16c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9.1-2.8v-69.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7l255.4 224.5c8 7 12 15 11 24z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/monarch-initiative" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
