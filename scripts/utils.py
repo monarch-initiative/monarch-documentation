@@ -16,6 +16,11 @@ src_dir = Path(f"{Path(__file__).parent.parent}/src")
 monarch_resource_file = Path(f"{src_dir}/data/resources.yaml")
 
 
+def get_repo(repo_name: str) -> github.Repository.Repository:
+    """Returns a GitHub Repository object"""
+    repo = g.get_repo(repo_name)
+    return repo
+
 def get_repos(resource_file: Path = monarch_resource_file):
     with open(resource_file, "r") as yaml_file:
         resources = yaml.safe_load(yaml_file)
@@ -47,7 +52,6 @@ def _get_repo_info(repo_id) -> dict:
         time.sleep(wait_time.total_seconds() + 10)
         repo_info = g.get_repo(repo_id)
     return repo_info
-
 
 def get_readme(repo):
     try:
@@ -153,3 +157,13 @@ def build_repo_page(repo: github.Repository.Repository) -> str:
     if readme is not None:
         page_contents += f"\n### Documentation \n\n{readme}"
     return page_contents
+
+
+def get_repo_file(repo: github.Repository.Repository, filepath: str) -> str:
+    """Returns a string of the contents of a file in a GitHub Repository"""
+    try:
+        file_contents = repo.get_contents(filepath).decoded_content.decode('UTF-8')
+    except* github.UnknownObjectException as e:
+        logger.warning(f"Repo \"{repo.name}\" does not appear to have the file: {filepath}")
+        file_contents = None
+    return file_contents

@@ -181,7 +181,6 @@ slots:
   organization:
     slot_uri: mtd:organization
 
-
 enums:
   release_status_enum:
     permissible_values:
