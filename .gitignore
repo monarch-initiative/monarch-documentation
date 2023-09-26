@@ -8,6 +8,7 @@
 !/docs/Repositories/.gitkeep
 
 /doc-env/
+.ruff_cache
 
 ### Standard ignores
 

@@ -59,7 +59,7 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | [Data Harmonizer](https://github.com/cidgoh/DataHarmonizer) | Data Curation |
 | [OntoGPT](https://github.com/monarch-initiative/ontogpt) | Data Curation |
 | [semsimian](https://github.com/monarch-initiative/semsimian) | Mapping |
-| [Monarch Python Toolkit](https://github.com/monarch-initiative/monarch-py) | Data Curation |
+| [Monarch Python Toolkit](https://github.com/monarch-initiative/monarch-app) | Data Curation |
 | [Babelon Toolkit](https://github.com/monarch-initiative/babelon) | Data Curation |
 | [Fenominal](https://github.com/monarch-initiative/fenominal) | Data Curation |
 

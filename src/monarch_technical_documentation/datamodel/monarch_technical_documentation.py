@@ -1,5 +1,5 @@
-# Auto generated from monarch_technical_documentation.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-06-13T12:37:10
+# Auto generated from monarch_technical_documentation.yaml by pythongen.py version: 0.0.1
+# Generation date: 2023-09-25T21:13:09
 # Schema: monarch-documentation-schema
 #
 # id: https://w3id.org/monarch-initiative/monarch-technical-documentation
@@ -7,7 +7,6 @@
 # license: GNU GPL v3.0
 
 import dataclasses
-import sys
 import re
 from jsonasobj2 import JsonObj, as_dict
 from typing import Optional, List, Union, Dict, ClassVar, Any
@@ -356,7 +355,7 @@ class ReleaseStatusEnum(EnumDefinitionImpl):
     @classmethod
     def _addvals(cls):
         setattr(cls, "development snapshot",
-                PermissibleValue(text="development snapshot") )
+            PermissibleValue(text="development snapshot"))
 
 class FileFormatEnum(EnumDefinitionImpl):
 
@@ -381,9 +380,9 @@ class StandardEnum(EnumDefinitionImpl):
     @classmethod
     def _addvals(cls):
         setattr(cls, "Data Standard",
-                PermissibleValue(text="Data Standard") )
+            PermissibleValue(text="Data Standard"))
         setattr(cls, "Data Exchange",
-                PermissibleValue(text="Data Exchange") )
+            PermissibleValue(text="Data Exchange"))
 
 class DataAssetEnum(EnumDefinitionImpl):
 
@@ -394,11 +393,11 @@ class DataAssetEnum(EnumDefinitionImpl):
     @classmethod
     def _addvals(cls):
         setattr(cls, "Biomedical Data",
-                PermissibleValue(text="Biomedical Data") )
+            PermissibleValue(text="Biomedical Data"))
         setattr(cls, "Knowledge Graph Ingestibles",
-                PermissibleValue(text="Knowledge Graph Ingestibles") )
+            PermissibleValue(text="Knowledge Graph Ingestibles"))
         setattr(cls, "Knowledge Graph",
-                PermissibleValue(text="Knowledge Graph") )
+            PermissibleValue(text="Knowledge Graph"))
 
 class ToolAssetEnum(EnumDefinitionImpl):
 
@@ -411,13 +410,13 @@ class ToolAssetEnum(EnumDefinitionImpl):
     @classmethod
     def _addvals(cls):
         setattr(cls, "Clinical Diagnosis",
-                PermissibleValue(text="Clinical Diagnosis") )
+            PermissibleValue(text="Clinical Diagnosis"))
         setattr(cls, "Ontology Maintenance",
-                PermissibleValue(text="Ontology Maintenance") )
+            PermissibleValue(text="Ontology Maintenance"))
         setattr(cls, "Ontology Use",
-                PermissibleValue(text="Ontology Use") )
+            PermissibleValue(text="Ontology Use"))
         setattr(cls, "Data Curation",
-                PermissibleValue(text="Data Curation") )
+            PermissibleValue(text="Data Curation"))
 
 class DocumentationAssetEnum(EnumDefinitionImpl):
 
@@ -428,7 +427,7 @@ class DocumentationAssetEnum(EnumDefinitionImpl):
     @classmethod
     def _addvals(cls):
         setattr(cls, "Technical Documentation",
-                PermissibleValue(text="Technical Documentation") )
+            PermissibleValue(text="Technical Documentation"))
 
 class MonarchContributionEnum(EnumDefinitionImpl):
 
@@ -442,7 +441,7 @@ class MonarchContributionEnum(EnumDefinitionImpl):
     @classmethod
     def _addvals(cls):
         setattr(cls, "Co-Lead",
-                PermissibleValue(text="Co-Lead") )
+            PermissibleValue(text="Co-Lead"))
 
 class GrantEnum(EnumDefinitionImpl):
 
@@ -456,12 +455,13 @@ class GrantEnum(EnumDefinitionImpl):
     @classmethod
     def _addvals(cls):
         setattr(cls, "Phenomics First",
-                PermissibleValue(text="Phenomics First",
-                                 description="The Phenomics First Grant") )
+            PermissibleValue(
+                text="Phenomics First",
+                description="The Phenomics First Grant"))
         setattr(cls, "Monarch R24",
-                PermissibleValue(text="Monarch R24") )
+            PermissibleValue(text="Monarch R24"))
         setattr(cls, "Bosch Gift",
-                PermissibleValue(text="Bosch Gift") )
+            PermissibleValue(text="Bosch Gift"))
 
 # Slots
 class slots:

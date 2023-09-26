@@ -2,46 +2,23 @@ import os
 from pathlib import Path
 
 from loguru import logger
-import github
 import yaml
 
-from utils import get_repos
+from utils import get_repo, get_repos
 
 
 logger.info("Generating index page...")
 
 # Get resource files and set paths
-docs_dir = Path(f"{Path(__file__).parent.parent}/docs") 
+docs_dir = Path(f"{Path(__file__).parent.parent}/docs")
 src_dir = Path(f"{Path(__file__).parent.parent}/src")
 resource_file = Path(f"{src_dir}/data/resources.yaml")
 
 repos = get_repos(resource_file)
 
-token = os.getenv('GITHUB_TOKEN')
-g = github.Github(token)
-
-with open(resource_file, "r") as yaml_file:
-    resources = yaml.safe_load(yaml_file)
-
-repo_reference = resources.get("repositories")
-repos = {}
-for repo in repo_reference:
-    repo_url = repo['id']
-    if repo_url.startswith("https://github.com/"):
-        repo_id = repo_url.replace("https://github.com/","")
-        try:
-            r = g.get_repo(repo_id)
-            repos[repo_id] = r
-        except:
-            logger.exception(f"{repo_url} could not be retrieved with GitHub API.")
-
-
-repos_table = ""
-for repo_name in repos.keys():
-    repo = repos[repo_name]
-    repos_table += f"""
-| [{repo.name}](./Repositories/{repo.name}) | {repo.description} |  
-"""
+repos_table = "| Repository | Description |\n| | |\n"
+for name, repo in repos.items():
+    repos_table += f"| [{name}](./Repositories/{name}) | {repo.description} |\n"
 
 page_contents = f"""
 ## Monarch Technical Documentation
@@ -57,8 +34,6 @@ Here you can find information about the connections between the Monarch Intiativ
 <img src='images/docs-coming-soon.jpg' width=420, style='display: block; margin-left: auto; margin-right: auto; width: 60%;'>
 
 ### Repositories
-
-| Repository | Description |
 {repos_table}
 
 """
