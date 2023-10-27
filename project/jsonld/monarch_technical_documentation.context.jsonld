@@ -1,12 +1,12 @@
 {
-   "_comments": "Auto generated from monarch_technical_documentation.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-12-01T08:05:58\n    Schema: monarch-documentation-schema\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://w3id.org/monarch-initiative/monarch-technical-documentation\n    description: Technical documentation for all Monarch applications, packages, services and related projects.\n    license: GNU GPL v3.0\n    ",
+   "_comments": "Auto generated from monarch_documentation.yaml by jsonldcontextgen.py version: 0.1.1\n    Generation date: 2022-12-01T08:05:58\n    Schema: monarch-documentation-schema\n    metamodel version: 1.7.0\n    model version: None\n    \n    id: https://w3id.org/monarch-initiative/monarch-documentation\n    description: Technical documentation for all Monarch applications, packages, services and related projects.\n    license: GNU GPL v3.0\n    ",
    "@context": {
       "biolink": "https://w3id.org/biolink/",
       "linkml": "https://w3id.org/linkml/",
-      "mtd": "https://w3id.org/monarch-initiative/monarch-technical-documentation/",
+      "mtd": "https://w3id.org/monarch-initiative/monarch-documentation/",
       "schema": "http://schema.org/",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "@vocab": "https://w3id.org/monarch-initiative/monarch-technical-documentation/",
+      "@vocab": "https://w3id.org/monarch-initiative/monarch-documentation/",
       "category": {
          "@context": {
             "@vocab": "@null",

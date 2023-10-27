@@ -2,7 +2,7 @@
 
 Technical documentation for all Monarch applications, packages, services and related projects.
 
-[See the docs here](https://monarch-initiative.github.io/monarch-technical-documentation)
+[See the docs here](https://monarch-initiative.github.io/monarch-documentation)
 
 
 ## Overview
@@ -19,7 +19,7 @@ This repository will host the higher-order structure documentation of the Monarc
 
 - [Markdown Generation Scripts](scripts/) - Python scripts to pull documentation from resources to aggregate in Monarch Technical Documentation pages.
 - [src/](src/) - Source files for LinkML Cookie Cutter
-    - [Monarch Technical Documentation LinkML Schema](src/monarch_technical_documentation/schema/monarch_technical_documentation.yaml) - Describes the Schema for the Monarch Technical Documentation
+    - [Monarch Technical Documentation LinkML Schema](src/monarch_documentation/schema/monarch_documentation.yaml) - Describes the Schema for the Monarch Technical Documentation
     - [Monarch Resources Yaml](src/data/resources.yaml) - LinkML-schema YAML file detailing the various Monarhc resources, and repositories for each software resource.
 - [project.Makefile](project.Makefile) - Custom makefile targets go here
 - [Makefile](Makefile) - LinkML cookie-cutter generated Makefile (DO NOT EDIT) 
@@ -39,7 +39,7 @@ poetry install
 
 ### Build the Docs
 
-The `project.Makefile` file includes some custom `make` targets: 
+The `project.Makefile` file includes some custom `make` targets, such as: 
 - `build-docs` - Runs all other custom make targets
 - `genpython` - Generates a Python dataclass from the project's LinkML schema
 - `genindex` - Runs the generation script for the index.md

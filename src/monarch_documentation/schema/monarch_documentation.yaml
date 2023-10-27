@@ -1,4 +1,4 @@
-id: https://w3id.org/monarch-initiative/monarch-technical-documentation
+id: https://w3id.org/monarch-initiative/monarch-documentation
 name: monarch-documentation-schema
 title: monarch-documentation-schema
 description: |-
@@ -6,7 +6,7 @@ description: |-
 license: GNU GPL v3.0
 
 prefixes:
-  mtd: https://w3id.org/monarch-initiative/monarch-technical-documentation/
+  mtd: https://w3id.org/monarch-initiative/monarch-documentation/
   linkml: https://w3id.org/linkml/
   biolink: https://w3id.org/biolink/
   schema: http://schema.org/

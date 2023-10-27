@@ -1,8 +1,8 @@
 site_name: "Monarch Technical Documentation"
-site_url: 'https://monarch-initiative.github.io/monarch-technical-documentation/'
+site_url: 'https://monarch-initiative.github.io/monarch-documentation/'
 
-repo_name: 'monarch-technical-documentation'
-repo_url: 'https://github.com/monarch-initiative/monarch-technical-documentation'
+repo_name: 'monarch-documentation'
+repo_url: 'https://github.com/monarch-initiative/monarch-documentation'
 
 theme:
     name: 'material'

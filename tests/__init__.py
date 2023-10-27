@@ -1,1 +1,1 @@
-"""Tests for monarch-technical-documentation."""
+"""Tests for monarch-documentation."""

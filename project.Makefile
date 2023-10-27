@@ -3,7 +3,7 @@
 .INCLUDE : Makefile
 
 genpython:
-	@$(RUN) gen-python $(SOURCE_SCHEMA_PATH) > $(PYMODEL)/monarch_technical_documentation.py
+	@$(RUN) gen-python $(SOURCE_SCHEMA_PATH) > $(PYMODEL)/monarch_documentation.py
 
 genindex:
 	@$(RUN) python scripts/generate_index.py
@@ -26,7 +26,7 @@ build-docs: genindex genpython genschemadoc genrepodocs geningestdoc gen-monarch
 ### Provisional Monarch Asset Registry #####
 ############################################
 
-src/docs/registry.md: src/monarch_technical_documentation/resources/monarch_resources.md.jinja2 src/data/resources.yaml
+src/docs/registry.md: src/monarch_documentation/resources/monarch_resources.md.jinja2 src/data/resources.yaml
 	$(RUN) j2 $^ > $@
 
 src/docs/registry_2.md: $(SOURCE_SCHEMA_PATH) src/data/resources.yaml
