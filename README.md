@@ -1,6 +1,6 @@
-# Monarch Technical Documentation
+# Monarch Documentation
 
-Technical documentation for all Monarch applications, packages, services and related projects.
+documentation for all Monarch applications, packages, services and related projects.
 
 [See the docs here](https://monarch-initiative.github.io/monarch-documentation)
 
@@ -15,11 +15,11 @@ as well as documentation for how the different software tools are used together.
 
 ## Contents
 
-This repository will host the higher-order structure documentation of the Monarch Intiative Knowledge Graph Tools and as a build platform for integrating all of the documentation of each of requisite resources used to construct the Monarch Intiative Knowledge Graph and make it useable to others. This project consists of the following tools to build and deploy the Monarch Initiative Technical Documentation.
+This repository will host the higher-order structure documentation of the Monarch Intiative Knowledge Graph Tools and as a build platform for integrating all of the documentation of each of requisite resources used to construct the Monarch Intiative Knowledge Graph and make it useable to others. This project consists of the following tools to build and deploy the Monarch Initiative Documentation.
 
-- [Markdown Generation Scripts](scripts/) - Python scripts to pull documentation from resources to aggregate in Monarch Technical Documentation pages.
+- [Markdown Generation Scripts](scripts/) - Python scripts to pull documentation from resources to aggregate in Monarch Documentation pages.
 - [src/](src/) - Source files for LinkML Cookie Cutter
-    - [Monarch Technical Documentation LinkML Schema](src/monarch_documentation/schema/monarch_documentation.yaml) - Describes the Schema for the Monarch Technical Documentation
+    - [Monarch Documentation LinkML Schema](src/monarch_documentation/schema/monarch_documentation.yaml) - Describes the Schema for the Monarch Documentation
     - [Monarch Resources Yaml](src/data/resources.yaml) - LinkML-schema YAML file detailing the various Monarhc resources, and repositories for each software resource.
 - [project.Makefile](project.Makefile) - Custom makefile targets go here
 - [Makefile](Makefile) - LinkML cookie-cutter generated Makefile (DO NOT EDIT) 
@@ -45,7 +45,7 @@ The `project.Makefile` file includes some custom `make` targets, such as:
 - `genindex` - Runs the generation script for the index.md
 
 You can run any step individually (ex. `make genindex`),  
-or run the full series of steps to generate the full technical documentation site (`make build-docs`)
+or run the full series of steps to generate the full documentation site (`make build-docs`)
 
 
 ## Credits
