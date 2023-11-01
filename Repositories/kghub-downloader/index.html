@@ -1916,6 +1916,10 @@
 <td>mkdocstrings</td>
 <td>{'extras': ['python'], 'version': '^0.20.0'}</td>
 </tr>
+<tr>
+<td>gdown</td>
+<td>^4.7.1</td>
+</tr>
 </tbody>
 </table>
 <h3 id="documentation">Documentation</h3>
@@ -1928,24 +1932,33 @@
 <div class="highlight"><pre><span></span><code>pip install kghub-downloader
 </code></pre></div></p>
 <h3 id="configure">Configure</h3>
-<h4 id="download-configuration">Download Configuration</h4>
-<p>The downloader requires a YAML file which contains a list of target URLs to download, and local names to save those downloads.
-The format for the file is:
-<div class="highlight"><pre><span></span><code><span class="nn">---</span>
-<span class="p p-Indicator">-</span><span class="w"> </span>
-<span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http://example.com/myawesomefile.tsv&quot;</span>
-<span class="w">  </span><span class="nt">local_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myawesomefile.tsv</span>
-<span class="p p-Indicator">-</span>
-<span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;http://example.com/myokfile.json&quot;</span>
-<span class="w">  </span><span class="nt">local_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myokfile.json</span>
-</code></pre></div></p>
+<p>The downloader requires a YAML file which contains a list of target URLs to download, and local names to save those downloads.<br />
+For an example, see <a href="example/download.yaml">example/download.yaml</a></p>
+<p>Available options are:
+- *<strong>url</strong>: The URL to download from. Currently supported:<br />
+  - <code>http(s)</code>
+  - Google Cloud Storage (<code>gs://</code>)
+  - Google Drive (<code>gdrive://</code> or https://drive.google.com/...). The file must be publicly accessible.
+- <strong>local_name</strong>: The name to save the file as locally
+- <strong>tag</strong>: A tag to use to filter downloads
+- <strong>api</strong>: The API to use to download the file. Currently supported: <code>elasticsearch</code>
+- elastic search options<br />
+  - <strong>query_file</strong>: The file containing the query to run against the index
+  - <strong>index</strong>: The elastic search index for query</p>
+<blockquote>
+<p>* Note:<br />
+ Google Cloud Storage URLs require that you have set up your credentials as described <a href="https://cloud.google.com/artifact-registry/docs/python/authentication#keyring-user">here</a>. You must:<br />
+- <a href="https://cloud.google.com/iam/docs/service-accounts-create">create a service account</a><br />
+- <a href="https://cloud.google.com/storage/docs/access-control/using-iam-permissions#bucket-iam">add the service account to the relevant bucket</a> and<br />
+- <a href="https://cloud.google.com/iam/docs/keys-create-delete">download a JSON key</a> for that service account.<br />
+ Then, set the <code>GOOGLE_APPLICATION_CREDENTIALS</code> environment variable to point to that file.</p>
+</blockquote>
 <p>You can also include any secrets like API keys you have set as environment variables using <code>{VARIABLE_NAME}</code>, for example:<br />
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
-<span class="p p-Indicator">-</span>
-<span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://example.com/myfancyfile.json?key={YOUR_SECRET}&quot;</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://example.com/myfancyfile.json?key={YOUR_SECRET}&quot;</span>
 <span class="w">  </span><span class="nt">localname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myfancyfile.json</span>
 </code></pre></div>
-Note: You <em>MUST</em> have this secret set as an environment variable, and be sure to include the {curly braces}</p>
+Note: <code>YOUR_SECRET</code> <em>MUST</em> as an environment variable, and be sure to include the {curly braces} in the url string.</p>
 <h3 id="usage">Usage</h3>
 <p>Downloader can be used directly in Python or via command line</p>
 <h4 id="in-python">In Python</h4>
@@ -2009,6 +2022,16 @@ $<span class="w"> </span>downloader<span class="w"> </span>--output_dir<span cla
 <span class="c1"># the argument can be omitted from the CLI call.</span>
 $<span class="w"> </span>downloader<span class="w"> </span>--output_dir<span class="w"> </span>example_output
 </code></pre></div></p>
+<h3 id="development">Development</h3>
+<h4 id="install">Install</h4>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/monarch-initiative/kghub-downloader.git
+<span class="nb">cd</span><span class="w"> </span>kghub-downloader
+poetry<span class="w"> </span>install
+</code></pre></div>
+<h4 id="run-tests">Run tests</h4>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>run<span class="w"> </span>pytest
+</code></pre></div>
+<p>NOTE: The tests require gcloud credentials to be set up as described above, using the monarch github actions service account.</p>
 
 
 

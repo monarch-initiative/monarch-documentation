@@ -1862,7 +1862,7 @@
 </tr>
 <tr>
 <td>Description</td>
-<td>This is the Exomiser plugin for PhEval. Highly experimental.</td>
+<td>Exomiser plugin for PhEval.</td>
 </tr>
 </tbody>
 </table>
@@ -1902,7 +1902,7 @@
 </tr>
 <tr>
 <td>oaklib</td>
-<td>^0.1.55</td>
+<td>^0.5.12</td>
 </tr>
 <tr>
 <td>docker</td>
@@ -1920,17 +1920,22 @@
 </table>
 <h3 id="documentation">Documentation</h3>
 <h1 id="exomiser-runner-for-pheval">Exomiser Runner for PhEval</h1>
-<p>This is the Exomiser plugin for PhEval. Highly experimental. Do not use.</p>
-<h2 id="developers">Developers</h2>
-<p>Warning, the <code>pheval</code> library is currently included as a file reference in the toml file.</p>
-<div class="highlight"><pre><span></span><code>pheval = { path = &quot;/Users/matentzn/ws/pheval&quot; }
+<p>This is the Exomiser plugin for PhEval. With this plugin, you can leverage the variant prioritisation tool, Exomiser, to run the PhEval pipeline seamlessly. Detailed documentation on how to set up and run the PhEval Makefile pipeline with the Exomiser runner can be found <a href="https://monarch-initiative.github.io/pheval/exomiser_pipeline/">here</a>. The setup process for running the full PhEval Makefile pipeline differs from setting up for a single run. The Makefile pipeline creates directory structures for corpora and configurations to handle multiple run configurations. Detailed instructions on setting up the appropriate directory layout, including the input directory and test data directory, can be found here.</p>
+<h2 id="installation">Installation</h2>
+<p>Clone the pheval.exomiser repo and set up the poetry environment:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/monarch-initiative/pheval.exomiser.git
+<span class="nb">cd</span><span class="w"> </span>pheval.exomiser
+poetry<span class="w"> </span>shell
+poetry<span class="w"> </span>install
 </code></pre></div>
-<p>This will change when pheval is published on pypi.</p>
-<h2 id="configuring-the-applicationproperties">Configuring the application.properties:</h2>
-<p>The input directory config.yaml should be formatted like so:</p>
+<h2 id="configuring-a-single-run">Configuring a <em>single</em> run:</h2>
+<h3 id="setting-up-the-input-directory">Setting up the input directory</h3>
+<p>A <code>config.yaml</code> should be located in the input directory and formatted like so:</p>
 <p><div class="highlight"><pre><span></span><code><span class="nt">tool</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exomiser</span>
 <span class="nt">tool_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">13.2.0</span>
-<span class="nt">phenotype_only</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span><span class="w"> </span><span class="c1"># NOTE phenotype-only preset analysis should only be run with Exomiser versions &gt;= 13.2.0</span>
+<span class="nt">variant_analysis</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+<span class="nt">gene_analysis</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
+<span class="nt">disease_analysis</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
 <span class="nt">tool_specific_configuration_options</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local</span>
 <span class="w">  </span><span class="nt">exomiser_software_directory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exomiser-cli-13.2.0</span>
@@ -1940,8 +1945,9 @@
 <span class="w">    </span><span class="nt">remm_version</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">cadd_version</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">hg19_data_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2302</span>
-<span class="w">    </span><span class="nt">hg19_local_frequency_path</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">hg19_local_frequency_path</span><span class="p">:</span><span class="w"> </span><span class="c1"># name of hg19 local frequency file </span>
 <span class="w">    </span><span class="nt">hg38_data_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2302</span>
+<span class="w">    </span><span class="nt">hg38_local_frequency_path</span><span class="p">:</span><span class="w"> </span><span class="c1"># name of hg38 local frequency file </span>
 <span class="w">    </span><span class="nt">phenotype_data_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2302</span>
 <span class="w">    </span><span class="nt">cache_type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">cache_caffeine_spec</span><span class="p">:</span>
@@ -1949,8 +1955,10 @@
 <span class="w">    </span><span class="nt">score_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">combinedScore</span>
 <span class="w">    </span><span class="nt">sort_order</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DESCENDING</span>
 </code></pre></div>
-The bare minimum fields are filled to give an idea on the requirements. This is so that the application.properties can be correctly configured. An example config has been provided <code>pheval.exomiser/config.yaml</code>.</p>
-<p>The analysis configuration file should be located within the input directory.</p>
+The bare minimum fields are filled to give an idea on the requirements. This is so that the application.properties for Exomiser can be correctly configured. An example config has been provided <code>pheval.exomiser/config.yaml</code>.</p>
+<p>The Exomiser input data directories (phenotype database and variant database) should also be located in the input directory - or a symlink pointing to the location.</p>
+<p>The <code>exomiser_software_directory</code> points to the name of the Exomiser distribution directory located in the input directory.</p>
+<p>The analysis configuration file (in this case: <code>preset-exome-analysis.yml</code>) should be located within the input directory.</p>
 <p>If using optional databases, such as REMM/CADD/local frequency the optional data input should look like so in the input
 directory:</p>
 <div class="highlight"><pre><span></span><code>├── cadd
@@ -1967,6 +1975,70 @@ directory:</p>
 └── remm
     ├── ReMM.v{{REMM-VERSION}}.hg19.tsv.gz
     └── ReMM.v{{REMM-VERSION}}.hg38.tsv.gz
+</code></pre></div>
+<p>The overall structure of the input directory should look like this with the cadd, local and remm directories being optional, depending on the exomiser configuration:
+<div class="highlight"><pre><span></span><code>.
+├── 2302_hg19
+│   ├── 2302_hg19_clinvar_whitelist.tsv.gz
+│   ├── 2302_hg19_clinvar_whitelist.tsv.gz.tbi
+│   ├── 2302_hg19_genome.h2.db
+│   ├── 2302_hg19_transcripts_ensembl.ser
+│   ├── 2302_hg19_transcripts_refseq.ser
+│   ├── 2302_hg19_transcripts_ucsc.ser
+│   └── 2302_hg19_variants.mv.db
+├── 2302_phenotype
+│   ├── 2302_phenotype.h2.db
+│   ├── hp.obo
+│   ├── phenix
+│   │   ├── ALL_SOURCES_ALL_FREQUENCIES_genes_to_phenotype.txt
+│   │   ├── hp.obo
+│   │   └── out
+│   └── rw_string_10.mv
+├── config.yaml
+├── exomiser-cli-13.2.0
+│   ├── lib
+│   └── exomiser-cli-13.2.0.jar
+├── preset-exome-analysis.yml
+├── cadd
+│   └── {{CADD-VERSION}}
+│       ├── hg19
+│       │   ├── InDels.tsv.gz
+│       │   └── whole_genome_SNVs.tsv.gz
+│       └── hg38
+│           ├── InDels.tsv.gz
+│           └── whole_genome_SNVs.tsv.gz
+├── local
+│   ├── local_frequency_test_hg19.tsv.gz
+│   └── local_frequency_test_hg38.tsv.gz
+└── remm
+    ├── ReMM.v{{REMM-VERSION}}.hg19.tsv.gz
+    └── ReMM.v{{REMM-VERSION}}.hg38.tsv.gz
+</code></pre></div></p>
+<h3 id="setting-up-the-testdata-directory">Setting up the testdata directory</h3>
+<p>The Exomiser plugin for PhEval accepts phenopackets and vcf files as an input for running Exomiser. The plugin can be run in <code>phenotype_only</code> mode, where only phenopackets are required as an input, however, this <em>must</em> be specified in the <code>config.yaml</code>.</p>
+<p>The testdata directory should include subdirectories named <code>phenopackets</code> and <code>vcf</code> if running with variant prioritisation.</p>
+<p>e.g., </p>
+<div class="highlight"><pre><span></span><code>├── testdata_dir
+   ├── phenopackets
+   └── vcf
+</code></pre></div>
+<h2 id="run-command">Run command</h2>
+<p>Once the testdata and input directories are correctly configured for the run, the <code>pheval run</code> command can be executed.</p>
+<div class="highlight"><pre><span></span><code>pheval<span class="w"> </span>run<span class="w"> </span>--input-dir<span class="w"> </span>/path/to/input_dir<span class="w"> </span><span class="se">\</span>
+--testdata-dir<span class="w"> </span>/path/to/testdata_dir<span class="w"> </span><span class="se">\</span>
+--runner<span class="w"> </span>exomiserphevalrunner<span class="w"> </span><span class="se">\</span>
+--output-dir<span class="w"> </span>/path/to/output_dir<span class="w"> </span><span class="se">\</span>
+--version<span class="w"> </span><span class="m">13</span>.2.0
+</code></pre></div>
+<h2 id="common-errors">Common errors</h2>
+<p>You may see an error that is related to the current <code>setuptools</code> being used:</p>
+<div class="highlight"><pre><span></span><code>pkg_resources.extern.packaging.requirements.InvalidRequirement:<span class="w"> </span>Expected<span class="w"> </span>closing<span class="w"> </span>RIGHT_PARENTHESIS
+<span class="w">    </span>requests<span class="w"> </span><span class="o">(</span>&lt;<span class="m">3</span>,&gt;<span class="o">=</span><span class="m">2</span>.12.*<span class="o">)</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="nv">extra</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;parse&#39;</span>
+<span class="w">             </span>~~~~~~~~~~^
+</code></pre></div>
+<p>To fix the error, <code>setuptools</code> needs to be downgraded to version 66:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>uninstall<span class="w"> </span>setuptools
+pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span><span class="nv">setuptools</span><span class="o">==</span><span class="s2">&quot;66&quot;</span>
 </code></pre></div>
 
 

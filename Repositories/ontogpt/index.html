@@ -1862,7 +1862,7 @@
 </tr>
 <tr>
 <td>Description</td>
-<td>GPT-based ontological extraction tools, including SPIRES</td>
+<td>LLM-based ontological extraction tools, including SPIRES</td>
 </tr>
 </tbody>
 </table>
@@ -1886,15 +1886,15 @@
 </tr>
 <tr>
 <td>openai</td>
-<td>&gt;=0.27.4</td>
+<td>&gt;=0.27.8</td>
 </tr>
 <tr>
 <td>oaklib</td>
-<td>&gt;=0.5.6</td>
+<td>&gt;=0.5.15</td>
 </tr>
 <tr>
 <td>gilda</td>
-<td>&gt;=0.10.3</td>
+<td>&gt;=1.0.0</td>
 </tr>
 <tr>
 <td>jsonlines</td>
@@ -1903,10 +1903,6 @@
 <tr>
 <td>python-multipart</td>
 <td>^0.0.5</td>
-</tr>
-<tr>
-<td>linkml-owl</td>
-<td>&gt;=0.2.7</td>
 </tr>
 <tr>
 <td>beautifulsoup4</td>
@@ -1927,10 +1923,6 @@
 <tr>
 <td>bioc</td>
 <td>&gt;=2.0.post5</td>
-</tr>
-<tr>
-<td>linkml</td>
-<td>&gt;=1.4.10</td>
 </tr>
 <tr>
 <td>wikipedia</td>
@@ -1955,10 +1947,6 @@
 <tr>
 <td>inflection</td>
 <td>&gt;=0.5.1</td>
-</tr>
-<tr>
-<td>linkml-runtime</td>
-<td>&gt;=1.5.3</td>
 </tr>
 <tr>
 <td>nlpcloud</td>
@@ -2013,20 +2001,8 @@
 <td>&gt;=0.5.8</td>
 </tr>
 <tr>
-<td>semsimian</td>
-<td>&gt;=0.1.13</td>
-</tr>
-<tr>
 <td>pystow</td>
 <td>^0.5.0</td>
-</tr>
-<tr>
-<td>langchain</td>
-<td>&gt;=0.0.191</td>
-</tr>
-<tr>
-<td>gpt4all</td>
-<td>{'version': '&gt;=0.3.0', 'extras': ['gpt4all'], 'optional': True}</td>
 </tr>
 <tr>
 <td>requests-cache</td>
@@ -2044,6 +2020,30 @@
 <td>ruamel.yaml</td>
 <td>&gt;=0.17.31</td>
 </tr>
+<tr>
+<td>requests</td>
+<td>^2.31.0</td>
+</tr>
+<tr>
+<td>huggingface_hub</td>
+<td>{'version': '&gt;=0.15.1', 'extras': ['huggingface'], 'optional': True}</td>
+</tr>
+<tr>
+<td>llm</td>
+<td>^0.8</td>
+</tr>
+<tr>
+<td>llm-gpt4all</td>
+<td>^0.1.1</td>
+</tr>
+<tr>
+<td>linkml</td>
+<td>^1.5.7</td>
+</tr>
+<tr>
+<td>linkml-owl</td>
+<td>^0.3.0</td>
+</tr>
 </tbody>
 </table>
 <h3 id="documentation">Documentation</h3>
@@ -2051,307 +2051,52 @@
 <p><a href="https://zenodo.org/badge/latestdoi/13996/monarch-initiative/ontogpt"><img alt="DOI" src="https://zenodo.org/badge/13996/monarch-initiative/ontogpt.svg" /></a>
 <img alt="PyPI" src="https://img.shields.io/pypi/v/ontogpt" /></p>
 <h2 id="introduction">Introduction</h2>
-<p>OntoGPT is a Python package for the generation of Ontologies and Knowledge Bases using GPT. It is a knowledge extraction tool that uses a Large Language Models (LLMs) to extract semantic information from text.</p>
-<p>This makes use of so-called <em>instruction prompts</em> in Large Language Models (LLMs) such as GPT-4.</p>
-<p>Currently three different strategies for knowledge extraction have been implemented in the ontogpt package:</p>
-<ul>
-<li>SPIRES: <em>Structured Prompt Interrogation and Recursive Extraction of Semantics</em></li>
-<li>Zero-shot learning (ZSL) approach to extracting nested semantic structures from text</li>
-<li>This approach takes two inputs - 1) LinkML schema 2) free text, and outputs knowledge in a structure conformant with the supplied schema in JSON, YAML, RDF or OWL formats</li>
-<li>Uses text-davinci-003 or gpt-3.5-turbo (gpt-4 untested)</li>
-<li>HALO: <em>HAllucinating Latent Ontologies</em></li>
-<li>Few-shot learning approach to generating/hallucinating a domain ontology given a few examples</li>
-<li>Uses code-davinci-002</li>
-<li>SPINDOCTOR: <em>Structured Prompt Interpolation of Narrative Descriptions Or Controlled Terms for Ontological Reporting</em></li>
-<li>Summarize gene set descriptions (pseudo gene-set enrichment)</li>
-<li>Uses text-davinci-003 or gpt-3.5-turbo (gpt-4 untested)</li>
-</ul>
-<h2 id="pre-requisites">Pre-requisites</h2>
-<ul>
-<li>Python 3.9+</li>
-<li>OpenAI account</li>
-<li>Optionally, <a href="https://bioportal.bioontology.org/">BioPortal</a> account (for grounding)</li>
-</ul>
-<p>You will need to set both API keys using the <a href="https://github.com/INCATools/ontology-access-kit">Ontology Access Kit</a></p>
-<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>run<span class="w"> </span>runoak<span class="w"> </span>set-apikey<span class="w"> </span>-e<span class="w"> </span>openai<span class="w"> </span>&lt;your<span class="w"> </span>openai<span class="w"> </span>api<span class="w"> </span>key&gt;
-poetry<span class="w"> </span>run<span class="w"> </span>runoak<span class="w"> </span>set-apikey<span class="w"> </span>-e<span class="w"> </span>bioportal<span class="w"> </span>&lt;your<span class="w"> </span>bioportal<span class="w"> </span>api<span class="w"> </span>key&gt;
-</code></pre></div>
-<h2 id="setup">Setup</h2>
-<p>For feature development and contributing to the package:</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/monarch-initiative/ontogpt.git
-<span class="nb">cd</span><span class="w"> </span>~/path/to/ontogpt
-poetry<span class="w"> </span>install
-</code></pre></div>
-<p>To simply start using the package in your workspace:</p>
+<p><em>OntoGPT</em> is a Python package for extracting structured information from text with large language models (LLMs), <em>instruction prompts</em>, and ontology-based grounding.</p>
+<p>Two different strategies for knowledge extraction are currently implemented in OntoGPT:</p>
+<p><a href="https://monarch-initiative.github.io/ontogpt/">For more details, please see the full documentation.</a></p>
+<h2 id="quick-start">Quick Start</h2>
+<p>OntoGPT runs on the command line, though there's also a minimal web app interface (see <code>Web Application</code> section below).</p>
+<ol>
+<li>Ensure you have Python 3.9 or greater installed.</li>
+<li>
+<p>Install with <code>pip</code>:</p>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>ontogpt
 </code></pre></div>
-<h2 id="examples">Examples</h2>
-<h3 id="strategy-1-knowledge-extraction-using-spires">Strategy 1: Knowledge extraction using SPIRES</h3>
-<h4 id="input">Input</h4>
-<p>Consider some text from one of the input files being used in the ontogpt test suite. You can find the text file <a href="tests/input/cases/gocam-betacat.txt">here</a>. You can download the raw file from the GitHub link to that input text file, or copy its contents over into another file, say, <code>abstract.txt</code>. An excerpt </p>
-<blockquote>
-<p>The cGAS/STING-mediated DNA-sensing signaling pathway is crucial
-  for interferon (IFN) production and host antiviral
-  responses</p>
-<p>...
-[snip] 
-...</p>
-<p>The underlying mechanism was the
-  interaction of US3 with β-catenin and its hyperphosphorylation of
-  β-catenin at Thr556 to block its nuclear translocation
-...
-...</p>
-</blockquote>
-<p>We can extract knowledge from the above text this into the <a href="src/ontogpt/templates/gocam.yaml">GO pathway datamodel</a> by running the following command:</p>
-<h4 id="command">Command</h4>
-<div class="highlight"><pre><span></span><code>ontogpt<span class="w"> </span>extract<span class="w"> </span>-t<span class="w"> </span>gocam.GoCamAnnotations<span class="w"> </span>-i<span class="w"> </span>~/path/to/abstract.txt
-</code></pre></div>
-<p>Note: The value accepted by the <code>-t</code> / <code>--template</code> argument is the base name of one of the LinkML schema / data model which can be found in the <a href="src/ontogpt/templates/">templates</a> folder.</p>
-<h4 id="output">Output</h4>
-<p>The output returned from the above command can be optionally redirected into an output file using the <code>-o</code> / <code>--output</code>.</p>
-<p>The following is a small part of what the larger schema-compliant output looks like:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">genes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HGNC:2514</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HGNC:21367</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HGNC:27962</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">US3</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">FPLX:Interferon</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ISG</span>
-<span class="nt">gene_gene_interactions</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">gene1</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">US3</span>
-<span class="w">  </span><span class="nt">gene2</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HGNC:2514</span>
-<span class="nt">gene_localizations</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">gene</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HGNC:2514</span>
-<span class="w">  </span><span class="nt">location</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Nuclear</span>
-<span class="nt">gene_functions</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">gene</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HGNC:2514</span>
-<span class="w">  </span><span class="nt">molecular_activity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Transcription</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">gene</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HGNC:21367</span>
-<span class="w">  </span><span class="nt">molecular_activity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Production</span>
-<span class="nn">...</span>
-</code></pre></div>
-<h4 id="working-mechanism">Working Mechanism</h4>
-<ol>
-<li>You provide an arbitrary data model, describing the structure you want to extract text into<ul>
-<li>This can be nested (but see limitations below)</li>
-</ul>
 </li>
-<li>Provide your preferred annotations for grounding <code>NamedEntity</code> fields</li>
-<li>OntoGPT will:<ul>
-<li>Generate a prompt</li>
-<li>Feed the prompt to a language model (currently OpenAI GPT models)</li>
-<li>Parse the results into a dictionary structure</li>
-<li>Ground the results using a preferred annotator</li>
-</ul>
+<li>
+<p>Set your OpenAI API key:</p>
+<div class="highlight"><pre><span></span><code>runoak<span class="w"> </span>set-apikey<span class="w"> </span>-e<span class="w"> </span>openai<span class="w"> </span>&lt;your<span class="w"> </span>openai<span class="w"> </span>api<span class="w"> </span>key&gt;
+</code></pre></div>
+</li>
+<li>
+<p>See the list of all OntoGPT commands:</p>
+<div class="highlight"><pre><span></span><code>ontogpt<span class="w"> </span>--help
+</code></pre></div>
+</li>
+<li>
+<p>Try a simple example of information extraction:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;One treatment for high blood pressure is carvedilol.&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>example.txt
+ontogpt<span class="w"> </span>extract<span class="w"> </span>-i<span class="w"> </span>example.txt<span class="w"> </span>-t<span class="w"> </span>drug
+</code></pre></div>
+<p>OntoGPT will retrieve the necessary ontologies and output results to the command line. Your output will provide all extracted objects under the heading <code>extracted_object</code>.</p>
 </li>
 </ol>
-<h2 id="strategy-2-halo">Strategy 2: HALO</h2>
-<p><em>Documentation to come</em></p>
-<h2 id="strategy-3-gene-enrichment-using-spindoctor">Strategy 3: Gene Enrichment using SPINDOCTOR</h2>
-<p>Given a set of genes, OntoGPT can find similarities among them.</p>
-<p>Ex.:</p>
-<div class="highlight"><pre><span></span><code>ontogpt<span class="w"> </span>enrichment<span class="w"> </span>-U<span class="w"> </span>tests/input/genesets/sensory-ataxia.yaml
-</code></pre></div>
-<p>The default is to use ontological gene function synopses (via the Alliance API).</p>
-<ul>
-<li>To use narrative/RefSeq summaries, use the <code>--no-ontological-synopses</code> flag</li>
-<li>To run without any gene descriptions, use the <code>--no-annotations</code> flag</li>
-</ul>
-<h2 id="features">Features</h2>
-<h3 id="define-your-own-extraction-model-using-linkml">Define your own extraction model using LinkML</h3>
-<p>There are a number of pre-defined LinkML data models already developed here - <a href="src/ontogpt/templates/">src/ontogpt/templates/</a> which you can use as reference when creating your own data models.</p>
-<p>Define a schema (using a subset of <a href="https://linkml.io">LinkML</a>) that describes the structure in which you want to extract knowledge from your text.</p>
-<details>
-  <summary>example custom linkml data model</summary>
-  ```yaml
-  classes:
-    MendelianDisease:
-      attributes:
-        name:
-          description: the name of the disease
-          examples:
-            - value: peroxisome biogenesis disorder
-          identifier: true  ## needed for inlining
-        description:
-          description: a description of the disease
-          examples:
-            - value: >-
-              Peroxisome biogenesis disorders, Zellweger syndrome spectrum (PBD-ZSS) is a group of autosomal recessive disorders affecting the formation of functional peroxisomes, characterized by sensorineural hearing loss, pigmentary retinal degeneration, multiple organ dysfunction and psychomotor impairment
-        synonyms:
-          multivalued: true
-          examples:
-            - value: Zellweger syndrome spectrum
-            - value: PBD-ZSS
-        subclass_of:
-          multivalued: true
-          range: MendelianDisease
-          examples:
-            - value: lysosomal disease
-            - value: autosomal recessive disorder
-        symptoms:
-          range: Symptom
-          multivalued: true
-          examples:
-            - value: sensorineural hearing loss
-            - value: pigmentary retinal degeneration
-        inheritance:
-          range: Inheritance
-          examples:
-            - value: autosomal recessive
-        genes:
-          range: Gene
-          multivalued: true
-          examples:
-            - value: PEX1
-            - value: PEX2
-            - value: PEX3
-
-    Gene:
-      is_a: NamedThing
-      id_prefixes:
-        - HGNC
-      annotations:
-        annotators: gilda:, bioportal:hgnc-nr
-
-    Symptom:
-      is_a: NamedThing
-      id_prefixes:
-        - HP
-      annotations:
-        annotators: sqlite:obo:hp
-
-    Inheritance:
-      is_a: NamedThing
-      annotations:
-        annotators: sqlite:obo:hp
-    ```
-</details>
-
-<ul>
-<li>Prompt hints can be specified using the <code>prompt</code> annotation (otherwise description is used)</li>
-<li>Multivalued fields are supported</li>
-<li>The default range is string — these are not grounded. Ex.: disease name, synonyms</li>
-<li>Define a class for each <code>NamedEntity</code></li>
-<li>For any <code>NamedEntity</code>, you can specify a preferred annotator using the <code>annotators</code> annotation</li>
-</ul>
-<p>We recommend following an established schema like <a href="https://github.com/biolink/biolink-model">BioLink Model</a>, but you can define your own.</p>
-<p>Next step is to compile the schema. For that, you should place the schema YAML in the directory <a href="src/ontogpt/templates/">src/ontogpt/templates/</a>. Then, run the <code>make</code> command at the top level. This will compile the schema to Python (Pydantic classes).</p>
-<p>Once you have defined your own schema / data model and placed in the correct directory, you can run the <code>extract</code> command. </p>
-<p>Ex.:</p>
-<div class="highlight"><pre><span></span><code>ontogpt extract -t mendelian_disease.MendelianDisease -i marfan-wikipedia.txt
-</code></pre></div>
-<h3 id="multiple-levels-of-nesting">Multiple levels of nesting</h3>
-<p>Currently no more than two levels of nesting are recommended.</p>
-<p>If a field has a range which is itself a class and not a primitive, it will attempt to nest.</p>
-<p>Ex. the <code>gocam</code> schema has an attribute:</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">attributes</span><span class="p">:</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">...</span>
-<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">gene_functions</span><span class="p p-Indicator">:</span>
-<span class="w">        </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">semicolon-separated list of gene to molecular activity relationships</span>
-<span class="w">        </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">        </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GeneMolecularActivityRelationship</span>
-</code></pre></div>
-<p>The range <code>GeneMolecularActivityRelationship</code> has been specified <em>inline</em>, so it will nest.</p>
-<p>The generated prompt is:</p>
-<div class="highlight"><pre><span></span><code>gene_functions<span class="w"> </span>:<span class="w"> </span>&lt;semicolon-separated<span class="w"> </span>list<span class="w"> </span>of<span class="w"> </span>gene<span class="w"> </span>to<span class="w"> </span>molecular<span class="w"> </span>activities<span class="w"> </span>relationships&gt;
-</code></pre></div>
-<p>The output of this is then passed through further SPIRES iterations.</p>
-<h3 id="text-length-limit">Text length limit</h3>
-<p>Currently SPIRES must use text-davinci-003, which has a total 4k token limit (prompt + completion).</p>
-<p>You can pass in a parameter to split the text into chunks. Returned results will be recombined automatically, but more experiments need to be done to determined how reliable this is.</p>
-<h3 id="schema-tips">Schema tips</h3>
-<p>It helps to have an understanding of the <a href="https://linkml.io">LinkML</a> schema language, but it should be possible to define your own schemas using the examples in <a href="src/ontogpt/templates/">src/ontogpt/templates</a> as a guide.</p>
-<p>OntoGPT-specific extensions are specified as <em>annotations</em>.</p>
-<p>You can specify a set of annotators for a field using the <code>annotators</code> annotation.</p>
-<p>Ex.:</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">Gene</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NamedThing</span>
-<span class="w">    </span><span class="nt">id_prefixes</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HGNC</span>
-<span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">annotators</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gilda:, bioportal:hgnc-nr, obo:pr</span>
-</code></pre></div>
-<p>The annotators are applied in order.</p>
-<p>Additionally, when performing grounding, the following measures can be taken to improve accuracy:</p>
-<ul>
-<li>Specify the valid set of ID prefixes using <code>id_prefixes</code></li>
-<li>Some vocabularies have structural IDs that are amenable to regexes, you can specify these using <code>pattern</code></li>
-<li>You can make use of <code>values_from</code> slot to specify a <a href="https://linkml.io/linkml/schemas/enums.html#dynamic-enums">Dynamic Value Set</a></li>
-<li>For example, you can constrain the set of valid locations for a gene product to be subclasses of <code>cellular_component</code> in GO or <code>cell</code> in CL</li>
-</ul>
-<p>Ex.:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">classes</span><span class="p">:</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">...</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">GeneLocation</span><span class="p p-Indicator">:</span>
-<span class="w">    </span><span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NamedEntity</span>
-<span class="w">    </span><span class="nt">id_prefixes</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GO</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CL</span>
-<span class="w">    </span><span class="nt">annotations</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">annotators</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;sqlite:obo:go,</span><span class="nv"> </span><span class="s">sqlite:obo:cl&quot;</span>
-<span class="w">    </span><span class="nt">slot_usage</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">id</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">values_from</span><span class="p">:</span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GOCellComponentType</span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CellType</span>
-
-<span class="nt">enums</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">GOCellComponentType</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">reachable_from</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">source_ontology</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">obo:go</span>
-<span class="w">      </span><span class="nt">source_nodes</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GO:0005575</span><span class="w"> </span><span class="c1">## cellular_component</span>
-<span class="w">  </span><span class="nt">CellType</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">reachable_from</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">source_ontology</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">obo:cl</span>
-<span class="w">      </span><span class="nt">source_nodes</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CL:0000000</span><span class="w"> </span><span class="c1">## cell</span>
-</code></pre></div>
-<h3 id="owl-exports">OWL Exports</h3>
-<p>The <code>extract</code> command will let you export the results as OWL axioms, utilizing <a href="https://linkml.io/linkml-owl">linkml-owl</a> mappings in the schema.</p>
-<p>Ex.:</p>
-<div class="highlight"><pre><span></span><code>ontogpt<span class="w"> </span>extract<span class="w"> </span>-t<span class="w"> </span>recipe<span class="w"> </span>-i<span class="w"> </span>recipe-spaghetti.txt<span class="w"> </span>-o<span class="w"> </span>recipe-spaghetti.owl<span class="w"> </span>-O<span class="w"> </span>owl
-</code></pre></div>
-<p><a href="src/ontogpt/templates/recipe.yaml">src/ontogpt/templates/recipe.yaml</a> is an example schema that uses linkml-owl mappings.</p>
-<p>See the <a href="Makefile">Makefile</a> for a full pipeline that involves using robot to extract a subset of FOODON
-and merge in the extracted results. This uses <a href="https://github.com/hhursev/recipe-scrapers">recipe-scrapers</a>.</p>
-<p>OWL output: <a href="tests/output/owl/merged/recipe-all-merged.owl">recipe-all-merged.owl</a></p>
-<p>Classification:</p>
-<p><img width="1329" alt="image" src="https://user-images.githubusercontent.com/50745/230427663-20d845e9-f1d5-490e-b1ad-cdccdd0dca70.png"></p>
-<h2 id="web-application-setup">Web Application Setup</h2>
+<h2 id="web-application">Web Application</h2>
 <p>There is a bare bones web application for running OntoGPT and viewing results.</p>
-<p>Install the required dependencies by running the following command:</p>
-<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>install<span class="w"> </span>-E<span class="w"> </span>web
+<p>First, install the required dependencies with <code>pip</code> by running the following command:</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>ontogpt<span class="o">[</span>web<span class="o">]</span>
 </code></pre></div>
 <p>Then run this command to start the web application:</p>
-<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>run<span class="w"> </span>web-ontogpt
+<div class="highlight"><pre><span></span><code>web-ontogpt
 </code></pre></div>
-<p>Note: The agent running uvicorn must have the API key set, so for obvious reasons don't host this publicly without authentication, unless you want your credits drained.</p>
-<h2 id="ontogpt-limitations">OntoGPT Limitations</h2>
-<ol>
-<li>Non-deterministic</li>
-<li>This relies on an existing LLM, and LLMs can be fickle in their responses</li>
-<li>Coupled to OpenAI</li>
-<li>You will need an OpenAI account to use their API. In theory any LLM can be used but in practice the parser is tuned for OpenAI's models</li>
-</ol>
-<h3 id="spindoctor-web-app">SPINDOCTOR web app</h3>
-<p>To start:</p>
-<div class="highlight"><pre><span></span><code>poetry run streamlit run src/ontogpt/streamlit/spindoctor.py
-</code></pre></div>
-<h3 id="using-local-models">Using local models</h3>
-<p>OntoGPT supports using language models released by <a href="https://gpt4all.io/">GPT4All</a>.</p>
-<p>Specify the name of a model when using the <code>extract</code> command with the <code>-m</code> or <code>--model</code> option and OntoGPT will retrieve the model.</p>
-<p>For example:</p>
-<div class="highlight"><pre><span></span><code>ontogpt --verbose extract -t mendelian_disease.MendelianDisease -i mendelian-disease-sly.txt -m ggml-gpt4all-j-v1.3-groovy
-</code></pre></div>
-<p>will download the <code>ggml-gpt4all-j-v1.3-groovy.bin</code> file, generate a prompt, and try that prompt against the specified model.</p>
+<p>NOTE: We do not recommend hosting this webapp publicly without authentication.</p>
+<h2 id="evaluations">Evaluations</h2>
+<p>OpenAI's functions have been evaluated on test data. Please see the full documentation for details on these evaluations and how to reproduce them.</p>
 <h2 id="citation">Citation</h2>
-<p>SPIRES is described further in: Caufield JH, Hegde H, Emonet V, Harris NL, Joachimiak MP, Matentzoglu N, et al. Structured prompt interrogation and recursive extraction of semantics (SPIRES): A method for populating knowledge bases using zero-shot learning. </p>
-<p>arXiv publication: http://arxiv.org/abs/2304.02711</p>
-<h2 id="contributing">Contributing</h2>
-<p>Contributions on recipes to test welcome from anyone! Just make a PR <a href="https://github.com/monarch-initiative/ontogpt/blob/main/tests/input/recipe-urls.csv">here</a>. See <a href="https://github.com/hhursev/recipe-scrapers">this list</a> for accepted URLs</p>
+<p>The information extraction approach used in OntoGPT, SPIRES, is described further in: Caufield JH, Hegde H, Emonet V, Harris NL, Joachimiak MP, Matentzoglu N, et al. Structured prompt interrogation and recursive extraction of semantics (SPIRES): A method for populating knowledge bases using zero-shot learning. arXiv publication: <a href="http://arxiv.org/abs/2304.02711">http://arxiv.org/abs/2304.02711</a></p>
+<p>The gene summarization approach used in OntoGPT, SPINDOCTOR, is described further in: Joachimiak MP, Caufield JH, Harris NL, Kim H, Mungall CJ. Gene Set Summarization using Large Language Models. arXiv publication: <a href="http://arxiv.org/abs/2305.13338">http://arxiv.org/abs/2305.13338</a></p>
 <h2 id="acknowledgements">Acknowledgements</h2>
-<p>We gratefully acknowledge <a href="https://www.bosch.com/research">Bosch Research</a> for their support of this research project.</p>
+<p>This project is part of the <a href="https://monarchinitiative.org/">Monarch Initiative</a>. We also gratefully acknowledge <a href="https://www.bosch.com/research">Bosch Research</a> for their support of this research project.</p>
 
 
 

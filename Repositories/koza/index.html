@@ -1886,7 +1886,7 @@
 </tr>
 <tr>
 <td>pydantic</td>
-<td>^1.0.0</td>
+<td>^1.10</td>
 </tr>
 <tr>
 <td>pyyaml</td>
@@ -1912,6 +1912,10 @@
 <td>loguru</td>
 <td>*</td>
 </tr>
+<tr>
+<td>sssom</td>
+<td>^0.3.41</td>
+</tr>
 </tbody>
 </table>
 <h3 id="documentation">Documentation</h3>
@@ -1921,8 +1925,8 @@
 <img alt="Github Action" src="https://github.com/monarch-initiative/koza/actions/workflows/build.yml/badge.svg" /></p>
 <p><img alt="pupa" src="docs/img/pupa.png" />  </p>
 <p><a href="https://koza.monarchinitiative.org/"><strong>Documentation</strong></a></p>
-<p><em>Disclaimer</em>: Koza is in beta; we are looking for beta testers</p>
-<h3 id="overview">Overview</h3>
+<p><em>Disclaimer</em>: Koza is in beta - we are looking for testers!</p>
+<h2 id="overview">Overview</h2>
 <ul>
 <li>Transform csv, json, yaml, jsonl, and xml and converting them to a target csv, json, or jsonl format based on your dataclass model.  </li>
 <li>Koza also can output data in the <a href="https://github.com/biolink/kgx/blob/master/specification/kgx-format.md#kgx-format-as-tsv">KGX format</a></li>
@@ -1931,11 +1935,11 @@
 <li>Create or import mapping files to be used in ingests (eg id mapping, type mappings)</li>
 <li>Create and use translation tables to map between source and target vocabularies</li>
 </ul>
-<h3 id="installation">Installation</h3>
+<h2 id="installation">Installation</h2>
 <p>Koza is available on PyPi and can be installed via pip/pipx:
 <div class="highlight"><pre><span></span><code>[pip|pipx] install koza
 </code></pre></div></p>
-<h3 id="usage">Usage</h3>
+<h2 id="usage">Usage</h2>
 <p><strong>NOTE: As of version 0.2.0, there is a new method for getting your ingest's <code>KozaApp</code> instance. Please see the <a href="https://koza.monarchinitiative.org/Usage/configuring_ingests/#transform-code">updated documentation</a> for details.</strong></p>
 <p>See the <a href="https://koza.monarchinitiative.org/">Koza documentation</a> for usage information</p>
 <h3 id="try-the-examples">Try the Examples</h3>
@@ -1957,11 +1961,25 @@
 </code></pre></div>
 <h4 id="transform">Transform</h4>
 <p>Run the example ingest, "string/protein-links-detailed"
-<div class="highlight"><pre><span></span><code>koza<span class="w"> </span>transform<span class="w"> </span>--source<span class="w"> </span>examples/string/protein-links-detailed.yaml<span class="w"> </span>--global-table<span class="w"> </span>examples/translation_table.yaml
+<div class="highlight"><pre><span></span><code>koza<span class="w"> </span>transform<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span>examples/string/protein-links-detailed.yaml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--global-table<span class="w"> </span>examples/translation_table.yaml
 
-koza<span class="w"> </span>transform<span class="w"> </span>--source<span class="w"> </span>examples/string-declarative/protein-links-detailed.yaml<span class="w"> </span>--global-table<span class="w"> </span>examples/translation_table.yaml
-</code></pre></div>
-note: koza expects a directory structure as described in the above example (examples/ingest_name/ingest.yaml)</p>
+koza<span class="w"> </span>transform<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--source<span class="w"> </span>examples/string-declarative/protein-links-detailed.yaml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--global-table<span class="w"> </span>examples/translation_table.yaml
+</code></pre></div></p>
+<p><strong>Note</strong>: 
+  Koza expects a directory structure as described in the above example<br />
+  with the source config file and transform code in the same directory: 
+  <div class="highlight"><pre><span></span><code>.
+├── ...
+│   ├── your_source
+│   │   ├── your_ingest.yaml
+│   │   └── your_ingest.py
+│   └── some_translation_table.yaml
+└── ...
+</code></pre></div></p>
 
 
 
