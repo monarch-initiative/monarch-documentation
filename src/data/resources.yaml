@@ -252,15 +252,19 @@ documentation:
     repository: https://github.com/monarch-initiative/monarch-app
   - id: https://obophenotype.github.io/human-phenotype-ontology/
     name: Human Phenotype Ontology User Docs
+    description: The HPO provides a standardized vocabulary of phenotypic abnormalities in human disease. 
     repository: https://github.com/obophenotype/human-phenotype-ontology
   - id: https://mondo.readthedocs.io/
     name: Mondo User Docs
+    description: The Mondo Disease Ontology aims to harmonizes disease definitions across the world.
     repository: https://github.com/monarch-initiative/mondo
   - id: https://linkml.io/linkml-model/docs/
-    name: LinkML model Docs
+    name: LinkML Model Docs
+    description: Metamodel schema for the Linked Data Modeling Language (LinkML)
     repository: https://github.com/linkml/linkml-model
   - id: https://obophenotype.github.io/upheno/
     name: The Unified Phenotype Ontology (uPheno) Docs
+    description: uPheno aims to unify the annotation of phenotypes across species.
     repository: https://obophenotype.github.io/upheno/
   - id: https://oboacademy.github.io/obook/
     name: OBO Academy
@@ -272,14 +276,15 @@ documentation:
     repository: https://github.com/exomiser/Exomiser
   - id: https://monarch-initiative.github.io/monarch-ingest
     name: Monarch Ingest Docs
+    description: The Monarch Ingest pulls in data from a wide variety of biomedical data sources and generates Biolink-compliant KGX files that are used to build the Monarch KG.
     repository: https://github.com/monarch-initiative/monarch-ingest
   - id: https://mapping-commons.github.io/sssom/spec/
     name: Simple Standard for Sharing Ontological Mappings (SSSOM) Docs
-    description: Specification of SSSOM Standard, Tutorials and other materials.
+    description: SSSOM is a simple metadata standard for describing semantic mappings.
     repository: https://github.com/mapping-commons/sssom/
   - id: https://phenopacket-schema.readthedocs.io/en/latest/
     name: Phenopackets Schema Docs
-    description: Specification of Phenopackets Standard, Tutorials and other materials.
+    description: The Phenopacket Schema is an ISO-endorsed open standard for sharing disease and phenotype information.
     repository: https://github.com/phenopackets/phenopacket-schema
 repositories:
   - id: https://github.com/INCATools/ontology-development-kit
