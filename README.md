@@ -1,6 +1,6 @@
 # Monarch Documentation
 
-documentation for all Monarch applications, packages, services and related projects.
+Documentation for all Monarch applications, packages, services and related projects.
 
 [See the docs here](https://monarch-initiative.github.io/monarch-documentation)
 
