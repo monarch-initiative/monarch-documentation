@@ -14,27 +14,35 @@ docs_dir = Path(f"{Path(__file__).parent.parent}/docs")
 src_dir = Path(f"{Path(__file__).parent.parent}/src")
 resource_file = Path(f"{src_dir}/data/resources.yaml")
 
-repos = get_repos(resource_file)
+token = os.getenv('GITHUB_TOKEN')
+g = github.Github(token)
 
-repos_table = "| Repository | Description |\n| | |\n"
-for name, repo in repos.items():
-    repos_table += f"| [{name}](./Repositories/{name}) | {repo.description} |\n"
+with open(resource_file, "r") as yaml_file:
+    resources = yaml.safe_load(yaml_file)
+
+repo_reference = resources.get("documentation")
+docs_table = ""
+
+for repo in repo_reference:
+    doc_url = repo['id']
+    doc_name = repo['name']
+    doc_description = repo['description'] if 'description' in repo else ""
+    doc_repository = repo['repository'] if 'repository' in repo else "https://github.com/monarch-initiative/helpdesk/issues"
+    row = "| " + f"[{doc_name}]({doc_url})" + " | "+ doc_description + " | "+ f"[Issue Tracker]({doc_repository}/issues)" + " |\n"
+    docs_table += row
 
 page_contents = f"""
-## Monarch Technical Documentation
+## Monarch Documentation
 
-The Monarch Initiative Knowledge Graph (Monarch KG) is created using a constellation of tools and packages created by the Monarch Initiative team and our collaborators.  
-Here you can find information about the connections between the Monarch Intiative tools and how they are used to create the Monarch Graph.  
+The Monarch Initiative and our collaborators develop a wide range of tools and ontologies to tackle global challenges such as Rare Disease.
+Here we document the software and data infrastructure across the entire Monarch ecosystem. If you would like any specific documentation to be added
+please use [our Monarch-wide issue tracker](https://github.com/monarch-initiative/helpdesk/issues).
 
-## Monarch Software Infrastructure
+### Important documentation across the Monarch Initiative ecosystem
 
-(Insert a description of the various "sub-workflows" within the overall Monarch pipeline)
-
-(Placeholder image)
-<img src='images/docs-coming-soon.jpg' width=420, style='display: block; margin-left: auto; margin-right: auto; width: 60%;'>
-
-### Repositories
-{repos_table}
+| Repository | Description | Tracker |
+| --- | --- | --- |
+{docs_table}
 
 """
 

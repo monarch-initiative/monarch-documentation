@@ -1,21 +1,20 @@
 # Monarch Documentation
 
-Documentation for all Monarch applications, packages, services and related projects.
+Documentation for all Monarch applications, packages, services, and related projects.
 
-[See the docs here](https://monarch-initiative.github.io/monarch-documentation)
+[See the docs here](https://monarch-initiative.github.io/monarch-documentation/)
 
 
 ## Overview
 
 The Monarch Initiative Knowledge Graph (Monarch KG) is created using a constellation of tools and packages created by the Monarch Initiative team and our collaborators.  
-This repository exists to document the connections between the Monarch Intiative tools and how they are used to create the Monarch Graph.  
-The intent of this repository is to serve as the source of truth for documentation of the project overall, containing information and documentation for each repository,  
-as well as documentation for how the different software tools are used together.
+This repository exists to document the connections between the Monarch Initiative tools and how they are used to create the Monarch Graph.  
+The intent of this repository is to serve as the source of truth for the documentation of the project overall, containing information and documentation for each repository, as well as documentation for how the different software tools are used together.
 
 
 ## Contents
 
-This repository will host the higher-order structure documentation of the Monarch Intiative Knowledge Graph Tools and as a build platform for integrating all of the documentation of each of requisite resources used to construct the Monarch Intiative Knowledge Graph and make it useable to others. This project consists of the following tools to build and deploy the Monarch Initiative Documentation.
+This repository will host the higher-order structure documentation of the Monarch Intiative Knowledge Graph Tools and as a build platform for integrating all of the documentation of each of the requisite resources used to construct the Monarch Intiative Knowledge Graph and make it useable to others. This project consists of the following tools to build and deploy the Monarch Initiative Technical Documentation.
 
 - [Markdown Generation Scripts](scripts/) - Python scripts to pull documentation from resources to aggregate in Monarch Documentation pages.
 - [src/](src/) - Source files for LinkML Cookie Cutter
