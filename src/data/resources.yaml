@@ -133,9 +133,9 @@ standards:
     documentation: https://mapping-commons.github.io/sssom/spec/
     project_boards:
       - name: SSSOM Toolkit
-        url: "https://github.com/orgs/mapping-commons/projects/4/views/1?groupedBy%5BcolumnId%5D=3008850&visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C3008850%2C%22Linked+Pull+Requests%22%2C%22Milestone%22%2C%22Labels%22%5D"
+        id: "https://github.com/orgs/mapping-commons/projects/4/views/1?groupedBy%5BcolumnId%5D=3008850&visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C3008850%2C%22Linked+Pull+Requests%22%2C%22Milestone%22%2C%22Labels%22%5D"
       - name: SSSOM Model
-        url: "https://github.com/orgs/mapping-commons/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Milestone%22%2C3005838%5D&groupedBy%5BcolumnId%5D=3005838"
+        id: "https://github.com/orgs/mapping-commons/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Milestone%22%2C3005838%5D&groupedBy%5BcolumnId%5D=3005838"
     category: Data Exchange
     grants:
       - Phenomics First
@@ -181,7 +181,7 @@ standards:
     documentation: https://obophenotype.github.io/upheno/
     project_boards:
       - name: uPheno 2 Ontology Development
-        url: "https://github.com/orgs/obophenotype/projects/15/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C13049768%5D&groupedBy%5BcolumnId%5D=13049768"
+        id: "https://github.com/orgs/obophenotype/projects/15/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C13049768%5D&groupedBy%5BcolumnId%5D=13049768"
     contact:
         name: James McLaughlin
         email: jmcl@ebi.ac.uk
@@ -209,7 +209,7 @@ standards:
     documentation: https://obophenotype.github.io/upheno/
     project_boards:
       - name: OBA Ontology Development (uPheno board)
-        url: "https://github.com/orgs/obophenotype/projects/15/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C13049768%5D&groupedBy%5BcolumnId%5D=13049768"
+        id: "https://github.com/orgs/obophenotype/projects/15/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C13049768%5D&groupedBy%5BcolumnId%5D=13049768"
     monarch_role: Core
     contact:
         name: Chris Mungall
@@ -316,7 +316,7 @@ tools:
     documentation: https://github.com/INCATools/ontology-development-kit
     project_boards:
       - name: ODK Milestones
-        url: "https://github.com/orgs/INCATools/projects/2/views/1?groupedBy%5BcolumnId%5D=Milestone"
+        id: "https://github.com/orgs/INCATools/projects/2/views/1?groupedBy%5BcolumnId%5D=Milestone"
   - id: https://tools.monarchinitiative.org/oak
     name: Ontology Access Kit (OAK)
     category: Ontology Use

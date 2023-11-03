@@ -33,6 +33,7 @@ classes:
       - monarch_role
       - citation
       - contact
+      - project_boards
     class_uri: schema:Thing
 
   DataAsset:
@@ -72,6 +73,12 @@ classes:
     slot_usage:
         category:
             range: documentation_asset_enum
+    is_a: Resource
+
+  ProjectBoard:
+    description: A reference to a project board, like a kanban board.
+    slots:
+      - url
     is_a: Resource
 
   Repository:
@@ -154,6 +161,11 @@ slots:
     description: The grant used to finance the production of an asset.
     range: grant_enum
     multivalued: true
+  project_boards:
+    description: The project board associated with this resource
+    range: ProjectBoard
+    multivalued: true
+    inlined_as_list: true
   release_status:
     description: The maturity of the asset, e.g. whether it is under development, or public.
     range: release_status_enum
