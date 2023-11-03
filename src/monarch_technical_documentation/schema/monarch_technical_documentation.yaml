@@ -29,6 +29,10 @@ classes:
       - grants
       - documentation
       - monarch_contribution
+      - repository
+      - monarch_role
+      - citation
+      - contact
     class_uri: schema:Thing
 
   DataAsset:
@@ -54,7 +58,6 @@ classes:
     description: A reference to a repository.
     slots:
       - url
-      - repository
       - category
     slot_usage:
       category:
@@ -65,7 +68,6 @@ classes:
     description: A reference to a documentation page.
     slots:
       - url
-      - repository
       - category
     slot_usage:
         category:
@@ -94,6 +96,7 @@ classes:
     description: >-
       A registry of different types of data assets
     slots:
+      - name
       - data
       - standards
       - tools
@@ -104,10 +107,19 @@ classes:
   Download:
     description: >-
       A downloadable asset, i.e. a data file, an software component, etc.
-    attributes:
-      url:
-      release_status:
-      file_format:
+    slots:
+      - url
+      - release_status
+      - file_format
+
+  Contact:
+    description: >-
+      The person responsible for a resources.
+    slots:
+      - name
+      - orcid
+      - github
+      - email
 
 slots:
   id:
@@ -118,12 +130,26 @@ slots:
   name:
     slot_uri: schema:name
     description: A human-readable name for a resource
+  email:
+    description: The email of the contact.
+  github:
+    description: The GitHub handle of the contact.
+  orcid:
+    description: The ORCID of the contact.
+    range: uriorcurie
   description:
     slot_uri: schema:description
     description: A human-readable description for a resource
+  contact:
+    description: The person responsible for a resources.
+    range: Contact
   download:
     description: The web location this asset can be obtained from.
     range: Download
+    multivalued: true
+  citation:
+    description: A citation for the resource
+    range: uriorcurie
   grants:
     description: The grant used to finance the production of an asset.
     range: grant_enum
@@ -149,6 +175,9 @@ slots:
   monarch_contribution:
     description: The role the Monarch Initiative plays in the maintainence of this asset.
     range: monarch_contribution_enum
+  monarch_role:
+    description: The strategic role the asset has for the Monarch core mission.
+    range: monarch_role_enum
   data:
     range: DataAsset
     multivalued: true
@@ -193,11 +222,13 @@ enums:
       ttl:
       json:
       rdfxml:
+      nt.gz:
   standard_enum:
     permissible_values:
       Ontology:
       Data Standard:
       Data Exchange:
+      Ontology Curation:
   data_asset_enum:
     permissible_values:
       Biomedical Data:
@@ -226,3 +257,11 @@ enums:
       HPO:
       Exomiser:
       Bosch Gift:
+      TBD:
+  monarch_role_enum:
+    permissible_values:
+      Flagship:
+      Core:
+      Support:
+      Research:
+      Community:

@@ -4,40 +4,190 @@ The Monarch Tool, Standard and Data Registry aims to provide a centralised view 
 the diverse ecosystem of tools, data and standards that Monarch supports.
 
 
-## Datasets developed by the Monarch Initiative
-
-| Dataset | Category | Docs | Contribution |
-| ------ | ----- | ----- | ----- |
-| [HPOA - Disease Annotations](http://purl.obolibrary.org/obo/hp/hpoa/phenotype.hpoa) | Biomedical Data | [Docs](https://hpo-annotation-qc.readthedocs.io/en/latest/annotationFormat.html#phenotype-hpoa-format) | Lead |
-| [HPOA - Phenotype to Gene Associations](http://purl.obolibrary.org/obo/hp/hpoa/phenotype_to_genes.txt) | Biomedical Data | [Docs](https://hpo.jax.org/app/download/annotation) | Lead |
-| [HPOA - Gene to Phenotype Associations](http://purl.obolibrary.org/obo/hp/hpoa/genes_to_phenotype.txt) | Biomedical Data | [Docs](https://hpo.jax.org/app/download/annotation) | Lead |
-| [HPOA Knowledge Graph Ingestible](https://data.monarchinitiative.org/monarch-kg/hpoa) | Knowledge Graph Ingestibles | [Docs](https://monarch-initiative.github.io/monarch-ingest/Sources/HPOA/) |  |
-| [Alliance Knowledge Graph Ingestible](https://data.monarchinitiative.org/monarch-kg/alliance) | Knowledge Graph Ingestibles | [Docs](https://monarch-initiative.github.io/monarch-ingest/Sources/Alliance/) | Lead |
-| [KG Covid-19](https://github.com/Knowledge-Graph-Hub/kg-covid-19) | Knowledge Graph | [Docs]() | Lead |
-| [ECO KG](https://github.com/Knowledge-Graph-Hub/eco-kg) | Knowledge Graph | [Docs]() | Lead |
-| [KG IDG](https://github.com/Knowledge-Graph-Hub/kg-idg) | Knowledge Graph | [Docs]() | Lead |
-| [KG Phenio](https://github.com/Knowledge-Graph-Hub/kg-phenio) | Knowledge Graph | [Docs]() | Lead |
-| [KG OBO](https://github.com/Knowledge-Graph-Hub/kg-obo) | Knowledge Graph | [Docs]() | Lead |
-| [KG Microbe](https://github.com/Knowledge-Graph-Hub/kg-microbe) | Knowledge Graph | [Docs]() | Lead |
-| [SRI Reference KG](https://github.com/Knowledge-Graph-Hub/sri-reference-kg) | Knowledge Graph | [Docs]() | Lead |
-
-
 ## Standards developed or significantly supported by the Monarch Initiative
 
-| Standard | Category | Docs | Contribution | Grants |
-| ------ | ----- | ----- | ----- | ----- |
-| [Knowledge Graph Change Language](https://github.com/INCATools/kgcl) | Ontology Curation | [Docs]() | Lead | Bosch Gift |
-| [Phenopackets](https://standards.monarchinitiative.org/phenopackets) | Data Exchange | [Docs]() | Lead | Phenomics First |
-| [Simple Standard for Ontology Mappings (SSSOM)](https://standards.monarchinitiative.org/sssom) | Data Exchange | [Docs]() | Lead | Phenomics First |
-| [Mondo Disease Ontology](http://purl.obolibrary.org/obo/mondo.owl) | Ontology | [Docs](https://mondo.readthedocs.io/) | Lead | Phenomics First |
-| [The Unified Phenotype Ontology (uPheno)](https://github.com/obophenotype/upheno-dev) | Ontology | [Docs]() | Lead | Phenomics First |
-| [Medical Action Ontology](http://purl.obolibrary.org/obo/maxo.owl) | Ontology | [Docs]() | Lead | Phenomics First |
-| [Environmental Exposure Ontology](http://purl.obolibrary.org/obo/ecto.owl) | Ontology | [Docs](https://github.com/EnvironmentOntology/environmental-exposure-ontology) | Lead | Phenomics First |
-| [Ontology of biological Attributes](http://purl.obolibrary.org/obo/oba.owl) | Ontology | [Docs]() | Lead | Phenomics First |
-| [Uberon Anatomy Ontology](http://purl.obolibrary.org/obo/uberon.owl) | Ontology | [Docs]() | Co-Lead | Phenomics First |
-| [Phenomics Integrated Ontology (PHENIO)](https://github.com/monarch-initiative/phenio) | Ontology | [Docs]() | Lead | Phenomics First |
-| [Dead simple owl design pattern (DOS-DP) exchange format](https://github.com/INCATools/dead_simple_owl_design_patterns) | Data Exchange | [Docs]() | Lead | Phenomics First |
-| [Babelon](https://github.com/monarch-initiative/babelon) | Data Exchange | [Docs](https://monarch-initiative.github.io/babelon/) | Lead |  |
+
+### Phenopackets
+
+| [Phenopackets](https://standards.monarchinitiative.org/phenopackets) | |
+| ------ | ----- |
+| PURL | https://standards.monarchinitiative.org/phenopackets |
+| Cite | https://phenopackets-schema.readthedocs.io/en/latest/ |
+| Category | Data Exchange |
+| Documentation | [https://phenopackets-schema.readthedocs.io/en/latest/](https://phenopackets-schema.readthedocs.io/en/latest/) | 
+| Monarch role in the development | Lead |
+| Grants involved in this standard | Phenomics First |
+| Role in Monarchs strategic vision | Flagship |
+| Main repository |  |
+| Responsible contact in Monarch | Peter Robinson, https://orcid.org/0000-0002-0736-9199, @pnrobinson |
+
+### Simple Standard for Ontology Mappings (SSSOM)
+
+| [Simple Standard for Ontology Mappings (SSSOM)](https://standards.monarchinitiative.org/sssom) | |
+| ------ | ----- |
+| PURL | https://standards.monarchinitiative.org/sssom |
+| Cite | https://mapping-commons.github.io/sssom/spec/ |
+| Category | Data Exchange |
+| Documentation | [https://mapping-commons.github.io/sssom/spec/](https://mapping-commons.github.io/sssom/spec/) | 
+| Monarch role in the development | Lead |
+| Grants involved in this standard | Phenomics First |
+| Role in Monarchs strategic vision | Core |
+| Main repository |  |
+| Responsible contact in Monarch | Chris Mungall, https://orcid.org/0000-0002-6601-2165, @cmungall |
+
+### Human Phenotype Ontology
+
+| [Human Phenotype Ontology](http://purl.obolibrary.org/obo/hp.owl) | |
+| ------ | ----- |
+| PURL | http://purl.obolibrary.org/obo/hp.owl |
+| Cite | https://obophenotype.github.io/human-phenotype-ontology/ |
+| Category | Ontology |
+| Documentation | [https://obophenotype.github.io/human-phenotype-ontology/](https://obophenotype.github.io/human-phenotype-ontology/) | 
+| Monarch role in the development | Lead |
+| Grants involved in this standard | HPO, Phenomics First |
+| Role in Monarchs strategic vision | Flagship |
+| Main repository |  |
+| Responsible contact in Monarch | Peter Robinson, https://orcid.org/0000-0002-0736-9199, @pnrobinson |
+
+### Mondo Disease Ontology
+
+| [Mondo Disease Ontology](http://purl.obolibrary.org/obo/mondo.owl) | |
+| ------ | ----- |
+| PURL | http://purl.obolibrary.org/obo/mondo.owl |
+| Cite | https://mondo.readthedocs.io/ |
+| Category | Ontology |
+| Documentation | [https://mondo.readthedocs.io/](https://mondo.readthedocs.io/) | 
+| Monarch role in the development | Lead |
+| Grants involved in this standard | Phenomics First |
+| Role in Monarchs strategic vision | Flagship |
+| Main repository |  |
+| Responsible contact in Monarch | Chris Mungall, https://orcid.org/0000-0002-6601-2165, @cmungall |
+
+### The Unified Phenotype Ontology (uPheno)
+
+| [The Unified Phenotype Ontology (uPheno)](https://github.com/obophenotype/upheno-dev) | |
+| ------ | ----- |
+| PURL | https://github.com/obophenotype/upheno-dev |
+| Cite | https://obophenotype.github.io/upheno/ |
+| Category | Ontology |
+| Documentation | [https://obophenotype.github.io/upheno/](https://obophenotype.github.io/upheno/) | 
+| Monarch role in the development | Lead |
+| Grants involved in this standard | Phenomics First |
+| Role in Monarchs strategic vision | Flagship |
+| Main repository |  |
+| Responsible contact in Monarch | Chris Mungall, https://orcid.org/0000-0002-6601-2165, @cmungall |
+
+### Medical Action Ontology
+
+| [Medical Action Ontology](http://purl.obolibrary.org/obo/maxo.owl) | |
+| ------ | ----- |
+| PURL | http://purl.obolibrary.org/obo/maxo.owl |
+| Cite | https://github.com/monarch-initiative/MAxO |
+| Category | Ontology |
+| Documentation | [https://github.com/monarch-initiative/MAxO](https://github.com/monarch-initiative/MAxO) | 
+| Monarch role in the development | Lead |
+| Grants involved in this standard | HPO |
+| Role in Monarchs strategic vision | Core |
+| Main repository |  |
+| Responsible contact in Monarch | Peter Robinson, https://orcid.org/0000-0002-0736-9199, @pnrobinson |
+
+### Ontology of Biological Attributes
+
+| [Ontology of Biological Attributes](http://purl.obolibrary.org/obo/oba.owl) | |
+| ------ | ----- |
+| PURL | http://purl.obolibrary.org/obo/oba.owl |
+| Cite | https://obophenotype.github.io/upheno/ |
+| Category | Ontology |
+| Documentation | [https://obophenotype.github.io/upheno/](https://obophenotype.github.io/upheno/) | 
+| Monarch role in the development | Lead |
+| Grants involved in this standard | Phenomics First |
+| Role in Monarchs strategic vision | Core |
+| Main repository |  |
+| Responsible contact in Monarch | Chris Mungall, https://orcid.org/0000-0002-6601-2165, @cmungall |
+
+### Uberon Anatomy Ontology
+
+| [Uberon Anatomy Ontology](http://purl.obolibrary.org/obo/uberon.owl) | |
+| ------ | ----- |
+| PURL | http://purl.obolibrary.org/obo/uberon.owl |
+| Cite | https://obophenotype.github.io/uberon/ |
+| Category | Ontology |
+| Documentation | [https://obophenotype.github.io/uberon/](https://obophenotype.github.io/uberon/) | 
+| Monarch role in the development | Co-Lead |
+| Grants involved in this standard | Phenomics First |
+| Role in Monarchs strategic vision | Core |
+| Main repository |  |
+| Responsible contact in Monarch | Chris Mungall, https://orcid.org/0000-0002-6601-2165, @cmungall |
+
+### Phenomics Integrated Ontology (PHENIO)
+
+| [Phenomics Integrated Ontology (PHENIO)](https://github.com/monarch-initiative/phenio) | |
+| ------ | ----- |
+| PURL | https://github.com/monarch-initiative/phenio |
+| Cite |  |
+| Category | Ontology |
+| Documentation | [TBD]() | 
+| Monarch role in the development | Lead |
+| Grants involved in this standard | Monarch R24 |
+| Role in Monarchs strategic vision |  |
+| Main repository |  |
+| Responsible contact in Monarch | Chris Mungall, https://orcid.org/0000-0002-6601-2165, @cmungall |
+
+### Environmental Exposure Ontology
+
+| [Environmental Exposure Ontology](http://purl.obolibrary.org/obo/ecto.owl) | |
+| ------ | ----- |
+| PURL | http://purl.obolibrary.org/obo/ecto.owl |
+| Cite | https://github.com/EnvironmentOntology/environmental-exposure-ontology |
+| Category | Ontology |
+| Documentation | [https://github.com/EnvironmentOntology/environmental-exposure-ontology](https://github.com/EnvironmentOntology/environmental-exposure-ontology) | 
+| Monarch role in the development | Lead |
+| Grants involved in this standard | TBD |
+| Role in Monarchs strategic vision | Support |
+| Main repository |  |
+| Responsible contact in Monarch | Chris Mungall, https://orcid.org/0000-0002-6601-2165, @cmungall |
+
+### Dead simple owl design pattern (DOS-DP) exchange format
+
+| [Dead simple owl design pattern (DOS-DP) exchange format](https://github.com/INCATools/dead_simple_owl_design_patterns) | |
+| ------ | ----- |
+| PURL | https://github.com/INCATools/dead_simple_owl_design_patterns |
+| Cite | https://incatools.github.io/dead_simple_owl_design_patterns/ |
+| Category | Data Exchange |
+| Documentation | [https://incatools.github.io/dead_simple_owl_design_patterns/](https://incatools.github.io/dead_simple_owl_design_patterns/) | 
+| Monarch role in the development | Lead |
+| Grants involved in this standard | Phenomics First |
+| Role in Monarchs strategic vision | Support |
+| Main repository |  |
+| Responsible contact in Monarch | Chris Mungall, https://orcid.org/0000-0002-6601-2165, @cmungall |
+
+### Knowledge Graph Change Language
+
+| [Knowledge Graph Change Language](https://github.com/INCATools/kgcl) | |
+| ------ | ----- |
+| PURL | https://github.com/INCATools/kgcl |
+| Cite | https://incatools.github.io/kgcl/ |
+| Category | Ontology Curation |
+| Documentation | [https://incatools.github.io/kgcl/](https://incatools.github.io/kgcl/) | 
+| Monarch role in the development | Lead |
+| Grants involved in this standard | Bosch Gift |
+| Role in Monarchs strategic vision | Community |
+| Main repository |  |
+| Responsible contact in Monarch | Chris Mungall, https://orcid.org/0000-0002-6601-2165, @cmungall |
+
+### Babelon - A simple standard for managing ontology translations and language profiles
+
+| [Babelon - A simple standard for managing ontology translations and language profiles](https://github.com/monarch-initiative/babelon) | |
+| ------ | ----- |
+| PURL | https://github.com/monarch-initiative/babelon |
+| Cite | https://monarch-initiative.github.io/babelon/ |
+| Category | Data Exchange |
+| Documentation | [https://monarch-initiative.github.io/babelon/](https://monarch-initiative.github.io/babelon/) | 
+| Monarch role in the development | Lead |
+| Grants involved in this standard | HPO |
+| Role in Monarchs strategic vision | Support |
+| Main repository | https://github.com/monarch-initiative/babelon |
+| Responsible contact in Monarch | Peter Robinson, https://orcid.org/0000-0002-0736-9199, @pnrobinson |
 
 
 ## Tools and Services developed or significantly supported by the Monarch Initiative
@@ -45,7 +195,7 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | Tool or Service | Category |
 | ------ | ----- |
 | [Exomiser](https://tools.monarchinitiative.org/exomiser) | Clinical Diagnosis |
-| [Monarch UI](https://monarchinitiative.org/) | Clinical Diagnosis |
+| [Monarch App](https://monarchinitiative.org/) | Clinical Diagnosis |
 | [Ontology Development Kit (ODK)](https://tools.monarchinitiative.org/odk) | Ontology Maintenance |
 | [Ontology Access Kit (OAK)](https://tools.monarchinitiative.org/oak) | Ontology Use |
 | [SSSOM Toolkit](https://tools.monarchinitiative.org/sssom-toolkit) | Mapping |
@@ -65,20 +215,20 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | [Koza](https://github.com/monarch-initiative/koza) | Data Curation |
 
 
-## Documentation resources relevant to work by the Monarch Initiative
+## Datasets developed by the Monarch Initiative
 
-| Documentation | Description |
-| ------ | ----- |
-| [Monarch App Docs](https://monarch-app.monarchinitiative.org/) | The Monarch App is a web application for exploring the Monarch Knowledge Graph. |
-| [Human Phenotype Ontology User Docs](https://obophenotype.github.io/human-phenotype-ontology/) | The HPO provides a standardized vocabulary of phenotypic abnormalities in human disease. |
-| [Mondo User Docs](https://mondo.readthedocs.io/) | The Mondo Disease Ontology aims to harmonizes disease definitions across the world. |
-| [LinkML Docs](https://linkml.io/linkml-model/docs/) | The Linked Data Modeling Language (LinkML) is a flexible modeling language that allows you to author schemas (models) in YAML that describe the structure of your data. |
-| [The Unified Phenotype Ontology (uPheno) Docs](https://obophenotype.github.io/upheno/) | uPheno aims to unify the annotation of phenotypes across species. |
-| [OBO Academy](https://oboacademy.github.io/obook/) | A resource for self-paced training of Semantic Engineers. |
-| [Best practices for collaborative open source coding](https://berkeleybop.github.io/best_practice/) | The best practice / house style guide maintained by Monarch's LBNL team members. |
-| [Exomiser Docs](https://exomiser.readthedocs.io/en/latest/) | The Exomiser is a tool for finding potential disease-causing variants in whole-exome or whole-genome sequencing data. |
-| [Monarch Ingest Docs](https://monarch-initiative.github.io/monarch-ingest) | The Monarch Ingest pulls in data from a wide variety of biomedical data sources and generates Biolink-compliant KGX files that are used to build the Monarch KG. |
-| [Simple Standard for Sharing Ontological Mappings (SSSOM) Docs](https://mapping-commons.github.io/sssom/spec/) | SSSOM is a simple metadata standard for describing semantic mappings. |
-| [Phenopackets Schema Docs](https://phenopacket-schema.readthedocs.io/en/latest/) | The Phenopacket Schema is an ISO-endorsed open standard for sharing disease and phenotype information. |
-| [OntoGPT Docs](https://monarch-initiative.github.io/ontogpt/) | OntoGPT is a Python package for extracting structured information from text with large language models (LLMs), instruction prompts, and ontology-based grounding. |
-| [Ontology Access Kit (OAK) Docs](https://incatools.github.io/ontology-access-kit/) | OAK is a Python library and command-line tool for common ontology operations. |
+| Dataset | Category | Docs | Contribution |
+| ------ | ----- | ----- | ----- |
+| [HPOA - Disease Annotations](http://purl.obolibrary.org/obo/hp/hpoa/phenotype.hpoa) | Biomedical Data | [Docs](https://hpo-annotation-qc.readthedocs.io/en/latest/annotationFormat.html#phenotype-hpoa-format) | Lead |
+| [HPOA - Phenotype to Gene Associations](http://purl.obolibrary.org/obo/hp/hpoa/phenotype_to_genes.txt) | Biomedical Data | [Docs](https://hpo.jax.org/app/download/annotation) | Lead |
+| [HPOA - Gene to Phenotype Associations](http://purl.obolibrary.org/obo/hp/hpoa/genes_to_phenotype.txt) | Biomedical Data | [Docs](https://hpo.jax.org/app/download/annotation) | Lead |
+| [HPOA Knowledge Graph Ingestible](https://data.monarchinitiative.org/monarch-kg/hpoa) | Knowledge Graph Ingestibles | [Docs](https://monarch-initiative.github.io/monarch-ingest/Sources/HPOA/) |  |
+| [Alliance Knowledge Graph Ingestible](https://data.monarchinitiative.org/monarch-kg/alliance) | Knowledge Graph Ingestibles | [Docs](https://monarch-initiative.github.io/monarch-ingest/Sources/Alliance/) | Lead |
+| [KG Covid-19](https://github.com/Knowledge-Graph-Hub/kg-covid-19) | Knowledge Graph | [Docs]() | Lead |
+| [ECO KG](https://github.com/Knowledge-Graph-Hub/eco-kg) | Knowledge Graph | [Docs]() | Lead |
+| [KG IDG](https://github.com/Knowledge-Graph-Hub/kg-idg) | Knowledge Graph | [Docs]() | Lead |
+| [KG Phenio](https://github.com/Knowledge-Graph-Hub/kg-phenio) | Knowledge Graph | [Docs]() | Lead |
+| [KG OBO](https://github.com/Knowledge-Graph-Hub/kg-obo) | Knowledge Graph | [Docs]() | Lead |
+| [KG Microbe](https://github.com/Knowledge-Graph-Hub/kg-microbe) | Knowledge Graph | [Docs]() | Lead |
+| [SRI Reference KG](https://github.com/Knowledge-Graph-Hub/sri-reference-kg) | Knowledge Graph | [Docs]() | Lead |
+

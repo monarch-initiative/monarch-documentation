@@ -1,5 +1,5 @@
 id: https://monarchinitiative.org/registry
-title: Monarch Tool, Standard and Data Registry
+name: Monarch Tool, Standard and Data Registry
 description: |
   The Monarch Tool, Standard and Data Registry aims to provide a centralised view of
   the diverse ecosystem of tools, data and standards that Monarch supports.
@@ -7,160 +7,307 @@ data:
   - id: http://purl.obolibrary.org/obo/hp/hpoa/phenotype.hpoa
     download:
       - url: http://purl.obolibrary.org/obo/hp/hpoa/phenotype.hpoa
-        release: public
-        format: tsv
+        release_status: public
+        file_format: tsv
     category: Biomedical Data
     documentation: https://hpo-annotation-qc.readthedocs.io/en/latest/annotationFormat.html#phenotype-hpoa-format
     name: HPOA - Disease Annotations
     monarch_contribution: Lead
+    monarch_role: Core
+    contact:
+        name: Peter Robinson
+        email: Peter.Robinson@jax.org
+        orcid: https://orcid.org/0000-0002-0736-9199
+        github: "@pnrobinson"
   - id: http://purl.obolibrary.org/obo/hp/hpoa/phenotype_to_genes.txt
     download:
       - url: http://purl.obolibrary.org/obo/hp/hpoa/phenotype_to_genes.txt
-        release: public
-        format: tsv
+        release_status: public
+        file_format: tsv
     category: Biomedical Data
     documentation: https://hpo.jax.org/app/download/annotation
     name: HPOA - Phenotype to Gene Associations
     monarch_contribution: Lead
+    monarch_role: Core
+    contact:
+        name: Peter Robinson
+        email: Peter.Robinson@jax.org
+        orcid: https://orcid.org/0000-0002-0736-9199
+        github: "@pnrobinson"
   - id: http://purl.obolibrary.org/obo/hp/hpoa/genes_to_phenotype.txt
     download:
       - url: http://purl.obolibrary.org/obo/hp/hpoa/genes_to_phenotype.txt
-        release: public
-        format: tsv
+        release_status: public
+        file_format: tsv
     category: Biomedical Data
     documentation: https://hpo.jax.org/app/download/annotation
     name: HPOA - Gene to Phenotype Associations
     monarch_contribution: Lead
+    monarch_role: Core
+    contact:
+        name: Peter Robinson
+        email: Peter.Robinson@jax.org
+        orcid: https://orcid.org/0000-0002-0736-9199
+        github: "@pnrobinson"
   - id: https://data.monarchinitiative.org/monarch-kg/hpoa
     download:
       - url: https://data.monarchinitiative.org/monarch-kg-dev/latest/rdf/hpoa_disease_phenotype.nt.gz
-        release: dev
-        format: nt.gz
+        release_status: development snapshot
+        file_format: nt.gz
     category: Knowledge Graph Ingestibles
     documentation: https://monarch-initiative.github.io/monarch-ingest/Sources/HPOA/
     name: HPOA Knowledge Graph Ingestible
+    monarch_role: Core
+    contact:
+        name: Kevin Schaper
+        email: kevin@tislab.org
+        orcid: https://orcid.org/0000-0003-3311-7320
+        github: "@kevinschaper"
   - id: https://data.monarchinitiative.org/monarch-kg/alliance
     download:
       - url: https://data.monarchinitiative.org/monarch-kg-dev/latest/rdf/alliance.nt.gz
-        release: dev
-        format: nt.gz
+        release_status: development snapshot
+        file_format: nt.gz
     category: Knowledge Graph Ingestibles
     documentation: https://monarch-initiative.github.io/monarch-ingest/Sources/Alliance/
     name: Alliance Knowledge Graph Ingestible
     monarch_contribution: Lead
+    monarch_role: Core
+    contact:
+        name: Kevin Schaper
+        email: kevin@tislab.org
+        orcid: https://orcid.org/0000-0003-3311-7320
+        github: "@kevinschaper"
   - id: https://github.com/Knowledge-Graph-Hub/kg-covid-19
     name: KG Covid-19
     monarch_contribution: Lead
     category: Knowledge Graph
+    monarch_role: Community
   - id: https://github.com/Knowledge-Graph-Hub/eco-kg
     name: ECO KG
     category: Knowledge Graph
     monarch_contribution: Lead
+    monarch_role: Community
   - id: https://github.com/Knowledge-Graph-Hub/kg-idg
     name: KG IDG
     category: Knowledge Graph
     monarch_contribution: Lead
+    monarch_role: Community
   - id: https://github.com/Knowledge-Graph-Hub/kg-phenio
     name: KG Phenio
     category: Knowledge Graph
     monarch_contribution: Lead
+    monarch_role: Core
   - id: https://github.com/Knowledge-Graph-Hub/kg-obo
     name: KG OBO
     category: Knowledge Graph
     monarch_contribution: Lead
+    monarch_role: Community
   - id: https://github.com/Knowledge-Graph-Hub/kg-microbe
     name: KG Microbe
     category: Knowledge Graph
     monarch_contribution: Lead
+    monarch_role: Community
   - id: https://github.com/Knowledge-Graph-Hub/sri-reference-kg
     name: SRI Reference KG
     category: Knowledge Graph
     monarch_contribution: Lead
+    monarch_role: Community
 standards:
-  - id: https://github.com/INCATools/kgcl
-    name: Knowledge Graph Change Language
-    monarch_contribution: Lead
-    category: Ontology Curation
-    grants: Bosch Gift
   - id: https://standards.monarchinitiative.org/phenopackets
     name: Phenopackets
     monarch_contribution: Lead
     category: Data Exchange
-    grants: Phenomics First
+    documentation: https://phenopackets-schema.readthedocs.io/en/latest/
+    grants:
+      - Phenomics First
+    monarch_role: Flagship
+    contact:
+        name: Peter Robinson
+        email: Peter.Robinson@jax.org
+        orcid: https://orcid.org/0000-0002-0736-9199
+        github: "@pnrobinson"
   - id: https://standards.monarchinitiative.org/sssom
     name: Simple Standard for Ontology Mappings (SSSOM)
     monarch_contribution: Lead
+    documentation: https://mapping-commons.github.io/sssom/spec/
     category: Data Exchange
-    grants: Phenomics First
+    grants:
+      - Phenomics First
+    monarch_role: Core
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
+  - id: http://purl.obolibrary.org/obo/hp.owl
+    name: Human Phenotype Ontology
+    monarch_contribution: Lead
+    category: Ontology
+    monarch_role: Flagship
+    documentation: https://obophenotype.github.io/human-phenotype-ontology/
+    contact:
+        name: Peter Robinson
+        email: Peter.Robinson@jax.org
+        orcid: https://orcid.org/0000-0002-0736-9199
+        github: "@pnrobinson"
+    grants:
+      - HPO
+      - Phenomics First
   - id: http://purl.obolibrary.org/obo/mondo.owl
     documentation: https://mondo.readthedocs.io/
     name: Mondo Disease Ontology
     monarch_contribution: Lead
     category: Ontology
-    grants: Phenomics First
+    monarch_role: Flagship
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
+    grants:
+      - Phenomics First
   - id: https://github.com/obophenotype/upheno-dev
     name: The Unified Phenotype Ontology (uPheno)
     monarch_contribution: Lead
     category: Ontology
-    grants: Phenomics First
+    monarch_role: Flagship
+    documentation: https://obophenotype.github.io/upheno/
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
+    grants:
+      - Phenomics First
   - id: http://purl.obolibrary.org/obo/maxo.owl
     name: Medical Action Ontology
     monarch_contribution: Lead
     category: Ontology
-    grants: Phenomics First
+    documentation: https://github.com/monarch-initiative/MAxO
+    monarch_role: Core
+    contact:
+        name: Peter Robinson
+        email: Peter.Robinson@jax.org
+        orcid: https://orcid.org/0000-0002-0736-9199
+        github: "@pnrobinson"
+    grants:
+      - HPO
+  - id: http://purl.obolibrary.org/obo/oba.owl
+    name: Ontology of Biological Attributes
+    monarch_contribution: Lead
+    category: Ontology
+    documentation: https://obophenotype.github.io/upheno/
+    monarch_role: Core
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
+    grants:
+      - Phenomics First
+  - id: http://purl.obolibrary.org/obo/uberon.owl
+    name: Uberon Anatomy Ontology
+    monarch_contribution: Co-Lead
+    category: Ontology
+    monarch_role: Core
+    documentation: https://obophenotype.github.io/uberon/
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
+    grants:
+      - Phenomics First
+  - id: https://github.com/monarch-initiative/phenio
+    name: Phenomics Integrated Ontology (PHENIO)
+    monarch_contribution: Lead
+    category: Ontology
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
+    grants:
+      - Monarch R24
   - id: http://purl.obolibrary.org/obo/ecto.owl
     documentation: https://github.com/EnvironmentOntology/environmental-exposure-ontology
     name: Environmental Exposure Ontology
     monarch_contribution: Lead
     category: Ontology
-    grants: Phenomics First
-  - id: http://purl.obolibrary.org/obo/oba.owl
-    name: Ontology of biological Attributes
-    monarch_contribution: Lead
-    category: Ontology
-    grants: Phenomics First
-  - id: http://purl.obolibrary.org/obo/uberon.owl
-    name: Uberon Anatomy Ontology
-    monarch_contribution: Co-Lead
-    category: Ontology
-    grants: Phenomics First
-  - id: https://github.com/monarch-initiative/phenio
-    name: Phenomics Integrated Ontology (PHENIO)
-    monarch_contribution: Lead
-    category: Ontology
-    grants: Phenomics First
+    monarch_role: Support
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
+    grants:
+      - TBD
   - id: https://github.com/INCATools/dead_simple_owl_design_patterns
     name: Dead simple owl design pattern (DOS-DP) exchange format
     monarch_contribution: Lead
     category: Data Exchange
-    grants: Phenomics First
+    documentation: https://incatools.github.io/dead_simple_owl_design_patterns/
+    monarch_role: Support
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
+    grants:
+      - Phenomics First
+  - id: https://github.com/INCATools/kgcl
+    name: Knowledge Graph Change Language
+    monarch_contribution: Lead
+    category: Ontology Curation
+    documentation: https://incatools.github.io/kgcl/
+    grants:
+      - Bosch Gift
+    monarch_role: Community
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
   - id: https://github.com/monarch-initiative/babelon
-    name: Babelon
+    name: Babelon - A simple standard for managing ontology translations and language profiles
     category: Data Exchange
     documentation: https://monarch-initiative.github.io/babelon/
     monarch_contribution: Lead
+    monarch_role: Support
+    contact:
+        name: Peter Robinson
+        email: Peter.Robinson@jax.org
+        orcid: https://orcid.org/0000-0002-0736-9199
+        github: "@pnrobinson"
     repository: https://github.com/monarch-initiative/babelon
+    grants:
+      - HPO
 tools:
   - id: https://tools.monarchinitiative.org/exomiser
     name: Exomiser
     monarch_contribution: Lead
     category: Clinical Diagnosis
+    monarch_role: Flagship
   - id: https://monarchinitiative.org/
-    name: Monarch UI
+    name: Monarch App
     category: Clinical Diagnosis
-    repository: https://github.com/monarch-initiative/monarch-ui
+    repository: https://github.com/monarch-initiative/monarch-app
     monarch_contribution: Lead
+    monarch_role: Flagship
   - id: https://tools.monarchinitiative.org/odk
     name: Ontology Development Kit (ODK)
     category: Ontology Maintenance
     description: A toolkit and workflow system for managing the ontology life-cycle.
     monarch_contribution: Lead
+    monarch_role: Support
     documentation: https://github.com/INCATools/ontology-development-kit
   - id: https://tools.monarchinitiative.org/oak
     name: Ontology Access Kit (OAK)
     category: Ontology Use
     description: A python toolkit for accessing and visualising ontologies.
     monarch_contribution: Lead
+    monarch_role: Support
     documentation: https://incatools.github.io/ontology-access-kit/
   - id: https://tools.monarchinitiative.org/sssom-toolkit
     name: SSSOM Toolkit
@@ -168,22 +315,26 @@ tools:
     description: A python toolkit for processing SSSOM mapping files.
     monarch_contribution: Lead
     documentation: https://mapping-commons.github.io/sssom-py
+    monarch_role: Support
   - id: https://tools.monarchinitiative.org/ols
     url: https://ols.monarchinitiative.org/
     name: Monarch Ontology Lookup Service
     category: Ontology Use
     description: An instance of EBI's OLS for hosting Monarch-specific development snapshots of ontologies.
     monarch_contribution: Lead
+    monarch_role: Support
     repository: https://github.com/monarch-initiative/ontotools-docker
   - id: https://tools.monarchinitiative.org/poet
     url: https://poet.jax.org/
     name: POET
     category: Data Curation
+    monarch_role: Support
     repository: https://github.com/TheJacksonLaboratory/POET
   - id: https://tools.monarchinitiative.org/lirical
     url: https://lirical.readthedocs.io
     name: LIRICAL
     category: Clinical Diagnosis
+    monarch_role: Core
     documentation: https://lirical.readthedocs.io/en/latest/
     repository: https://github.com/TheJacksonLaboratory/LIRICAL
   - id: https://github.com/INCATools/obographviz
@@ -191,39 +342,47 @@ tools:
     category: Ontology Use
     documentation: https://github.com/INCATools/obographviz#readme
     repository: https://github.com/INCATools/obographviz
+    monarch_role: Support
   - id: https://github.com/INCATools/ubergraph
     name: ubergraph
     category: Ontology Use
     repository: https://github.com/INCATools/ubergraph
+    monarch_role: Support
   - id: https://github.com/balhoff/whelk
     name: whelk
     category: Ontology Use
     repository: https://github.com/balhoff/whelk
+    monarch_role: Support
   - id: https://github.com/ontodev/robot
     name: robot
     category: Ontology Use
     documentation: https://robot.obolibrary.org
     monarch_contribution: Contributor
     repository: https://github.com/ontodev/robot
+    monarch_role: Community
   - id: https://github.com/cidgoh/DataHarmonizer
     name: Data Harmonizer
     category: Data Curation
     monarch_contribution: Contributor
+    monarch_role: Community
     repository: https://github.com/cidgoh/DataHarmonizer
   - id: https://github.com/monarch-initiative/ontogpt
     name: OntoGPT
     category: Data Curation
     documentation: https://monarch-initiative.github.io/ontogpt/
     monarch_contribution: Lead
+    monarch_role: Core
     repository: https://github.com/monarch-initiative/ontogpt
   - id: https://github.com/monarch-initiative/semsimian
     name: semsimian
     category: Mapping
     monarch_contribution: Lead
+    monarch_role: Support
     repository: https://github.com/monarch-initiative/semsimian
   - id: https://github.com/monarch-initiative/monarch-py
     name: Monarch Python Toolkit
     category: Data Curation
+    monarch_role: Support
     documentation: https://monarch-initiative.github.io/monarch-py/
     monarch_contribution: Lead
     repository: https://github.com/monarch-initiative/monarch-py
@@ -232,20 +391,23 @@ tools:
     category: Data Curation
     documentation: https://monarch-initiative.github.io/babelon/
     monarch_contribution: Lead
+    monarch_role: Support
     repository: https://github.com/monarch-initiative/babelon
   - id: https://github.com/monarch-initiative/fenominal
     name: Fenominal
     category: Data Curation
+    monarch_role: Support
     documentation: https://monarch-initiative.github.io/fenominal/
     monarch_contribution: Lead
     repository: https://github.com/monarch-initiative/fenominal
   - id: https://github.com/monarch-initiative/koza
     name: Koza
     category: Data Curation
+    monarch_role: Core
     documentation: https://koza.monarchinitiative.org/
     monarch_contribution: Lead
     repository: https://github.com/monarch-initiative/fenominal
-documentation:
+documentations:
   - id: https://monarch-app.monarchinitiative.org/
     name: Monarch App Docs
     description: The Monarch App is a web application for exploring the Monarch Knowledge Graph.
@@ -352,9 +514,7 @@ repositories:
   - id: https://github.com/Knowledge-Graph-Hub/knowledge-graph-hub.github.io
     name: KG Hub
   - id: https://github.com/biolink/kgx
-    name: Knowledge Graph Exchange (KGX) Format
-  - id: https://github.com/biolink/kgx
-    name: KGX Tools
+    name: Knowledge Graph Exchange (KGX) Format and Toolkit
   - id: https://github.com/linkml/linkml-runtime
     name: LinkML Runtime Toolkit
   - id: https://github.com/TheJacksonLaboratory/LIRICAL
@@ -373,7 +533,7 @@ repositories:
     name: Phenomiser
   - id: https://github.com/phenopackets/phenopacket-schema
     name: Phenopackets Schema
-  - id: Phenopackets Tools
+  - id: https://github.com/phenopackets/phenopacket-tools
     name: Phenopackets
   - id: https://github.com/TheJacksonLaboratory/POET
     name: POET
