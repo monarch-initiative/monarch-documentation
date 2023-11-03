@@ -21,7 +21,7 @@ g = github.Github(token)
 with open(resource_file, "r") as yaml_file:
     resources = yaml.safe_load(yaml_file)
 
-repo_reference = resources.get("documentation")
+repo_reference = resources.get("documentations")
 docs_table = ""
 
 for repo in repo_reference:
