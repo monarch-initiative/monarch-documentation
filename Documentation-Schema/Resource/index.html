@@ -532,6 +532,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../ProjectBoard/" class="md-nav__link">
+        Class: ProjectBoard
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ReleaseStatusEnum/" class="md-nav__link">
         Enum: ReleaseStatusEnum
       </a>
@@ -1021,6 +1035,20 @@
     <li class="md-nav__item">
       <a href="../organization/" class="md-nav__link">
         Slot: organization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project_boards/" class="md-nav__link">
+        Slot: project_boards
       </a>
     </li>
   
@@ -2085,6 +2113,7 @@
       Resource &lt;|-- Standard
       Resource &lt;|-- Tool
       Resource &lt;|-- Documentation
+      Resource &lt;|-- ProjectBoard
       Resource &lt;|-- Repository
       Resource &lt;|-- ResourceRegistry
 
@@ -2097,6 +2126,7 @@
       Resource : monarch_contribution
       Resource : monarch_role
       Resource : name
+      Resource : project_boards
       Resource : repository
 </code></pre></div>
 <h2 id="inheritance">Inheritance</h2>
@@ -2106,6 +2136,7 @@
 <li><a href="../Standard/">Standard</a></li>
 <li><a href="../Tool/">Tool</a></li>
 <li><a href="../Documentation/">Documentation</a></li>
+<li><a href="../ProjectBoard/">ProjectBoard</a></li>
 <li><a href="../Repository/">Repository</a></li>
 <li><a href="../ResourceRegistry/">ResourceRegistry</a></li>
 </ul>
@@ -2182,6 +2213,12 @@
 <td>The person responsible for a resources</td>
 <td>direct</td>
 </tr>
+<tr>
+<td><a href="../project_boards/">project_boards</a></td>
+<td>0..* <br/> <a href="../ProjectBoard/">ProjectBoard</a></td>
+<td>The project board associated with this resource</td>
+<td>direct</td>
+</tr>
 </tbody>
 </table>
 <h2 id="usages">Usages</h2>
@@ -2247,6 +2284,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">monarch_role</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">citation</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">contact</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">project_boards</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">schema:Thing</span>
 </code></pre></div>
 </details>
@@ -2366,6 +2404,18 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Resource</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Contact</span>
+<span class="w">  </span><span class="nt">project_boards</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">project_boards</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The project board associated with this resource</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/monarch-initiative/monarch-technical-documentation</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">project_boards</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Resource</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Resource</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ProjectBoard</span>
+<span class="w">    </span><span class="nt">inlined_as_list</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">schema:Thing</span>
 </code></pre></div>
 </details>

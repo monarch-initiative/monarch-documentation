@@ -641,6 +641,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../ProjectBoard/" class="md-nav__link">
+        Class: ProjectBoard
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../ReleaseStatusEnum/" class="md-nav__link">
         Enum: ReleaseStatusEnum
       </a>
@@ -1021,6 +1035,20 @@
     <li class="md-nav__item">
       <a href="../organization/" class="md-nav__link">
         Slot: organization
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project_boards/" class="md-nav__link">
+        Slot: project_boards
       </a>
     </li>
   
@@ -2094,6 +2122,7 @@
       DataAsset : monarch_contribution
       DataAsset : monarch_role
       DataAsset : name
+      DataAsset : project_boards
       DataAsset : repository
 </code></pre></div>
 <h2 id="inheritance">Inheritance</h2>
@@ -2133,45 +2162,9 @@
 <td><a href="../Resource/">Resource</a></td>
 </tr>
 <tr>
-<td><a href="../description/">description</a></td>
-<td>0..1 <br/> NONE</td>
-<td>A human-readable description for a resource</td>
-<td><a href="../Resource/">Resource</a></td>
-</tr>
-<tr>
-<td><a href="../repository/">repository</a></td>
-<td>0..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
-<td>The repository associated with this resource</td>
-<td><a href="../Resource/">Resource</a></td>
-</tr>
-<tr>
-<td><a href="../citation/">citation</a></td>
-<td>0..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
-<td>A citation for the resource</td>
-<td><a href="../Resource/">Resource</a></td>
-</tr>
-<tr>
-<td><a href="../monarch_role/">monarch_role</a></td>
-<td>0..1 <br/> <a href="../MonarchRoleEnum/">MonarchRoleEnum</a></td>
-<td>The strategic role the asset has for the Monarch core mission</td>
-<td><a href="../Resource/">Resource</a></td>
-</tr>
-<tr>
-<td><a href="../grants/">grants</a></td>
-<td>0..* <br/> <a href="../GrantEnum/">GrantEnum</a></td>
-<td>The grant used to finance the production of an asset</td>
-<td><a href="../Resource/">Resource</a></td>
-</tr>
-<tr>
-<td><a href="../contact/">contact</a></td>
-<td>0..1 <br/> <a href="../Contact/">Contact</a></td>
-<td>The person responsible for a resources</td>
-<td><a href="../Resource/">Resource</a></td>
-</tr>
-<tr>
-<td><a href="../id/">id</a></td>
-<td>1..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
-<td>A unique identifier for a resource</td>
+<td><a href="../project_boards/">project_boards</a></td>
+<td>0..* <br/> <a href="../ProjectBoard/">ProjectBoard</a></td>
+<td>The project board associated with this resource</td>
 <td><a href="../Resource/">Resource</a></td>
 </tr>
 <tr>
@@ -2184,6 +2177,48 @@
 <td><a href="../name/">name</a></td>
 <td>0..1 <br/> NONE</td>
 <td>A human-readable name for a resource</td>
+<td><a href="../Resource/">Resource</a></td>
+</tr>
+<tr>
+<td><a href="../grants/">grants</a></td>
+<td>0..* <br/> <a href="../GrantEnum/">GrantEnum</a></td>
+<td>The grant used to finance the production of an asset</td>
+<td><a href="../Resource/">Resource</a></td>
+</tr>
+<tr>
+<td><a href="../citation/">citation</a></td>
+<td>0..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
+<td>A citation for the resource</td>
+<td><a href="../Resource/">Resource</a></td>
+</tr>
+<tr>
+<td><a href="../repository/">repository</a></td>
+<td>0..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
+<td>The repository associated with this resource</td>
+<td><a href="../Resource/">Resource</a></td>
+</tr>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
+<td>A unique identifier for a resource</td>
+<td><a href="../Resource/">Resource</a></td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> NONE</td>
+<td>A human-readable description for a resource</td>
+<td><a href="../Resource/">Resource</a></td>
+</tr>
+<tr>
+<td><a href="../monarch_role/">monarch_role</a></td>
+<td>0..1 <br/> <a href="../MonarchRoleEnum/">MonarchRoleEnum</a></td>
+<td>The strategic role the asset has for the Monarch core mission</td>
+<td><a href="../Resource/">Resource</a></td>
+</tr>
+<tr>
+<td><a href="../contact/">contact</a></td>
+<td>0..1 <br/> <a href="../Contact/">Contact</a></td>
+<td>The person responsible for a resources</td>
 <td><a href="../Resource/">Resource</a></td>
 </tr>
 </tbody>
@@ -2418,6 +2453,19 @@
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Resource</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Contact</span>
+<span class="w">  </span><span class="nt">project_boards</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">project_boards</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The project board associated with this resource</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/monarch-initiative/monarch-technical-documentation</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">alias</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">project_boards</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DataAsset</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Resource</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ProjectBoard</span>
+<span class="w">    </span><span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">inlined_as_list</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 </details>
 

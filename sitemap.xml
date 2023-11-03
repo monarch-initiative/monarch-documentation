@@ -66,6 +66,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/ProjectBoard/</loc>
+         <lastmod>2023-11-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/ReleaseStatusEnum/</loc>
          <lastmod>2023-11-03</lastmod>
          <changefreq>daily</changefreq>
@@ -202,6 +207,11 @@
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/organization/</loc>
+         <lastmod>2023-11-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/project_boards/</loc>
          <lastmod>2023-11-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
