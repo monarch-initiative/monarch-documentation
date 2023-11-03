@@ -1,0 +1,49 @@
+# Monarch Standard Operating Procedures
+
+## New projects
+
+### Creating a new project
+
+1. Every new project in the "monarch-initative" organisation MUST establish a _public GitHub repository_.
+1. Every new project MUST have an associated documentation page. A documentation page MUST fulfill the following criteria:
+    1. Required information
+        1. A "home" page which explains what the project is. A Monarch Initiative logo MUST be displayed somewhere on the page.
+        1. A "contributing" page that explains, or links to an explanation, of how to contribute to the project.
+        1. A "use cases" page that explains concrete use cases of the project.
+        1. A "Other Monarch Docs" backlink to the main Monarch documentation pages (https://monarch-initiative.github.io/monarch-documentation/)
+        1. An "Editors guide" that explains how the resource is maintained. The information should be sufficient for a new developer to take up maintenance of the resource.
+        1. A "contact" page with clear instructions on how to contact the primary maintainer of the resource.
+    1. The documentation SHOULD be maintained in markdown, and SHOULD follow the [Monarch style guide](#monarch-style-guide).
+1. Every new project MUST assign an [accountable contact person](#contact).
+1. Every new project MUST be registered in the [Monarch Asset Registry](https://github.com/monarch-initiative/monarch-documentation/blob/main/src/data/resources.yaml) database.
+1. Every new project that is either a new ontology, a new datamodel or schema, or a new software project, MUST follow their respective SOP (see below).
+
+### Creating a new ontology
+
+1. Every new ontology MUST use a standard [ODK setup](https://github.com/INCATools/ontology-development-kit).
+
+### Creating a data model or schema
+
+1. Every new data model MUST use the [LinkML Project Template](https://github.com/linkml/linkml-project-cookiecutter/).
+
+### Creating a new Python project
+
+1. Every new python project in Monarch SHOULD use the [Monarch Project Template](https://github.com/monarch-initiative/monarch-project-template) to ensure uniform QC standards.
+
+## Monarch Style guide
+
+- Monarch documentation pages SHOULD follow the "materials" theme provided by the mkdocs framework. NOTE: This recommendation is provisional until we have a better colour scheme in place.
+
+<a id="contact"></a>
+
+## Responsibilities of the "primary contact" of a resource (PCR)
+
+1. Monitor the projects issue tracker. 
+   - User issues MUST be responded to within 2 weeks.
+   - Monarch internal issues MUST be responded to within 1 month.
+1. Respond to non-issue-tracker user correspondence (slack or email) 
+   - User issues MUST be responded to within 2 weeks.
+   - Monarch internal issues MUST be responded to within 1 month.
+1. If the PCR is missing for more than 2 weeks at a time, they SHOULD name a replacement contact
+1. The PCR MUST report progress to the wider Monarch Community and Organisation on request by Monarch Leadership.
+1. The PCR MUST ensure the relevant SOPs to their resource, such as documentation requirements, are upheld.
