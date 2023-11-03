@@ -2127,18 +2127,6 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../citation/">citation</a></td>
-<td>0..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
-<td>A citation for the resource</td>
-<td><a href="../Resource/">Resource</a></td>
-</tr>
-<tr>
-<td><a href="../description/">description</a></td>
-<td>0..1 <br/> NONE</td>
-<td>A human-readable description for a resource</td>
-<td><a href="../Resource/">Resource</a></td>
-</tr>
-<tr>
 <td><a href="../repository/">repository</a></td>
 <td>0..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
 <td>The repository associated with this resource</td>
@@ -2151,15 +2139,9 @@
 <td><a href="../Resource/">Resource</a></td>
 </tr>
 <tr>
-<td><a href="../documentation/">documentation</a></td>
-<td>0..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
-<td>A URL to the documentation about this asset</td>
-<td><a href="../Resource/">Resource</a></td>
-</tr>
-<tr>
-<td><a href="../grants/">grants</a></td>
-<td>0..* <br/> <a href="../GrantEnum/">GrantEnum</a></td>
-<td>The grant used to finance the production of an asset</td>
+<td><a href="../id/">id</a></td>
+<td>1..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
+<td>A unique identifier for a resource</td>
 <td><a href="../Resource/">Resource</a></td>
 </tr>
 <tr>
@@ -2169,15 +2151,33 @@
 <td><a href="../Resource/">Resource</a></td>
 </tr>
 <tr>
-<td><a href="../id/">id</a></td>
-<td>1..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
-<td>A unique identifier for a resource</td>
+<td><a href="../citation/">citation</a></td>
+<td>0..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
+<td>A citation for the resource</td>
 <td><a href="../Resource/">Resource</a></td>
 </tr>
 <tr>
 <td><a href="../contact/">contact</a></td>
 <td>0..1 <br/> <a href="../Contact/">Contact</a></td>
 <td>The person responsible for a resources</td>
+<td><a href="../Resource/">Resource</a></td>
+</tr>
+<tr>
+<td><a href="../documentation/">documentation</a></td>
+<td>0..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
+<td>A URL to the documentation about this asset</td>
+<td><a href="../Resource/">Resource</a></td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> NONE</td>
+<td>A human-readable description for a resource</td>
+<td><a href="../Resource/">Resource</a></td>
+</tr>
+<tr>
+<td><a href="../grants/">grants</a></td>
+<td>0..* <br/> <a href="../GrantEnum/">GrantEnum</a></td>
+<td>The grant used to finance the production of an asset</td>
 <td><a href="../Resource/">Resource</a></td>
 </tr>
 <tr>
