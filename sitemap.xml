@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Documentation-Schema/Contact/</loc>
+         <lastmod>2023-11-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Documentation-Schema/DataAsset/</loc>
          <lastmod>2023-11-03</lastmod>
          <changefreq>daily</changefreq>
@@ -52,6 +57,11 @@
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Documentation-Schema/MonarchContributionEnum/</loc>
+         <lastmod>2023-11-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Documentation-Schema/MonarchRoleEnum/</loc>
          <lastmod>2023-11-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -101,6 +111,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Documentation-Schema/citation/</loc>
+         <lastmod>2023-11-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Documentation-Schema/contact/</loc>
+         <lastmod>2023-11-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Documentation-Schema/data/</loc>
          <lastmod>2023-11-03</lastmod>
          <changefreq>daily</changefreq>
@@ -131,7 +151,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Documentation-Schema/email/</loc>
+         <lastmod>2023-11-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Documentation-Schema/file_format/</loc>
+         <lastmod>2023-11-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Documentation-Schema/github/</loc>
          <lastmod>2023-11-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -156,7 +186,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Documentation-Schema/monarch_role/</loc>
+         <lastmod>2023-11-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Documentation-Schema/name/</loc>
+         <lastmod>2023-11-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Documentation-Schema/orcid/</loc>
          <lastmod>2023-11-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -402,6 +442,11 @@
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Repositories/phenopacket-schema/</loc>
+         <lastmod>2023-11-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/monarch-technical-documentation/Repositories/phenopacket-tools/</loc>
          <lastmod>2023-11-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
