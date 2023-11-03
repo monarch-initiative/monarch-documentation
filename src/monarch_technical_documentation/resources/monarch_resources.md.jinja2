@@ -1,3 +1,9 @@
+<style>
+  .md-typeset h1,
+  .md-content__button {
+    display: none;
+  }
+</style>
 # {{ name }}
 
 {{ description }}
@@ -18,18 +24,43 @@
 | [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | {{ d.monarch_role|default("") }} |
 | Main repository | {{ d.repository|default("") }} |
 | Responsible contact in Monarch | {{ d.contact.name }}, {{ d.contact.orcid }}, {{ d.contact.github }} |
+| Project boards | {%if "project_boards" in d %}{% for board in d.project_boards%}[{{ board.name }}]({{ board.url }}){% if not loop.last %},{% endif %}{% endfor %}{% endif %} |
 {% endfor %}
 
 ## Tools and Services developed or significantly supported by the Monarch Initiative
 
-| Tool or Service | Category |
+{% for d in tools %}
+### {{ d.name }}
+
+| [{{ d.name }}]({{ d.id }}) | |
 | ------ | ----- |
-{% for d in tools %}| [{{ d.name }}]({{ d.id }}) | {{ d.category|default("") }} |
+| PURL | {{ d.id }} |
+| Cite | {{ d.citation|default("") }} |
+| [Resource category](../Documentation-Schema/StandardEnum/) | {{ d.category }} |
+| Documentation | [{{ d.documentation|default("TBD") }}]({{ d.documentation|default("") }}) | 
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | {{ d.monarch_contribution|default("") }} |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | {{ d.grants|default([])|join(", ") }} |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | {{ d.monarch_role|default("") }} |
+| Main repository | {{ d.repository|default("") }} |
+| Responsible contact in Monarch | {%if "contact" in d %}{{ d.contact.name }}, {{ d.contact.orcid }}, {{ d.contact.github }}{% endif %} |
+| Project boards | {%if "project_boards" in d %}{% for board in d.project_boards%}[{{ board.name }}]({{ board.url }}){% if not loop.last %},{% endif %}{% endfor %}{% endif %} |
 {% endfor %}
 
 ## Datasets developed by the Monarch Initiative
 
-| Dataset | Category | Docs | Contribution |
-| ------ | ----- | ----- | ----- |
-{% for d in data %}| [{{ d.name }}]({{ d.id }}) | {{ d.category }} | [Docs]({{ d.documentation|default("") }}) | {{ d.monarch_contribution|default("") }} |
+{% for d in data %}
+### {{ d.name }}
+
+| [{{ d.name }}]({{ d.id }}) | |
+| ------ | ----- |
+| PURL | {{ d.id }} |
+| Cite | {{ d.citation|default("") }} |
+| [Resource category](../Documentation-Schema/StandardEnum/) | {{ d.category }} |
+| Documentation | [{{ d.documentation|default("TBD") }}]({{ d.documentation|default("") }}) | 
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | {{ d.monarch_contribution|default("") }} |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | {{ d.grants|default([])|join(", ") }} |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | {{ d.monarch_role|default("") }} |
+| Main repository | {{ d.repository|default("") }} |
+| Responsible contact in Monarch | {%if "contact" in d %}{{ d.contact.name }}, {{ d.contact.orcid }}, {{ d.contact.github }}{% endif %} |
+| Project boards | {%if "project_boards" in d %}{% for board in d.project_boards%}[{{ board.name }}]({{ board.url }}){% if not loop.last %}, {% endif %}{% endfor %}{% endif %} |
 {% endfor %}
