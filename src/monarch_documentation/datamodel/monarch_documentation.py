@@ -1,5 +1,5 @@
 # Auto generated from monarch_documentation.yaml by pythongen.py version: 0.0.1
-# Generation date: 2023-10-27T14:03:41
+# Generation date: 2023-11-03T17:51:32
 # Schema: monarch-documentation-schema
 #
 # id: https://w3id.org/monarch-initiative/monarch-documentation
@@ -87,6 +87,10 @@ class Resource(YAMLRoot):
     grants: Optional[Union[Union[str, "GrantEnum"], List[Union[str, "GrantEnum"]]]] = empty_list()
     documentation: Optional[Union[str, URIorCURIE]] = None
     monarch_contribution: Optional[Union[str, "MonarchContributionEnum"]] = None
+    repository: Optional[Union[str, URIorCURIE]] = None
+    monarch_role: Optional[Union[str, "MonarchRoleEnum"]] = None
+    citation: Optional[Union[str, URIorCURIE]] = None
+    contact: Optional[Union[dict, "Contact"]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
@@ -110,6 +114,18 @@ class Resource(YAMLRoot):
         if self.monarch_contribution is not None and not isinstance(self.monarch_contribution, MonarchContributionEnum):
             self.monarch_contribution = MonarchContributionEnum(self.monarch_contribution)
 
+        if self.repository is not None and not isinstance(self.repository, URIorCURIE):
+            self.repository = URIorCURIE(self.repository)
+
+        if self.monarch_role is not None and not isinstance(self.monarch_role, MonarchRoleEnum):
+            self.monarch_role = MonarchRoleEnum(self.monarch_role)
+
+        if self.citation is not None and not isinstance(self.citation, URIorCURIE):
+            self.citation = URIorCURIE(self.citation)
+
+        if self.contact is not None and not isinstance(self.contact, Contact):
+            self.contact = Contact(**as_dict(self.contact))
+
         super().__post_init__(**kwargs)
 
 
@@ -126,7 +142,7 @@ class DataAsset(Resource):
     class_model_uri: ClassVar[URIRef] = MTD.DataAsset
 
     id: Union[str, DataAssetId] = None
-    download: Optional[Union[dict, "Download"]] = None
+    download: Optional[Union[Union[dict, "Download"], List[Union[dict, "Download"]]]] = empty_list()
     category: Optional[Union[str, "DataAssetEnum"]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
@@ -135,8 +151,9 @@ class DataAsset(Resource):
         if not isinstance(self.id, DataAssetId):
             self.id = DataAssetId(self.id)
 
-        if self.download is not None and not isinstance(self.download, Download):
-            self.download = Download(**as_dict(self.download))
+        if not isinstance(self.download, list):
+            self.download = [self.download] if self.download is not None else []
+        self.download = [v if isinstance(v, Download) else Download(**as_dict(v)) for v in self.download]
 
         if self.category is not None and not isinstance(self.category, DataAssetEnum):
             self.category = DataAssetEnum(self.category)
@@ -185,7 +202,6 @@ class Tool(Resource):
 
     id: Union[str, ToolId] = None
     url: Optional[Union[str, URIorCURIE]] = None
-    repository: Optional[Union[str, URIorCURIE]] = None
     category: Optional[Union[str, "ToolAssetEnum"]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
@@ -196,9 +212,6 @@ class Tool(Resource):
 
         if self.url is not None and not isinstance(self.url, URIorCURIE):
             self.url = URIorCURIE(self.url)
-
-        if self.repository is not None and not isinstance(self.repository, URIorCURIE):
-            self.repository = URIorCURIE(self.repository)
 
         if self.category is not None and not isinstance(self.category, ToolAssetEnum):
             self.category = ToolAssetEnum(self.category)
@@ -220,7 +233,6 @@ class Documentation(Resource):
 
     id: Union[str, DocumentationId] = None
     url: Optional[Union[str, URIorCURIE]] = None
-    repository: Optional[Union[str, URIorCURIE]] = None
     category: Optional[Union[str, "DocumentationAssetEnum"]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
@@ -231,9 +243,6 @@ class Documentation(Resource):
 
         if self.url is not None and not isinstance(self.url, URIorCURIE):
             self.url = URIorCURIE(self.url)
-
-        if self.repository is not None and not isinstance(self.repository, URIorCURIE):
-            self.repository = URIorCURIE(self.repository)
 
         if self.category is not None and not isinstance(self.category, DocumentationAssetEnum):
             self.category = DocumentationAssetEnum(self.category)
@@ -289,6 +298,7 @@ class ResourceRegistry(Resource):
     class_model_uri: ClassVar[URIRef] = MTD.ResourceRegistry
 
     id: Union[str, ResourceRegistryId] = None
+    name: Optional[str] = None
     data: Optional[Union[Dict[Union[str, DataAssetId], Union[dict, DataAsset]], List[Union[dict, DataAsset]]]] = empty_dict()
     standards: Optional[Union[Dict[Union[str, StandardId], Union[dict, Standard]], List[Union[dict, Standard]]]] = empty_dict()
     tools: Optional[Union[Dict[Union[str, ToolId], Union[dict, Tool]], List[Union[dict, Tool]]]] = empty_dict()
@@ -300,6 +310,9 @@ class ResourceRegistry(Resource):
             self.MissingRequiredField("id")
         if not isinstance(self.id, ResourceRegistryId):
             self.id = ResourceRegistryId(self.id)
+
+        if self.name is not None and not isinstance(self.name, str):
+            self.name = str(self.name)
 
         self._normalize_inlined_as_list(slot_name="data", slot_type=DataAsset, key_name="id", keyed=True)
 
@@ -326,19 +339,52 @@ class Download(YAMLRoot):
     class_name: ClassVar[str] = "Download"
     class_model_uri: ClassVar[URIRef] = MTD.Download
 
-    url: Optional[str] = None
-    release_status: Optional[str] = None
-    file_format: Optional[str] = None
+    url: Optional[Union[str, URIorCURIE]] = None
+    release_status: Optional[Union[str, "ReleaseStatusEnum"]] = None
+    file_format: Optional[Union[str, "FileFormatEnum"]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
-        if self.url is not None and not isinstance(self.url, str):
-            self.url = str(self.url)
+        if self.url is not None and not isinstance(self.url, URIorCURIE):
+            self.url = URIorCURIE(self.url)
 
-        if self.release_status is not None and not isinstance(self.release_status, str):
-            self.release_status = str(self.release_status)
+        if self.release_status is not None and not isinstance(self.release_status, ReleaseStatusEnum):
+            self.release_status = ReleaseStatusEnum(self.release_status)
 
-        if self.file_format is not None and not isinstance(self.file_format, str):
-            self.file_format = str(self.file_format)
+        if self.file_format is not None and not isinstance(self.file_format, FileFormatEnum):
+            self.file_format = FileFormatEnum(self.file_format)
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass
+class Contact(YAMLRoot):
+    """
+    The person responsible for a resources.
+    """
+    _inherited_slots: ClassVar[List[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = MTD.Contact
+    class_class_curie: ClassVar[str] = "mtd:Contact"
+    class_name: ClassVar[str] = "Contact"
+    class_model_uri: ClassVar[URIRef] = MTD.Contact
+
+    name: Optional[str] = None
+    orcid: Optional[Union[str, URIorCURIE]] = None
+    github: Optional[str] = None
+    email: Optional[str] = None
+
+    def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
+        if self.name is not None and not isinstance(self.name, str):
+            self.name = str(self.name)
+
+        if self.orcid is not None and not isinstance(self.orcid, URIorCURIE):
+            self.orcid = URIorCURIE(self.orcid)
+
+        if self.github is not None and not isinstance(self.github, str):
+            self.github = str(self.github)
+
+        if self.email is not None and not isinstance(self.email, str):
+            self.email = str(self.email)
 
         super().__post_init__(**kwargs)
 
@@ -369,6 +415,11 @@ class FileFormatEnum(EnumDefinitionImpl):
         name="FileFormatEnum",
     )
 
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "nt.gz",
+            PermissibleValue(text="nt.gz"))
+
 class StandardEnum(EnumDefinitionImpl):
 
     Ontology = PermissibleValue(text="Ontology")
@@ -383,6 +434,8 @@ class StandardEnum(EnumDefinitionImpl):
             PermissibleValue(text="Data Standard"))
         setattr(cls, "Data Exchange",
             PermissibleValue(text="Data Exchange"))
+        setattr(cls, "Ontology Curation",
+            PermissibleValue(text="Ontology Curation"))
 
 class DataAssetEnum(EnumDefinitionImpl):
 
@@ -447,6 +500,7 @@ class GrantEnum(EnumDefinitionImpl):
 
     HPO = PermissibleValue(text="HPO")
     Exomiser = PermissibleValue(text="Exomiser")
+    TBD = PermissibleValue(text="TBD")
 
     _defn = EnumDefinition(
         name="GrantEnum",
@@ -463,6 +517,18 @@ class GrantEnum(EnumDefinitionImpl):
         setattr(cls, "Bosch Gift",
             PermissibleValue(text="Bosch Gift"))
 
+class MonarchRoleEnum(EnumDefinitionImpl):
+
+    Flagship = PermissibleValue(text="Flagship")
+    Core = PermissibleValue(text="Core")
+    Support = PermissibleValue(text="Support")
+    Research = PermissibleValue(text="Research")
+    Community = PermissibleValue(text="Community")
+
+    _defn = EnumDefinition(
+        name="MonarchRoleEnum",
+    )
+
 # Slots
 class slots:
     pass
@@ -473,11 +539,26 @@ slots.id = Slot(uri=SCHEMA.identifier, name="id", curie=SCHEMA.curie('identifier
 slots.name = Slot(uri=SCHEMA.name, name="name", curie=SCHEMA.curie('name'),
                    model_uri=MTD.name, domain=None, range=Optional[str])
 
+slots.email = Slot(uri=MTD.email, name="email", curie=MTD.curie('email'),
+                   model_uri=MTD.email, domain=None, range=Optional[str])
+
+slots.github = Slot(uri=MTD.github, name="github", curie=MTD.curie('github'),
+                   model_uri=MTD.github, domain=None, range=Optional[str])
+
+slots.orcid = Slot(uri=MTD.orcid, name="orcid", curie=MTD.curie('orcid'),
+                   model_uri=MTD.orcid, domain=None, range=Optional[Union[str, URIorCURIE]])
+
 slots.description = Slot(uri=SCHEMA.description, name="description", curie=SCHEMA.curie('description'),
                    model_uri=MTD.description, domain=None, range=Optional[str])
 
+slots.contact = Slot(uri=MTD.contact, name="contact", curie=MTD.curie('contact'),
+                   model_uri=MTD.contact, domain=None, range=Optional[Union[dict, Contact]])
+
 slots.download = Slot(uri=MTD.download, name="download", curie=MTD.curie('download'),
-                   model_uri=MTD.download, domain=None, range=Optional[Union[dict, Download]])
+                   model_uri=MTD.download, domain=None, range=Optional[Union[Union[dict, Download], List[Union[dict, Download]]]])
+
+slots.citation = Slot(uri=MTD.citation, name="citation", curie=MTD.curie('citation'),
+                   model_uri=MTD.citation, domain=None, range=Optional[Union[str, URIorCURIE]])
 
 slots.grants = Slot(uri=MTD.grants, name="grants", curie=MTD.curie('grants'),
                    model_uri=MTD.grants, domain=None, range=Optional[Union[Union[str, "GrantEnum"], List[Union[str, "GrantEnum"]]]])
@@ -503,6 +584,9 @@ slots.documentation = Slot(uri=MTD.documentation, name="documentation", curie=MT
 slots.monarch_contribution = Slot(uri=MTD.monarch_contribution, name="monarch_contribution", curie=MTD.curie('monarch_contribution'),
                    model_uri=MTD.monarch_contribution, domain=None, range=Optional[Union[str, "MonarchContributionEnum"]])
 
+slots.monarch_role = Slot(uri=MTD.monarch_role, name="monarch_role", curie=MTD.curie('monarch_role'),
+                   model_uri=MTD.monarch_role, domain=None, range=Optional[Union[str, "MonarchRoleEnum"]])
+
 slots.data = Slot(uri=MTD.data, name="data", curie=MTD.curie('data'),
                    model_uri=MTD.data, domain=None, range=Optional[Union[Dict[Union[str, DataAssetId], Union[dict, DataAsset]], List[Union[dict, DataAsset]]]])
 
@@ -526,15 +610,6 @@ slots.repo_url = Slot(uri=MTD.repo_url, name="repo_url", curie=MTD.curie('repo_u
 
 slots.organization = Slot(uri=MTD.organization, name="organization", curie=MTD.curie('organization'),
                    model_uri=MTD.organization, domain=None, range=Optional[str])
-
-slots.download__url = Slot(uri=MTD.url, name="download__url", curie=MTD.curie('url'),
-                   model_uri=MTD.download__url, domain=None, range=Optional[str])
-
-slots.download__release_status = Slot(uri=MTD.release_status, name="download__release_status", curie=MTD.curie('release_status'),
-                   model_uri=MTD.download__release_status, domain=None, range=Optional[str])
-
-slots.download__file_format = Slot(uri=MTD.file_format, name="download__file_format", curie=MTD.curie('file_format'),
-                   model_uri=MTD.download__file_format, domain=None, range=Optional[str])
 
 slots.DataAsset_category = Slot(uri=MTD.category, name="DataAsset_category", curie=MTD.curie('category'),
                    model_uri=MTD.DataAsset_category, domain=DataAsset, range=Optional[Union[str, "DataAssetEnum"]])
