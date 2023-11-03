@@ -13,11 +13,11 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | ------ | ----- |
 | PURL | https://standards.monarchinitiative.org/phenopackets |
 | Cite |  |
-| [Resource category](Documentation-Schema/StandardEnum/) | Data Exchange |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Data Exchange |
 | Documentation | [https://phenopackets-schema.readthedocs.io/en/latest/](https://phenopackets-schema.readthedocs.io/en/latest/) | 
-| [Monarch role](Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
-| [Grants](Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
-| [Role in Monarchs strategic vision](Documentation-Schema/MonarchRoleEnum/) | Flagship |
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Flagship |
 | Main repository |  |
 | Responsible contact in Monarch | Peter Robinson, https://orcid.org/0000-0002-0736-9199, @pnrobinson |
 
@@ -27,11 +27,11 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | ------ | ----- |
 | PURL | https://standards.monarchinitiative.org/sssom |
 | Cite | https://doi.org/10.1093/database/baac035 |
-| [Resource category](Documentation-Schema/StandardEnum/) | Data Exchange |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Data Exchange |
 | Documentation | [https://mapping-commons.github.io/sssom/spec/](https://mapping-commons.github.io/sssom/spec/) | 
-| [Monarch role](Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
-| [Grants](Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
-| [Role in Monarchs strategic vision](Documentation-Schema/MonarchRoleEnum/) | Core |
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Core |
 | Main repository |  |
 | Responsible contact in Monarch | Nicolas Matentzoglu, https://orcid.org/0000-0002-7356-1779, @matentzn |
 
@@ -41,11 +41,11 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | ------ | ----- |
 | PURL | http://purl.obolibrary.org/obo/hp.owl |
 | Cite |  |
-| [Resource category](Documentation-Schema/StandardEnum/) | Ontology |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Ontology |
 | Documentation | [https://obophenotype.github.io/human-phenotype-ontology/](https://obophenotype.github.io/human-phenotype-ontology/) | 
-| [Monarch role](Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
-| [Grants](Documentation-Schema/GrantEnum/) involved in this standard | HPO, Phenomics First |
-| [Role in Monarchs strategic vision](Documentation-Schema/MonarchRoleEnum/) | Flagship |
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | HPO, Phenomics First |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Flagship |
 | Main repository |  |
 | Responsible contact in Monarch | Peter Robinson, https://orcid.org/0000-0002-0736-9199, @pnrobinson |
 
@@ -55,11 +55,11 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | ------ | ----- |
 | PURL | http://purl.obolibrary.org/obo/mondo.owl |
 | Cite |  |
-| [Resource category](Documentation-Schema/StandardEnum/) | Ontology |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Ontology |
 | Documentation | [https://mondo.readthedocs.io/](https://mondo.readthedocs.io/) | 
-| [Monarch role](Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
-| [Grants](Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
-| [Role in Monarchs strategic vision](Documentation-Schema/MonarchRoleEnum/) | Flagship |
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Flagship |
 | Main repository |  |
 | Responsible contact in Monarch | Chris Mungall, https://orcid.org/0000-0002-6601-2165, @cmungall |
 
@@ -69,11 +69,11 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | ------ | ----- |
 | PURL | https://github.com/obophenotype/upheno-dev |
 | Cite |  |
-| [Resource category](Documentation-Schema/StandardEnum/) | Ontology |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Ontology |
 | Documentation | [https://obophenotype.github.io/upheno/](https://obophenotype.github.io/upheno/) | 
-| [Monarch role](Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
-| [Grants](Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
-| [Role in Monarchs strategic vision](Documentation-Schema/MonarchRoleEnum/) | Flagship |
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Flagship |
 | Main repository |  |
 | Responsible contact in Monarch | Chris Mungall, https://orcid.org/0000-0002-6601-2165, @cmungall |
 
@@ -83,11 +83,11 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | ------ | ----- |
 | PURL | http://purl.obolibrary.org/obo/maxo.owl |
 | Cite |  |
-| [Resource category](Documentation-Schema/StandardEnum/) | Ontology |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Ontology |
 | Documentation | [https://github.com/monarch-initiative/MAxO](https://github.com/monarch-initiative/MAxO) | 
-| [Monarch role](Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
-| [Grants](Documentation-Schema/GrantEnum/) involved in this standard | HPO |
-| [Role in Monarchs strategic vision](Documentation-Schema/MonarchRoleEnum/) | Core |
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | HPO |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Core |
 | Main repository |  |
 | Responsible contact in Monarch | Peter Robinson, https://orcid.org/0000-0002-0736-9199, @pnrobinson |
 
@@ -97,11 +97,11 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | ------ | ----- |
 | PURL | http://purl.obolibrary.org/obo/oba.owl |
 | Cite |  |
-| [Resource category](Documentation-Schema/StandardEnum/) | Ontology |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Ontology |
 | Documentation | [https://obophenotype.github.io/upheno/](https://obophenotype.github.io/upheno/) | 
-| [Monarch role](Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
-| [Grants](Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
-| [Role in Monarchs strategic vision](Documentation-Schema/MonarchRoleEnum/) | Core |
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Core |
 | Main repository |  |
 | Responsible contact in Monarch | Chris Mungall, https://orcid.org/0000-0002-6601-2165, @cmungall |
 
@@ -111,11 +111,11 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | ------ | ----- |
 | PURL | http://purl.obolibrary.org/obo/uberon.owl |
 | Cite |  |
-| [Resource category](Documentation-Schema/StandardEnum/) | Ontology |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Ontology |
 | Documentation | [https://obophenotype.github.io/uberon/](https://obophenotype.github.io/uberon/) | 
-| [Monarch role](Documentation-Schema/MonarchContributionEnum/) in the development | Co-Lead |
-| [Grants](Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
-| [Role in Monarchs strategic vision](Documentation-Schema/MonarchRoleEnum/) | Core |
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Co-Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Core |
 | Main repository |  |
 | Responsible contact in Monarch | Chris Mungall, https://orcid.org/0000-0002-6601-2165, @cmungall |
 
@@ -125,11 +125,11 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | ------ | ----- |
 | PURL | https://github.com/monarch-initiative/phenio |
 | Cite |  |
-| [Resource category](Documentation-Schema/StandardEnum/) | Ontology |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Ontology |
 | Documentation | [TBD]() | 
-| [Monarch role](Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
-| [Grants](Documentation-Schema/GrantEnum/) involved in this standard | Monarch R24 |
-| [Role in Monarchs strategic vision](Documentation-Schema/MonarchRoleEnum/) |  |
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | Monarch R24 |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) |  |
 | Main repository |  |
 | Responsible contact in Monarch | Chris Mungall, https://orcid.org/0000-0002-6601-2165, @cmungall |
 
@@ -139,11 +139,11 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | ------ | ----- |
 | PURL | http://purl.obolibrary.org/obo/ecto.owl |
 | Cite |  |
-| [Resource category](Documentation-Schema/StandardEnum/) | Ontology |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Ontology |
 | Documentation | [https://github.com/EnvironmentOntology/environmental-exposure-ontology](https://github.com/EnvironmentOntology/environmental-exposure-ontology) | 
-| [Monarch role](Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
-| [Grants](Documentation-Schema/GrantEnum/) involved in this standard | TBD |
-| [Role in Monarchs strategic vision](Documentation-Schema/MonarchRoleEnum/) | Support |
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | TBD |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Support |
 | Main repository |  |
 | Responsible contact in Monarch | Chris Mungall, https://orcid.org/0000-0002-6601-2165, @cmungall |
 
@@ -153,11 +153,11 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | ------ | ----- |
 | PURL | https://github.com/INCATools/dead_simple_owl_design_patterns |
 | Cite |  |
-| [Resource category](Documentation-Schema/StandardEnum/) | Data Exchange |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Data Exchange |
 | Documentation | [https://incatools.github.io/dead_simple_owl_design_patterns/](https://incatools.github.io/dead_simple_owl_design_patterns/) | 
-| [Monarch role](Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
-| [Grants](Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
-| [Role in Monarchs strategic vision](Documentation-Schema/MonarchRoleEnum/) | Support |
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Support |
 | Main repository |  |
 | Responsible contact in Monarch | Chris Mungall, https://orcid.org/0000-0002-6601-2165, @cmungall |
 
@@ -167,11 +167,11 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | ------ | ----- |
 | PURL | https://github.com/INCATools/kgcl |
 | Cite |  |
-| [Resource category](Documentation-Schema/StandardEnum/) | Ontology Curation |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Ontology Curation |
 | Documentation | [https://incatools.github.io/kgcl/](https://incatools.github.io/kgcl/) | 
-| [Monarch role](Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
-| [Grants](Documentation-Schema/GrantEnum/) involved in this standard | Bosch Gift |
-| [Role in Monarchs strategic vision](Documentation-Schema/MonarchRoleEnum/) | Community |
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | Bosch Gift |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Community |
 | Main repository |  |
 | Responsible contact in Monarch | Chris Mungall, https://orcid.org/0000-0002-6601-2165, @cmungall |
 
@@ -181,11 +181,11 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | ------ | ----- |
 | PURL | https://github.com/monarch-initiative/babelon |
 | Cite |  |
-| [Resource category](Documentation-Schema/StandardEnum/) | Data Exchange |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Data Exchange |
 | Documentation | [https://monarch-initiative.github.io/babelon/](https://monarch-initiative.github.io/babelon/) | 
-| [Monarch role](Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
-| [Grants](Documentation-Schema/GrantEnum/) involved in this standard | HPO |
-| [Role in Monarchs strategic vision](Documentation-Schema/MonarchRoleEnum/) | Support |
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | HPO |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Support |
 | Main repository | https://github.com/monarch-initiative/babelon |
 | Responsible contact in Monarch | Peter Robinson, https://orcid.org/0000-0002-0736-9199, @pnrobinson |
 
