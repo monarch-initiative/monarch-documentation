@@ -1,6 +1,6 @@
 # Monarch Tool, Standard and Data Registry
 
-The Monarch Tool, Standard and Data Registry aims at providing a centralised view over
+The Monarch Tool, Standard and Data Registry aims to provide a centralised view of
 the diverse ecosystem of tools, data and standards that Monarch supports.
 
 
@@ -62,13 +62,23 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | [Monarch Python Toolkit](https://github.com/monarch-initiative/monarch-py) | Data Curation |
 | [Babelon Toolkit](https://github.com/monarch-initiative/babelon) | Data Curation |
 | [Fenominal](https://github.com/monarch-initiative/fenominal) | Data Curation |
+| [Koza](https://github.com/monarch-initiative/koza) | Data Curation |
 
 
 ## Documentation resources relevant to work by the Monarch Initiative
 
 | Documentation | Description |
 | ------ | ----- |
-| [Monarch Ingest Documentation](https://monarch-initiative.github.io/monarch-ingest) |  |
-| [Koza Framework Documentation](https://koza.monarchinitiative.org/) |  |
-| [LinkML model documentation](https://linkml.io/linkml-model/docs/) |  |
+| [Monarch App Docs](https://monarch-app.monarchinitiative.org/) | The Monarch App is a web application for exploring the Monarch Knowledge Graph. |
+| [Human Phenotype Ontology User Docs](https://obophenotype.github.io/human-phenotype-ontology/) | The HPO provides a standardized vocabulary of phenotypic abnormalities in human disease. |
+| [Mondo User Docs](https://mondo.readthedocs.io/) | The Mondo Disease Ontology aims to harmonizes disease definitions across the world. |
+| [LinkML Docs](https://linkml.io/linkml-model/docs/) | The Linked Data Modeling Language (LinkML) is a flexible modeling language that allows you to author schemas (models) in YAML that describe the structure of your data. |
+| [The Unified Phenotype Ontology (uPheno) Docs](https://obophenotype.github.io/upheno/) | uPheno aims to unify the annotation of phenotypes across species. |
 | [OBO Academy](https://oboacademy.github.io/obook/) | A resource for self-paced training of Semantic Engineers. |
+| [Best practices for collaborative open source coding](https://berkeleybop.github.io/best_practice/) | The best practice / house style guide maintained by Monarch's LBNL team members. |
+| [Exomiser Docs](https://exomiser.readthedocs.io/en/latest/) | The Exomiser is a tool for finding potential disease-causing variants in whole-exome or whole-genome sequencing data. |
+| [Monarch Ingest Docs](https://monarch-initiative.github.io/monarch-ingest) | The Monarch Ingest pulls in data from a wide variety of biomedical data sources and generates Biolink-compliant KGX files that are used to build the Monarch KG. |
+| [Simple Standard for Sharing Ontological Mappings (SSSOM) Docs](https://mapping-commons.github.io/sssom/spec/) | SSSOM is a simple metadata standard for describing semantic mappings. |
+| [Phenopackets Schema Docs](https://phenopacket-schema.readthedocs.io/en/latest/) | The Phenopacket Schema is an ISO-endorsed open standard for sharing disease and phenotype information. |
+| [OntoGPT Docs](https://monarch-initiative.github.io/ontogpt/) | OntoGPT is a Python package for extracting structured information from text with large language models (LLMs), instruction prompts, and ontology-based grounding. |
+| [Ontology Access Kit (OAK) Docs](https://incatools.github.io/ontology-access-kit/) | OAK is a Python library and command-line tool for common ontology operations. |
