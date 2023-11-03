@@ -246,10 +246,6 @@ tools:
     monarch_contribution: Lead
     repository: https://github.com/monarch-initiative/fenominal
 documentation:
-  - id: https://berkeleybop.github.io/best_practice/
-    name: Best practices for collaborative open source coding
-    description: The best practice / house style guide maintained by Monarch's LBNL team members.
-    repository: https://github.com/berkeleybop/berkeleybop.github.io/tree/master/best_practice
   - id: https://monarch-app.monarchinitiative.org/
     name: Monarch App Docs
     description: The Monarch App is a web application for exploring the Monarch Knowledge Graph.
@@ -274,6 +270,10 @@ documentation:
     name: OBO Academy
     description: A resource for self-paced training of Semantic Engineers.
     repository: https://github.com/OBOAcademy/obook/
+  - id: https://berkeleybop.github.io/best_practice/
+    name: Best practices for collaborative open source coding
+    description: The best practice / house style guide maintained by Monarch's LBNL team members.
+    repository: https://github.com/berkeleybop/berkeleybop.github.io/tree/master/best_practice
   - id: https://exomiser.readthedocs.io/en/latest/
     name: Exomiser Docs
     description: The Exomiser is a tool for finding potential disease-causing variants in whole-exome or whole-genome sequencing data.
