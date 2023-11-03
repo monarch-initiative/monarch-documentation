@@ -135,11 +135,12 @@ standards:
     grants:
       - Phenomics First
     monarch_role: Core
+    citation: https://doi.org/10.1093/database/baac035
     contact:
-        name: Chris Mungall
-        email: cjmungall@lbl.gov
-        orcid: https://orcid.org/0000-0002-6601-2165
-        github: "@cmungall"
+        name: Nicolas Matentzoglu
+        email: nicolas.matentzoglu@gmail.com
+        orcid: https://orcid.org/0000-0002-7356-1779
+        github: "@matentzn"
   - id: http://purl.obolibrary.org/obo/hp.owl
     name: Human Phenotype Ontology
     monarch_contribution: Lead
