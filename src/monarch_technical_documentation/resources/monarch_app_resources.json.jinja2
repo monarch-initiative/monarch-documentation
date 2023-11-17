@@ -6,7 +6,7 @@
         {%- set item = {
           "name": d.short_name if 'short_name' in d else d.name,
           "icon": d.icon if 'icon' in d else None,
-          "link": d.website if 'website' in d else None,
+          "link": d.url if 'url' in d else None,
           "description": "Open and Computable Bioinformation for Phenotypic Data"
         } %}
         {%- do standards_items.append(item) %}
@@ -21,7 +21,7 @@
         {%- set item = {
           "name": d.short_name if 'short_name' in d else d.name,
           "icon": d.icon if 'icon' in d else None,
-          "link": d.website if 'website' in d else None,
+          "link": d.url if 'url' in d else None,
           "description": "Open and Computable Bioinformation for Phenotypic Data"
         } %}
         {%- do ontology_items.append(item) %}
@@ -36,7 +36,7 @@
         {%- set item = {
           "name": d.short_name if 'short_name' in d else d.name,
           "icon": d.icon if 'icon' in d else None,
-          "link": d.website if 'website' in d else None,
+          "link": d.url if 'url' in d else None,
           "description": "Open and Computable Bioinformation for Phenotypic Data"
         } %}
         {%- do tools_items.append(item) %}

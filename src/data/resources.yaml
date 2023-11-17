@@ -119,7 +119,7 @@ data:
     monarch_contribution: Lead
     monarch_role: Flagship
     icon: resource-monarch
-    website: https://monarch-initiative.github.io/monarch-ingest
+    url: https://monarch-initiative.github.io/monarch-ingest
     description: Monarch's Knowledge Graph integrates resources from a wide 
       variety of sources to provide a comprehensive view of the relationships between genes, 
       diseases, phenotypes, and other biomedical entities.
@@ -129,7 +129,7 @@ standards:
     monarch_contribution: Lead
     category: Data Exchange
     documentation: https://phenopackets-schema.readthedocs.io/en/latest/
-    website: http://phenopackets.org/
+    url: http://phenopackets.org/
     icon: resource-phenopackets
     grants:
       - Phenomics First
@@ -146,7 +146,7 @@ standards:
     short_name: SSSOM
     monarch_contribution: Lead
     documentation: https://mapping-commons.github.io/sssom/spec/
-    website: https://mapping-commons.github.io/sssom/spec/
+    url: https://mapping-commons.github.io/sssom/spec/
     description: SSSOM is a simple metadata standard for describing semantic mappings.
     repository: https://github.com/mapping-commons/sssom/
     icon: resource-sssom
@@ -175,7 +175,7 @@ standards:
     documentation: https://obophenotype.github.io/human-phenotype-ontology/
     description: The HPO provides a standardized vocabulary of phenotypic abnormalities in human disease.
     repository: https://github.com/obophenotype/human-phenotype-ontology
-    website: https://hpo.jax.org/app/
+    url: https://hpo.jax.org/app/
     contact:
         name: Peter Robinson
         email: Peter.Robinson@jax.org
@@ -186,7 +186,7 @@ standards:
       - Phenomics First
   - id: http://purl.obolibrary.org/obo/mondo.owl
     documentation: https://mondo.readthedocs.io/en/latest/
-    website: https://mondo.monarchinitiative.org/
+    url: https://mondo.monarchinitiative.org/
     name: Mondo Disease Ontology
     short_name: Mondo
     icon: resource-mondo
@@ -209,7 +209,7 @@ standards:
     category: Ontology
     monarch_role: Flagship
     icon: resource-upheno
-    website: https://obophenotype.github.io/upheno/,
+    url: https://obophenotype.github.io/upheno/
     documentation: https://obophenotype.github.io/upheno/
     description: uPheno aims to unify the annotation of phenotypes across species.
     repository: https://obophenotype.github.io/upheno/
@@ -337,15 +337,15 @@ tools:
     category: Clinical Diagnosis
     monarch_role: Flagship
     icon: resource-exomiser
-    website: https://hpo.jax.org/app/tools/exomiser
+    url: https://hpo.jax.org/app/tools/exomiser
     documentation: https://exomiser.readthedocs.io/en/latest/
     description: The Exomiser is a tool for finding potential disease-causing variants in whole-exome or whole-genome sequencing data.
     repository: https://github.com/exomiser/Exomiser
   - id: https://monarchinitiative.org/
     name: Monarch App
     category: Clinical Diagnosis
-    icon: resource-monarch,
-    website: https://monarch-initiative.github.io/monarch-documentation
+    icon: resource-monarch
+    url: https://monarch-initiative.github.io/monarch-documentation
     description: The Monarch App is a web application for exploring the Monarch Knowledge Graph.
     repository: https://github.com/monarch-initiative/monarch-app
     monarch_contribution: Lead
@@ -367,7 +367,7 @@ tools:
     category: Ontology Use
     description: A python toolkit for accessing and visualising ontologies.
     icon: resource-oak
-    website: https://github.com/INCATools/ontology-access-kit
+    url: https://github.com/INCATools/ontology-access-kit
     monarch_contribution: Lead
     monarch_role: Support
     documentation: https://incatools.github.io/ontology-access-kit/
@@ -394,12 +394,11 @@ tools:
     monarch_role: Support
     repository: https://github.com/TheJacksonLaboratory/POET
   - id: https://tools.monarchinitiative.org/lirical
-    url: https://lirical.readthedocs.io
     name: LIkelihood Ratio Interpretation of Clinical AbnormaLities (LIRICAL)
     short_name: LIRICAL
     category: Clinical Diagnosis
     icon: lirical
-    website: https://thejacksonlaboratory.github.io/LIRICAL/stable/,
+    url: https://thejacksonlaboratory.github.io/LIRICAL/stable/
     description: LIkelihood Ratio Interpretation of Clinical AbnormaLities performs 
       phenotype-driven prioritization of candidate diseases and genes in the setting of genomic diagnostics.
     monarch_role: Core
@@ -441,17 +440,17 @@ tools:
     monarch_contribution: Lead
     monarch_role: Core
     icon: onto-gpt
-    website: https://github.com/monarch-initiative/ontogpt
+    url: https://github.com/monarch-initiative/ontogpt
     repository: https://github.com/monarch-initiative/ontogpt
     description: OntoGPT is a Python package for extracting structured information from text with large language models (LLMs), instruction prompts, and ontology-based grounding.
-  - id: https://github.com/monarch-initiative/ontogpt
+  - id: https://github.com/monarch-initiative/curate-gpt
     name: CurateGPT
     category: Data Curation
-    documentation: https://monarch-initiative.github.io/ontogpt/
+    documentation: https://github.com/monarch-initiative/curate-gpt
     monarch_contribution: Lead
     monarch_role: Core
     icon: curate-gpt
-    website: https://github.com/monarch-initiative/curate-gpt
+    url: https://curategpt.io/
     repository: https://github.com/monarch-initiative/curate-gpt
     description: AI Assisted Ontology Curation.
   - id: https://github.com/monarch-initiative/semsimian
@@ -459,7 +458,7 @@ tools:
     category: Mapping
     monarch_contribution: Lead
     icon: semsimian
-    website: https://github.com/monarch-initiative/semsimian
+    url: https://github.com/monarch-initiative/semsimian
     description: Semantic Similarity in Rust.
     monarch_role: Support
     repository: https://github.com/monarch-initiative/semsimian
@@ -499,7 +498,7 @@ tools:
     repository: https://github.com/linkml/linkml
     documentation: https://linkml.io/linkml-model/docs/
     icon: resource-linkml
-    website: https://linkml.io/
+    url: https://linkml.io/
     monarch_role: Core
     monarch_contribution: Lead
   - id: https://monarch-initiative.github.io/monarch-ingest
@@ -516,7 +515,7 @@ tools:
     description: SSSOM Mappings collected and curated by the Monarch Initiative.
     repository: https://github.com/monarch-initiative/monarch-mapping-commons
     documentation: https://github.com/monarch-initiative/monarch-mapping-commons
-    website: https://github.com/monarch-initiative/monarch-mapping-commons
+    url: https://github.com/monarch-initiative/monarch-mapping-commons
     monarch_contribution: Lead
 
 documentations:
