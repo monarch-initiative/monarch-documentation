@@ -192,6 +192,7 @@ slots:
   category:
     description: Monarch asset category. This allows grouping related assets (like data assets) together in sensible categories.
     range: string
+    required: true
   icon:
     description: An icon representing the asset.
     range: string
@@ -270,6 +271,7 @@ enums:
   documentation_asset_enum:
     permissible_values:
       Technical Documentation:
+      Training Materials:
   monarch_contribution_enum:
     permissible_values:
       Lead:
