@@ -192,6 +192,7 @@ slots:
   category:
     description: Monarch asset category. This allows grouping related assets (like data assets) together in sensible categories.
     range: string
+    required: true
   icon:
     description: An icon representing the asset.
     range: string
