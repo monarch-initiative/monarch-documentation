@@ -1,5 +1,5 @@
 {
-  "Standards": [
+  "Standards":
     {%- set standards_items = [] %}
     {%- for d in standards %}
       {%- if d.category != 'Ontology' and (d.monarch_role == 'Flagship' or d.monarch_role == 'Core') %}
@@ -13,8 +13,8 @@
       {%- endif %}
     {%- endfor %}
     {{ standards_items | tojson(indent=2) | safe }}
-  ],
-  "Ontologies": [
+  ,
+  "Ontologies":
     {%- set ontology_items = [] %}
     {%- for d in standards %}
       {%- if d.category == 'Ontology' and d.monarch_role == 'Flagship' %}
@@ -28,8 +28,8 @@
       {%- endif %}
     {%- endfor %}
     {{ ontology_items | tojson(indent=2) | safe }}
-  ],
-  "Tools": [
+  ,
+  "Tools":
     {%- set tools_items = [] %}
     {%- for d in tools %}
       {%- if d.monarch_role == 'Flagship' %}
@@ -43,5 +43,4 @@
       {%- endif %}
     {%- endfor %}
     {{ tools_items | tojson(indent=2) | safe }}
-  ]
 }

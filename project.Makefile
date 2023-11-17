@@ -40,6 +40,6 @@ gen-monarch-overview:
 
 src/docs/resources/monarch-app-resources.json: src/monarch_documentation/resources/monarch_app_resources.json.jinja2 src/data/resources.yaml
 	mkdir -p src/docs/resources/
-	$(RUN) j2 $^ > $@
+	$(RUN) j2 $^ | jq . > $@
 
 gen-monarch-resources: src/docs/resources/monarch-app-resources.json
