@@ -33,6 +33,8 @@ src/docs/registry_2.md: $(SOURCE_SCHEMA_PATH) src/data/resources.yaml
 validate-registry: $(SOURCE_SCHEMA_PATH) src/data/resources.yaml
 	$(RUN) linkml-validate --target-class ResourceRegistry -s $^
 
+test: validate-registry
+
 gen-monarch-overview:
 	$(MAKE) src/docs/registry.md -B
 
