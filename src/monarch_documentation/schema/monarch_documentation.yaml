@@ -25,6 +25,7 @@ classes:
     slots:
       - id
       - name
+      - short_name
       - description
       - grants
       - documentation
@@ -34,6 +35,8 @@ classes:
       - citation
       - contact
       - project_boards
+      - icon
+      - url
     class_uri: schema:Thing
 
   DataAsset:
@@ -66,7 +69,6 @@ classes:
       typically making complex or time-consuming processes more efficient and user-friendly. 
       These tasks can range from simple data manipulation to sophisticated design and analysis.
     slots:
-      - url
       - category
     slot_usage:
       category:
@@ -76,7 +78,6 @@ classes:
   Documentation:
     description: A resource that contains documentation, like a wiki, a webpage with training materials, etc.
     slots:
-      - url
       - category
     slot_usage:
         category:
@@ -145,6 +146,8 @@ slots:
   name:
     slot_uri: schema:name
     description: A human-readable name for a resource
+  short_name:
+    description: A short name for a resource
   email:
     description: The email of the contact.
   github:
@@ -188,6 +191,9 @@ slots:
     range: uriorcurie
   category:
     description: Monarch asset category. This allows grouping related assets (like data assets) together in sensible categories.
+    range: string
+  icon:
+    description: An icon representing the asset.
     range: string
   documentation:
     description: A URL to the documentation about this asset.
