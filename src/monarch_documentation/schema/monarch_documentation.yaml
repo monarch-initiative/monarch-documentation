@@ -271,6 +271,7 @@ enums:
   documentation_asset_enum:
     permissible_values:
       Technical Documentation:
+      Training Materials:
   monarch_contribution_enum:
     permissible_values:
       Lead:

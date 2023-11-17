@@ -500,6 +500,7 @@ tools:
     icon: resource-linkml
     url: https://linkml.io/
     monarch_role: Core
+    category: Data Curation
     monarch_contribution: Lead
   - id: https://monarch-initiative.github.io/monarch-ingest
     name: Monarch Ingest
@@ -507,11 +508,13 @@ tools:
     description: The Monarch Ingest pulls in data from a wide variety of biomedical data sources and generates Biolink-compliant KGX files that are used to build the Monarch KG.
     repository: https://github.com/monarch-initiative/monarch-ingest
     monarch_role: Core
+    category: Data Curation
     monarch_contribution: Lead
   - id: https://github.com/monarch-initiative/monarch-mapping-commons
     name: Monarch Mapping Commons
     icon: resource-monarch
     monarch_role: Flagship
+    category: Mapping
     description: SSSOM Mappings collected and curated by the Monarch Initiative.
     repository: https://github.com/monarch-initiative/monarch-mapping-commons
     documentation: https://github.com/monarch-initiative/monarch-mapping-commons
@@ -521,10 +524,12 @@ tools:
 documentations:
   - id: https://oboacademy.github.io/obook/
     name: OBO Academy
+    category: Training Materials
     description: A resource for self-paced training of Semantic Engineers.
     repository: https://github.com/OBOAcademy/obook/
   - id: https://berkeleybop.github.io/best_practice/
     name: Best practices for collaborative open source coding
+    category: Training Materials
     description: The best practice / house style guide maintained by Monarch's LBNL team members.
     repository: https://github.com/berkeleybop/berkeleybop.github.io/tree/master/best_practice
 repositories:
