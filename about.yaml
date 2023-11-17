@@ -1,4 +1,4 @@
-name: monarch_technical_documentation
+name: monarch_documentation
 author: Glass Elsarboukh <glass@tislab.org>
 description: Technical documentation for all Monarch applications, packages, services and related projects.
-source_schema_path: src/monarch_technical_documentation/schema/monarch_technical_documentation.yaml
+source_schema_path: src/monarch_documentation/schema/monarch_documentation.yaml

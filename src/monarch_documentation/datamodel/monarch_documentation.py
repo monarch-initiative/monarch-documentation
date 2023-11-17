@@ -1,8 +1,8 @@
-# Auto generated from monarch_technical_documentation.yaml by pythongen.py version: 0.9.0
+# Auto generated from monarch_documentation.yaml by pythongen.py version: 0.9.0
 # Generation date: 2023-06-13T12:37:10
 # Schema: monarch-documentation-schema
 #
-# id: https://w3id.org/monarch-initiative/monarch-technical-documentation
+# id: https://w3id.org/monarch-initiative/monarch-documentation
 # description: Technical documentation for all Monarch applications, packages, services and related projects.
 # license: GNU GPL v3.0
 
@@ -34,7 +34,7 @@ dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 # Namespaces
 BIOLINK = CurieNamespace('biolink', 'https://w3id.org/biolink/')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
-MTD = CurieNamespace('mtd', 'https://w3id.org/monarch-initiative/monarch-technical-documentation/')
+MTD = CurieNamespace('mtd', 'https://w3id.org/monarch-initiative/monarch-documentation/')
 SCHEMA = CurieNamespace('schema', 'http://schema.org/')
 DEFAULT_ = MTD
 
