@@ -1,0 +1,72 @@
+{
+  "Standards": [
+    
+    
+    {
+      "name": "Phenopackets",
+      "icon": "",
+      "link": "",
+      "description": "Open and Computable Bioinformation for Phenotypic Data"
+    },
+    
+    
+    {
+      "name": "SSSOM",
+      "icon": "resource-sssom",
+      "link": "",
+      "description": "Open and Computable Bioinformation for Phenotypic Data"
+    },
+    
+  ],
+  "Ontologies": [
+    
+    
+    {
+      "name": "HPO",
+      "icon": "resource-hpo",
+      "link": "https://hpo.jax.org/app/",
+      "description": "Open and Computable Bioinformation for Phenotypic Data"
+    },
+    
+    
+    {
+      "name": "Mondo Disease Ontology",
+      "icon": "resource-mondo",
+      "link": "",
+      "description": "Open and Computable Bioinformation for Phenotypic Data"
+    },
+    
+    
+    {
+      "name": "uPheno",
+      "icon": "resource-upheno",
+      "link": "https://obophenotype.github.io/upheno/,",
+      "description": "Open and Computable Bioinformation for Phenotypic Data"
+    },
+    
+  ],
+  "Tools": [
+    
+    {
+      "name": "Exomiser",
+      "icon": "resource-exomiser",
+      "link": "https://hpo.jax.org/app/tools/exomiser",
+      "description": "Open and Computable Bioinformation for Phenotypic Data"
+    },
+    
+    {
+      "name": "Monarch App",
+      "icon": "resource-monarch,",
+      "link": "https://monarch-initiative.github.io/monarch-documentation",
+      "description": "Open and Computable Bioinformation for Phenotypic Data"
+    },
+    
+    {
+      "name": "Monarch Mapping Commons",
+      "icon": "resource-monarch",
+      "link": "",
+      "description": "Open and Computable Bioinformation for Phenotypic Data"
+    }
+    
+  ]
+}

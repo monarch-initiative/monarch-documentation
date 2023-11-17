@@ -35,3 +35,9 @@ validate-registry: $(SOURCE_SCHEMA_PATH) src/data/resources.yaml
 
 gen-monarch-overview:
 	$(MAKE) src/docs/registry.md -B
+
+src/docs/resources/monarch-app-resources.json: src/monarch_technical_documentation/resources/monarch_app_resources.json.jinja2 src/data/resources.yaml
+	mkdir -p src/docs/resources/
+	$(RUN) j2 $^ > $@
+
+gen-monarch-resources: src/docs/resources/monarch-app-resources.json

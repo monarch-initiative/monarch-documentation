@@ -1,0 +1,34 @@
+{
+  "Standards": [
+    {% for d in standards %}{%if d.category!='Ontology' and (d.monarch_role=='Flagship' or d.monarch_role=='Core') %}
+    {% set standard_loop = loop %}
+    {
+      "name": "{%if 'short_name' in d %}{{ d.short_name }}{%else%}{{ d.name }}{%endif%}",
+      "icon": "{%if 'icon' in d %}{{ d.icon }}{%endif%}",
+      "link": "{%if 'website' in d %}{{ d.website }}{%endif%}",
+      "description": "Open and Computable Bioinformation for Phenotypic Data"
+    }{% if not standard_loop.last %},{% endif %}
+    {%endif%}{%endfor%}
+  ],
+  "Ontologies": [
+    {% for d in standards %}{%if d.category=='Ontology' and d.monarch_role=='Flagship' %}
+    {% set ontology_loop = loop %}
+    {
+      "name": "{%if 'short_name' in d %}{{ d.short_name }}{%else%}{{ d.name }}{%endif%}",
+      "icon": "{%if 'icon' in d %}{{ d.icon }}{%endif%}",
+      "link": "{%if 'website' in d %}{{ d.website }}{%endif%}",
+      "description": "Open and Computable Bioinformation for Phenotypic Data"
+    }{% if not ontology_loop.last %},{% endif %}
+    {%endif%}{%endfor%}
+  ],
+  "Tools": [
+    {% for d in tools %}{%if d.monarch_role=='Flagship' %}
+    {
+      "name": "{%if 'short_name' in d %}{{ d.short_name }}{%else%}{{ d.name }}{%endif%}",
+      "icon": "{%if 'icon' in d %}{{ d.icon }}{%endif%}",
+      "link": "{%if 'website' in d %}{{ d.website }}{%endif%}",
+      "description": "Open and Computable Bioinformation for Phenotypic Data"
+    }{% if not loop.last %},{% endif %}
+    {%endif%}{%endfor%}
+  ]
+}
