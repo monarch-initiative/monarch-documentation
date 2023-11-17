@@ -127,6 +127,8 @@ standards:
     monarch_contribution: Lead
     category: Data Exchange
     documentation: https://phenopackets-schema.readthedocs.io/en/latest/
+    website: http://phenopackets.org/
+    icon: resource-phenopackets
     grants:
       - Phenomics First
     monarch_role: Flagship
@@ -142,6 +144,7 @@ standards:
     short_name: SSSOM
     monarch_contribution: Lead
     documentation: https://mapping-commons.github.io/sssom/spec/
+    website: https://mapping-commons.github.io/sssom/spec/
     description: SSSOM is a simple metadata standard for describing semantic mappings.
     repository: https://github.com/mapping-commons/sssom/
     icon: resource-sssom
@@ -180,8 +183,10 @@ standards:
       - HPO
       - Phenomics First
   - id: http://purl.obolibrary.org/obo/mondo.owl
-    documentation: https://mondo.monarchinitiative.org/
+    documentation: https://mondo.readthedocs.io/en/latest/
+    website: https://mondo.monarchinitiative.org/
     name: Mondo Disease Ontology
+    short_name: Mondo
     icon: resource-mondo
     monarch_contribution: Lead
     category: Ontology
@@ -504,6 +509,10 @@ tools:
     icon: resource-monarch
     monarch_role: Flagship
     description: SSSOM Mappings collected and curated by the Monarch Initiative
+    repository: https://github.com/monarch-initiative/monarch-mapping-commons
+    documentation: https://github.com/monarch-initiative/monarch-mapping-commons
+    website: https://github.com/monarch-initiative/monarch-mapping-commons
+    monarch_contribution: Lead
 
 documentations:
   - id: https://oboacademy.github.io/obook/
