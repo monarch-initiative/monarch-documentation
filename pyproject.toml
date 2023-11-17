@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "Monarch-Technical-Documentation"
+name = "Monarch-Documentation"
 version = "0.1.1"
 description = ""
 authors = [
