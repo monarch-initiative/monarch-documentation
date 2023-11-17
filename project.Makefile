@@ -3,7 +3,7 @@
 .INCLUDE : Makefile
 
 genpython:
-	@$(RUN) gen-python $(SOURCE_SCHEMA_PATH) > $(PYMODEL)/monarch_technical_documentation.py
+	@$(RUN) gen-python $(SOURCE_SCHEMA_PATH) > $(PYMODEL)/monarch_documentation.py
 
 genindex:
 	@$(RUN) python scripts/generate_index.py
@@ -24,7 +24,7 @@ build-docs: genindex genpython genschemadoc genrepodocs geningestdoc gen-monarch
 ### Provisional Monarch Asset Registry #####
 ############################################
 
-src/docs/registry.md: src/monarch_technical_documentation/resources/monarch_resources.md.jinja2 src/data/resources.yaml
+src/docs/registry.md: src/monarch_documentation/resources/monarch_resources.md.jinja2 src/data/resources.yaml
 	$(RUN) j2 $^ > $@
 
 src/docs/registry_2.md: $(SOURCE_SCHEMA_PATH) src/data/resources.yaml
@@ -36,7 +36,7 @@ validate-registry: $(SOURCE_SCHEMA_PATH) src/data/resources.yaml
 gen-monarch-overview:
 	$(MAKE) src/docs/registry.md -B
 
-src/docs/resources/monarch-app-resources.json: src/monarch_technical_documentation/resources/monarch_app_resources.json.jinja2 src/data/resources.yaml
+src/docs/resources/monarch-app-resources.json: src/monarch_documentation/resources/monarch_app_resources.json.jinja2 src/data/resources.yaml
 	mkdir -p src/docs/resources/
 	$(RUN) j2 $^ > $@
 

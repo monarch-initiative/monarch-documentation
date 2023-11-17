@@ -1,8 +1,8 @@
-# Contributing to monarch-technical-documentation
+# Contributing to monarch-documentation
 
 :+1: First of all: Thank you for taking the time to contribute!
 
-The following is a set of guidelines for contributing to monarch-technical-documentation. 
+The following is a set of guidelines for contributing to monarch-documentation. 
 These guidelines are not strict rules. Use your best judgment, and feel free to propose 
 changes to this document in a pull request.
 
@@ -21,7 +21,7 @@ changes to this document in a pull request.
 
 ## Code of Conduct
 
-The monarch-technical-documentation team strives to create a
+The monarch-documentation team strives to create a
 welcoming environment for editors, users and other contributors.
 Please carefully read our [Code of Conduct](CODE_OF_CONDUCT.md).
 
@@ -33,5 +33,5 @@ Please carefully read our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ### Reporting problems with the data model
 
-Please use our [Issue Tracker](https://github.com/monarch-initiative/monarch-technical-documentation/issues/) for reporting problems with the ontology. 
+Please use our [Issue Tracker](https://github.com/monarch-initiative/monarch-documentation/issues/) for reporting problems with the ontology. 
 
