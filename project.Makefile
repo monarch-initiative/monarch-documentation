@@ -17,7 +17,7 @@ geningestdoc:
 genschemadoc: $(DOCDIR)
 	@$(RUN) gen-doc -d $(DOCDIR)/Documentation-Schema $(SOURCE_SCHEMA_PATH)
 
-build-docs: genindex genpython genschemadoc genrepodocs geningestdoc gen-monarch-overview
+build-docs: genindex genpython genschemadoc genrepodocs geningestdoc gen-monarch-overview gen-monarch-resources
 	@cp -r src/docs/* docs/
 
 ############################################

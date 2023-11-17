@@ -120,7 +120,9 @@ data:
     monarch_role: Flagship
     icon: resource-monarch
     website: https://monarch-initiative.github.io/monarch-ingest
-    description: Monarch's Integrated Knowledge Graph
+    description: Monarch's Knowledge Graph integrates resources from a wide 
+      variety of sources to provide a comprehensive view of the relationships between genes, 
+      diseases, phenotypes, and other biomedical entities.
 standards:
   - id: http://phenopackets.org/
     name: Phenopackets
@@ -171,7 +173,7 @@ standards:
     category: Ontology
     monarch_role: Flagship
     documentation: https://obophenotype.github.io/human-phenotype-ontology/
-    description: The HPO provides a standardized vocabulary of phenotypic abnormalities in human disease. 
+    description: The HPO provides a standardized vocabulary of phenotypic abnormalities in human disease.
     repository: https://github.com/obophenotype/human-phenotype-ontology
     website: https://hpo.jax.org/app/
     contact:
@@ -398,7 +400,8 @@ tools:
     category: Clinical Diagnosis
     icon: lirical
     website: https://thejacksonlaboratory.github.io/LIRICAL/stable/,
-    description: LIkelihood Ratio Interpretation of Clinical AbnormaLities
+    description: LIkelihood Ratio Interpretation of Clinical AbnormaLities performs 
+      phenotype-driven prioritization of candidate diseases and genes in the setting of genomic diagnostics.
     monarch_role: Core
     documentation: https://lirical.readthedocs.io/en/latest/
     repository: https://github.com/TheJacksonLaboratory/LIRICAL
@@ -450,14 +453,14 @@ tools:
     icon: curate-gpt
     website: https://github.com/monarch-initiative/curate-gpt
     repository: https://github.com/monarch-initiative/curate-gpt
-    description: AI Assisted Ontology Curation
+    description: AI Assisted Ontology Curation.
   - id: https://github.com/monarch-initiative/semsimian
     name: semsimian
     category: Mapping
     monarch_contribution: Lead
     icon: semsimian
     website: https://github.com/monarch-initiative/semsimian
-    description: Semantic Similarity in Rust
+    description: Semantic Similarity in Rust.
     monarch_role: Support
     repository: https://github.com/monarch-initiative/semsimian
   - id: https://github.com/monarch-initiative/monarch-py
@@ -490,7 +493,9 @@ tools:
     repository: https://github.com/monarch-initiative/fenominal
   - id: https://linkml.io/
     name: LinkML
-    description: The Linked Data Modeling Language (LinkML) is a flexible modeling language that allows you to author schemas (models) in YAML that describe the structure of your data. 
+    description: The Linked Data Modeling Language (LinkML) is a flexible 
+      modeling language that allows you to author schemas (models) in YAML that 
+      describe the structure of your data. 
     repository: https://github.com/linkml/linkml
     documentation: https://linkml.io/linkml-model/docs/
     icon: resource-linkml
@@ -508,7 +513,7 @@ tools:
     name: Monarch Mapping Commons
     icon: resource-monarch
     monarch_role: Flagship
-    description: SSSOM Mappings collected and curated by the Monarch Initiative
+    description: SSSOM Mappings collected and curated by the Monarch Initiative.
     repository: https://github.com/monarch-initiative/monarch-mapping-commons
     documentation: https://github.com/monarch-initiative/monarch-mapping-commons
     website: https://github.com/monarch-initiative/monarch-mapping-commons
