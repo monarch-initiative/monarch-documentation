@@ -401,7 +401,7 @@ tools:
     url: https://thejacksonlaboratory.github.io/LIRICAL/stable/
     description: LIkelihood Ratio Interpretation of Clinical AbnormaLities performs 
       phenotype-driven prioritization of candidate diseases and genes in the setting of genomic diagnostics.
-    monarch_role: Core
+    monarch_role: Flagship
     documentation: https://lirical.readthedocs.io/en/latest/
     repository: https://github.com/TheJacksonLaboratory/LIRICAL
   - id: https://github.com/INCATools/obographviz
@@ -438,7 +438,7 @@ tools:
     category: Data Curation
     documentation: https://monarch-initiative.github.io/ontogpt/
     monarch_contribution: Lead
-    monarch_role: Core
+    monarch_role: Flagship
     icon: onto-gpt
     url: https://github.com/monarch-initiative/ontogpt
     repository: https://github.com/monarch-initiative/ontogpt
@@ -448,7 +448,7 @@ tools:
     category: Data Curation
     documentation: https://github.com/monarch-initiative/curate-gpt
     monarch_contribution: Lead
-    monarch_role: Core
+    monarch_role: Flagship
     icon: curate-gpt
     url: https://curategpt.io/
     repository: https://github.com/monarch-initiative/curate-gpt
