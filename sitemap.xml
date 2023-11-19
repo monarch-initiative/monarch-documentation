@@ -2,532 +2,532 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/registry/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/Contact/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/DataAsset/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/DataAssetEnum/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/Documentation/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/DocumentationAssetEnum/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/Download/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/FileFormatEnum/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/GrantEnum/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/MonarchContributionEnum/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/MonarchRoleEnum/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/ProjectBoard/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/ReleaseStatusEnum/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/Repository/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/Resource/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/ResourceRegistry/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/Standard/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/StandardEnum/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/Tool/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/ToolAssetEnum/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/category/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/citation/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/contact/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/data/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/depends_on/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/description/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/documentation/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/documentations/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/download/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/email/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/file_format/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/github/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/grants/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/icon/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/id/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/monarch-documentation-schema/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/monarch_contribution/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/monarch_role/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/name/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/orcid/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/organization/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/project_boards/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/release_status/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/repo_url/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/repositories/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/repository/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/short_name/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/standards/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/tools/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/types/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Documentation-Schema/url/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Ingest%20Principles/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Ingest%20Principles/modeling-principles/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/Exomiser/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/LIRICAL/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/POET/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/Phenomiser/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/arachne/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/babelon/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/biolink-model-toolkit/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/biolink-model/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/boomer/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/cat-merge/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/closurizer/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/dosdp-tools/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/fenominal/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/hpo-web/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/human-phenotype-ontology/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/jenkins/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/kghub-downloader/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/kgx/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/knowledge-graph-hub.github.io/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/koza/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/linkml-runtime/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/loinc2hpoAnnotation/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/monarch-app/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/monarch-file-server/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/monarch-gene-mapping/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/monarch-ingest-dashboard/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/monarch-ingest/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/monarch-ontology-dashboard/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/monarch-plater-docker/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/monarch-py/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/monarch-ui/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/mondo/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/neat-ml/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/oakx-grape/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/ontogpt/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/ontology-access-kit/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/ontology-development-kit/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/phenopacket-schema/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/phenopacket-tools/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/pheval.exomiser/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/pheval/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/prefixmaps/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/pyphetools/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/relation-graph/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/semantic-sql/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/semsim/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/semsimian/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/sssom-py/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/sssom/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/universalizer/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/upheno-dev/</loc>
-         <lastmod>2023-11-17</lastmod>
+         <lastmod>2023-11-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
