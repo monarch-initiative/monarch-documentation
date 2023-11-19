@@ -20,7 +20,7 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | PURL | https://standards.monarchinitiative.org/phenopackets |
 | Cite |  |
 | [Resource category](../Documentation-Schema/StandardEnum/) | Data Exchange |
-| Documentation | [https://phenopackets-schema.readthedocs.io/en/latest/](https://phenopackets-schema.readthedocs.io/en/latest/) | 
+| Documentation | [https://phenopacket-schema.readthedocs.io/en/latest/](https://phenopacket-schema.readthedocs.io/en/latest/) | 
 | [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
 | [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
 | [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Flagship |

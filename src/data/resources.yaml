@@ -128,7 +128,7 @@ standards:
     name: Phenopackets
     monarch_contribution: Lead
     category: Data Exchange
-    documentation: https://phenopackets-schema.readthedocs.io/en/latest/
+    documentation: https://phenopacket-schema.readthedocs.io/en/latest/
     url: http://phenopackets.org/
     icon: resource-phenopackets
     grants:
