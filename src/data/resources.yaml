@@ -184,6 +184,22 @@ standards:
     grants:
       - HPO
       - Phenomics First
+  - id: https://github.com/geneontology/obographs
+    documentation: https://incatools.github.io/ontology-access-kit/datamodels/obograph/index.html
+    url: https://github.com/geneontology/obographs
+    name: obographs
+    monarch_contribution: Lead
+    category: Data Exchange
+    monarch_role: Support
+    description: The obographs ontology format aims and providing a simple graph-oriented JSON format for ontologies.
+    repository: https://github.com/geneontology/obographs
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
+    grants:
+      - Phenomics First
   - id: http://purl.obolibrary.org/obo/mondo.owl
     documentation: https://mondo.readthedocs.io/en/latest/
     url: https://mondo.monarchinitiative.org/
@@ -404,6 +420,13 @@ tools:
     monarch_role: Flagship
     documentation: https://lirical.readthedocs.io/en/latest/
     repository: https://github.com/TheJacksonLaboratory/LIRICAL
+  - id: https://github.com/monarch-initiative/pheval
+    name: PhEval
+    category: Benchmarking
+    documentation: https://monarch-initiative.github.io/pheval/
+    repository: https://github.com/monarch-initiative/pheval
+    monarch_role: Core
+    description: PhEval is a Python package for evaluating phenotype-powered variant prioritisation systems such as Exomiser.
   - id: https://github.com/INCATools/obographviz
     name: obographviz
     category: Ontology Use
