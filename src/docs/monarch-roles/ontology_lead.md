@@ -1,4 +1,4 @@
-## Monarch role: Ontology lead
+## Monarch role: Ontology Technical Lead
 
 The Monarch Ontology lead is responsible for coordinating all Monarch-related ontology efforts. 
 Primarily means the following:
