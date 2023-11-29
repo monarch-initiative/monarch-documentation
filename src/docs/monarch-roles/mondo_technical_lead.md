@@ -3,7 +3,7 @@
 Main responsibilities:
 
 1. Coordinate the development of the Mondo ingest pipeline
-1. Ensuring the ongoing Mondo ingest pipeline with external sources runs smoothly (devops)
+1. Ensure the ongoing Mondo ingest pipeline with external sources runs smoothly (devops)
 1. Support the curation team:
     1. Ensuring that the release system (including import management, ODK stuff etc) runs smoothly (mostly support / debugging role when things break because of a bad imported axiom or a software update).
     1. Maintaining and extending the QC system. The curation team identifies and issue that needs a check. We develop it and integrate it into the QC system
