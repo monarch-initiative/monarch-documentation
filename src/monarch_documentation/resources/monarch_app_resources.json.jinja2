@@ -7,7 +7,7 @@
           "name": d.short_name if 'short_name' in d else d.name,
           "icon": d.icon if 'icon' in d else None,
           "link": d.url if 'url' in d else None,
-          "description": "Open and Computable Bioinformation for Phenotypic Data"
+          "description": d.description if 'description' in d else None
         } %}
         {%- do standards_items.append(item) %}
       {%- endif %}
@@ -22,7 +22,7 @@
           "name": d.short_name if 'short_name' in d else d.name,
           "icon": d.icon if 'icon' in d else None,
           "link": d.url if 'url' in d else None,
-          "description": "Open and Computable Bioinformation for Phenotypic Data"
+          "description": d.description if 'description' in d else None
         } %}
         {%- do ontology_items.append(item) %}
       {%- endif %}
@@ -37,7 +37,7 @@
           "name": d.short_name if 'short_name' in d else d.name,
           "icon": d.icon if 'icon' in d else None,
           "link": d.url if 'url' in d else None,
-          "description": "Open and Computable Bioinformation for Phenotypic Data"
+          "description": d.description if 'description' in d else None
         } %}
         {%- do tools_items.append(item) %}
       {%- endif %}
