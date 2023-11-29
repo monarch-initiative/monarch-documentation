@@ -16,13 +16,21 @@ Main responsibilities:
 
 ## Coordination of the Mondo Ingest pipeline
 
-Develop an efficient system for aligning external ontologies, including:
+Github: https://github.com/monarch-initiative/mondo-ingest
+Documentation: https://monarch-initiative.github.io/mondo-ingest/
+
+### Develop an efficient system for aligning external ontologies
+
+The most important _technical_ component of Mondo is its alignment system. It comprises a number of sub-systems. The three core subsystems are:
 
 1. Mapping system (map new terms in external ontologies to Mondo)
 2. Migrations system (incorporate new terms from external resources into Mondo)
 3. Syncing system (update information about terms already mapped in Mondo)
 
-Incorporating new strategic ingests, including:
+## Incorporating new ingests
+
+As there are dozens of resources that _could_ be incorporated, but our curation resources are limited,
+we need to carefully decide which ingests to incorporate, strategically. Two ingests that are top priority for example are:
 
 1. ICD10
 1. ICD11
