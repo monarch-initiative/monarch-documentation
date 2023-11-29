@@ -291,7 +291,7 @@ enums:
       Flagship:
         description: A flagship product is a product that fulfills a strategic role for the Monarch Initiative.
           In particular it
-          (1) *directly* supports the Monarch mission (excluding products of general utility like mapping or ontology standards)
+          (1) *directly* supports the Monarch mission (excluding products of general utility)
           (2) has stakeholders outside of the Monarch Initiative
           (3) has stakeholders among most major member organisations of the Monarch Initiative
           An important corrolary of (3) is that all major member organisations of the Monarch Initiative should
