@@ -2063,16 +2063,28 @@
 <td>^3.9</td>
 </tr>
 <tr>
-<td>linkml</td>
-<td>&gt;=1.6.1</td>
-</tr>
-<tr>
 <td>curies</td>
-<td>^0.5.2</td>
+<td>^0.7.4</td>
 </tr>
 <tr>
 <td>prefixmaps</td>
-<td>^0.1.4</td>
+<td>^0.2.0</td>
+</tr>
+<tr>
+<td>rdflib</td>
+<td>6.0.0</td>
+</tr>
+<tr>
+<td>pyyaml</td>
+<td>^6.0.1</td>
+</tr>
+<tr>
+<td>importlib-metadata</td>
+<td>^6.8.0</td>
+</tr>
+<tr>
+<td>stringcase</td>
+<td>^1.2.0</td>
 </tr>
 <tr>
 <td>pytest</td>
@@ -2087,14 +2099,10 @@
 <h3 id="documentation">Documentation</h3>
 <p><a href="https://img.shields.io/github/license/biolink/biolink-model"><img alt="" src="https://img.shields.io/github/license/biolink/biolink-model" /></a>
 <a href="https://img.shields.io/github/v/release/biolink/biolink-model?style=flat-square"><img alt="Biolink Model" src="https://img.shields.io/github/v/release/biolink/biolink-model?style=flat-square" /></a>
-<a href="https://www.python.org/downloads/release/python-370/"><img alt="Python 3.7" src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Blue_Python_3.7_Shield_Badge.svg" /></a>
-<a href="https://travis-ci.com/biolink/biolink-model"><img alt="Build Status" src="https://travis-ci.com/biolink/biolink-model.svg?branch=master" /></a>
-<a href="https://zenodo.org/badge/latestdoi/112995625"><img alt="DOI" src="https://zenodo.org/badge/112995625.svg" /></a>
-<a href="https://gitter.im/biolink-model/community?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img alt="Join the chat at https://gitter.im/biolink-model/community" src="https://badges.gitter.im/biolink-model/community.svg" /></a>
-<img alt="Regenerate Biolink Model Artifacts" src="https://github.com/biolink/biolink-model/workflows/Regenerate%20Biolink%20Model%20Artifacts/badge.svg" />
-<img alt="Deploy Documentation" src="https://github.com/biolink/biolink-model/workflows/Deploy%20Documentation/badge.svg" /></p>
+<a href="https://www.python.org/downloads/release/python-370/"><img alt="Python 3.10.1" src="https://upload.wikimedia.org/wikipedia/commons/f/fc/Blue_Python_3.7_Shield_Badge.svg" /></a>
+<a href="https://zenodo.org/badge/latestdoi/112995625"><img alt="DOI" src="https://zenodo.org/badge/112995625.svg" /></a></p>
 <p><img src="images/biolink-logo.png" width="20%"></p>
-<h1 id="biolink-model_1">Biolink Model</h1>
+<h1 id="biolink-model-httpsw3idorgbiolinkbiolink-modelyaml">Biolink Model: https://w3id.org/biolink/biolink-model.yaml</h1>
 <p>Quickstart docs:</p>
 <p>For a good overview of the biolink-model, <a href="https://www.youtube.com/watch?v=RE1hFm8lvJA&amp;t=2s">watch Chris Mungall's talk</a> at ICBO 2020.</p>
 <ul>
@@ -2149,40 +2157,6 @@ be relatively simple to view and edit in its native form.</p>
 </li>
 <li><a href="docs">Markdown documentation</a></li>
 </ul>
-<h2 id="make-and-build-instructions">Make and build instructions</h2>
-<p>Prerequisites: Python 3.7+ and pipenv</p>
-<p>To install pipenv,</p>
-<div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>pipenv
-</code></pre></div>
-<p>To install the project,
-<div class="highlight"><pre><span></span><code>make<span class="w"> </span>install
-</code></pre></div></p>
-<p>To regenerate artifacts from the Biolink Model YAML,</p>
-<div class="highlight"><pre><span></span><code>make
-</code></pre></div>
-<p><strong>Note:</strong> the Makefile requires the following dependencies to be installed:</p>
-<h3 id="jsonschema">jsonschema</h3>
-<p><a href="https://json-schema.org/">jsonschema</a></p>
-<p>Generally install using </p>
-<div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>jsonschema
-</code></pre></div>
-<h3 id="jsonschema2pojo">jsonschema2pojo</h3>
-<p><a href="https://github.com/joelittlejohn/jsonschema2pojo">jsonschema2pojo</a></p>
-<p>If you are on a Mac, it can be installed using <code>brew</code>:
-<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>jsonschema2pojo
-</code></pre></div>
-For other OS environments, download the latest release then extract it into your execution path. eg
-<div class="highlight"><pre><span></span><code>wget<span class="w"> </span>https://github.com/joelittlejohn/jsonschema2pojo/releases/download/jsonschema2pojo-1.0.2/jsonschema2pojo-1.0.2.tar.gz
-tar<span class="w"> </span>-xvzf<span class="w"> </span>jsonschema2pojo-1.0.2.tar.gz
-<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/jsonschema2pojo-1.0.2/bin
-</code></pre></div></p>
-<h3 id="graphviz">GraphViz</h3>
-<p>See <a href="https://graphviz.org/">GraphViz site</a> for installation in your operating system.</p>
-<h3 id="to-regenerate-semmeddb-exclusion-list">to regenerate semmeddb exclusion list:</h3>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-<h2 id="how-do-i-use-biolink-model-yaml-programmatically">How do I use Biolink Model YAML programmatically?</h2>
-<p>For operations such as CURIE lookup, finding class by synonyms, get parents, get ancestors, etc. please make use of <a href="https://github.com/biolink/biolink-model-toolkit/">biolink-model-toolkit</a>. It provides convenience methods for traversing Biolink Model.</p>
 <h2 id="citing-biolink-model">Citing Biolink Model</h2>
 <p>Unni DR, Moxon SAT, Bada M, Brush M, Bruskiewich R, Caufield JH, Clemons PA, Dancik V, Dumontier M, Fecho K, Glusman G, Hadlock JJ, Harris NL, Joshi A, Putman T, Qin G, Ramsey SA, Shefchek KA, Solbrig H, Soman K, Thessen AE, Haendel MA, Bizon C, Mungall CJ, The Biomedical Data Translator Consortium (2022).
 Biolink Model: A universal schema for knowledge graphs in clinical, biomedical, and translational science. Clin Transl Sci. Wiley; 2022 Jun 6; https://onlinelibrary.wiley.com/doi/10.1111/cts.13302 </p>

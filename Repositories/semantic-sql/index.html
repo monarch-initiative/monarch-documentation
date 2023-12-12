@@ -2287,6 +2287,10 @@ This allows for code uchlike the following, which joins <a href="https://incatoo
 <div class="highlight"><pre><span></span><code>runoak<span class="w"> </span>-i<span class="w"> </span>sqlite:envo.owl<span class="w"> </span>search<span class="w"> </span>t~biome
 </code></pre></div>
 <p>Even if using OAK, it can be useful to access SQL tables directly to do complex multi-join queries in a performant way.</p>
+<h2 id="optimization">Optimization</h2>
+<div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>run<span class="w"> </span>semsql<span class="w"> </span>view2table<span class="w"> </span>edge<span class="w"> </span>--full-index<span class="w"> </span><span class="p">|</span><span class="w"> </span>sqlite3<span class="w"> </span><span class="nv">$db</span>/mydb.db
+</code></pre></div>
+<p>See <a href="indexes">indexes</a> for some ready-made indexes</p>
 
 
 
