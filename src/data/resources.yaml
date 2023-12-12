@@ -353,7 +353,7 @@ tools:
     category: Clinical Diagnosis
     monarch_role: Flagship
     icon: resource-exomiser
-    url: https://tools.monarchinitiative.org/exomiser
+    url: https://exomiser.monarchinitiative.org/exomiser/
     documentation: https://exomiser.readthedocs.io/en/latest/
     description: The Exomiser is a tool for finding potential disease-causing variants in whole-exome or whole-genome sequencing data.
     repository: https://github.com/exomiser/Exomiser
