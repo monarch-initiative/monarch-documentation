@@ -347,7 +347,7 @@ standards:
     grants:
       - HPO
 tools:
-  - id: https://tools.monarchinitiative.org/exomiser
+  - id: https://exomiser.monarchinitiative.org/exomiser/
     name: Exomiser
     monarch_contribution: Lead
     category: Clinical Diagnosis
