@@ -218,6 +218,57 @@ standards:
         github: "@cmungall"
     grants:
       - Phenomics First
+  - id: http://purl.obolibrary.org/obo/geno.owl
+    documentation: https://github.com/monarch-initiative/GENO-ontology
+    url: https://github.com/monarch-initiative/GENO-ontology
+    name: Genotype Ontology
+    short_name: GENO
+    monarch_contribution: Lead
+    category: Ontology
+    monarch_role: Core
+    description: An ontology that represents the levels of genetic variation specified in genotypes.
+    repository: https://github.com/monarch-initiative/GENO-ontology
+    contact:
+        name: Matt Brush
+        email: matt@tislab.org
+        orcid: https://orcid.org/0000-0002-1048-5019
+        github: "@mbrush"
+    grants:
+      - R24
+  - id: http://purl.obolibrary.org/obo/sepio.owl
+    documentation: https://github.com/monarch-initiative/SEPIO-ontology
+    url: https://github.com/monarch-initiative/SEPIO-ontology
+    name: Scientific Evidence and Provenance Information Ontology
+    short_name: SEPIO
+    monarch_contribution: Lead
+    category: Ontology
+    monarch_role: Core
+    description: An ontology that supports the description of evidence and provenance information for scientific claims.
+    repository: https://github.com/monarch-initiative/SEPIO-ontology
+    contact:
+        name: Matt Brush
+        email: matt@tislab.org
+        orcid: https://orcid.org/0000-0002-1048-5019
+        github: "@mbrush"
+    grants:
+      - R24
+  - id: http://purl.obolibrary.org/obo/vbo.owl
+    documentation: https://github.com/monarch-initiative/vertebrate-breed-ontology
+    url: https://github.com/monarch-initiative/vertebrate-breed-ontology
+    name: Vertebrate Breed Ontology
+    short_name: VBO
+    monarch_contribution: Lead
+    category: Ontology
+    monarch_role: Core
+    description: An ontology created to serve as a single computable resource for vertebrate breed names.
+    repository: https://github.com/monarch-initiative/vertebrate-breed-ontology
+    contact:
+        name: Sabrina Toro
+        email: sabrina@tislab.org
+        orcid: https://orcid.org/0000-0002-4142-7153
+        github: "@sabrinatoro"
+    grants:
+      - R24
   - id: https://github.com/obophenotype/upheno
     name: The Unified Phenotype Ontology (uPheno)
     short_name: uPheno
@@ -543,7 +594,42 @@ tools:
     documentation: https://github.com/monarch-initiative/monarch-mapping-commons
     url: https://github.com/monarch-initiative/monarch-mapping-commons
     monarch_contribution: Lead
-
+  - id: https://github.com/obophenotype/hpo-translations
+    name: HPO Language Translations
+    monarch_role: Support
+    category: Ontology Maintenance
+    description: Infrastructure to collect and coordinate HPO language translations.
+    repository: https://github.com/obophenotype/hpo-translations
+    documentation: https://obophenotype.github.io/hpo-translations/
+    url: https://obophenotype.github.io/hpo-translations/
+    monarch_contribution: Lead
+  - id: https://github.com/TheJacksonLaboratory/Phenomiser
+    name: Phenomizer
+    monarch_role: Core
+    category: Clinical Diagnosis
+    description: A web application for clinical diagnostics in human genetics using semantic similarity searches in ontologies.
+    repository: https://github.com/TheJacksonLaboratory/Phenomiser
+    documentation: https://github.com/TheJacksonLaboratory/Phenomiser
+    url: https://hpo.jax.org/app/tools/phenomizer
+    monarch_contribution: Lead
+  - id: https://github.com/monarch-initiative/phenogrid
+    name: Phenogrid
+    monarch_role: Core
+    category: Clinical Diagnosis
+    description: Phenogrid is a web component that visualizes semantic similarity calculations provided by OWLSim, as provided through APIs from the Monarch Initiative.
+    repository: https://github.com/monarch-initiative/phenogrid
+    documentation: https://github.com/monarch-initiative/phenogrid
+    url: https://github.com/monarch-initiative/phenogrid
+    monarch_contribution: Lead
+  - id: https://github.com/monarch-initiative/monarch-assistant
+    name: Monarch Assistant
+    monarch_role: Core
+    category: Clinical Diagnosis
+    description: An LLM retrieval augmented generation (RAG) agent for Monarch Initiative.
+    repository: https://github.com/monarch-initiative/monarch-assistant
+    documentation: https://github.com/monarch-initiative/monarch-assistant
+    url: https://github.com/monarch-initiative/monarch-assistant
+    monarch_contribution: Lead
 documentations:
   - id: https://oboacademy.github.io/obook/
     name: OBO Academy
