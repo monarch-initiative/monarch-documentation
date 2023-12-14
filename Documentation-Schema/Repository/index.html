@@ -263,6 +263,22 @@
   
 
       
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../monarch-roles/mondo_technical_lead/" class="md-tabs__link">
+        Monarch roles
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -2011,6 +2027,68 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Monarch roles
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Monarch roles" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Monarch roles
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monarch-roles/mondo_technical_lead/" class="md-nav__link">
+        Mondo technical lead
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monarch-roles/ontology_lead/" class="md-nav__link">
+        Ontology lead
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -2194,27 +2272,9 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../monarch_role/">monarch_role</a></td>
-<td>0..1 <br/> <a href="../MonarchRoleEnum/">MonarchRoleEnum</a></td>
-<td>The strategic role the asset has for the Monarch core mission</td>
-<td><a href="../Resource/">Resource</a></td>
-</tr>
-<tr>
-<td><a href="../contact/">contact</a></td>
-<td>0..1 <br/> <a href="../Contact/">Contact</a></td>
-<td>The person responsible for a resources</td>
-<td><a href="../Resource/">Resource</a></td>
-</tr>
-<tr>
-<td><a href="../project_boards/">project_boards</a></td>
-<td>0..* <br/> <a href="../ProjectBoard/">ProjectBoard</a></td>
-<td>The project board associated with this resource</td>
-<td><a href="../Resource/">Resource</a></td>
-</tr>
-<tr>
-<td><a href="../repository/">repository</a></td>
-<td>0..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
-<td>The repository associated with this resource</td>
+<td><a href="../monarch_contribution/">monarch_contribution</a></td>
+<td>0..1 <br/> <a href="../MonarchContributionEnum/">MonarchContributionEnum</a></td>
+<td>The role the Monarch Initiative plays in the maintainence of this asset</td>
 <td><a href="../Resource/">Resource</a></td>
 </tr>
 <tr>
@@ -2224,45 +2284,9 @@
 <td><a href="../Resource/">Resource</a></td>
 </tr>
 <tr>
-<td><a href="../icon/">icon</a></td>
-<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
-<td>An icon representing the asset</td>
-<td><a href="../Resource/">Resource</a></td>
-</tr>
-<tr>
 <td><a href="../url/">url</a></td>
 <td>0..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
 <td>A web location</td>
-<td><a href="../Resource/">Resource</a></td>
-</tr>
-<tr>
-<td><a href="../description/">description</a></td>
-<td>0..1 <br/> NONE</td>
-<td>A human-readable description for a resource</td>
-<td><a href="../Resource/">Resource</a></td>
-</tr>
-<tr>
-<td><a href="../documentation/">documentation</a></td>
-<td>0..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
-<td>A URL to the documentation about this asset</td>
-<td><a href="../Resource/">Resource</a></td>
-</tr>
-<tr>
-<td><a href="../name/">name</a></td>
-<td>0..1 <br/> NONE</td>
-<td>A human-readable name for a resource</td>
-<td><a href="../Resource/">Resource</a></td>
-</tr>
-<tr>
-<td><a href="../short_name/">short_name</a></td>
-<td>0..1 <br/> NONE</td>
-<td>A short name for a resource</td>
-<td><a href="../Resource/">Resource</a></td>
-</tr>
-<tr>
-<td><a href="../id/">id</a></td>
-<td>1..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
-<td>A unique identifier for a resource</td>
 <td><a href="../Resource/">Resource</a></td>
 </tr>
 <tr>
@@ -2272,9 +2296,63 @@
 <td><a href="../Resource/">Resource</a></td>
 </tr>
 <tr>
-<td><a href="../monarch_contribution/">monarch_contribution</a></td>
-<td>0..1 <br/> <a href="../MonarchContributionEnum/">MonarchContributionEnum</a></td>
-<td>The role the Monarch Initiative plays in the maintainence of this asset</td>
+<td><a href="../monarch_role/">monarch_role</a></td>
+<td>0..1 <br/> <a href="../MonarchRoleEnum/">MonarchRoleEnum</a></td>
+<td>The strategic role the asset has for the Monarch core mission</td>
+<td><a href="../Resource/">Resource</a></td>
+</tr>
+<tr>
+<td><a href="../documentation/">documentation</a></td>
+<td>0..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
+<td>A URL to the documentation about this asset</td>
+<td><a href="../Resource/">Resource</a></td>
+</tr>
+<tr>
+<td><a href="../project_boards/">project_boards</a></td>
+<td>0..* <br/> <a href="../ProjectBoard/">ProjectBoard</a></td>
+<td>The project board associated with this resource</td>
+<td><a href="../Resource/">Resource</a></td>
+</tr>
+<tr>
+<td><a href="../description/">description</a></td>
+<td>0..1 <br/> NONE</td>
+<td>A human-readable description for a resource</td>
+<td><a href="../Resource/">Resource</a></td>
+</tr>
+<tr>
+<td><a href="../name/">name</a></td>
+<td>0..1 <br/> NONE</td>
+<td>A human-readable name for a resource</td>
+<td><a href="../Resource/">Resource</a></td>
+</tr>
+<tr>
+<td><a href="../contact/">contact</a></td>
+<td>0..1 <br/> <a href="../Contact/">Contact</a></td>
+<td>The person responsible for a resources</td>
+<td><a href="../Resource/">Resource</a></td>
+</tr>
+<tr>
+<td><a href="../icon/">icon</a></td>
+<td>0..1 <br/> <a href="xsd:string">xsd:string</a></td>
+<td>An icon representing the asset</td>
+<td><a href="../Resource/">Resource</a></td>
+</tr>
+<tr>
+<td><a href="../repository/">repository</a></td>
+<td>0..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
+<td>The repository associated with this resource</td>
+<td><a href="../Resource/">Resource</a></td>
+</tr>
+<tr>
+<td><a href="../id/">id</a></td>
+<td>1..1 <br/> <a href="xsd:anyURI">xsd:anyURI</a></td>
+<td>A unique identifier for a resource</td>
+<td><a href="../Resource/">Resource</a></td>
+</tr>
+<tr>
+<td><a href="../short_name/">short_name</a></td>
+<td>0..1 <br/> NONE</td>
+<td>A short name for a resource</td>
 <td><a href="../Resource/">Resource</a></td>
 </tr>
 </tbody>

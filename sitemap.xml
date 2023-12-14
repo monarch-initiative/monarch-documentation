@@ -530,4 +530,14 @@
          <lastmod>2023-12-14</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/monarch-documentation/monarch-roles/mondo_technical_lead/</loc>
+         <lastmod>2023-12-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/monarch-documentation/monarch-roles/ontology_lead/</loc>
+         <lastmod>2023-12-14</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
