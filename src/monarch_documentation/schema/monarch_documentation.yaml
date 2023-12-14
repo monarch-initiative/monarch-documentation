@@ -319,6 +319,6 @@ enums:
         description: A community product is a product that does not directly support the Monarch mission, but supports community efforts towards the mission.
           A community product
           (1) is usually a community resource, such as training materials, a community website, a standard specification, etc.
-          (2) is usually more "general-purpose"
+          (2) is usually more *general-purpose*
           (3) is community-driven, rather than mission-driven
 
