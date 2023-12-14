@@ -234,7 +234,7 @@ standards:
         orcid: https://orcid.org/0000-0002-1048-5019
         github: "@mbrush"
     grants:
-      - R24
+      - Monarch R24
   - id: http://purl.obolibrary.org/obo/sepio.owl
     documentation: https://github.com/monarch-initiative/SEPIO-ontology
     url: https://github.com/monarch-initiative/SEPIO-ontology
@@ -251,7 +251,7 @@ standards:
         orcid: https://orcid.org/0000-0002-1048-5019
         github: "@mbrush"
     grants:
-      - R24
+      - Monarch R24
   - id: http://purl.obolibrary.org/obo/vbo.owl
     documentation: https://github.com/monarch-initiative/vertebrate-breed-ontology
     url: https://github.com/monarch-initiative/vertebrate-breed-ontology
@@ -268,7 +268,7 @@ standards:
         orcid: https://orcid.org/0000-0002-4142-7153
         github: "@sabrinatoro"
     grants:
-      - R24
+      - Monarch R24
   - id: https://github.com/obophenotype/upheno
     name: The Unified Phenotype Ontology (uPheno)
     short_name: uPheno
