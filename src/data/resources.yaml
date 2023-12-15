@@ -412,11 +412,20 @@ tools:
     name: Monarch App
     category: Clinical Diagnosis
     icon: resource-monarch
-    url: https://monarch-initiative.github.io/monarch-documentation
+    url: https://monarch-app.monarchinitiative.org/
     description: The Monarch App is a web application for exploring the Monarch Knowledge Graph.
     repository: https://github.com/monarch-initiative/monarch-app
     monarch_contribution: Lead
     monarch_role: Flagship
+    documentation: https://monarch-app.monarchinitiative.org/
+  - id: https://monarchinitiative.org/
+    name: Monarch API
+    category: Clinical Diagnosis
+    url: https://monarch-app.monarchinitiative.org/
+    description: The Monarch API is used to access information from the Monarch Knowledge Graph programmatically.
+    repository: https://github.com/monarch-initiative/monarch-app
+    monarch_contribution: Lead
+    monarch_role: Core
     documentation: https://monarch-app.monarchinitiative.org/
   - id: https://tools.monarchinitiative.org/odk
     name: Ontology Development Kit (ODK)
