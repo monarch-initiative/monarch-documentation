@@ -56,7 +56,9 @@ Edit the top two lines in new env to match the latest KG & API versions:
 export MONARCH_KG_VERSION="2023-11-16"
 export MONARCH_API_VERSION="0.18.1"
 ```
+
 Then source the new environment and run provision.sh to create the new VM stack, paying attention to the terrform output to make sure that it's creating VMs with a version name you expect:
+
 ```
 source site-envs/monarch-2023-11-16.env
 ./provision.sh
@@ -70,8 +72,6 @@ Get yourself a cup of hot chocolate / ice cold lemonade (season dependent) and s
 
 
 #### Deploying to production
-
-
 
 Then switch the load balancer to pointing to it as production  
 Then turn off the former production  
