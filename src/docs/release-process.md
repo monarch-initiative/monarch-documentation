@@ -38,7 +38,9 @@ To deploy the knowledge graph to the dev environment, follow these steps:
 * Checkout (or update) [Monarch Stack V3](gh repo clone monarch-initiative/monarch-stack-v3)
 * Source the dev environment: `cd deployment && source site-envs/monarch-dev.env`
 * Run the provision script to update the dev environment: `./provision.sh`
-* After running the provision script to update the dev environment, a manual restart of the Solr container is necessary: ```
+* After running the provision script to update the dev environment, a manual restart of the Solr container is necessary:
+
+```
 gcloud compute ssh --zone us-central1-a monarch-v3-${TF_VAR_env}-manager -- sudo docker service update --force monarch-v3_solr
 ```
 
