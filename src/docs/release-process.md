@@ -64,8 +64,14 @@ Then source the new environment and run provision.sh to create the new VM stack,
 source site-envs/monarch-2023-11-16.env
 ./provision.sh
 ```
+#### Connecting beta to the load balancer
 
-Once this completes, edit the [GCP load balancer configuration](https://console.cloud.google.com/net-services/loadbalancing/details/http/monarch-balancer?project=monarch-initiative) to point beta.monarchinitiative.org api & ui at the new stack by adding the `monarch-v3-{release}-api-backend` & `monarch-v3-{release}-nginx-backend` backend services to the load balancer in the `Backend Configuration` section and then modifying the `Host and path rules` section to point beta.monarchinitiative.org to the nginx backend and api-beta.monarchinitiative.org to the api backend. 
+Once this completes, open the [GCP load balancer configuration](https://console.cloud.google.com/net-services/loadbalancing/details/http/monarch-balancer?project=monarch-initiative). 
+
+1. Click on the **edit** link at the top of the page.
+2. Click on **Backend Configuration**
+3. Open the **Backend services & backend buckets** pull down on the right side and check `monarch-v3-{release}-api-backend` & `monarch-v3-{release}-nginx-backend`
+4. Open the `Host and path rules` section to point beta.monarchinitiative.org to the nginx backend and api-beta.monarchinitiative.org to the api backend,  
 
 Restart the load balancer with the new configuration and confirm that the site is up and running. 
 
@@ -74,14 +80,17 @@ Get yourself a cup of hot chocolate / ice cold lemonade (season dependent) and s
 
 #### Deploying to production
 
-Then switch the load balancer to pointing to it as production  
-Then turn off the former production  
-And source the former former env in v3 stack to delete it
+Edit the load balancer
+1. Remove the nginx and api backends from the last release
+2. point api-beta.monarchinitiative.org api-v3.monarchinitiative.org api-next.monarchinitiative.org to monarch-v3-{release}-api-backend
+3. point next.monarchinitiative.org, monarchinitiative.org to monarch-v3-{release}-nginx-backend
+4. at the top of the host and path rules seciton, change the default backend ("Backend 1") to point to monarch-v3-{release}-nginx-backend as well
 
-## Monarch-Py (Monarch-App backend)
+Then turn off the former production VMs (but keep them around for disaster recovery) by going to the GCP console VM listings and just clicking stop on each VM. 
 
-TBD
+Source the former former env in v3 stack to delete it (say yes to deleting, and no to creating in the terraform dialogs)
+```
+source site-envs/monarch-2023-10-17.env 
+./provision.sh -d
+```
 
-## Monarch Website (Monarch-App frontend)
-
-TBD
