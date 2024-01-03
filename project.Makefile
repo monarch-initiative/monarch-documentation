@@ -17,7 +17,7 @@ geningestdoc:
 genschemadoc: $(DOCDIR)
 	@$(RUN) gen-doc -d $(DOCDIR)/Documentation-Schema $(SOURCE_SCHEMA_PATH)
 
-build-docs: genindex genpython genschemadoc genrepodocs geningestdoc gen-monarch-overview
+build-docs: genindex genpython genschemadoc genrepodocs geningestdoc gen-monarch-overview gen-monarch-resources
 	@cp -r src/docs/* docs/
 	@echo
 	@echo "Documentation built! Run 'mkdocs serve' to view it locally, or check the 'docs' folder to see the generated files."
@@ -35,5 +35,13 @@ src/docs/registry_2.md: $(SOURCE_SCHEMA_PATH) src/data/resources.yaml
 validate-registry: $(SOURCE_SCHEMA_PATH) src/data/resources.yaml
 	$(RUN) linkml-validate --target-class ResourceRegistry -s $^
 
+test: validate-registry
+
 gen-monarch-overview:
-	$(MAKE) src/docs/registry.md
+	$(MAKE) src/docs/registry.md -B
+
+src/docs/resources/monarch-app-resources.json: src/monarch_documentation/resources/monarch_app_resources.json.jinja2 src/data/resources.yaml
+	mkdir -p src/docs/resources/
+	$(RUN) j2 $^ | jq . > $@
+
+gen-monarch-resources: src/docs/resources/monarch-app-resources.json

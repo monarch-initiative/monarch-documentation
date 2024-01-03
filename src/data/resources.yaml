@@ -113,15 +113,29 @@ data:
     category: Knowledge Graph
     monarch_contribution: Lead
     monarch_role: Community
+  - id: https://monarch-initiative.github.io/monarch-ingest
+    name: Monarch KG
+    category: Knowledge Graph
+    monarch_contribution: Lead
+    monarch_role: Flagship
+    icon: resource-monarch
+    url: https://monarch-initiative.github.io/monarch-ingest
+    description: Monarch's Knowledge Graph integrates resources from a wide 
+      variety of sources to provide a comprehensive view of the relationships between genes, 
+      diseases, phenotypes, and other biomedical entities.
 standards:
-  - id: https://standards.monarchinitiative.org/phenopackets
+  - id: http://phenopackets.org/
     name: Phenopackets
     monarch_contribution: Lead
     category: Data Exchange
-    documentation: https://phenopackets-schema.readthedocs.io/en/latest/
+    documentation: https://phenopacket-schema.readthedocs.io/en/latest/
+    url: http://phenopackets.org/
+    icon: resource-phenopackets
     grants:
       - Phenomics First
     monarch_role: Flagship
+    description: The Phenopacket Schema is an ISO-endorsed open standard for sharing disease and phenotype information.
+    repository: https://github.com/phenopackets/phenopacket-schema
     contact:
         name: Peter Robinson
         email: Peter.Robinson@jax.org
@@ -129,13 +143,18 @@ standards:
         github: "@pnrobinson"
   - id: https://standards.monarchinitiative.org/sssom
     name: Simple Standard for Ontology Mappings (SSSOM)
+    short_name: SSSOM
     monarch_contribution: Lead
     documentation: https://mapping-commons.github.io/sssom/spec/
+    url: https://mapping-commons.github.io/sssom/spec/
+    description: SSSOM is a simple metadata standard for describing semantic mappings.
+    repository: https://github.com/mapping-commons/sssom/
+    icon: resource-sssom
     project_boards:
       - name: SSSOM Toolkit
-        url: "https://github.com/orgs/mapping-commons/projects/4/views/1?groupedBy%5BcolumnId%5D=3008850&visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C3008850%2C%22Linked+Pull+Requests%22%2C%22Milestone%22%2C%22Labels%22%5D"
+        id: "https://github.com/orgs/mapping-commons/projects/4/views/1?groupedBy%5BcolumnId%5D=3008850&visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C3008850%2C%22Linked+Pull+Requests%22%2C%22Milestone%22%2C%22Labels%22%5D"
       - name: SSSOM Model
-        url: "https://github.com/orgs/mapping-commons/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Milestone%22%2C3005838%5D&groupedBy%5BcolumnId%5D=3005838"
+        id: "https://github.com/orgs/mapping-commons/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Milestone%22%2C3005838%5D&groupedBy%5BcolumnId%5D=3005838"
     category: Data Exchange
     grants:
       - Phenomics First
@@ -148,10 +167,15 @@ standards:
         github: "@matentzn"
   - id: http://purl.obolibrary.org/obo/hp.owl
     name: Human Phenotype Ontology
+    short_name: HPO
+    icon: resource-hpo
     monarch_contribution: Lead
     category: Ontology
     monarch_role: Flagship
     documentation: https://obophenotype.github.io/human-phenotype-ontology/
+    description: The HPO provides a standardized vocabulary of phenotypic abnormalities in human disease.
+    repository: https://github.com/obophenotype/human-phenotype-ontology
+    url: https://hpo.jax.org/app/
     contact:
         name: Peter Robinson
         email: Peter.Robinson@jax.org
@@ -160,12 +184,15 @@ standards:
     grants:
       - HPO
       - Phenomics First
-  - id: http://purl.obolibrary.org/obo/mondo.owl
-    documentation: https://mondo.readthedocs.io/
-    name: Mondo Disease Ontology
+  - id: https://github.com/geneontology/obographs
+    documentation: https://incatools.github.io/ontology-access-kit/datamodels/obograph/index.html
+    url: https://github.com/geneontology/obographs
+    name: obographs
     monarch_contribution: Lead
-    category: Ontology
-    monarch_role: Flagship
+    category: Data Exchange
+    monarch_role: Support
+    description: The obographs ontology format aims and providing a simple graph-oriented JSON format for ontologies.
+    repository: https://github.com/geneontology/obographs
     contact:
         name: Chris Mungall
         email: cjmungall@lbl.gov
@@ -173,15 +200,89 @@ standards:
         github: "@cmungall"
     grants:
       - Phenomics First
-  - id: https://github.com/obophenotype/upheno-dev
-    name: The Unified Phenotype Ontology (uPheno)
+  - id: http://purl.obolibrary.org/obo/mondo.owl
+    documentation: https://mondo.readthedocs.io/en/latest/
+    url: https://mondo.monarchinitiative.org/
+    name: Mondo Disease Ontology
+    short_name: Mondo
+    icon: resource-mondo
     monarch_contribution: Lead
     category: Ontology
     monarch_role: Flagship
+    description: The Mondo Disease Ontology aims to harmonizes disease definitions across the world.
+    repository: https://github.com/monarch-initiative/mondo
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
+    grants:
+      - Phenomics First
+  - id: http://purl.obolibrary.org/obo/geno.owl
+    documentation: https://github.com/monarch-initiative/GENO-ontology
+    url: https://github.com/monarch-initiative/GENO-ontology
+    name: Genotype Ontology
+    short_name: GENO
+    monarch_contribution: Lead
+    category: Ontology
+    monarch_role: Core
+    description: An ontology that represents the levels of genetic variation specified in genotypes.
+    repository: https://github.com/monarch-initiative/GENO-ontology
+    contact:
+        name: Matt Brush
+        email: matt@tislab.org
+        orcid: https://orcid.org/0000-0002-1048-5019
+        github: "@mbrush"
+    grants:
+      - Monarch R24
+  - id: http://purl.obolibrary.org/obo/sepio.owl
+    documentation: https://github.com/monarch-initiative/SEPIO-ontology
+    url: https://github.com/monarch-initiative/SEPIO-ontology
+    name: Scientific Evidence and Provenance Information Ontology
+    short_name: SEPIO
+    monarch_contribution: Lead
+    category: Ontology
+    monarch_role: Core
+    description: An ontology that supports the description of evidence and provenance information for scientific claims.
+    repository: https://github.com/monarch-initiative/SEPIO-ontology
+    contact:
+        name: Matt Brush
+        email: matt@tislab.org
+        orcid: https://orcid.org/0000-0002-1048-5019
+        github: "@mbrush"
+    grants:
+      - Monarch R24
+  - id: http://purl.obolibrary.org/obo/vbo.owl
+    documentation: https://github.com/monarch-initiative/vertebrate-breed-ontology
+    url: https://github.com/monarch-initiative/vertebrate-breed-ontology
+    name: Vertebrate Breed Ontology
+    short_name: VBO
+    monarch_contribution: Lead
+    category: Ontology
+    monarch_role: Core
+    description: An ontology created to serve as a single computable resource for vertebrate breed names.
+    repository: https://github.com/monarch-initiative/vertebrate-breed-ontology
+    contact:
+        name: Sabrina Toro
+        email: sabrina@tislab.org
+        orcid: https://orcid.org/0000-0002-4142-7153
+        github: "@sabrinatoro"
+    grants:
+      - Monarch R24
+  - id: https://github.com/obophenotype/upheno
+    name: The Unified Phenotype Ontology (uPheno)
+    short_name: uPheno
+    monarch_contribution: Lead
+    category: Ontology
+    monarch_role: Flagship
+    icon: resource-upheno
+    url: https://obophenotype.github.io/upheno/
     documentation: https://obophenotype.github.io/upheno/
+    description: uPheno aims to unify the annotation of phenotypes across species.
+    repository: https://obophenotype.github.io/upheno/
     project_boards:
       - name: uPheno 2 Ontology Development
-        url: "https://github.com/orgs/obophenotype/projects/15/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C13049768%5D&groupedBy%5BcolumnId%5D=13049768"
+        id: "https://github.com/orgs/obophenotype/projects/15/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C13049768%5D&groupedBy%5BcolumnId%5D=13049768"
     contact:
         name: James McLaughlin
         email: jmcl@ebi.ac.uk
@@ -209,7 +310,7 @@ standards:
     documentation: https://obophenotype.github.io/upheno/
     project_boards:
       - name: OBA Ontology Development (uPheno board)
-        url: "https://github.com/orgs/obophenotype/projects/15/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C13049768%5D&groupedBy%5BcolumnId%5D=13049768"
+        id: "https://github.com/orgs/obophenotype/projects/15/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C13049768%5D&groupedBy%5BcolumnId%5D=13049768"
     monarch_role: Core
     contact:
         name: Chris Mungall
@@ -235,6 +336,7 @@ standards:
     name: Phenomics Integrated Ontology (PHENIO)
     monarch_contribution: Lead
     category: Ontology
+    monarch_role: Core
     contact:
         name: Chris Mungall
         email: cjmungall@lbl.gov
@@ -301,12 +403,30 @@ tools:
     monarch_contribution: Lead
     category: Clinical Diagnosis
     monarch_role: Flagship
+    icon: resource-exomiser
+    url: https://exomiser.monarchinitiative.org/exomiser/
+    documentation: https://exomiser.readthedocs.io/en/latest/
+    description: The Exomiser is a tool for finding potential disease-causing variants in whole-exome or whole-genome sequencing data.
+    repository: https://github.com/exomiser/Exomiser
   - id: https://monarchinitiative.org/
     name: Monarch App
     category: Clinical Diagnosis
+    icon: resource-monarch
+    url: https://monarch-app.monarchinitiative.org/
+    description: The Monarch App is a web application for exploring the Monarch Knowledge Graph.
     repository: https://github.com/monarch-initiative/monarch-app
     monarch_contribution: Lead
     monarch_role: Flagship
+    documentation: https://monarch-app.monarchinitiative.org/
+  - id: https://monarchinitiative.org/
+    name: Monarch API
+    category: Clinical Diagnosis
+    url: https://monarch-app.monarchinitiative.org/
+    description: The Monarch API is used to access information from the Monarch Knowledge Graph programmatically.
+    repository: https://github.com/monarch-initiative/monarch-app
+    monarch_contribution: Lead
+    monarch_role: Core
+    documentation: https://monarch-app.monarchinitiative.org/
   - id: https://tools.monarchinitiative.org/odk
     name: Ontology Development Kit (ODK)
     category: Ontology Maintenance
@@ -316,14 +436,18 @@ tools:
     documentation: https://github.com/INCATools/ontology-development-kit
     project_boards:
       - name: ODK Milestones
-        url: "https://github.com/orgs/INCATools/projects/2/views/1?groupedBy%5BcolumnId%5D=Milestone"
+        id: "https://github.com/orgs/INCATools/projects/2/views/1?groupedBy%5BcolumnId%5D=Milestone"
   - id: https://tools.monarchinitiative.org/oak
     name: Ontology Access Kit (OAK)
+    short_name: OAK
     category: Ontology Use
     description: A python toolkit for accessing and visualising ontologies.
+    icon: resource-oak
+    url: https://github.com/INCATools/ontology-access-kit
     monarch_contribution: Lead
     monarch_role: Support
     documentation: https://incatools.github.io/ontology-access-kit/
+    repository: https://github.com/INCATools/ontology-access-kit  
   - id: https://tools.monarchinitiative.org/sssom-toolkit
     name: SSSOM Toolkit
     category: Mapping
@@ -346,12 +470,23 @@ tools:
     monarch_role: Support
     repository: https://github.com/TheJacksonLaboratory/POET
   - id: https://tools.monarchinitiative.org/lirical
-    url: https://lirical.readthedocs.io
-    name: LIRICAL
+    name: LIkelihood Ratio Interpretation of Clinical AbnormaLities (LIRICAL)
+    short_name: LIRICAL
     category: Clinical Diagnosis
-    monarch_role: Core
+    icon: lirical
+    url: https://thejacksonlaboratory.github.io/LIRICAL/stable/
+    description: LIkelihood Ratio Interpretation of Clinical AbnormaLities performs 
+      phenotype-driven prioritization of candidate diseases and genes in the setting of genomic diagnostics.
+    monarch_role: Flagship
     documentation: https://lirical.readthedocs.io/en/latest/
     repository: https://github.com/TheJacksonLaboratory/LIRICAL
+  - id: https://github.com/monarch-initiative/pheval
+    name: PhEval
+    category: Benchmarking
+    documentation: https://monarch-initiative.github.io/pheval/
+    repository: https://github.com/monarch-initiative/pheval
+    monarch_role: Core
+    description: PhEval is a Python package for evaluating phenotype-powered variant prioritisation systems such as Exomiser.
   - id: https://github.com/INCATools/obographviz
     name: obographviz
     category: Ontology Use
@@ -386,12 +521,28 @@ tools:
     category: Data Curation
     documentation: https://monarch-initiative.github.io/ontogpt/
     monarch_contribution: Lead
-    monarch_role: Core
+    monarch_role: Flagship
+    icon: onto-gpt
+    url: https://github.com/monarch-initiative/ontogpt
     repository: https://github.com/monarch-initiative/ontogpt
+    description: OntoGPT is a Python package for extracting structured information from text with large language models (LLMs), instruction prompts, and ontology-based grounding.
+  - id: https://github.com/monarch-initiative/curate-gpt
+    name: CurateGPT
+    category: Data Curation
+    documentation: https://github.com/monarch-initiative/curate-gpt
+    monarch_contribution: Lead
+    monarch_role: Flagship
+    icon: curate-gpt
+    url: https://curategpt.io/
+    repository: https://github.com/monarch-initiative/curate-gpt
+    description: AI Assisted Ontology Curation.
   - id: https://github.com/monarch-initiative/semsimian
     name: semsimian
     category: Mapping
     monarch_contribution: Lead
+    icon: semsimian
+    url: https://github.com/monarch-initiative/semsimian
+    description: Semantic Similarity in Rust.
     monarch_role: Support
     repository: https://github.com/monarch-initiative/semsimian
   - id: https://github.com/monarch-initiative/monarch-app
@@ -422,59 +573,83 @@ tools:
     documentation: https://koza.monarchinitiative.org/
     monarch_contribution: Lead
     repository: https://github.com/monarch-initiative/fenominal
-documentations:
-  - id: https://monarch-app.monarchinitiative.org/
-    name: Monarch App Docs
-    description: The Monarch App is a web application for exploring the Monarch Knowledge Graph.
-    repository: https://github.com/monarch-initiative/monarch-app
-  - id: https://obophenotype.github.io/human-phenotype-ontology/
-    name: Human Phenotype Ontology User Docs
-    description: The HPO provides a standardized vocabulary of phenotypic abnormalities in human disease. 
-    repository: https://github.com/obophenotype/human-phenotype-ontology
-  - id: https://mondo.readthedocs.io/
-    name: Mondo User Docs
-    description: The Mondo Disease Ontology aims to harmonizes disease definitions across the world.
-    repository: https://github.com/monarch-initiative/mondo
-  - id: https://linkml.io/linkml-model/docs/
-    name: LinkML Docs
-    description: The Linked Data Modeling Language (LinkML) is a flexible modeling language that allows you to author schemas (models) in YAML that describe the structure of your data. 
+  - id: https://linkml.io/
+    name: LinkML
+    description: The Linked Data Modeling Language (LinkML) is a flexible 
+      modeling language that allows you to author schemas (models) in YAML that 
+      describe the structure of your data. 
     repository: https://github.com/linkml/linkml
-  - id: https://obophenotype.github.io/upheno/
-    name: The Unified Phenotype Ontology (uPheno) Docs
-    description: uPheno aims to unify the annotation of phenotypes across species.
-    repository: https://obophenotype.github.io/upheno/
+    documentation: https://linkml.io/linkml-model/docs/
+    icon: resource-linkml
+    url: https://linkml.io/
+    monarch_role: Core
+    category: Data Curation
+    monarch_contribution: Lead
+  - id: https://monarch-initiative.github.io/monarch-ingest
+    name: Monarch Ingest
+    documentation: https://monarch-initiative.github.io/monarch-ingest
+    description: The Monarch Ingest pulls in data from a wide variety of biomedical data sources and generates Biolink-compliant KGX files that are used to build the Monarch KG.
+    repository: https://github.com/monarch-initiative/monarch-ingest
+    monarch_role: Core
+    category: Data Curation
+    monarch_contribution: Lead
+  - id: https://github.com/monarch-initiative/monarch-mapping-commons
+    name: Monarch Mapping Commons
+    icon: resource-monarch
+    monarch_role: Flagship
+    category: Mapping
+    description: SSSOM Mappings collected and curated by the Monarch Initiative.
+    repository: https://github.com/monarch-initiative/monarch-mapping-commons
+    documentation: https://github.com/monarch-initiative/monarch-mapping-commons
+    url: https://github.com/monarch-initiative/monarch-mapping-commons
+    monarch_contribution: Lead
+  - id: https://github.com/obophenotype/hpo-translations
+    name: HPO Language Translations
+    monarch_role: Support
+    category: Ontology Maintenance
+    description: Infrastructure to collect and coordinate HPO language translations.
+    repository: https://github.com/obophenotype/hpo-translations
+    documentation: https://obophenotype.github.io/hpo-translations/
+    url: https://obophenotype.github.io/hpo-translations/
+    monarch_contribution: Lead
+  - id: https://github.com/TheJacksonLaboratory/Phenomiser
+    name: Phenomizer
+    monarch_role: Core
+    category: Clinical Diagnosis
+    description: A web application for clinical diagnostics in human genetics using semantic similarity searches in ontologies.
+    repository: https://github.com/TheJacksonLaboratory/Phenomiser
+    documentation: https://github.com/TheJacksonLaboratory/Phenomiser
+    url: https://hpo.jax.org/app/tools/phenomizer
+    monarch_contribution: Lead
+  - id: https://github.com/monarch-initiative/phenogrid
+    name: Phenogrid
+    monarch_role: Core
+    category: Clinical Diagnosis
+    description: Phenogrid is a web component that visualizes semantic similarity calculations provided by OWLSim, as provided through APIs from the Monarch Initiative.
+    repository: https://github.com/monarch-initiative/phenogrid
+    documentation: https://github.com/monarch-initiative/phenogrid
+    url: https://github.com/monarch-initiative/phenogrid
+    monarch_contribution: Lead
+  - id: https://github.com/monarch-initiative/monarch-assistant
+    name: Monarch Assistant
+    monarch_role: Core
+    category: Clinical Diagnosis
+    description: An LLM retrieval augmented generation (RAG) agent for Monarch Initiative.
+    repository: https://github.com/monarch-initiative/monarch-assistant
+    documentation: https://github.com/monarch-initiative/monarch-assistant
+    url: https://github.com/monarch-initiative/monarch-assistant
+    monarch_contribution: Lead
+documentations:
   - id: https://oboacademy.github.io/obook/
     name: OBO Academy
+    category: Training Materials
     description: A resource for self-paced training of Semantic Engineers.
     repository: https://github.com/OBOAcademy/obook/
   - id: https://berkeleybop.github.io/best_practice/
     name: Best practices for collaborative open source coding
+    category: Training Materials
     description: The best practice / house style guide maintained by Monarch's LBNL team members.
     repository: https://github.com/berkeleybop/berkeleybop.github.io/tree/master/best_practice
-  - id: https://exomiser.readthedocs.io/en/latest/
-    name: Exomiser Docs
-    description: The Exomiser is a tool for finding potential disease-causing variants in whole-exome or whole-genome sequencing data.
-    repository: https://github.com/exomiser/Exomiser
-  - id: https://monarch-initiative.github.io/monarch-ingest
-    name: Monarch Ingest Docs
-    description: The Monarch Ingest pulls in data from a wide variety of biomedical data sources and generates Biolink-compliant KGX files that are used to build the Monarch KG.
-    repository: https://github.com/monarch-initiative/monarch-ingest
-  - id: https://mapping-commons.github.io/sssom/spec/
-    name: Simple Standard for Sharing Ontological Mappings (SSSOM) Docs
-    description: SSSOM is a simple metadata standard for describing semantic mappings.
-    repository: https://github.com/mapping-commons/sssom/
-  - id: https://phenopacket-schema.readthedocs.io/en/latest/
-    name: Phenopackets Schema Docs
-    description: The Phenopacket Schema is an ISO-endorsed open standard for sharing disease and phenotype information.
-    repository: https://github.com/phenopackets/phenopacket-schema
-  - id: https://monarch-initiative.github.io/ontogpt/
-    name: OntoGPT Docs
-    description: OntoGPT is a Python package for extracting structured information from text with large language models (LLMs), instruction prompts, and ontology-based grounding.
-    repository: https://github.com/monarch-initiative/ontogpt
-  - id: https://incatools.github.io/ontology-access-kit/
-    name: Ontology Access Kit (OAK) Docs
-    description: OAK is a Python library and command-line tool for common ontology operations.
-    repository: https://github.com/INCATools/ontology-access-kit  
 repositories:
   - id: https://github.com/INCATools/ontology-development-kit
     name: ODK
