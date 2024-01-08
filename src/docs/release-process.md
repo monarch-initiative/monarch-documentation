@@ -14,7 +14,11 @@ These releases consist primarily of the following components:
 
 ## Monarch Mapping Commons
 
-TBD
+[Monarch Mapping Commons](https://github.com/monarch-initiative/monarch-mapping-commons) is a repository repository contains code used to generate the mapping files used in the creation of the Monarch knowledge graph.  
+The nodes and edges in the knowledge graph come from a variety of sources, and have varying IDs and prefixes.  
+The mapping files are used to map these IDs to IDs in Monarch's preferred namespaces.
+
+These mapping files are generated via a Jenkins job on a weekly basis, and are stored in the [Monarch Data Bucket](https://data.monarchinitiative.org/mappings/index.html).
 
 ## Monarch Ingest (Knowledge Graph)
 
@@ -35,7 +39,7 @@ While the Github Actions workflow for Monarch App will automatically update and 
 
 To deploy the knowledge graph to the dev environment, follow these steps:
 
-* Checkout (or update) [Monarch Stack V3](gh repo clone monarch-initiative/monarch-stack-v3)
+* Checkout (or update) [Monarch Stack V3](https://github.com/monarch-initiative/monarch-stack-v3)
 * Source the dev environment: `cd deployment && source site-envs/monarch-dev.env`
 * Run the provision script to update the dev environment: `./provision.sh`
 * After running the provision script to update the dev environment, a manual restart of the Solr container is necessary:
@@ -49,7 +53,7 @@ From this point forward, code updates on the dev environment will be automatical
 #### Deploying to beta
 
 Once work on the milestone is complete, the release can be tagged and deployed to the beta environment. 
-Copy the last release env file to a new env, for example: `cp site-envs/monarch-2023-10-11.env site-envs/monarch-2023-11-16.env` 
+Copy the latest release env file to a new env, for example: `cp site-envs/monarch-2023-10-11.env site-envs/monarch-2023-11-16.env` 
 The date for the environment file name should match the KG release version, rather than today's date. 
 Edit the top two lines in new env to match the latest KG & API versions:
 
@@ -82,9 +86,9 @@ Get yourself a cup of hot chocolate / ice cold lemonade (season dependent) and s
 
 Edit the load balancer
 1. Remove the nginx and api backends from the last release
-2. point api-beta.monarchinitiative.org api-v3.monarchinitiative.org api-next.monarchinitiative.org to monarch-v3-{release}-api-backend
-3. point next.monarchinitiative.org, monarchinitiative.org to monarch-v3-{release}-nginx-backend
-4. at the top of the host and path rules seciton, change the default backend ("Backend 1") to point to monarch-v3-{release}-nginx-backend as well
+2. Point `api-beta.monarchinitiative.org`, `api-v3.monarchinitiative.org`, and `api-next.monarchinitiative.org` to `monarch-v3-{release}-api-backend`
+3. Point `next.monarchinitiative.org` and `monarchinitiative.org` to `monarch-v3-{release}-nginx-backend`
+4. At the top of the host and path rules seciton, change the default backend ("Backend 1") to point to `monarch-v3-{release}-nginx-backend` as well
 
 Then turn off the former production VMs (but keep them around for disaster recovery) by going to the GCP console VM listings and just clicking stop on each VM. 
 
