@@ -545,13 +545,13 @@ tools:
     description: Semantic Similarity in Rust.
     monarch_role: Support
     repository: https://github.com/monarch-initiative/semsimian
-  - id: https://github.com/monarch-initiative/monarch-py
+  - id: https://github.com/monarch-initiative/monarch-app
     name: Monarch Python Toolkit
     category: Data Curation
     monarch_role: Support
     documentation: https://monarch-initiative.github.io/monarch-py/
     monarch_contribution: Lead
-    repository: https://github.com/monarch-initiative/monarch-py
+    repository: https://github.com/monarch-initiative/monarch-app/backend
   - id: https://github.com/monarch-initiative/babelon
     name: Babelon Toolkit
     category: Data Curation
@@ -671,10 +671,8 @@ repositories:
     name: Monarch Plater Docker
   - id: https://github.com/monarch-initiative/jenkins
     name: Jenkins
-  - id: https://github.com/monarch-initiative/monarch-py
-    name: Monarch Python Toolkit
-  - id: https://github.com/monarch-initiative/monarch-api
-    name: Monarch API
+  - id: https://github.com/monarch-initiative/monarch-app
+    name: Monarch App
   - id: https://github.com/monarch-initiative/monarch-ingest-dashboard
     name: Monarch Ingest Dashboard
   - id: https://github.com/Knowledge-Graph-Hub/universalizer

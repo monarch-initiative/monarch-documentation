@@ -1,22 +1,15 @@
-import os
 from pathlib import Path
 
 from loguru import logger
-import github
 import yaml
-
-from utils import get_repos
 
 
 logger.info("Generating index page...")
 
 # Get resource files and set paths
-docs_dir = Path(f"{Path(__file__).parent.parent}/docs") 
+docs_dir = Path(f"{Path(__file__).parent.parent}/docs")
 src_dir = Path(f"{Path(__file__).parent.parent}/src")
 resource_file = Path(f"{src_dir}/data/resources.yaml")
-
-token = os.getenv('GITHUB_TOKEN')
-g = github.Github(token)
 
 with open(resource_file, "r") as yaml_file:
     resources = yaml.safe_load(yaml_file)

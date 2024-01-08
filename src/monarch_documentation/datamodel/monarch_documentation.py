@@ -1,5 +1,5 @@
-# Auto generated from monarch_documentation.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-11-17T12:26:29
+# Auto generated from monarch_documentation.yaml by pythongen.py version: 0.0.1
+# Generation date: 2024-01-03T12:29:16
 # Schema: monarch-documentation-schema
 #
 # id: https://w3id.org/monarch-initiative/monarch-documentation
@@ -7,7 +7,6 @@
 # license: GNU GPL v3.0
 
 import dataclasses
-import sys
 import re
 from jsonasobj2 import JsonObj, as_dict
 from typing import Optional, List, Union, Dict, ClassVar, Any
@@ -454,7 +453,7 @@ class ReleaseStatusEnum(EnumDefinitionImpl):
     @classmethod
     def _addvals(cls):
         setattr(cls, "development snapshot",
-                PermissibleValue(text="development snapshot") )
+            PermissibleValue(text="development snapshot"))
 
 class FileFormatEnum(EnumDefinitionImpl):
 
@@ -471,7 +470,7 @@ class FileFormatEnum(EnumDefinitionImpl):
     @classmethod
     def _addvals(cls):
         setattr(cls, "nt.gz",
-                PermissibleValue(text="nt.gz") )
+            PermissibleValue(text="nt.gz"))
 
 class StandardEnum(EnumDefinitionImpl):
 
@@ -484,11 +483,11 @@ class StandardEnum(EnumDefinitionImpl):
     @classmethod
     def _addvals(cls):
         setattr(cls, "Data Standard",
-                PermissibleValue(text="Data Standard") )
+            PermissibleValue(text="Data Standard"))
         setattr(cls, "Data Exchange",
-                PermissibleValue(text="Data Exchange") )
+            PermissibleValue(text="Data Exchange"))
         setattr(cls, "Ontology Curation",
-                PermissibleValue(text="Ontology Curation") )
+            PermissibleValue(text="Ontology Curation"))
 
 class DataAssetEnum(EnumDefinitionImpl):
 
@@ -499,15 +498,16 @@ class DataAssetEnum(EnumDefinitionImpl):
     @classmethod
     def _addvals(cls):
         setattr(cls, "Biomedical Data",
-                PermissibleValue(text="Biomedical Data") )
+            PermissibleValue(text="Biomedical Data"))
         setattr(cls, "Knowledge Graph Ingestibles",
-                PermissibleValue(text="Knowledge Graph Ingestibles") )
+            PermissibleValue(text="Knowledge Graph Ingestibles"))
         setattr(cls, "Knowledge Graph",
-                PermissibleValue(text="Knowledge Graph") )
+            PermissibleValue(text="Knowledge Graph"))
 
 class ToolAssetEnum(EnumDefinitionImpl):
 
     Mapping = PermissibleValue(text="Mapping")
+    Benchmarking = PermissibleValue(text="Benchmarking")
 
     _defn = EnumDefinition(
         name="ToolAssetEnum",
@@ -516,13 +516,13 @@ class ToolAssetEnum(EnumDefinitionImpl):
     @classmethod
     def _addvals(cls):
         setattr(cls, "Clinical Diagnosis",
-                PermissibleValue(text="Clinical Diagnosis") )
+            PermissibleValue(text="Clinical Diagnosis"))
         setattr(cls, "Ontology Maintenance",
-                PermissibleValue(text="Ontology Maintenance") )
+            PermissibleValue(text="Ontology Maintenance"))
         setattr(cls, "Ontology Use",
-                PermissibleValue(text="Ontology Use") )
+            PermissibleValue(text="Ontology Use"))
         setattr(cls, "Data Curation",
-                PermissibleValue(text="Data Curation") )
+            PermissibleValue(text="Data Curation"))
 
 class DocumentationAssetEnum(EnumDefinitionImpl):
 
@@ -533,9 +533,9 @@ class DocumentationAssetEnum(EnumDefinitionImpl):
     @classmethod
     def _addvals(cls):
         setattr(cls, "Technical Documentation",
-                PermissibleValue(text="Technical Documentation") )
+            PermissibleValue(text="Technical Documentation"))
         setattr(cls, "Training Materials",
-                PermissibleValue(text="Training Materials") )
+            PermissibleValue(text="Training Materials"))
 
 class MonarchContributionEnum(EnumDefinitionImpl):
 
@@ -549,7 +549,7 @@ class MonarchContributionEnum(EnumDefinitionImpl):
     @classmethod
     def _addvals(cls):
         setattr(cls, "Co-Lead",
-                PermissibleValue(text="Co-Lead") )
+            PermissibleValue(text="Co-Lead"))
 
 class GrantEnum(EnumDefinitionImpl):
 
@@ -564,20 +564,31 @@ class GrantEnum(EnumDefinitionImpl):
     @classmethod
     def _addvals(cls):
         setattr(cls, "Phenomics First",
-                PermissibleValue(text="Phenomics First",
-                                 description="The Phenomics First Grant") )
+            PermissibleValue(
+                text="Phenomics First",
+                description="The Phenomics First Grant"))
         setattr(cls, "Monarch R24",
-                PermissibleValue(text="Monarch R24") )
+            PermissibleValue(text="Monarch R24"))
         setattr(cls, "Bosch Gift",
-                PermissibleValue(text="Bosch Gift") )
+            PermissibleValue(text="Bosch Gift"))
 
 class MonarchRoleEnum(EnumDefinitionImpl):
 
-    Flagship = PermissibleValue(text="Flagship")
-    Core = PermissibleValue(text="Core")
-    Support = PermissibleValue(text="Support")
-    Research = PermissibleValue(text="Research")
-    Community = PermissibleValue(text="Community")
+    Flagship = PermissibleValue(
+        text="Flagship",
+        description="""A flagship product is a product that fulfills a strategic role for the Monarch Initiative. In particular it (1) *directly* supports the Monarch mission (excluding products of general utility) (2) has stakeholders outside of the Monarch Initiative (3) has stakeholders among most major member organisations of the Monarch Initiative An important corrolary of (3) is that all major member organisations of the Monarch Initiative should feel a sense of commitment to contributing to the success of the flagship product.""")
+    Core = PermissibleValue(
+        text="Core",
+        description="""A core product is a product that contributes to the Monarch mission, but is not a flagship product. In particular it (1) may support the Monarch mission in an indirect manner, such as core infrastructure for ontology lifecycle management or querying (2) has stakeholders outside of the Monarch Initiative (3) has stakeholders among at least one major member organisation of the Monarch Initiative An important corrolary of (3) is that at least one major member organisation of the Monarch Initiative should feel a sense of commitment to contributing to the success of the core product.""")
+    Support = PermissibleValue(
+        text="Support",
+        description="""A support product is a product that only indirectly contributes to the Monarch mission, usually by supporting the development of a flagship or core product. A support product (1) does not directly support the Monarch mission, but is essential for the development of a flagship or core product (2) has few stakeholders outside of the Monarch Initiative""")
+    Research = PermissibleValue(
+        text="Research",
+        description="""A research product is a product that supports our own research efforts. The research outcome may or may not be used in a flagship, core or support product. A research product (1) does not directly support the Monarch mission, but leads to insights that support our mission (2) has no stakeholders outside of the Monarch Initiative (the research itself may!)""")
+    Community = PermissibleValue(
+        text="Community",
+        description="""A community product is a product that does not directly support the Monarch mission, but supports community efforts towards the mission. A community product (1) is usually a community resource, such as training materials, a community website, a standard specification, etc. (2) is usually more *general-purpose* (3) is community-driven, rather than mission-driven""")
 
     _defn = EnumDefinition(
         name="MonarchRoleEnum",

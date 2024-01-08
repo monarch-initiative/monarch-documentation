@@ -19,6 +19,8 @@ genschemadoc: $(DOCDIR)
 
 build-docs: genindex genpython genschemadoc genrepodocs geningestdoc gen-monarch-overview gen-monarch-resources
 	@cp -r src/docs/* docs/
+	@echo
+	@echo "Documentation built! Run 'mkdocs serve' to view it locally, or check the 'docs' folder to see the generated files."
 
 ############################################
 ### Provisional Monarch Asset Registry #####

@@ -15,16 +15,16 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 
 ### Phenopackets
 
-| [Phenopackets](https://standards.monarchinitiative.org/phenopackets) | |
+| [Phenopackets](http://phenopackets.org/) | |
 | ------ | ----- |
-| PURL | https://standards.monarchinitiative.org/phenopackets |
+| PURL | http://phenopackets.org/ |
 | Cite |  |
 | [Resource category](../Documentation-Schema/StandardEnum/) | Data Exchange |
 | Documentation | [https://phenopacket-schema.readthedocs.io/en/latest/](https://phenopacket-schema.readthedocs.io/en/latest/) | 
 | [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
 | [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
 | [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Flagship |
-| Main repository |  |
+| Main repository | https://github.com/phenopackets/phenopacket-schema |
 | Responsible contact in Monarch | Peter Robinson, https://orcid.org/0000-0002-0736-9199, @pnrobinson |
 | Project boards |  |
 
@@ -39,7 +39,7 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
 | [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
 | [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Core |
-| Main repository |  |
+| Main repository | https://github.com/mapping-commons/sssom/ |
 | Responsible contact in Monarch | Nicolas Matentzoglu, https://orcid.org/0000-0002-7356-1779, @matentzn |
 | Project boards | [SSSOM Toolkit](https://github.com/orgs/mapping-commons/projects/4/views/1?groupedBy%5BcolumnId%5D=3008850&visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C3008850%2C%22Linked+Pull+Requests%22%2C%22Milestone%22%2C%22Labels%22%5D),[SSSOM Model](https://github.com/orgs/mapping-commons/projects/3/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C%22Status%22%2C%22Milestone%22%2C3005838%5D&groupedBy%5BcolumnId%5D=3005838) |
 
@@ -54,8 +54,23 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
 | [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | HPO, Phenomics First |
 | [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Flagship |
-| Main repository |  |
+| Main repository | https://github.com/obophenotype/human-phenotype-ontology |
 | Responsible contact in Monarch | Peter Robinson, https://orcid.org/0000-0002-0736-9199, @pnrobinson |
+| Project boards |  |
+
+### obographs
+
+| [obographs](https://github.com/geneontology/obographs) | |
+| ------ | ----- |
+| PURL | https://github.com/geneontology/obographs |
+| Cite |  |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Data Exchange |
+| Documentation | [https://incatools.github.io/ontology-access-kit/datamodels/obograph/index.html](https://incatools.github.io/ontology-access-kit/datamodels/obograph/index.html) | 
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Support |
+| Main repository | https://github.com/geneontology/obographs |
+| Responsible contact in Monarch | Chris Mungall, https://orcid.org/0000-0002-6601-2165, @cmungall |
 | Project boards |  |
 
 ### Mondo Disease Ontology
@@ -65,26 +80,71 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | PURL | http://purl.obolibrary.org/obo/mondo.owl |
 | Cite |  |
 | [Resource category](../Documentation-Schema/StandardEnum/) | Ontology |
-| Documentation | [https://mondo.readthedocs.io/](https://mondo.readthedocs.io/) | 
+| Documentation | [https://mondo.readthedocs.io/en/latest/](https://mondo.readthedocs.io/en/latest/) | 
 | [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
 | [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
 | [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Flagship |
-| Main repository |  |
+| Main repository | https://github.com/monarch-initiative/mondo |
 | Responsible contact in Monarch | Chris Mungall, https://orcid.org/0000-0002-6601-2165, @cmungall |
+| Project boards |  |
+
+### Genotype Ontology
+
+| [Genotype Ontology](http://purl.obolibrary.org/obo/geno.owl) | |
+| ------ | ----- |
+| PURL | http://purl.obolibrary.org/obo/geno.owl |
+| Cite |  |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Ontology |
+| Documentation | [https://github.com/monarch-initiative/GENO-ontology](https://github.com/monarch-initiative/GENO-ontology) | 
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | Monarch R24 |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Core |
+| Main repository | https://github.com/monarch-initiative/GENO-ontology |
+| Responsible contact in Monarch | Matt Brush, https://orcid.org/0000-0002-1048-5019, @mbrush |
+| Project boards |  |
+
+### Scientific Evidence and Provenance Information Ontology
+
+| [Scientific Evidence and Provenance Information Ontology](http://purl.obolibrary.org/obo/sepio.owl) | |
+| ------ | ----- |
+| PURL | http://purl.obolibrary.org/obo/sepio.owl |
+| Cite |  |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Ontology |
+| Documentation | [https://github.com/monarch-initiative/SEPIO-ontology](https://github.com/monarch-initiative/SEPIO-ontology) | 
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | Monarch R24 |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Core |
+| Main repository | https://github.com/monarch-initiative/SEPIO-ontology |
+| Responsible contact in Monarch | Matt Brush, https://orcid.org/0000-0002-1048-5019, @mbrush |
+| Project boards |  |
+
+### Vertebrate Breed Ontology
+
+| [Vertebrate Breed Ontology](http://purl.obolibrary.org/obo/vbo.owl) | |
+| ------ | ----- |
+| PURL | http://purl.obolibrary.org/obo/vbo.owl |
+| Cite |  |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Ontology |
+| Documentation | [https://github.com/monarch-initiative/vertebrate-breed-ontology](https://github.com/monarch-initiative/vertebrate-breed-ontology) | 
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | Monarch R24 |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Core |
+| Main repository | https://github.com/monarch-initiative/vertebrate-breed-ontology |
+| Responsible contact in Monarch | Sabrina Toro, https://orcid.org/0000-0002-4142-7153, @sabrinatoro |
 | Project boards |  |
 
 ### The Unified Phenotype Ontology (uPheno)
 
-| [The Unified Phenotype Ontology (uPheno)](https://github.com/obophenotype/upheno-dev) | |
+| [The Unified Phenotype Ontology (uPheno)](https://github.com/obophenotype/upheno) | |
 | ------ | ----- |
-| PURL | https://github.com/obophenotype/upheno-dev |
+| PURL | https://github.com/obophenotype/upheno |
 | Cite |  |
 | [Resource category](../Documentation-Schema/StandardEnum/) | Ontology |
 | Documentation | [https://obophenotype.github.io/upheno/](https://obophenotype.github.io/upheno/) | 
 | [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
 | [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
 | [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Flagship |
-| Main repository |  |
+| Main repository | https://obophenotype.github.io/upheno/ |
 | Responsible contact in Monarch | James McLaughlin, None, @udp |
 | Project boards | [uPheno 2 Ontology Development](https://github.com/orgs/obophenotype/projects/15/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C13049768%5D&groupedBy%5BcolumnId%5D=13049768) |
 
@@ -143,7 +203,7 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | Documentation | [TBD]() | 
 | [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
 | [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | Monarch R24 |
-| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) |  |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Core |
 | Main repository |  |
 | Responsible contact in Monarch | Chris Mungall, https://orcid.org/0000-0002-6601-2165, @cmungall |
 | Project boards |  |
@@ -219,11 +279,11 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | PURL | https://tools.monarchinitiative.org/exomiser |
 | Cite |  |
 | [Resource category](../Documentation-Schema/StandardEnum/) | Clinical Diagnosis |
-| Documentation | [TBD]() | 
+| Documentation | [https://exomiser.readthedocs.io/en/latest/](https://exomiser.readthedocs.io/en/latest/) | 
 | [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
 | [Grants](../Documentation-Schema/GrantEnum/) involved in this standard |  |
 | [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Flagship |
-| Main repository |  |
+| Main repository | https://github.com/exomiser/Exomiser |
 | Responsible contact in Monarch |  |
 | Project boards |  |
 
@@ -234,10 +294,25 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | PURL | https://monarchinitiative.org/ |
 | Cite |  |
 | [Resource category](../Documentation-Schema/StandardEnum/) | Clinical Diagnosis |
-| Documentation | [TBD]() | 
+| Documentation | [https://monarch-app.monarchinitiative.org/](https://monarch-app.monarchinitiative.org/) | 
 | [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
 | [Grants](../Documentation-Schema/GrantEnum/) involved in this standard |  |
 | [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Flagship |
+| Main repository | https://github.com/monarch-initiative/monarch-app |
+| Responsible contact in Monarch |  |
+| Project boards |  |
+
+### Monarch API
+
+| [Monarch API](https://monarchinitiative.org/) | |
+| ------ | ----- |
+| PURL | https://monarchinitiative.org/ |
+| Cite |  |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Clinical Diagnosis |
+| Documentation | [https://monarch-app.monarchinitiative.org/](https://monarch-app.monarchinitiative.org/) | 
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard |  |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Core |
 | Main repository | https://github.com/monarch-initiative/monarch-app |
 | Responsible contact in Monarch |  |
 | Project boards |  |
@@ -268,7 +343,7 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
 | [Grants](../Documentation-Schema/GrantEnum/) involved in this standard |  |
 | [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Support |
-| Main repository |  |
+| Main repository | https://github.com/INCATools/ontology-access-kit |
 | Responsible contact in Monarch |  |
 | Project boards |  |
 
@@ -317,9 +392,9 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | Responsible contact in Monarch |  |
 | Project boards |  |
 
-### LIRICAL
+### LIkelihood Ratio Interpretation of Clinical AbnormaLities (LIRICAL)
 
-| [LIRICAL](https://tools.monarchinitiative.org/lirical) | |
+| [LIkelihood Ratio Interpretation of Clinical AbnormaLities (LIRICAL)](https://tools.monarchinitiative.org/lirical) | |
 | ------ | ----- |
 | PURL | https://tools.monarchinitiative.org/lirical |
 | Cite |  |
@@ -327,8 +402,23 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | Documentation | [https://lirical.readthedocs.io/en/latest/](https://lirical.readthedocs.io/en/latest/) | 
 | [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development |  |
 | [Grants](../Documentation-Schema/GrantEnum/) involved in this standard |  |
-| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Core |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Flagship |
 | Main repository | https://github.com/TheJacksonLaboratory/LIRICAL |
+| Responsible contact in Monarch |  |
+| Project boards |  |
+
+### PhEval
+
+| [PhEval](https://github.com/monarch-initiative/pheval) | |
+| ------ | ----- |
+| PURL | https://github.com/monarch-initiative/pheval |
+| Cite |  |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Benchmarking |
+| Documentation | [https://monarch-initiative.github.io/pheval/](https://monarch-initiative.github.io/pheval/) | 
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development |  |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard |  |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Core |
+| Main repository | https://github.com/monarch-initiative/pheval |
 | Responsible contact in Monarch |  |
 | Project boards |  |
 
@@ -417,8 +507,23 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | Documentation | [https://monarch-initiative.github.io/ontogpt/](https://monarch-initiative.github.io/ontogpt/) | 
 | [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
 | [Grants](../Documentation-Schema/GrantEnum/) involved in this standard |  |
-| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Core |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Flagship |
 | Main repository | https://github.com/monarch-initiative/ontogpt |
+| Responsible contact in Monarch |  |
+| Project boards |  |
+
+### CurateGPT
+
+| [CurateGPT](https://github.com/monarch-initiative/curate-gpt) | |
+| ------ | ----- |
+| PURL | https://github.com/monarch-initiative/curate-gpt |
+| Cite |  |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Data Curation |
+| Documentation | [https://github.com/monarch-initiative/curate-gpt](https://github.com/monarch-initiative/curate-gpt) | 
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard |  |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Flagship |
+| Main repository | https://github.com/monarch-initiative/curate-gpt |
 | Responsible contact in Monarch |  |
 | Project boards |  |
 
@@ -439,16 +544,16 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 
 ### Monarch Python Toolkit
 
-| [Monarch Python Toolkit](https://github.com/monarch-initiative/monarch-py) | |
+| [Monarch Python Toolkit](https://github.com/monarch-initiative/monarch-app) | |
 | ------ | ----- |
-| PURL | https://github.com/monarch-initiative/monarch-py |
+| PURL | https://github.com/monarch-initiative/monarch-app |
 | Cite |  |
 | [Resource category](../Documentation-Schema/StandardEnum/) | Data Curation |
 | Documentation | [https://monarch-initiative.github.io/monarch-py/](https://monarch-initiative.github.io/monarch-py/) | 
 | [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
 | [Grants](../Documentation-Schema/GrantEnum/) involved in this standard |  |
 | [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Support |
-| Main repository | https://github.com/monarch-initiative/monarch-py |
+| Main repository | https://github.com/monarch-initiative/monarch-app/backend |
 | Responsible contact in Monarch |  |
 | Project boards |  |
 
@@ -494,6 +599,111 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | [Grants](../Documentation-Schema/GrantEnum/) involved in this standard |  |
 | [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Core |
 | Main repository | https://github.com/monarch-initiative/fenominal |
+| Responsible contact in Monarch |  |
+| Project boards |  |
+
+### LinkML
+
+| [LinkML](https://linkml.io/) | |
+| ------ | ----- |
+| PURL | https://linkml.io/ |
+| Cite |  |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Data Curation |
+| Documentation | [https://linkml.io/linkml-model/docs/](https://linkml.io/linkml-model/docs/) | 
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard |  |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Core |
+| Main repository | https://github.com/linkml/linkml |
+| Responsible contact in Monarch |  |
+| Project boards |  |
+
+### Monarch Ingest
+
+| [Monarch Ingest](https://monarch-initiative.github.io/monarch-ingest) | |
+| ------ | ----- |
+| PURL | https://monarch-initiative.github.io/monarch-ingest |
+| Cite |  |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Data Curation |
+| Documentation | [https://monarch-initiative.github.io/monarch-ingest](https://monarch-initiative.github.io/monarch-ingest) | 
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard |  |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Core |
+| Main repository | https://github.com/monarch-initiative/monarch-ingest |
+| Responsible contact in Monarch |  |
+| Project boards |  |
+
+### Monarch Mapping Commons
+
+| [Monarch Mapping Commons](https://github.com/monarch-initiative/monarch-mapping-commons) | |
+| ------ | ----- |
+| PURL | https://github.com/monarch-initiative/monarch-mapping-commons |
+| Cite |  |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Mapping |
+| Documentation | [https://github.com/monarch-initiative/monarch-mapping-commons](https://github.com/monarch-initiative/monarch-mapping-commons) | 
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard |  |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Flagship |
+| Main repository | https://github.com/monarch-initiative/monarch-mapping-commons |
+| Responsible contact in Monarch |  |
+| Project boards |  |
+
+### HPO Language Translations
+
+| [HPO Language Translations](https://github.com/obophenotype/hpo-translations) | |
+| ------ | ----- |
+| PURL | https://github.com/obophenotype/hpo-translations |
+| Cite |  |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Ontology Maintenance |
+| Documentation | [https://obophenotype.github.io/hpo-translations/](https://obophenotype.github.io/hpo-translations/) | 
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard |  |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Support |
+| Main repository | https://github.com/obophenotype/hpo-translations |
+| Responsible contact in Monarch |  |
+| Project boards |  |
+
+### Phenomizer
+
+| [Phenomizer](https://github.com/TheJacksonLaboratory/Phenomiser) | |
+| ------ | ----- |
+| PURL | https://github.com/TheJacksonLaboratory/Phenomiser |
+| Cite |  |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Clinical Diagnosis |
+| Documentation | [https://github.com/TheJacksonLaboratory/Phenomiser](https://github.com/TheJacksonLaboratory/Phenomiser) | 
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard |  |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Core |
+| Main repository | https://github.com/TheJacksonLaboratory/Phenomiser |
+| Responsible contact in Monarch |  |
+| Project boards |  |
+
+### Phenogrid
+
+| [Phenogrid](https://github.com/monarch-initiative/phenogrid) | |
+| ------ | ----- |
+| PURL | https://github.com/monarch-initiative/phenogrid |
+| Cite |  |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Clinical Diagnosis |
+| Documentation | [https://github.com/monarch-initiative/phenogrid](https://github.com/monarch-initiative/phenogrid) | 
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard |  |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Core |
+| Main repository | https://github.com/monarch-initiative/phenogrid |
+| Responsible contact in Monarch |  |
+| Project boards |  |
+
+### Monarch Assistant
+
+| [Monarch Assistant](https://github.com/monarch-initiative/monarch-assistant) | |
+| ------ | ----- |
+| PURL | https://github.com/monarch-initiative/monarch-assistant |
+| Cite |  |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Clinical Diagnosis |
+| Documentation | [https://github.com/monarch-initiative/monarch-assistant](https://github.com/monarch-initiative/monarch-assistant) | 
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard |  |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Core |
+| Main repository | https://github.com/monarch-initiative/monarch-assistant |
 | Responsible contact in Monarch |  |
 | Project boards |  |
 
@@ -677,6 +887,21 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
 | [Grants](../Documentation-Schema/GrantEnum/) involved in this standard |  |
 | [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Community |
+| Main repository |  |
+| Responsible contact in Monarch |  |
+| Project boards |  |
+
+### Monarch KG
+
+| [Monarch KG](https://monarch-initiative.github.io/monarch-ingest) | |
+| ------ | ----- |
+| PURL | https://monarch-initiative.github.io/monarch-ingest |
+| Cite |  |
+| [Resource category](../Documentation-Schema/StandardEnum/) | Knowledge Graph |
+| Documentation | [TBD]() | 
+| [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
+| [Grants](../Documentation-Schema/GrantEnum/) involved in this standard |  |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Flagship |
 | Main repository |  |
 | Responsible contact in Monarch |  |
 | Project boards |  |
