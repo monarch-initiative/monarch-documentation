@@ -1,5 +1,5 @@
 # Auto generated from monarch_documentation.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-01-03T12:29:16
+# Generation date: 2024-01-18T16:38:18
 # Schema: monarch-documentation-schema
 #
 # id: https://w3id.org/monarch-initiative/monarch-documentation
@@ -80,7 +80,7 @@ class Resource(YAMLRoot):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = SCHEMA.Thing
+    class_class_uri: ClassVar[URIRef] = SCHEMA["Thing"]
     class_class_curie: ClassVar[str] = "schema:Thing"
     class_name: ClassVar[str] = "Resource"
     class_model_uri: ClassVar[URIRef] = MTD.Resource
@@ -156,7 +156,7 @@ class DataAsset(Resource):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = MTD.DataAsset
+    class_class_uri: ClassVar[URIRef] = MTD["DataAsset"]
     class_class_curie: ClassVar[str] = "mtd:DataAsset"
     class_name: ClassVar[str] = "DataAsset"
     class_model_uri: ClassVar[URIRef] = MTD.DataAsset
@@ -193,7 +193,7 @@ class Standard(Resource):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = MTD.Standard
+    class_class_uri: ClassVar[URIRef] = MTD["Standard"]
     class_class_curie: ClassVar[str] = "mtd:Standard"
     class_name: ClassVar[str] = "Standard"
     class_model_uri: ClassVar[URIRef] = MTD.Standard
@@ -224,7 +224,7 @@ class Tool(Resource):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = MTD.Tool
+    class_class_uri: ClassVar[URIRef] = MTD["Tool"]
     class_class_curie: ClassVar[str] = "mtd:Tool"
     class_name: ClassVar[str] = "Tool"
     class_model_uri: ClassVar[URIRef] = MTD.Tool
@@ -253,7 +253,7 @@ class Documentation(Resource):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = MTD.Documentation
+    class_class_uri: ClassVar[URIRef] = MTD["Documentation"]
     class_class_curie: ClassVar[str] = "mtd:Documentation"
     class_name: ClassVar[str] = "Documentation"
     class_model_uri: ClassVar[URIRef] = MTD.Documentation
@@ -282,7 +282,7 @@ class ProjectBoard(Resource):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = MTD.ProjectBoard
+    class_class_uri: ClassVar[URIRef] = MTD["ProjectBoard"]
     class_class_curie: ClassVar[str] = "mtd:ProjectBoard"
     class_name: ClassVar[str] = "ProjectBoard"
     class_model_uri: ClassVar[URIRef] = MTD.ProjectBoard
@@ -309,7 +309,7 @@ class Repository(Resource):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = MTD.Repository
+    class_class_uri: ClassVar[URIRef] = MTD["Repository"]
     class_class_curie: ClassVar[str] = "mtd:Repository"
     class_name: ClassVar[str] = "Repository"
     class_model_uri: ClassVar[URIRef] = MTD.Repository
@@ -344,7 +344,7 @@ class ResourceRegistry(Resource):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = MTD.ResourceRegistry
+    class_class_uri: ClassVar[URIRef] = MTD["ResourceRegistry"]
     class_class_curie: ClassVar[str] = "mtd:ResourceRegistry"
     class_name: ClassVar[str] = "ResourceRegistry"
     class_model_uri: ClassVar[URIRef] = MTD.ResourceRegistry
@@ -386,7 +386,7 @@ class Download(YAMLRoot):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = MTD.Download
+    class_class_uri: ClassVar[URIRef] = MTD["Download"]
     class_class_curie: ClassVar[str] = "mtd:Download"
     class_name: ClassVar[str] = "Download"
     class_model_uri: ClassVar[URIRef] = MTD.Download
@@ -415,7 +415,7 @@ class Contact(YAMLRoot):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = MTD.Contact
+    class_class_uri: ClassVar[URIRef] = MTD["Contact"]
     class_class_curie: ClassVar[str] = "mtd:Contact"
     class_name: ClassVar[str] = "Contact"
     class_model_uri: ClassVar[URIRef] = MTD.Contact
