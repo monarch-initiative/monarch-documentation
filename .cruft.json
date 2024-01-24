@@ -4,10 +4,10 @@
   "checkout": null,
   "context": {
     "cookiecutter": {
-      "project_name": "monarch-technical-documentation",
-      "__project_slug": "monarch_technical_documentation",
+      "project_name": "monarch-documentation",
+      "__project_slug": "monarch_documentation",
       "github_org": "monarch-initiative",
-      "__source_path": "src/monarch_technical_documentation/schema/monarch_technical_documentation.yaml",
+      "__source_path": "src/monarch_documentation/schema/monarch_documentation.yaml",
       "project_description": "Technical documentation for all Monarch applications, packages, services and related projects.",
       "full_name": "Glass Elsarboukh",
       "email": "glass@tislab.org",

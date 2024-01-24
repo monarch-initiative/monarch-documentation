@@ -25,6 +25,8 @@ The Monarch Knowledge Graph (KG) is built from a variety of data sources in the 
 These data sources are "ingested" into the KG using a variety of tools and packages created by the Monarch Initiative team and our collaborators.  
 This page describes the principles that guide the ingestion process.  
 
+For details on the ingestion process, see [this page](https://monarch-initiative.github.io/monarch-ingest/).
+
 ## General Principles
 
 1. All ingests should have a stringent (defensive) filtering strategy.  

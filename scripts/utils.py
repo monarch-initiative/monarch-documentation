@@ -3,23 +3,24 @@ import os
 from pathlib import Path
 import time
 
-import tomllib, yaml
+import tomllib
+import yaml
 import github
 from loguru import logger
 
 
 # Initialize GitHub connection
 token = os.getenv('GITHUB_TOKEN')
-g = github.Github(token)
-# 
+gh = github.Github(token)
 src_dir = Path(f"{Path(__file__).parent.parent}/src")
 monarch_resource_file = Path(f"{src_dir}/data/resources.yaml")
 
 
 def get_repo(repo_name: str) -> github.Repository.Repository:
     """Returns a GitHub Repository object"""
-    repo = g.get_repo(repo_name)
+    repo = gh.get_repo(repo_name)
     return repo
+
 
 def get_repos(resource_file: Path = monarch_resource_file):
     with open(resource_file, "r") as yaml_file:
@@ -34,32 +35,34 @@ def get_repos(resource_file: Path = monarch_resource_file):
         if repo_url.startswith("https://github.com/"):
             repo_id = repo_url.replace("https://github.com/","")
             try:
-                r = g.get_repo(repo_id)
+                r = get_repo(repo_id)
                 repos[repo_id] = r
                 time.sleep(0.1) # GitHub API rate limit is 10 requests per minute
             except Exception as e:
                 logger.warning(f"{repo_url} could not be retrieved with GitHub API - {e}")
-
     return repos
+
 
 def _get_repo_info(repo_id) -> dict:
     try:
-        repo_info = g.get_repo(repo_id)
-    except github.GithubException as e:
-        search_rate_limit = g.get_rate_limit().search
+        repo_info = get_repo(repo_id)
+    except github.GithubException:
+        search_rate_limit = gh.get_rate_limit().search
         wait_time = search_rate_limit.reset - datetime.utcnow()
         logger.warning(f"GitHub API rate limit exceeded - waiting {wait_time} seconds")
         time.sleep(wait_time.total_seconds() + 10)
-        repo_info = g.get_repo(repo_id)
+        repo_info = get_repo(repo_id)
     return repo_info
 
-def get_readme(repo):
+
+def get_repo_file(repo: github.Repository.Repository, filepath: str) -> str:
+    """Returns a string of the contents of a file in a GitHub Repository"""
     try:
-        readme = repo.get_contents('README.md').decoded_content.decode('UTF-8')
-    except* github.UnknownObjectException as e:
-        logger.warning(f"Repo \"{repo.name}\" does not appear to have a README.md")
-        readme = None
-    return readme
+        file_contents = repo.get_contents(filepath).decoded_content.decode('UTF-8')
+    except* github.UnknownObjectException:
+        logger.warning(f"Repo \"{repo.name}\" does not appear to have the file: {filepath}")
+        file_contents = None
+    return file_contents
 
 
 def get_dependencies(repo: github.Repository.Repository) -> dict:
@@ -69,7 +72,7 @@ def get_dependencies(repo: github.Repository.Repository) -> dict:
     try:
         project_toml = repo.get_contents('pyproject.toml').decoded_content.decode('UTF-8')
         pyproject = tomllib.loads(project_toml)
-    except* github.UnknownObjectException as e:
+    except* github.UnknownObjectException:
         logger.warning(f"Repo \"{repo.name}\" does not appear to have a pyproject.toml")
         pyproject = None
 
@@ -108,7 +111,8 @@ def get_dep_table(deps: dict, repos: dict) -> str:
             other_deps[dep] = deps[dep]
     
     # Make a markdown table of the dicts
-    row = lambda d: [f"| {i} | {d[i]} |\n" for i in d]
+    def row(d: dict) -> list:
+        return [f"| {i} | {d[i]} |\n" for i in d]
 
     monarch_dep_table = f"""
 Monarch Dependencies
@@ -146,7 +150,7 @@ def build_repo_page(repo: github.Repository.Repository) -> str:
 """
 
     # Get dependencies and readme
-    readme = get_readme(repo)    
+    readme = get_repo_file(repo, "README.md")
     deps = get_dependencies(repo)
 
     # Append dependencies and documentation, if they're not empty
@@ -159,11 +163,3 @@ def build_repo_page(repo: github.Repository.Repository) -> str:
     return page_contents
 
 
-def get_repo_file(repo: github.Repository.Repository, filepath: str) -> str:
-    """Returns a string of the contents of a file in a GitHub Repository"""
-    try:
-        file_contents = repo.get_contents(filepath).decoded_content.decode('UTF-8')
-    except* github.UnknownObjectException as e:
-        logger.warning(f"Repo \"{repo.name}\" does not appear to have the file: {filepath}")
-        file_contents = None
-    return file_contents
