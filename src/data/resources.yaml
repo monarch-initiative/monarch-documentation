@@ -83,36 +83,71 @@ data:
     monarch_contribution: Lead
     category: Knowledge Graph
     monarch_role: Community
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
   - id: https://github.com/Knowledge-Graph-Hub/eco-kg
     name: ECO KG
     category: Knowledge Graph
     monarch_contribution: Lead
     monarch_role: Community
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
   - id: https://github.com/Knowledge-Graph-Hub/kg-idg
     name: KG IDG
     category: Knowledge Graph
     monarch_contribution: Lead
     monarch_role: Community
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
   - id: https://github.com/Knowledge-Graph-Hub/kg-phenio
     name: KG Phenio
     category: Knowledge Graph
     monarch_contribution: Lead
     monarch_role: Core
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
   - id: https://github.com/Knowledge-Graph-Hub/kg-obo
     name: KG OBO
     category: Knowledge Graph
     monarch_contribution: Lead
     monarch_role: Community
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
   - id: https://github.com/Knowledge-Graph-Hub/kg-microbe
     name: KG Microbe
     category: Knowledge Graph
     monarch_contribution: Lead
     monarch_role: Community
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
   - id: https://github.com/Knowledge-Graph-Hub/sri-reference-kg
     name: SRI Reference KG
     category: Knowledge Graph
     monarch_contribution: Lead
     monarch_role: Community
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
   - id: https://monarch-initiative.github.io/monarch-ingest
     name: Monarch KG
     category: Knowledge Graph
@@ -123,6 +158,11 @@ data:
     description: Monarch's Knowledge Graph integrates resources from a wide 
       variety of sources to provide a comprehensive view of the relationships between genes, 
       diseases, phenotypes, and other biomedical entities.
+    contact:
+        name: Kevin Schaper
+        email: kevin@tislab.org
+        orcid: https://orcid.org/0000-0003-3311-7320
+        github: "@kevinschaper"
 standards:
   - id: http://phenopackets.org/
     name: Phenopackets
@@ -286,7 +326,7 @@ standards:
     contact:
         name: James McLaughlin
         email: jmcl@ebi.ac.uk
-        orcid: 
+        orcid: https://orcid.org/0000-0002-8361-2795
         github: "@udp"
     grants:
       - Phenomics First
@@ -408,6 +448,11 @@ tools:
     documentation: https://exomiser.readthedocs.io/en/latest/
     description: The Exomiser is a tool for finding potential disease-causing variants in whole-exome or whole-genome sequencing data.
     repository: https://github.com/exomiser/Exomiser
+    contact:
+        name: Jules Jacobsen
+        email: j.jacobsen@qmul.ac.uk
+        orcid: https://orcid.org/0000-0002-3265-1591
+        github: "@julesjacobsen"
   - id: https://monarchinitiative.org/
     name: Monarch App
     category: Clinical Diagnosis
@@ -418,7 +463,12 @@ tools:
     monarch_contribution: Lead
     monarch_role: Flagship
     documentation: https://monarch-app.monarchinitiative.org/
-  - id: https://monarchinitiative.org/
+    contact:
+        name: Kevin Schaper
+        email: kevin@tislab.org
+        orcid: https://orcid.org/0000-0003-3311-7320
+        github: "@kevinschaper"
+  - id: http://api-v3.monarchinitiative.org
     name: Monarch API
     category: Clinical Diagnosis
     url: https://monarch-app.monarchinitiative.org/
@@ -427,6 +477,11 @@ tools:
     monarch_contribution: Lead
     monarch_role: Core
     documentation: https://monarch-app.monarchinitiative.org/
+    contact:
+        name: Kevin Schaper
+        email: kevin@tislab.org
+        orcid: https://orcid.org/0000-0003-3311-7320
+        github: "@kevinschaper"
   - id: https://tools.monarchinitiative.org/odk
     name: Ontology Development Kit (ODK)
     category: Ontology Maintenance
@@ -434,6 +489,11 @@ tools:
     monarch_contribution: Lead
     monarch_role: Support
     documentation: https://github.com/INCATools/ontology-development-kit
+    contact:
+        name: Nicolas Matentzoglu
+        email: nicolas.matentzoglu@gmail.com
+        orcid: https://orcid.org/0000-0002-7356-1779
+        github: "@matentzn"
     project_boards:
       - name: ODK Milestones
         id: "https://github.com/orgs/INCATools/projects/2/views/1?groupedBy%5BcolumnId%5D=Milestone"
@@ -447,7 +507,12 @@ tools:
     monarch_contribution: Lead
     monarch_role: Support
     documentation: https://incatools.github.io/ontology-access-kit/
-    repository: https://github.com/INCATools/ontology-access-kit  
+    repository: https://github.com/INCATools/ontology-access-kit
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
   - id: https://tools.monarchinitiative.org/sssom-toolkit
     name: SSSOM Toolkit
     category: Mapping
@@ -455,6 +520,11 @@ tools:
     monarch_contribution: Lead
     documentation: https://mapping-commons.github.io/sssom-py
     monarch_role: Support
+    contact:
+        name: Nicolas Matentzoglu
+        email: nicolas.matentzoglu@gmail.com
+        orcid: https://orcid.org/0000-0002-7356-1779
+        github: "@matentzn"
   - id: https://tools.monarchinitiative.org/ols
     url: https://ols.monarchinitiative.org/
     name: Monarch Ontology Lookup Service
@@ -463,12 +533,22 @@ tools:
     monarch_contribution: Lead
     monarch_role: Support
     repository: https://github.com/monarch-initiative/ontotools-docker
+    contact:
+        name: Nicolas Matentzoglu
+        email: nicolas.matentzoglu@gmail.com
+        orcid: https://orcid.org/0000-0002-7356-1779
+        github: "@matentzn"
   - id: https://tools.monarchinitiative.org/poet
     url: https://poet.jax.org/
     name: POET
     category: Data Curation
     monarch_role: Support
     repository: https://github.com/TheJacksonLaboratory/POET
+    contact:
+        name: Peter Robinson
+        email: Peter.Robinson@jax.org
+        orcid: https://orcid.org/0000-0002-0736-9199
+        github: "@pnrobinson"
   - id: https://tools.monarchinitiative.org/lirical
     name: LIkelihood Ratio Interpretation of Clinical AbnormaLities (LIRICAL)
     short_name: LIRICAL
@@ -480,6 +560,11 @@ tools:
     monarch_role: Flagship
     documentation: https://lirical.readthedocs.io/en/latest/
     repository: https://github.com/TheJacksonLaboratory/LIRICAL
+    contact:
+        name: Peter Robinson
+        email: Peter.Robinson@jax.org
+        orcid: https://orcid.org/0000-0002-0736-9199
+        github: "@pnrobinson"
   - id: https://github.com/monarch-initiative/pheval
     name: PhEval
     category: Benchmarking
@@ -487,22 +572,42 @@ tools:
     repository: https://github.com/monarch-initiative/pheval
     monarch_role: Core
     description: PhEval is a Python package for evaluating phenotype-powered variant prioritisation systems such as Exomiser.
+    contact:
+        name: Jules Jacobsen
+        email: j.jacobsen@qmul.ac.uk
+        orcid: https://orcid.org/0000-0002-3265-1591
+        github: "@julesjacobsen"
   - id: https://github.com/INCATools/obographviz
     name: obographviz
     category: Ontology Use
     documentation: https://github.com/INCATools/obographviz#readme
     repository: https://github.com/INCATools/obographviz
     monarch_role: Support
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
   - id: https://github.com/INCATools/ubergraph
     name: ubergraph
     category: Ontology Use
     repository: https://github.com/INCATools/ubergraph
     monarch_role: Support
+    contact:
+        name: Jim Balhoff
+        email: balhoff@renci.org
+        orcid: https://orcid.org/0000-0002-8688-6599
+        github: "@balhoff"
   - id: https://github.com/balhoff/whelk
     name: whelk
     category: Ontology Use
     repository: https://github.com/balhoff/whelk
     monarch_role: Support
+    contact:
+        name: Jim Balhoff
+        email: balhoff@renci.org
+        orcid: https://orcid.org/0000-0002-8688-6599
+        github: "@balhoff"
   - id: https://github.com/ontodev/robot
     name: robot
     category: Ontology Use
@@ -510,12 +615,22 @@ tools:
     monarch_contribution: Contributor
     repository: https://github.com/ontodev/robot
     monarch_role: Community
+    contact:
+        name: Nicolas Matentzoglu
+        email: nicolas.matentzoglu@gmail.com
+        orcid: https://orcid.org/0000-0002-7356-1779
+        github: "@matentzn"
   - id: https://github.com/cidgoh/DataHarmonizer
     name: Data Harmonizer
     category: Data Curation
     monarch_contribution: Contributor
     monarch_role: Community
     repository: https://github.com/cidgoh/DataHarmonizer
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
   - id: https://github.com/monarch-initiative/ontogpt
     name: OntoGPT
     category: Data Curation
@@ -526,6 +641,11 @@ tools:
     url: https://github.com/monarch-initiative/ontogpt
     repository: https://github.com/monarch-initiative/ontogpt
     description: OntoGPT is a Python package for extracting structured information from text with large language models (LLMs), instruction prompts, and ontology-based grounding.
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
   - id: https://github.com/monarch-initiative/curate-gpt
     name: CurateGPT
     category: Data Curation
@@ -536,6 +656,11 @@ tools:
     url: https://curategpt.io/
     repository: https://github.com/monarch-initiative/curate-gpt
     description: AI Assisted Ontology Curation.
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
   - id: https://github.com/monarch-initiative/semsimian
     name: semsimian
     category: Mapping
@@ -545,6 +670,11 @@ tools:
     description: Semantic Similarity in Rust.
     monarch_role: Support
     repository: https://github.com/monarch-initiative/semsimian
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
   - id: https://github.com/monarch-initiative/monarch-app
     name: Monarch Python Toolkit
     category: Data Curation
@@ -552,6 +682,11 @@ tools:
     documentation: https://monarch-initiative.github.io/monarch-py/
     monarch_contribution: Lead
     repository: https://github.com/monarch-initiative/monarch-app/backend
+    contact:
+        name: Kevin Schaper
+        email: kevin@tislab.org
+        orcid: https://orcid.org/0000-0003-3311-7320
+        github: "@kevinschaper"
   - id: https://github.com/monarch-initiative/babelon
     name: Babelon Toolkit
     category: Data Curation
@@ -559,6 +694,11 @@ tools:
     monarch_contribution: Lead
     monarch_role: Support
     repository: https://github.com/monarch-initiative/babelon
+    contact:
+        name: Nicolas Matentzoglu
+        email: nicolas.matentzoglu@gmail.com
+        orcid: https://orcid.org/0000-0002-7356-1779
+        github: "@matentzn"
   - id: https://github.com/monarch-initiative/fenominal
     name: Fenominal
     category: Data Curation
@@ -566,6 +706,11 @@ tools:
     documentation: https://monarch-initiative.github.io/fenominal/
     monarch_contribution: Lead
     repository: https://github.com/monarch-initiative/fenominal
+    contact:
+        name: Peter Robinson
+        email: Peter.Robinson@jax.org
+        orcid: https://orcid.org/0000-0002-0736-9199
+        github: "@pnrobinson"
   - id: https://github.com/monarch-initiative/koza
     name: Koza
     category: Data Curation
@@ -573,6 +718,11 @@ tools:
     documentation: https://koza.monarchinitiative.org/
     monarch_contribution: Lead
     repository: https://github.com/monarch-initiative/fenominal
+    contact:
+        name: Kevin Schaper
+        email: kevin@tislab.org
+        orcid: https://orcid.org/0000-0003-3311-7320
+        github: "@kevinschaper"
   - id: https://linkml.io/
     name: LinkML
     description: The Linked Data Modeling Language (LinkML) is a flexible 
@@ -585,6 +735,11 @@ tools:
     monarch_role: Core
     category: Data Curation
     monarch_contribution: Lead
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
   - id: https://monarch-initiative.github.io/monarch-ingest
     name: Monarch Ingest
     documentation: https://monarch-initiative.github.io/monarch-ingest
@@ -593,6 +748,11 @@ tools:
     monarch_role: Core
     category: Data Curation
     monarch_contribution: Lead
+    contact:
+        name: Kevin Schaper
+        email: kevin@tislab.org
+        orcid: https://orcid.org/0000-0003-3311-7320
+        github: "@kevinschaper"
   - id: https://github.com/monarch-initiative/monarch-mapping-commons
     name: Monarch Mapping Commons
     icon: resource-monarch
@@ -603,6 +763,11 @@ tools:
     documentation: https://github.com/monarch-initiative/monarch-mapping-commons
     url: https://github.com/monarch-initiative/monarch-mapping-commons
     monarch_contribution: Lead
+    contact:
+        name: Kevin Schaper
+        email: kevin@tislab.org
+        orcid: https://orcid.org/0000-0003-3311-7320
+        github: "@kevinschaper"
   - id: https://github.com/obophenotype/hpo-translations
     name: HPO Language Translations
     monarch_role: Support
@@ -612,6 +777,11 @@ tools:
     documentation: https://obophenotype.github.io/hpo-translations/
     url: https://obophenotype.github.io/hpo-translations/
     monarch_contribution: Lead
+    contact:
+        name: Nicolas Matentzoglu
+        email: nicolas.matentzoglu@gmail.com
+        orcid: https://orcid.org/0000-0002-7356-1779
+        github: "@matentzn"
   - id: https://github.com/TheJacksonLaboratory/Phenomiser
     name: Phenomizer
     monarch_role: Core
@@ -621,6 +791,11 @@ tools:
     documentation: https://github.com/TheJacksonLaboratory/Phenomiser
     url: https://hpo.jax.org/app/tools/phenomizer
     monarch_contribution: Lead
+    contact:
+        name: Peter Robinson
+        email: Peter.Robinson@jax.org
+        orcid: https://orcid.org/0000-0002-0736-9199
+        github: "@pnrobinson"
   - id: https://github.com/monarch-initiative/phenogrid
     name: Phenogrid
     monarch_role: Core
@@ -630,6 +805,11 @@ tools:
     documentation: https://github.com/monarch-initiative/phenogrid
     url: https://github.com/monarch-initiative/phenogrid
     monarch_contribution: Lead
+    contact:
+        name: Kevin Schaper
+        email: kevin@tislab.org
+        orcid: https://orcid.org/0000-0003-3311-7320
+        github: "@kevinschaper"
   - id: https://github.com/monarch-initiative/monarch-assistant
     name: Monarch Assistant
     monarch_role: Core
@@ -639,6 +819,11 @@ tools:
     documentation: https://github.com/monarch-initiative/monarch-assistant
     url: https://github.com/monarch-initiative/monarch-assistant
     monarch_contribution: Lead
+    contact:
+        name: Kevin Schaper
+        email: kevin@tislab.org
+        orcid: https://orcid.org/0000-0003-3311-7320
+        github: "@kevinschaper"
 documentations:
   - id: https://oboacademy.github.io/obook/
     name: OBO Academy
