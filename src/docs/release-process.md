@@ -52,8 +52,14 @@ From this point forward, code updates on the dev environment will be automatical
 
 #### Deploying to beta
 
-Once work on the milestone is complete, the release can be tagged and deployed to the beta environment. 
-Copy the latest release env file to a new env, for example: `cp site-envs/monarch-2023-10-11.env site-envs/monarch-2023-11-16.env` 
+Once work on the milestone is complete, the release can be tagged and deployed to the beta environment.
+
+First, copy the KG release from monarch-kg-dev to monarch-kg:
+```
+gsutil cp -r gs://data-public-monarchinitiative/monarch-kg-dev/${RELEASE} gs://data-public-monarchinitiative/monarch-kg/${RELEASE} 
+```
+
+Within monarch-stack-v3, copy the latest release env file to a new env, for example: `cp site-envs/monarch-2023-10-11.env site-envs/monarch-2023-11-16.env` 
 The date for the environment file name should match the KG release version, rather than today's date. 
 Edit the top two lines in new env to match the latest KG & API versions:
 
