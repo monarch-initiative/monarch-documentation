@@ -14,7 +14,7 @@ These releases consist primarily of the following components:
 
 ## Monarch Mapping Commons
 
-[Monarch Mapping Commons](https://github.com/monarch-initiative/monarch-mapping-commons) is a repository repository contains code used to generate the mapping files used in the creation of the Monarch knowledge graph.  
+[Monarch Mapping Commons](https://github.com/monarch-initiative/monarch-mapping-commons) is a repository that contains code used to generate the mapping files used in the creation of the Monarch knowledge graph.  
 The nodes and edges in the knowledge graph come from a variety of sources, and have varying IDs and prefixes.  
 The mapping files are used to map these IDs to IDs in Monarch's preferred namespaces.
 
