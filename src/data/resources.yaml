@@ -286,7 +286,7 @@ standards:
     contact:
         name: James McLaughlin
         email: jmcl@ebi.ac.uk
-        orcid: 
+        orcid: https://orcid.org/0000-0002-8361-2795 
         github: "@udp"
     grants:
       - Phenomics First
