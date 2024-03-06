@@ -152,7 +152,7 @@ data:
     name: Monarch KG
     category: Knowledge Graph
     monarch_contribution: Lead
-    monarch_role: Flagship
+    monarch_role: Core
     icon: resource-monarch
     url: https://monarch-initiative.github.io/monarch-ingest
     description: Monarch's Knowledge Graph integrates resources from a wide 
@@ -314,7 +314,7 @@ standards:
     short_name: uPheno
     monarch_contribution: Lead
     category: Ontology
-    monarch_role: Flagship
+    monarch_role: Core
     icon: resource-upheno
     url: https://obophenotype.github.io/upheno/
     documentation: https://obophenotype.github.io/upheno/
@@ -361,9 +361,12 @@ standards:
       - Phenomics First
   - id: http://purl.obolibrary.org/obo/uberon.owl
     name: Uberon Anatomy Ontology
+    description: The Uberon Anatomy Ontology is an integrated cross-species anatomy ontology.
     monarch_contribution: Co-Lead
     category: Ontology
-    monarch_role: Core
+    monarch_role: Flagship
+    icon: resource-uberon
+    url: https://obophenotype.github.io/uberon/
     documentation: https://obophenotype.github.io/uberon/
     contact:
         name: Chris Mungall
@@ -454,6 +457,21 @@ tools:
         orcid: https://orcid.org/0000-0002-3265-1591
         github: "@julesjacobsen"
   - id: https://monarchinitiative.org/
+    name: Monarch Knowledge Graph & Services
+    category: Clinical Diagnosis
+    icon: resource-monarch
+    url: https://monarchinitiative.org/
+    description: The Monarch Monarch Knowledge Graph & Services integrates gene, disease, and phenotype data across species.
+    repository: https://github.com/monarch-initiative/monarch-app
+    monarch_contribution: Lead
+    monarch_role: Flagship
+    documentation: https://monarch-initiative.github.io/monarch-ingest/
+    contact:
+        name: Kevin Schaper
+        email: kevin@tislab.org
+        orcid: https://orcid.org/0000-0003-3311-7320
+        github: "@kevinschaper"
+  - id: https://monarch-app.monarchinitiative.org/
     name: Monarch App
     category: Clinical Diagnosis
     icon: resource-monarch
@@ -461,7 +479,7 @@ tools:
     description: The Monarch App is a web application for exploring the Monarch Knowledge Graph.
     repository: https://github.com/monarch-initiative/monarch-app
     monarch_contribution: Lead
-    monarch_role: Flagship
+    monarch_role: Core
     documentation: https://monarch-app.monarchinitiative.org/
     contact:
         name: Kevin Schaper
@@ -557,7 +575,7 @@ tools:
     url: https://thejacksonlaboratory.github.io/LIRICAL/stable/
     description: LIkelihood Ratio Interpretation of Clinical AbnormaLities performs 
       phenotype-driven prioritization of candidate diseases and genes in the setting of genomic diagnostics.
-    monarch_role: Flagship
+    monarch_role: Core
     documentation: https://lirical.readthedocs.io/en/latest/
     repository: https://github.com/TheJacksonLaboratory/LIRICAL
     contact:
@@ -636,7 +654,7 @@ tools:
     category: Data Curation
     documentation: https://monarch-initiative.github.io/ontogpt/
     monarch_contribution: Lead
-    monarch_role: Flagship
+    monarch_role: Core
     icon: onto-gpt
     url: https://github.com/monarch-initiative/ontogpt
     repository: https://github.com/monarch-initiative/ontogpt
@@ -651,7 +669,7 @@ tools:
     category: Data Curation
     documentation: https://github.com/monarch-initiative/curate-gpt
     monarch_contribution: Lead
-    monarch_role: Flagship
+    monarch_role: Core
     icon: curate-gpt
     url: https://curategpt.io/
     repository: https://github.com/monarch-initiative/curate-gpt
@@ -756,7 +774,7 @@ tools:
   - id: https://github.com/monarch-initiative/monarch-mapping-commons
     name: Monarch Mapping Commons
     icon: resource-monarch
-    monarch_role: Flagship
+    monarch_role: Core
     category: Mapping
     description: SSSOM Mappings collected and curated by the Monarch Initiative.
     repository: https://github.com/monarch-initiative/monarch-mapping-commons
