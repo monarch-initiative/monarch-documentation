@@ -2486,7 +2486,7 @@
 
       ProjectBoard : contact
 
-          ProjectBoard --|&gt; Contact : contact
+          ProjectBoard --&gt; Contact : contact
 
       ProjectBoard : description
 
@@ -2494,7 +2494,7 @@
 
       ProjectBoard : grants
 
-          ProjectBoard --|&gt; grant_enum : grants
+          ProjectBoard --&gt; grant_enum : grants
 
       ProjectBoard : icon
 
@@ -2502,17 +2502,17 @@
 
       ProjectBoard : monarch_contribution
 
-          ProjectBoard --|&gt; monarch_contribution_enum : monarch_contribution
+          ProjectBoard --&gt; monarch_contribution_enum : monarch_contribution
 
       ProjectBoard : monarch_role
 
-          ProjectBoard --|&gt; monarch_role_enum : monarch_role
+          ProjectBoard --&gt; monarch_role_enum : monarch_role
 
       ProjectBoard : name
 
       ProjectBoard : project_boards
 
-          ProjectBoard --|&gt; ProjectBoard : project_boards
+          ProjectBoard --&gt; ProjectBoard : project_boards
 
       ProjectBoard : repository
 

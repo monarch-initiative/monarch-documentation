@@ -2378,113 +2378,21 @@
 </tbody>
 </table>
 <h3 id="documentation">Documentation</h3>
-<h1 id="human-phenotype-ontology-hpo-web-app">Human Phenotype Ontology (HPO) Web App</h1>
-<p>The following guide provides the steps for an out-of-the-box setup for the Human Phenotype Ontology (HPO) Web application with minimum requirements for a local development environment. </p>
-<h2 id="requirements">Requirements</h2>
-<ul>
-<li>Java@11</li>
-<li>mysql@5.7</li>
-</ul>
-<h2 id="setup">Setup</h2>
-<ul>
-<li>Clone the repo:</li>
-</ul>
-<p>JAX Github </p>
-<pre><code>    git clone git@github.com:TheJacksonLaboratory/hpo-web.git
-</code></pre>
-<ul>
-<li>
-<p>Initialize the mysql database and load the HPO ontology data. Run the following command in the command window inside the hpo-web directory. This step will take approximate 3+ minutes to complete</p>
-<pre><code>./gradlew server:runCommand -Pargs="load-hpo-db"
-
-E.g. when complete the output in the command window should look like this:
-...
-finished refreshing database duration: 0:03:49.391 time: Thu Jan 11 11:28:56 EST 2018
-
-BUILD SUCCESSFUL
-
-Note:
-If you desire to re-initialize the application and the database, execute the command again.
-</code></pre>
-</li>
-<li>
-<p>Build the application with a gradle task.</p>
-<pre><code>./gradlew build -DchromeHeadless=true
-
-E.g.
-...
-:processTestResources
-:testClasses
-:test
-:check
-:build
-
-BUILD SUCCESSFUL
-
-Total time: 1 mins 29.306 secs
-</code></pre>
-</li>
-<li>
-<p>War creation with a gradle task.</p>
-<p>./gradlew clean war -Dgrails.env=[test, gcp, production]&gt;</p>
-<p>Will output a war to ./build/libs/</p>
-</li>
-</ul>
-<h2 id="usage">Usage</h2>
-<ul>
-<li>
-<p>Run the hpo-web application. This step will launch the application in the local web container and make it available through the web browser</p>
-<pre><code>./gradlew bootRun
-* if you are looking to use the grails console provide argument `-Dgrails.console=true`
-</code></pre>
-</li>
-<li>
-<p>To open the application site launch the browser and go to</p>
-<pre><code>http://&lt;host&gt;:8080/app/index.html
-</code></pre>
-</li>
-<li>
-<p>If client (Angular App) hot reload is desired open a new shell and execute</p>
-<pre><code>./gradlew buildClientWatch
-</code></pre>
-</li>
-<li>
-<p>Optionally to open the client (Angular app) via Cli</p>
-</li>
-<li>
-<p>Change directory to hpo-web/src/main/client</p>
-<pre><code>cd hpo-web/src/main/client
-</code></pre>
-<ul>
-<li>
-<p>Execute</p>
-<p>ng serve --open (will open application in the browser using port 4200)</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="unit-testing">Unit Testing</h2>
-<ul>
-<li>
-<p>To execute the client (Angular app) unit tests, run</p>
-<p>./gradlew clientTest</p>
-</li>
-<li>
-<p>To execute backend and client unit tests, run</p>
-<p>./gradlew test</p>
-</li>
-</ul>
-<h2 id="functional-testing">Functional Testing</h2>
-<ul>
-<li>
-<p>To execute functional testing with chrome browser, run</p>
-<p>./gradlew integrationTest</p>
-</li>
-<li>
-<p>To execute functional testing with chrome headless browser, run</p>
-<p>./gradlew integrationTest -DchromeHeadless</p>
-</li>
-</ul>
+<h1 id="hpo">Hpo</h1>
+<p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 1.2.6.</p>
+<h2 id="development-server">Development server</h2>
+<p>Run <code>ng serve</code> for a dev server. Navigate to <code>http://localhost:4200/</code>. The app will automatically reload if you change any of the source files.</p>
+<h2 id="code-scaffolding">Code scaffolding</h2>
+<p>Run <code>ng generate component component-name</code> to generate a new component. You can also use <code>ng generate directive|pipe|service|class|module</code>.</p>
+<h2 id="build">Build</h2>
+<p>Run <code>ng build</code> to build the project. The build artifacts will be stored in the <code>dist/</code> directory. Use the <code>-prod</code> flag for a production build.</p>
+<h2 id="running-unit-tests">Running unit tests</h2>
+<p>Run <code>ng test</code> to execute the unit tests via <a href="https://karma-runner.github.io">Karma</a>.</p>
+<h2 id="running-end-to-end-tests">Running end-to-end tests</h2>
+<p>Run <code>ng e2e</code> to execute the end-to-end tests via <a href="http://www.protractortest.org/">Protractor</a>.
+Before running the tests make sure you are serving the app via <code>ng serve</code>.</p>
+<h2 id="further-help">Further help</h2>
+<p>To get more help on the Angular CLI use <code>ng help</code> or go check out the <a href="https://github.com/angular/angular-cli/blob/master/README.md">Angular CLI README</a>.</p>
 
 
 

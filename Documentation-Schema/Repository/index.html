@@ -2486,11 +2486,11 @@
 
       Repository : contact
 
-          Repository --|&gt; Contact : contact
+          Repository --&gt; Contact : contact
 
       Repository : depends_on
 
-          Repository --|&gt; Repository : depends_on
+          Repository --&gt; Repository : depends_on
 
       Repository : description
 
@@ -2498,7 +2498,7 @@
 
       Repository : grants
 
-          Repository --|&gt; grant_enum : grants
+          Repository --&gt; grant_enum : grants
 
       Repository : icon
 
@@ -2506,11 +2506,11 @@
 
       Repository : monarch_contribution
 
-          Repository --|&gt; monarch_contribution_enum : monarch_contribution
+          Repository --&gt; monarch_contribution_enum : monarch_contribution
 
       Repository : monarch_role
 
-          Repository --|&gt; monarch_role_enum : monarch_role
+          Repository --&gt; monarch_role_enum : monarch_role
 
       Repository : name
 
@@ -2518,7 +2518,7 @@
 
       Repository : project_boards
 
-          Repository --|&gt; ProjectBoard : project_boards
+          Repository --&gt; ProjectBoard : project_boards
 
       Repository : repo_url
 

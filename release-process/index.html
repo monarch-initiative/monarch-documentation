@@ -469,6 +469,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2429,6 +2436,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2470,7 +2484,7 @@
 <li>Monarch website via <a href="https://github.com/monarch-initiative/monarch-app/frontend">Monarch-App</a></li>
 </ul>
 <h2 id="monarch-mapping-commons">Monarch Mapping Commons</h2>
-<p><a href="https://github.com/monarch-initiative/monarch-mapping-commons">Monarch Mapping Commons</a> is a repository repository contains code used to generate the mapping files used in the creation of the Monarch knowledge graph.<br />
+<p><a href="https://github.com/monarch-initiative/monarch-mapping-commons">Monarch Mapping Commons</a> is a repository that contains code used to generate the mapping files used in the creation of the Monarch knowledge graph.<br />
 The nodes and edges in the knowledge graph come from a variety of sources, and have varying IDs and prefixes.<br />
 The mapping files are used to map these IDs to IDs in Monarch's preferred namespaces.</p>
 <p>These mapping files are generated via a Jenkins job on a weekly basis, and are stored in the <a href="https://data.monarchinitiative.org/mappings/index.html">Monarch Data Bucket</a>.</p>
@@ -2483,6 +2497,11 @@ The pipeline is run on a Jenkins server, and the resulting knowledge graph is up
 <h3 id="deploying-the-knowledge-graph">Deploying the Knowledge Graph</h3>
 <h4 id="deploying-to-dev">Deploying to dev</h4>
 <p>While the Github Actions workflow for Monarch App will automatically update and deploy API &amp; UI code to the dev environment, the knowledge graph must be manually deployed to the dev environment.</p>
+<p>Preparing the environment for deployment:</p>
+<ul>
+<li>Make sure dependancies from monarch-stack-v3/README.md are installed</li>
+<li>Ensure secrets are installed in $home/.secrets</li>
+</ul>
 <p>To deploy the knowledge graph to the dev environment, follow these steps:</p>
 <ul>
 <li>Checkout (or update) <a href="https://github.com/monarch-initiative/monarch-stack-v3">Monarch Stack V3</a></li>
@@ -2494,8 +2513,18 @@ The pipeline is run on a Jenkins server, and the resulting knowledge graph is up
 </code></pre></div>
 <p>From this point forward, code updates on the dev environment will be automatically deployed and additional work will happen to finish the work planned for the milestone. Ideally changes to the graph will happen early in the release cycle.</p>
 <h4 id="deploying-to-beta">Deploying to beta</h4>
-<p>Once work on the milestone is complete, the release can be tagged and deployed to the beta environment. 
-Copy the latest release env file to a new env, for example: <code>cp site-envs/monarch-2023-10-11.env site-envs/monarch-2023-11-16.env</code> 
+<p>Once work on the milestone is complete, we need to tag the release in GitHub then we can deploy to the beta environment.</p>
+<p>To tag the release, go to the <a href="https://github.com/monarch-initiative/monarch-app">Monarch App</a> and click on releases. Create a new release with the new version number and click generate release notes. Make any changes to the release notes that are necessary (generally none) and click publish release.</p>
+<p>You may want to set an environment variable for the release version to make it easier to copy and paste the version number in the following steps (update for your current version):</p>
+<div class="highlight"><pre><span></span><code>RELEASE=&quot;2024-02-13&quot;
+</code></pre></div>
+<p>First, copy the KG release from monarch-kg-dev to monarch-kg:
+<div class="highlight"><pre><span></span><code>gsutil cp -r gs://data-public-monarchinitiative/monarch-kg-dev/${RELEASE} gs://data-public-monarchinitiative/monarch-kg/${RELEASE} 
+</code></pre></div>
+Then, we need to copy in the archive:
+<div class="highlight"><pre><span></span><code>gsutil cp -r gs://monarch-archive/monarch-kg-dev/${RELEASE} gs://monarch-archive/monarch-kg/${RELEASE}
+</code></pre></div></p>
+<p>Within monarch-stack-v3, copy the latest release env file to a new env, for example: <code>cp site-envs/monarch-2023-10-11.env site-envs/monarch-${RELEASE}.env</code> 
 The date for the environment file name should match the KG release version, rather than today's date. 
 Edit the top two lines in new env to match the latest KG &amp; API versions:</p>
 <div class="highlight"><pre><span></span><code>export MONARCH_KG_VERSION=&quot;2023-11-16&quot;
@@ -2505,15 +2534,44 @@ export MONARCH_API_VERSION=&quot;0.18.1&quot;
 <div class="highlight"><pre><span></span><code>source site-envs/monarch-2023-11-16.env
 ./provision.sh
 </code></pre></div>
+<p>Output for the provision script should look something like this:</p>
+<div class="highlight"><pre><span></span><code>...
+Changes to Outputs:
+  + api_image_tag       = &quot;1.0.0&quot;
+  + env                 = &quot;2024-02-13&quot;
+  + full_prefix         = &quot;monarch-v3-2024-02-13-&quot;
+  + neo4j_archive_url   = &quot;https://data.monarchinitiative.org/monarch-kg-dev/latest/monarch-kg.neo4j.dump&quot;
+  + phenio_archive_url  = &quot;https://data.monarchinitiative.org/monarch-kg/2024-02-13/phenio.db.gz&quot;
+  + project             = &quot;monarch-initiative&quot;
+  + semsimian_image_tag = &quot;latest&quot;
+  + solr_archive_url    = &quot;https://data.monarchinitiative.org/monarch-kg/2024-02-13/solr.tar.gz&quot;
+  + sqlite_archive_url  = &quot;https://data.monarchinitiative.org/monarch-kg/2024-02-13/monarch-kg.db.gz&quot;
+  + stack               = &quot;monarch-v3&quot;
+  + ui_image_tag        = &quot;latest&quot;
+  + vm_svc_acct_email   = &quot;terraform@monarch-initiative.iam.gserviceaccount.com&quot;
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only &#39;yes&#39; will be accepted to approve.
+</code></pre></div>
+<p>At the end of the run you should see a message like this:</p>
+<div class="highlight"><pre><span></span><code>PLAY RECAP ***************************************************************************************************
+monarch-v3-2024-02-13-api  : ok=11   changed=3    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0
+monarch-v3-2024-02-13-manager : ok=12   changed=3    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0
+monarch-v3-2024-02-13-neo4j : ok=11   changed=3    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0
+monarch-v3-2024-02-13-solr : ok=11   changed=3    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0
+</code></pre></div>
 <h4 id="connecting-beta-to-the-load-balancer">Connecting beta to the load balancer</h4>
 <p>Once this completes, open the <a href="https://console.cloud.google.com/net-services/loadbalancing/details/http/monarch-balancer?project=monarch-initiative">GCP load balancer configuration</a>. </p>
 <ol>
 <li>Click on the <strong>edit</strong> link at the top of the page.</li>
 <li>Click on <strong>Backend Configuration</strong></li>
-<li>Open the <strong>Backend services &amp; backend buckets</strong> pull down on the right side and check <code>monarch-v3-{release}-api-backend</code> &amp; <code>monarch-v3-{release}-nginx-backend</code></li>
-<li>Open the <code>Host and path rules</code> section to point beta.monarchinitiative.org to the nginx backend and api-beta.monarchinitiative.org to the api backend,  </li>
+<li>Open the <strong>Backend services &amp; backend buckets</strong> pull down on the right side and check <code>monarch-v3-{release}-api-backend</code> &amp; <code>monarch-v3-{release}-nginx-backend</code>, leave the other boxes checked, and click ok.</li>
+<li>Open the <code>Host and path rules</code> section to point <code>beta.monarchinitiative.org</code> to the <code>nginx</code> backend, <code>api-beta.monarchinitiative.org</code> to the <code>api</code> backend, and <code>neo4j-beta.monarchinitiative.org</code> to the <code>neo4j</code> backend.</li>
+<li>Then for each of these endpoints add <code>/*</code> to the path matcher, and click update.</li>
 </ol>
-<p>Restart the load balancer with the new configuration and confirm that the site is up and running. </p>
+<p>If you get a pop-up window error, you may have forgotten to delete one of the old routes when pointing to the new backend. You will need to redo the configuration if this happens.</p>
+<p>The load balancer will automatically restart with the new configuration. Then we'll need to confirm that the site is up and running.</p>
 <p>Get yourself a cup of hot chocolate / ice cold lemonade (season dependent) and settle in to go through the issues in the milestone. Make sure that each issue appears to actually be fixed, and close them with a note that they're confirmed to be working on beta.monarchinitiative.org. (with some additional explanation for externally submitted issues about when the change is expected to be visible on the production site)</p>
 <h4 id="deploying-to-production">Deploying to production</h4>
 <p>Edit the load balancer
@@ -2526,6 +2584,29 @@ export MONARCH_API_VERSION=&quot;0.18.1&quot;
 <div class="highlight"><pre><span></span><code>source site-envs/monarch-2023-10-17.env 
 ./provision.sh -d
 </code></pre></div></p>
+<h4 id="troubleshooting">Troubleshooting</h4>
+<p>Here are some known issues that we have seen before:</p>
+<p>In <code>./provision.sh</code> you may see an error like this:</p>
+<div class="highlight"><pre><span></span><code>fatal: [monarch-v3-2024-02-13-api]: UNREACHABLE! =&gt; changed=false
+  msg: |-
+    Data could not be sent to remote host &quot;monarch-v3-2024-02-13-api&quot;. Make sure this host can be reached over ssh: Pseudo-terminal will not be allocated because stdin is not a terminal.
+    sa_116692422516913491665@34.42.108.156: Permission denied (publickey).
+
+    Recommendation: To check for possible causes of SSH connectivity issues and get
+    recommendations, rerun the ssh command with the --troubleshoot option.
+
+    gcloud compute ssh monarch-v3-2024-02-13-api --project=monarch-initiative --zone=us-central1-a --troubleshoot
+
+    Or, to investigate an IAP tunneling issue:
+
+    gcloud compute ssh monarch-v3-2024-02-13-api --project=monarch-initiative --zone=us-central1-a --troubleshoot --tunnel-through-iap
+
+    ERROR: (gcloud.compute.ssh) [/usr/bin/ssh] exited with return code [255].
+  unreachable: true
+</code></pre></div>
+<p>If so you may want to run the stated command (update to your version):</p>
+<div class="highlight"><pre><span></span><code>gcloud compute ssh monarch-v3-2024-02-13-api --project=monarch-initiative --zone=us-central1-a --troubleshoot
+</code></pre></div>
 
 
 

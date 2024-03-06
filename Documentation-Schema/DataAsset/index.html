@@ -2484,13 +2484,13 @@
 
       DataAsset : category
 
-          DataAsset --|&gt; data_asset_enum : category
+          DataAsset --&gt; data_asset_enum : category
 
       DataAsset : citation
 
       DataAsset : contact
 
-          DataAsset --|&gt; Contact : contact
+          DataAsset --&gt; Contact : contact
 
       DataAsset : description
 
@@ -2498,11 +2498,11 @@
 
       DataAsset : download
 
-          DataAsset --|&gt; Download : download
+          DataAsset --&gt; Download : download
 
       DataAsset : grants
 
-          DataAsset --|&gt; grant_enum : grants
+          DataAsset --&gt; grant_enum : grants
 
       DataAsset : icon
 
@@ -2510,17 +2510,17 @@
 
       DataAsset : monarch_contribution
 
-          DataAsset --|&gt; monarch_contribution_enum : monarch_contribution
+          DataAsset --&gt; monarch_contribution_enum : monarch_contribution
 
       DataAsset : monarch_role
 
-          DataAsset --|&gt; monarch_role_enum : monarch_role
+          DataAsset --&gt; monarch_role_enum : monarch_role
 
       DataAsset : name
 
       DataAsset : project_boards
 
-          DataAsset --|&gt; ProjectBoard : project_boards
+          DataAsset --&gt; ProjectBoard : project_boards
 
       DataAsset : repository
 

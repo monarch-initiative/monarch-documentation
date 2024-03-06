@@ -2419,7 +2419,7 @@
 </tr>
 <tr>
 <td>tqdm</td>
-<td>^4.62.3</td>
+<td>&gt;=4.62.3</td>
 </tr>
 <tr>
 <td>google-cloud-storage</td>
@@ -2443,7 +2443,11 @@
 </tr>
 <tr>
 <td>gdown</td>
-<td>^4.7.1</td>
+<td>&gt;=4.7.1</td>
+</tr>
+<tr>
+<td>boto3</td>
+<td>&gt;=1.34.35</td>
 </tr>
 </tbody>
 </table>
@@ -2464,6 +2468,7 @@ For an example, see <a href="example/download.yaml">example/download.yaml</a></p
   - <code>http(s)</code>
   - Google Cloud Storage (<code>gs://</code>)
   - Google Drive (<code>gdrive://</code> or https://drive.google.com/...). The file must be publicly accessible.
+  - Amazon AWS S3 bucket (<code>s3://</code>)
 - <strong>local_name</strong>: The name to save the file as locally
 - <strong>tag</strong>: A tag to use to filter downloads
 - <strong>api</strong>: The API to use to download the file. Currently supported: <code>elasticsearch</code>
@@ -2477,6 +2482,10 @@ For an example, see <a href="example/download.yaml">example/download.yaml</a></p
 - <a href="https://cloud.google.com/storage/docs/access-control/using-iam-permissions#bucket-iam">add the service account to the relevant bucket</a> and<br />
 - <a href="https://cloud.google.com/iam/docs/keys-create-delete">download a JSON key</a> for that service account.<br />
  Then, set the <code>GOOGLE_APPLICATION_CREDENTIALS</code> environment variable to point to that file.</p>
+<p>Mirorring local files to Amazon AWS S3 bucket requires the following:
+ - <a href="https://portal.aws.amazon.com/">Create an AWS account</a>
+ - <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started.html">Create an IAM user in AWS</a>: This enables getting the <code>AWS_ACCESS_KEY_ID</code> and <code>AWS_SECRET_ACCESS_KEY</code> needed for authentication. These two should be stored as environment variables in the user's system.
+ - <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html">Create an S3 bucket</a>: This will be the destination for pushing local files.</p>
 </blockquote>
 <p>You can also include any secrets like API keys you have set as environment variables using <code>{VARIABLE_NAME}</code>, for example:<br />
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
