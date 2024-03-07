@@ -5,12 +5,6 @@
       "icon": "resource-phenopackets",
       "link": "http://phenopackets.org/",
       "name": "Phenopackets"
-    },
-    {
-      "description": "SSSOM is a simple metadata standard for describing semantic mappings.",
-      "icon": "resource-sssom",
-      "link": "https://mapping-commons.github.io/sssom/spec/",
-      "name": "SSSOM"
     }
   ],
   "Ontologies": [
