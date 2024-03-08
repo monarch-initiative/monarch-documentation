@@ -174,7 +174,7 @@ standards:
     grants:
       - Phenomics First
     monarch_role: Flagship
-    description: The Phenopacket Schema is an ISO-endorsed open standard for sharing disease and phenotype information.
+    description: An ISO-endorsed open standard for sharing disease and phenotype information.
     repository: https://github.com/phenopackets/phenopacket-schema
     contact:
         name: Peter Robinson
@@ -213,7 +213,7 @@ standards:
     category: Ontology
     monarch_role: Flagship
     documentation: https://obophenotype.github.io/human-phenotype-ontology/
-    description: The HPO provides a standardized vocabulary of phenotypic abnormalities in human disease.
+    description: Provides a standardized vocabulary of phenotypic abnormalities in human disease.
     repository: https://github.com/obophenotype/human-phenotype-ontology
     url: https://hpo.jax.org/app/
     contact:
@@ -249,7 +249,7 @@ standards:
     monarch_contribution: Lead
     category: Ontology
     monarch_role: Flagship
-    description: The Mondo Disease Ontology aims to harmonizes disease definitions across the world.
+    description: Aims to harmonize disease definitions across the world.
     repository: https://github.com/monarch-initiative/mondo
     contact:
         name: Chris Mungall
@@ -361,7 +361,7 @@ standards:
       - Phenomics First
   - id: http://purl.obolibrary.org/obo/uberon.owl
     name: Uberon Anatomy Ontology
-    description: The Uberon Anatomy Ontology is an integrated cross-species anatomy ontology.
+    description: An integrated cross-species anatomy ontology.
     monarch_contribution: Co-Lead
     category: Ontology
     monarch_role: Flagship
@@ -449,7 +449,7 @@ tools:
     icon: resource-exomiser
     url: https://exomiser.monarchinitiative.org/exomiser/
     documentation: https://exomiser.readthedocs.io/en/latest/
-    description: The Exomiser is a tool for finding potential disease-causing variants in whole-exome or whole-genome sequencing data.
+    description: A tool for finding potential disease-causing variants in whole-exome or whole-genome sequencing data.
     repository: https://github.com/exomiser/Exomiser
     contact:
         name: Jules Jacobsen
@@ -461,7 +461,7 @@ tools:
     category: Clinical Diagnosis
     icon: resource-monarch
     url: https://monarchinitiative.org/
-    description: The Monarch Monarch Knowledge Graph & Services integrates gene, disease, and phenotype data across species.
+    description: Integrates gene, disease, and phenotype data across species.
     repository: https://github.com/monarch-initiative/monarch-app
     monarch_contribution: Lead
     monarch_role: Flagship
@@ -476,7 +476,7 @@ tools:
     category: Clinical Diagnosis
     icon: resource-monarch
     url: https://monarch-app.monarchinitiative.org/
-    description: The Monarch App is a web application for exploring the Monarch Knowledge Graph.
+    description: A web application for exploring the Monarch Knowledge Graph.
     repository: https://github.com/monarch-initiative/monarch-app
     monarch_contribution: Lead
     monarch_role: Core
