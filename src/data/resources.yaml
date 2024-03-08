@@ -187,7 +187,7 @@ standards:
     monarch_contribution: Lead
     documentation: https://mapping-commons.github.io/sssom/spec/
     url: https://mapping-commons.github.io/sssom/spec/
-    description: SSSOM is a simple metadata standard for describing semantic mappings.
+    description: A simple metadata standard for describing semantic mappings.
     repository: https://github.com/mapping-commons/sssom/
     icon: resource-sssom
     project_boards:
@@ -318,7 +318,7 @@ standards:
     icon: resource-upheno
     url: https://obophenotype.github.io/upheno/
     documentation: https://obophenotype.github.io/upheno/
-    description: uPheno aims to unify the annotation of phenotypes across species.
+    description: Aims to unify the annotation of phenotypes across species.
     repository: https://obophenotype.github.io/upheno/
     project_boards:
       - name: uPheno 2 Ontology Development
