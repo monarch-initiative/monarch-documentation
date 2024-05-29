@@ -1,5 +1,5 @@
 # Auto generated from monarch_documentation.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-03-07T20:45:48
+# Generation date: 2024-05-29T19:45:00
 # Schema: monarch-documentation-schema
 #
 # id: https://w3id.org/monarch-initiative/monarch-documentation
@@ -574,18 +574,18 @@ class GrantEnum(EnumDefinitionImpl):
 
 class MonarchRoleEnum(EnumDefinitionImpl):
 
-    Flagship = PermissibleValue(
-        text="Flagship",
-        description="""A flagship product is a product that fulfills a strategic role for the Monarch Initiative. In particular it (1) *directly* supports the Monarch mission (excluding products of general utility) (2) has stakeholders outside of the Monarch Initiative (3) has stakeholders among most major member organisations of the Monarch Initiative An important corrolary of (3) is that all major member organisations of the Monarch Initiative should feel a sense of commitment to contributing to the success of the flagship product.""")
+    Foundational = PermissibleValue(
+        text="Foundational",
+        description="""A foundational product is a product that fulfills a strategic role for the Monarch Initiative. In particular it (1) *directly* supports the Monarch mission (excluding products of general utility) (2) has stakeholders outside of the Monarch Initiative (3) has stakeholders among most major member organisations of the Monarch Initiative An important corrolary of (3) is that all major member organisations of the Monarch Initiative should feel a sense of commitment to contributing to the success of the foundational product.""")
     Core = PermissibleValue(
         text="Core",
-        description="""A core product is a product that contributes to the Monarch mission, but is not a flagship product. In particular it (1) may support the Monarch mission in an indirect manner, such as core infrastructure for ontology lifecycle management or querying (2) has stakeholders outside of the Monarch Initiative (3) has stakeholders among at least one major member organisation of the Monarch Initiative An important corrolary of (3) is that at least one major member organisation of the Monarch Initiative should feel a sense of commitment to contributing to the success of the core product.""")
+        description="""A core product is a product that contributes to the Monarch mission, but is not a foundational product. In particular it (1) may support the Monarch mission in an indirect manner, such as core infrastructure for ontology lifecycle management or querying (2) has stakeholders outside of the Monarch Initiative (3) has stakeholders among at least one major member organisation of the Monarch Initiative An important corrolary of (3) is that at least one major member organisation of the Monarch Initiative should feel a sense of commitment to contributing to the success of the core product.""")
     Support = PermissibleValue(
         text="Support",
-        description="""A support product is a product that only indirectly contributes to the Monarch mission, usually by supporting the development of a flagship or core product. A support product (1) does not directly support the Monarch mission, but is essential for the development of a flagship or core product (2) has few stakeholders outside of the Monarch Initiative""")
+        description="""A support product is a product that only indirectly contributes to the Monarch mission, usually by supporting the development of a foundational or core product. A support product (1) does not directly support the Monarch mission, but is essential for the development of a foundational or core product (2) has few stakeholders outside of the Monarch Initiative""")
     Research = PermissibleValue(
         text="Research",
-        description="""A research product is a product that supports our own research efforts. The research outcome may or may not be used in a flagship, core or support product. A research product (1) does not directly support the Monarch mission, but leads to insights that support our mission (2) has no stakeholders outside of the Monarch Initiative (the research itself may!)""")
+        description="""A research product is a product that supports our own research efforts. The research outcome may or may not be used in a foundational product, core or support product. A research product (1) does not directly support the Monarch mission, but leads to insights that support our mission (2) has no stakeholders outside of the Monarch Initiative (the research itself may!)""")
     Community = PermissibleValue(
         text="Community",
         description="""A community product is a product that does not directly support the Monarch mission, but supports community efforts towards the mission. A community product (1) is usually a community resource, such as training materials, a community website, a standard specification, etc. (2) is usually more *general-purpose* (3) is community-driven, rather than mission-driven""")

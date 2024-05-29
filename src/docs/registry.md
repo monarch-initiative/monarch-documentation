@@ -23,7 +23,7 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | Documentation | [https://phenopacket-schema.readthedocs.io/en/latest/](https://phenopacket-schema.readthedocs.io/en/latest/) | 
 | [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
 | [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
-| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Flagship |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Foundational |
 | Main repository | https://github.com/phenopackets/phenopacket-schema |
 | Responsible contact in Monarch | Peter Robinson, https://orcid.org/0000-0002-0736-9199, @pnrobinson |
 | Project boards |  |
@@ -53,7 +53,7 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | Documentation | [https://obophenotype.github.io/human-phenotype-ontology/](https://obophenotype.github.io/human-phenotype-ontology/) | 
 | [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
 | [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | HPO, Phenomics First |
-| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Flagship |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Foundational |
 | Main repository | https://github.com/obophenotype/human-phenotype-ontology |
 | Responsible contact in Monarch | Peter Robinson, https://orcid.org/0000-0002-0736-9199, @pnrobinson |
 | Project boards |  |
@@ -83,7 +83,7 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | Documentation | [https://mondo.readthedocs.io/en/latest/](https://mondo.readthedocs.io/en/latest/) | 
 | [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
 | [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
-| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Flagship |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Foundational |
 | Main repository | https://github.com/monarch-initiative/mondo |
 | Responsible contact in Monarch | Chris Mungall, https://orcid.org/0000-0002-6601-2165, @cmungall |
 | Project boards |  |
@@ -188,7 +188,7 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | Documentation | [https://obophenotype.github.io/uberon/](https://obophenotype.github.io/uberon/) | 
 | [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Co-Lead |
 | [Grants](../Documentation-Schema/GrantEnum/) involved in this standard | Phenomics First |
-| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Flagship |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Foundational |
 | Main repository |  |
 | Responsible contact in Monarch | Chris Mungall, https://orcid.org/0000-0002-6601-2165, @cmungall |
 | Project boards |  |
@@ -282,7 +282,7 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | Documentation | [https://exomiser.readthedocs.io/en/latest/](https://exomiser.readthedocs.io/en/latest/) | 
 | [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
 | [Grants](../Documentation-Schema/GrantEnum/) involved in this standard |  |
-| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Flagship |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Foundational |
 | Main repository | https://github.com/exomiser/Exomiser |
 | Responsible contact in Monarch | Jules Jacobsen, https://orcid.org/0000-0002-3265-1591, @julesjacobsen |
 | Project boards |  |
@@ -297,7 +297,7 @@ the diverse ecosystem of tools, data and standards that Monarch supports.
 | Documentation | [https://monarch-initiative.github.io/monarch-ingest/](https://monarch-initiative.github.io/monarch-ingest/) | 
 | [Monarch role](../Documentation-Schema/MonarchContributionEnum/) in the development | Lead |
 | [Grants](../Documentation-Schema/GrantEnum/) involved in this standard |  |
-| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Flagship |
+| [Role in Monarchs strategic vision](../Documentation-Schema/MonarchRoleEnum/) | Foundational |
 | Main repository | https://github.com/monarch-initiative/monarch-app |
 | Responsible contact in Monarch | Kevin Schaper, https://orcid.org/0000-0003-3311-7320, @kevinschaper |
 | Project boards |  |

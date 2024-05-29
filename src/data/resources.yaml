@@ -173,7 +173,7 @@ standards:
     icon: resource-phenopackets
     grants:
       - Phenomics First
-    monarch_role: Flagship
+    monarch_role: Foundational
     description: An ISO-endorsed open standard for sharing disease and phenotype information.
     repository: https://github.com/phenopackets/phenopacket-schema
     contact:
@@ -211,7 +211,7 @@ standards:
     icon: resource-hpo
     monarch_contribution: Lead
     category: Ontology
-    monarch_role: Flagship
+    monarch_role: Foundational
     documentation: https://obophenotype.github.io/human-phenotype-ontology/
     description: Provides a standardized vocabulary of phenotypic abnormalities in human disease.
     repository: https://github.com/obophenotype/human-phenotype-ontology
@@ -248,7 +248,7 @@ standards:
     icon: resource-mondo
     monarch_contribution: Lead
     category: Ontology
-    monarch_role: Flagship
+    monarch_role: Foundational
     description: Aims to harmonize disease definitions across the world.
     repository: https://github.com/monarch-initiative/mondo
     contact:
@@ -364,7 +364,7 @@ standards:
     description: An integrated cross-species anatomy ontology.
     monarch_contribution: Co-Lead
     category: Ontology
-    monarch_role: Flagship
+    monarch_role: Foundational
     icon: resource-uberon
     url: https://obophenotype.github.io/uberon/
     documentation: https://obophenotype.github.io/uberon/
@@ -445,7 +445,7 @@ tools:
     name: Exomiser
     monarch_contribution: Lead
     category: Clinical Diagnosis
-    monarch_role: Flagship
+    monarch_role: Foundational
     icon: resource-exomiser
     url: https://exomiser.monarchinitiative.org/exomiser/
     documentation: https://exomiser.readthedocs.io/en/latest/
@@ -464,7 +464,7 @@ tools:
     description: Integrates gene, disease, and phenotype data across species.
     repository: https://github.com/monarch-initiative/monarch-app
     monarch_contribution: Lead
-    monarch_role: Flagship
+    monarch_role: Foundational
     documentation: https://monarch-initiative.github.io/monarch-ingest/
     contact:
         name: Kevin Schaper
