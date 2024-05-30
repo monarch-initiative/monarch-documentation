@@ -2403,7 +2403,7 @@
 <tbody>
 <tr>
 <td>python</td>
-<td>^3.8</td>
+<td>&gt;=3.8, &lt;4.0</td>
 </tr>
 <tr>
 <td>elasticsearch</td>
@@ -2427,15 +2427,15 @@
 </tr>
 <tr>
 <td>typer</td>
-<td>^0.7.0</td>
+<td>^0.12.3</td>
 </tr>
 <tr>
 <td>mkdocs</td>
-<td>^1.4.0</td>
+<td>&gt;=1.4</td>
 </tr>
 <tr>
 <td>mkdocs-material</td>
-<td>^8.5.6</td>
+<td>&gt;=9.5</td>
 </tr>
 <tr>
 <td>mkdocstrings</td>
@@ -2453,46 +2453,56 @@
 </table>
 <h3 id="documentation">Documentation</h3>
 <h1 id="kg-hub-downloader">KG-Hub Downloader</h1>
-<p>| <a href="https://monarch-initiative.github.io/kghub-downloader">Documentation</a> |</p>
+<p>| <a href="https://monarch-initiative.github.io/kghub-downloader">Documentation</a> | <a href="https://github.com/monarch-initiative/kghub-downloader">Repository</a> | <a href="https://pypi.org/project/kghub-downloader">PyPI</a> |</p>
 <h3 id="overview">Overview</h3>
 <p>This is a configuration based file caching downloader with initial support for http requests &amp; queries against elasticsearch.</p>
 <h3 id="installation">Installation</h3>
-<p>KGHub Downloader is available to install via pip:
+<p>KGHub Downloader is available to install via pip:</p>
 <div class="highlight"><pre><span></span><code>pip install kghub-downloader
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="configure">Configure</h3>
 <p>The downloader requires a YAML file which contains a list of target URLs to download, and local names to save those downloads.<br />
 For an example, see <a href="example/download.yaml">example/download.yaml</a></p>
-<p>Available options are:
-- *<strong>url</strong>: The URL to download from. Currently supported:<br />
-  - <code>http(s)</code>
-  - Google Cloud Storage (<code>gs://</code>)
-  - Google Drive (<code>gdrive://</code> or https://drive.google.com/...). The file must be publicly accessible.
-  - Amazon AWS S3 bucket (<code>s3://</code>)
-- <strong>local_name</strong>: The name to save the file as locally
-- <strong>tag</strong>: A tag to use to filter downloads
-- <strong>api</strong>: The API to use to download the file. Currently supported: <code>elasticsearch</code>
-- elastic search options<br />
-  - <strong>query_file</strong>: The file containing the query to run against the index
-  - <strong>index</strong>: The elastic search index for query</p>
+<p>Available options are:</p>
+<ul>
+<li>*<strong>url</strong>: The URL to download from. Currently supported:</li>
+<li><code>http(s)</code></li>
+<li><code>ftp</code><ul>
+<li>with <code>glob:</code> option to download files with specific extensions (only with ftp as of now and looks recursively).</li>
+</ul>
+</li>
+<li>Google Cloud Storage (<code>gs://</code>)</li>
+<li>Google Drive (<code>gdrive://</code> or https://drive.google.com/...). The file must be publicly accessible.</li>
+<li>Amazon AWS S3 bucket (<code>s3://</code>)</li>
+<li><strong>local_name</strong>: The name to save the file as locally</li>
+<li><strong>tag</strong>: A tag to use to filter downloads</li>
+<li><strong>api</strong>: The API to use to download the file. Currently supported: <code>elasticsearch</code></li>
+<li>elastic search options</li>
+<li><strong>query_file</strong>: The file containing the query to run against the index</li>
+<li><strong>index</strong>: The elastic search index for query</li>
+</ul>
 <blockquote>
 <p>* Note:<br />
- Google Cloud Storage URLs require that you have set up your credentials as described <a href="https://cloud.google.com/artifact-registry/docs/python/authentication#keyring-user">here</a>. You must:<br />
-- <a href="https://cloud.google.com/iam/docs/service-accounts-create">create a service account</a><br />
-- <a href="https://cloud.google.com/storage/docs/access-control/using-iam-permissions#bucket-iam">add the service account to the relevant bucket</a> and<br />
-- <a href="https://cloud.google.com/iam/docs/keys-create-delete">download a JSON key</a> for that service account.<br />
- Then, set the <code>GOOGLE_APPLICATION_CREDENTIALS</code> environment variable to point to that file.</p>
-<p>Mirorring local files to Amazon AWS S3 bucket requires the following:
- - <a href="https://portal.aws.amazon.com/">Create an AWS account</a>
- - <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started.html">Create an IAM user in AWS</a>: This enables getting the <code>AWS_ACCESS_KEY_ID</code> and <code>AWS_SECRET_ACCESS_KEY</code> needed for authentication. These two should be stored as environment variables in the user's system.
- - <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html">Create an S3 bucket</a>: This will be the destination for pushing local files.</p>
+ Google Cloud Storage URLs require that you have set up your credentials as described <a href="https://cloud.google.com/artifact-registry/docs/python/authentication#keyring-user">here</a>. You must:</p>
+<ul>
+<li><a href="https://cloud.google.com/iam/docs/service-accounts-create">create a service account</a></li>
+<li><a href="https://cloud.google.com/storage/docs/access-control/using-iam-permissions#bucket-iam">add the service account to the relevant bucket</a> and</li>
+<li><a href="https://cloud.google.com/iam/docs/keys-create-delete">download a JSON key</a> for that service account.<br />
+  Then, set the <code>GOOGLE_APPLICATION_CREDENTIALS</code> environment variable to point to that file.</li>
+</ul>
+<p>Mirorring local files to Amazon AWS S3 bucket requires the following:</p>
+<ul>
+<li><a href="https://portal.aws.amazon.com/">Create an AWS account</a></li>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started.html">Create an IAM user in AWS</a>: This enables getting the <code>AWS_ACCESS_KEY_ID</code> and <code>AWS_SECRET_ACCESS_KEY</code> needed for authentication. These two should be stored as environment variables in the user's system.</li>
+<li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html">Create an S3 bucket</a>: This will be the destination for pushing local files.</li>
+</ul>
 </blockquote>
-<p>You can also include any secrets like API keys you have set as environment variables using <code>{VARIABLE_NAME}</code>, for example:<br />
+<p>You can also include any secrets like API keys you have set as environment variables using <code>{VARIABLE_NAME}</code>, for example:</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://example.com/myfancyfile.json?key={YOUR_SECRET}&quot;</span>
 <span class="w">  </span><span class="nt">localname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myfancyfile.json</span>
 </code></pre></div>
-Note: <code>YOUR_SECRET</code> <em>MUST</em> as an environment variable, and be sure to include the {curly braces} in the url string.</p>
+<p>Note: <code>YOUR_SECRET</code> <em>MUST</em> as an environment variable, and be sure to include the {curly braces} in the url string.</p>
 <h3 id="usage">Usage</h3>
 <p>Downloader can be used directly in Python or via command line</p>
 <h4 id="in-python">In Python</h4>
@@ -2501,9 +2511,9 @@ Note: <code>YOUR_SECRET</code> <em>MUST</em> as an environment variable, and be 
 <span class="n">download_from_yaml</span><span class="p">(</span><span class="n">yaml_file</span><span class="o">=</span><span class="s2">&quot;download.yaml&quot;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="s2">&quot;data&quot;</span><span class="p">)</span>
 </code></pre></div>
 <h4 id="command-line">Command Line</h4>
-<p><div class="highlight"><pre><span></span><code>$<span class="w"> </span>downloader<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>ARGS
+<p>To download files listed in a download.yaml file:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>downloader<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>ARGS
 </code></pre></div>
-╰ Download files listed in a download.yaml file</p>
 <table>
 <thead>
 <tr>
@@ -2514,11 +2524,11 @@ Note: <code>YOUR_SECRET</code> <em>MUST</em> as an environment variable, and be 
 <tbody>
 <tr>
 <td>yaml_file</td>
-<td>A string pointing to the download.yaml file, to be parsed for things to download.<br>Defaults to <code>./download.yaml</code></td>
+<td>Path to the download.yaml file, to be parsed for things to download.<br>Defaults to <code>./download.yaml</code></td>
 </tr>
 <tr>
 <td>ignore_cache</td>
-<td>Ignore cache and download files even if they exist [false]</td>
+<td>Ignore cache and download files even if they exist (Default <code>False</code>)</td>
 </tr>
 <tr>
 <td>snippet_only</td>
@@ -2530,7 +2540,7 @@ Note: <code>YOUR_SECRET</code> <em>MUST</em> as an environment variable, and be 
 </tr>
 <tr>
 <td>mirror</td>
-<td>Remote storage URL to mirror download to. Supported buckets: Google Cloud Storage</td>
+<td>Remote storage URL to upload downloaded files to.<br/>Supported buckets: Google Cloud Storage</td>
 </tr>
 </tbody>
 </table>
@@ -2544,18 +2554,18 @@ Note: <code>YOUR_SECRET</code> <em>MUST</em> as an environment variable, and be 
 <tbody>
 <tr>
 <td>output_dir</td>
-<td>A string pointing to where to write out downloaded files.</td>
+<td>Where to save downloaded files.</td>
 </tr>
 </tbody>
 </table>
-<p>Examples:
+<p>Examples:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>downloader<span class="w"> </span>--output_dir<span class="w"> </span>example_output<span class="w"> </span>--tags<span class="w"> </span>zfin_gene_to_phenotype<span class="w"> </span>example.yaml
 $<span class="w"> </span>downloader<span class="w"> </span>--output_dir<span class="w"> </span>example_output<span class="w"> </span>--mirror<span class="w"> </span>gs://your-bucket/desired/directory
 
-<span class="c1"># Note that if your YAML file is named `download.yaml`, </span>
+<span class="c1"># Note that if your YAML file is named `download.yaml`,</span>
 <span class="c1"># the argument can be omitted from the CLI call.</span>
 $<span class="w"> </span>downloader<span class="w"> </span>--output_dir<span class="w"> </span>example_output
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="development">Development</h3>
 <h4 id="install">Install</h4>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/monarch-initiative/kghub-downloader.git
@@ -2565,7 +2575,7 @@ poetry<span class="w"> </span>install
 <h4 id="run-tests">Run tests</h4>
 <div class="highlight"><pre><span></span><code>poetry<span class="w"> </span>run<span class="w"> </span>pytest
 </code></pre></div>
-<p>NOTE: The tests require gcloud credentials to be set up as described above, using the monarch github actions service account.</p>
+<p>NOTE: The tests require gcloud credentials to be set up as described above, using the Monarch github actions service account.</p>
 
 
 

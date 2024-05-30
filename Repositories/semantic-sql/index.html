@@ -2403,7 +2403,7 @@
 <tbody>
 <tr>
 <td>python</td>
-<td>^3.8</td>
+<td>^3.8.1</td>
 </tr>
 <tr>
 <td>linkml-runtime</td>
@@ -2479,7 +2479,7 @@ to find all terms starting with <code>Abnormality</code> in <a href="https://obo
 </tr>
 </tbody>
 </table>
-<p>Ready-made SQLite3 builds can also be downloaded for any ontology in <a href="http://obofoundry.org">OBO</a>, using URLs such as https://s3.amazonaws.com/bbop-sqlite/hp.db</p>
+<p>Ready-made SQLite3 builds can also be downloaded for any ontology in <a href="http://obofoundry.org">OBO</a>, using URLs such as https://s3.amazonaws.com/bbop-sqlite/hp.db.gz</p>
 <p><a href="https://github.com/balhoff/relation-graph/">relation-graph</a> is used to pre-generate tables of <a href="https://incatools.github.io/semantic-sql/EntailedEdge/">entailed edges</a>. For example,
 all is-a and part-of ancestors of <a href="http://purl.obolibrary.org/obo/UBERON_0002389">finger</a> in Uberon:</p>
 <div class="highlight"><pre><span></span><code><span class="err">$</span><span class="w"> </span><span class="n">sqlite</span><span class="w"> </span><span class="n">db</span><span class="o">/</span><span class="n">uberon</span><span class="p">.</span><span class="n">db</span>
@@ -2536,7 +2536,7 @@ all is-a and part-of ancestors of <a href="http://purl.obolibrary.org/obo/UBERON
 </code></pre></div>
 <p>Or simply download using URL of the form:</p>
 <ul>
-<li>https://s3.amazonaws.com/bbop-sqlite/hp.db</li>
+<li>https://s3.amazonaws.com/bbop-sqlite/hp.db.gz</li>
 </ul>
 <h2 id="attaching-databases">Attaching databases</h2>
 <p>If you are using sqlite3, then databases can be attached to facilitate cross-database joins.</p>
@@ -2586,7 +2586,7 @@ and how to put things in your PATH. It does not require Docker.</p>
 <h3 id="2-use-docker">2. Use Docker</h3>
 <p>There are two docker images that can be used:</p>
 <ul>
-<li>ODK</li>
+<li><a href="https://hub.docker.com/r/obolibrary/odkfull">ODK</a></li>
 <li><a href="https://hub.docker.com/repository/docker/linkml/semantic-sql">semantic-sql</a></li>
 </ul>
 <p>The ODK image may lag behind</p>

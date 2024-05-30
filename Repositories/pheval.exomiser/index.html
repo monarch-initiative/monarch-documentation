@@ -2471,8 +2471,10 @@ poetry<span class="w"> </span>install
 <span class="w">    </span><span class="nt">cadd_version</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">hg19_data_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2302</span>
 <span class="w">    </span><span class="nt">hg19_local_frequency_path</span><span class="p">:</span><span class="w"> </span><span class="c1"># name of hg19 local frequency file </span>
+<span class="w">    </span><span class="nt">hg19_whitelist_path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2302_hg19_clinvar_whitelist.tsv.gz</span><span class="w"> </span><span class="c1"># only required for Exomiser v13.3.0 and earlier, can be left blank for Exomiser v14.0.0 onwards.</span>
 <span class="w">    </span><span class="nt">hg38_data_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2302</span>
 <span class="w">    </span><span class="nt">hg38_local_frequency_path</span><span class="p">:</span><span class="w"> </span><span class="c1"># name of hg38 local frequency file </span>
+<span class="w">    </span><span class="nt">hg38_whitelist_path</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">phenotype_data_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2302</span>
 <span class="w">    </span><span class="nt">cache_type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">cache_caffeine_spec</span><span class="p">:</span>
@@ -2484,6 +2486,7 @@ The bare minimum fields are filled to give an idea on the requirements. This is 
 <p>The Exomiser input data directories (phenotype database and variant database) should also be located in the input directory - or a symlink pointing to the location.</p>
 <p>The <code>exomiser_software_directory</code> points to the name of the Exomiser distribution directory located in the input directory.</p>
 <p>The analysis configuration file (in this case: <code>preset-exome-analysis.yml</code>) should be located within the input directory.</p>
+<p>The whitelist paths for the hg19 and hg38 dbs need only be specified for Exomiser v13.3.0 and earlier (unless specifying your own whitelist), as Exomiser v14.0.0 now includes this in the db.</p>
 <p>If using optional databases, such as REMM/CADD/local frequency the optional data input should look like so in the input
 directory:</p>
 <div class="highlight"><pre><span></span><code>├── cadd
