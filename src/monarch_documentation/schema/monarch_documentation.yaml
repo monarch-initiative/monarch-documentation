@@ -289,16 +289,16 @@ enums:
       TBD:
   monarch_role_enum:
     permissible_values:
-      Flagship:
-        description: A flagship product is a product that fulfills a strategic role for the Monarch Initiative.
+      Foundational:
+        description: A foundational product is a product that fulfills a strategic role for the Monarch Initiative.
           In particular it
           (1) *directly* supports the Monarch mission (excluding products of general utility)
           (2) has stakeholders outside of the Monarch Initiative
           (3) has stakeholders among most major member organisations of the Monarch Initiative
           An important corrolary of (3) is that all major member organisations of the Monarch Initiative should
-          feel a sense of commitment to contributing to the success of the flagship product.
+          feel a sense of commitment to contributing to the success of the foundational product.
       Core:
-        description: A core product is a product that contributes to the Monarch mission, but is not a flagship product.
+        description: A core product is a product that contributes to the Monarch mission, but is not a foundational product.
           In particular it
           (1) may support the Monarch mission in an indirect manner, such as core infrastructure for ontology lifecycle management or querying
           (2) has stakeholders outside of the Monarch Initiative
@@ -307,12 +307,12 @@ enums:
           feel a sense of commitment to contributing to the success of the core product.
       Support:
         description: A support product is a product that only indirectly contributes to the Monarch mission,
-          usually by supporting the development of a flagship or core product.
+          usually by supporting the development of a foundational or core product.
           A support product
-          (1) does not directly support the Monarch mission, but is essential for the development of a flagship or core product
+          (1) does not directly support the Monarch mission, but is essential for the development of a foundational or core product
           (2) has few stakeholders outside of the Monarch Initiative
       Research:
-        description: A research product is a product that supports our own research efforts. The research outcome may or may not be used in a flagship, core or support product.
+        description: A research product is a product that supports our own research efforts. The research outcome may or may not be used in a foundational product, core or support product.
           A research product
           (1) does not directly support the Monarch mission, but leads to insights that support our mission
           (2) has no stakeholders outside of the Monarch Initiative (the research itself may!)
