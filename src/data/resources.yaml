@@ -664,6 +664,20 @@ tools:
         email: cjmungall@lbl.gov
         orcid: https://orcid.org/0000-0002-6601-2165
         github: "@cmungall"
+  - id: https://github.com/monarch-initiative/talisman
+    name: TALISMAN
+    category: Data Curation
+    documentation: https://monarch-initiative.github.io/talisman/
+    monarch_contribution: Lead
+    monarch_role: Core
+    url: https://github.com/monarch-initiative/talisman/
+    repository: https://github.com/monarch-initiative/talisman/
+    description: TALISMAN is a Python package for summarizing gene set functions using large language models (LLMs).
+    contact:
+        name: Marcin Joachimiak
+        email: MJoachimiak@lbl.gov
+        orcid: https://orcid.org/0000-0001-8175-045X
+        github: "@realmarcin"
   - id: https://github.com/monarch-initiative/curate-gpt
     name: CurateGPT
     category: Data Curation
