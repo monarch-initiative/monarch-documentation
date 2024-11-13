@@ -2403,7 +2403,7 @@
 <tbody>
 <tr>
 <td>python</td>
-<td>&gt;=3.8, &lt;4.0</td>
+<td>&gt;=3.9, &lt;4.0</td>
 </tr>
 <tr>
 <td>elasticsearch</td>
@@ -2430,24 +2430,20 @@
 <td>^0.12.3</td>
 </tr>
 <tr>
-<td>mkdocs</td>
-<td>&gt;=1.4</td>
-</tr>
-<tr>
-<td>mkdocs-material</td>
-<td>&gt;=9.5</td>
-</tr>
-<tr>
-<td>mkdocstrings</td>
-<td>{'extras': ['python'], 'version': '^0.20.0'}</td>
-</tr>
-<tr>
 <td>gdown</td>
 <td>&gt;=4.7.1</td>
 </tr>
 <tr>
 <td>boto3</td>
 <td>&gt;=1.34.35</td>
+</tr>
+<tr>
+<td>pydantic</td>
+<td>^2.9.1</td>
+</tr>
+<tr>
+<td>pydantic-settings</td>
+<td>^2.5.2</td>
 </tr>
 </tbody>
 </table>
@@ -2474,13 +2470,16 @@ For an example, see <a href="example/download.yaml">example/download.yaml</a></p
 <li>Google Cloud Storage (<code>gs://</code>)</li>
 <li>Google Drive (<code>gdrive://</code> or https://drive.google.com/...). The file must be publicly accessible.</li>
 <li>Amazon AWS S3 bucket (<code>s3://</code>)</li>
-<li><strong>local_name</strong>: The name to save the file as locally</li>
-<li><strong>tag</strong>: A tag to use to filter downloads</li>
-<li><strong>api</strong>: The API to use to download the file. Currently supported: <code>elasticsearch</code></li>
-<li>elastic search options</li>
-<li><strong>query_file</strong>: The file containing the query to run against the index</li>
-<li><strong>index</strong>: The elastic search index for query</li>
+<li>GitHub Release Assets (<code>git://RepositoryOwner/RepositoryName</code>)</li>
 </ul>
+<p>If the URL includes a name in <code>{CURLY_BRACES}</code>, it will be expanded from environment variables.
+- <strong>glob</strong>: An optional glob pattern to limit downloading files (FTP only)
+- <strong>local_name</strong>: The name to save the file as locally
+- <strong>tag</strong>: A tag to use to filter downloads
+- <strong>api</strong>: The API to use to download the file. Currently supported: <code>elasticsearch</code>
+- elastic search options
+  - <strong>query_file</strong>: The file containing the query to run against the index
+  - <strong>index</strong>: The elastic search index for query</p>
 <blockquote>
 <p>* Note:<br />
  Google Cloud Storage URLs require that you have set up your credentials as described <a href="https://cloud.google.com/artifact-registry/docs/python/authentication#keyring-user">here</a>. You must:</p>

@@ -1776,6 +1776,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#documentation" class="md-nav__link">
     Documentation
   </a>
@@ -2327,6 +2334,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    Dependencies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#documentation" class="md-nav__link">
     Documentation
   </a>
@@ -2377,12 +2391,72 @@
 </tr>
 </tbody>
 </table>
+<h3 id="dependencies">Dependencies</h3>
+<p>External Dependencies</p>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>python</td>
+<td>^3.9</td>
+</tr>
+<tr>
+<td>boto3</td>
+<td>^1.35.26</td>
+</tr>
+<tr>
+<td>click</td>
+<td>^8.1.7</td>
+</tr>
+<tr>
+<td>kgx</td>
+<td>^2.4.2</td>
+</tr>
+<tr>
+<td>requests</td>
+<td>^2.32.3</td>
+</tr>
+<tr>
+<td>sh</td>
+<td>^2.0.7</td>
+</tr>
+<tr>
+<td>mkdocs</td>
+<td>^1.6.1</td>
+</tr>
+<tr>
+<td>linkml</td>
+<td>^1.8.3</td>
+</tr>
+<tr>
+<td>mkdocs-material</td>
+<td>^9.5.37</td>
+</tr>
+<tr>
+<td>mkdocs-table-reader-plugin</td>
+<td>^3.1.0</td>
+</tr>
+</tbody>
+</table>
 <h3 id="documentation">Documentation</h3>
 <h1 id="knowledge-graph-hub-web-site-and-metadata-generation">Knowledge Graph Hub: Web Site and Metadata Generation</h1>
 <p>This repository contains the code for assembling the Knowledge Graph Hub (KG-Hub) web site.</p>
 <p>Visit the site at <a href="https://kghub.org/">https://kghub.org/</a>.</p>
-<p>The <code>utils</code> directory contains utilities for tracking metadata on all graphs on KG-Hub, with the major KG projects listed in <code>projects.yaml</code>.</p>
-<p>Graph collections are modeled using <a href="https://github.com/linkml/linkml">LinkML</a>. See <code>utils/models/</code> for more details.</p>
+<h2 id="for-developers">For Developers</h2>
+<p>This project uses <code>poetry</code>. After cloning the repository, it may be installed by running <code>poetry install</code> from its root directory.</p>
+<p>To build the site, do the following:</p>
+<ul>
+<li>Install <a href="https://python-poetry.org/">Poetry</a> if needed.</li>
+<li>Clone the repository</li>
+<li>Change to the root directory of the cloned repo, then run <code>poetry install</code>.</li>
+<li>Change to the <code>docs</code> directory and run <code>build_site.sh</code>. This will retrieve recent metadata.</li>
+<li>Run <code>mkdocs gh-deploy</code> to deploy the site.</li>
+</ul>
 <h2 id="updates">Updates</h2>
 <p>To request addition of a new KG project to this site, please do one of the following:</p>
 <ol>

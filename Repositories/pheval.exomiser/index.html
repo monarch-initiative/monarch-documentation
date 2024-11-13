@@ -2439,7 +2439,7 @@
 </tr>
 <tr>
 <td>pheval</td>
-<td>^0.3.1</td>
+<td>^0.4.0</td>
 </tr>
 </tbody>
 </table>
@@ -2447,7 +2447,10 @@
 <h1 id="exomiser-runner-for-pheval">Exomiser Runner for PhEval</h1>
 <p>This is the Exomiser plugin for PhEval. With this plugin, you can leverage the variant prioritisation tool, Exomiser, to run the PhEval pipeline seamlessly. Detailed documentation on how to set up and run the PhEval Makefile pipeline with the Exomiser runner can be found <a href="https://monarch-initiative.github.io/pheval/exomiser_pipeline/">here</a>. The setup process for running the full PhEval Makefile pipeline differs from setting up for a single run. The Makefile pipeline creates directory structures for corpora and configurations to handle multiple run configurations. Detailed instructions on setting up the appropriate directory layout, including the input directory and test data directory, can be found here.</p>
 <h2 id="installation">Installation</h2>
-<p>Clone the pheval.exomiser repo and set up the poetry environment:</p>
+<p>You can install the Exomiser directly with PyPi (recommended):</p>
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>pheval.exomiser
+</code></pre></div>
+<p>Alternatively you can clone the pheval.exomiser repo and set up the poetry environment:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/monarch-initiative/pheval.exomiser.git
 <span class="nb">cd</span><span class="w"> </span>pheval.exomiser
 poetry<span class="w"> </span>shell
@@ -2478,6 +2481,7 @@ poetry<span class="w"> </span>install
 <span class="w">    </span><span class="nt">phenotype_data_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2302</span>
 <span class="w">    </span><span class="nt">cache_type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">cache_caffeine_spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">output_formats</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">JSON</span><span class="p p-Indicator">,</span><span class="nv">HTML</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># options include HTML, JSON, TSV_VARIANT, TSV_GENE, VCF</span>
 <span class="w">  </span><span class="nt">post_process</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">score_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">combinedScore</span>
 <span class="w">    </span><span class="nt">sort_order</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DESCENDING</span>
@@ -2487,6 +2491,7 @@ The bare minimum fields are filled to give an idea on the requirements. This is 
 <p>The <code>exomiser_software_directory</code> points to the name of the Exomiser distribution directory located in the input directory.</p>
 <p>The analysis configuration file (in this case: <code>preset-exome-analysis.yml</code>) should be located within the input directory.</p>
 <p>The whitelist paths for the hg19 and hg38 dbs need only be specified for Exomiser v13.3.0 and earlier (unless specifying your own whitelist), as Exomiser v14.0.0 now includes this in the db.</p>
+<p>To save on diskspace we recommend limiting the Exomiser output to JSON, this can be specified by setting the <code>output_formats</code> field in the <code>config.yaml</code> to [JSON]</p>
 <p>If using optional databases, such as REMM/CADD/local frequency the optional data input should look like so in the input
 directory:</p>
 <div class="highlight"><pre><span></span><code>├── cadd
@@ -2543,7 +2548,7 @@ directory:</p>
     └── ReMM.v{{REMM-VERSION}}.hg38.tsv.gz
 </code></pre></div></p>
 <h3 id="setting-up-the-testdata-directory">Setting up the testdata directory</h3>
-<p>The Exomiser plugin for PhEval accepts phenopackets and vcf files as an input for running Exomiser. The plugin can be run in <code>phenotype_only</code> mode, where only phenopackets are required as an input, however, this <em>must</em> be specified in the <code>config.yaml</code>.</p>
+<p>The Exomiser plugin for PhEval accepts phenopackets and vcf files as an input for running Exomiser. The plugin can be run in <code>phenotype_only</code> mode, where only phenopackets are required as an input, however, this <em>must</em> be specified in the <code>config.yaml</code> by setting <code>variant_analysis: False</code></p>
 <p>The testdata directory should include subdirectories named <code>phenopackets</code> and <code>vcf</code> if running with variant prioritisation.</p>
 <p>e.g., </p>
 <div class="highlight"><pre><span></span><code>├── testdata_dir

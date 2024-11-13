@@ -2423,7 +2423,7 @@
 </tr>
 <tr>
 <td>bioc</td>
-<td>&gt;=2.0.post5</td>
+<td>&gt;=2.0</td>
 </tr>
 <tr>
 <td>cachier</td>
@@ -2435,19 +2435,11 @@
 </tr>
 <tr>
 <td>fastapi</td>
-<td>{'version': '&gt;=0.88.0', 'optional': True}</td>
+<td>{'version': '&gt;=0.115.0', 'extras': ['web'], 'optional': True}</td>
 </tr>
 <tr>
 <td>gilda</td>
 <td>&gt;=1.0.0</td>
-</tr>
-<tr>
-<td>gpt4</td>
-<td>&gt;=0.0.1</td>
-</tr>
-<tr>
-<td>huggingface_hub</td>
-<td>{'version': '&gt;=0.15.1', 'extras': ['huggingface'], 'optional': True}</td>
 </tr>
 <tr>
 <td>inflect</td>
@@ -2459,39 +2451,27 @@
 </tr>
 <tr>
 <td>linkml</td>
-<td>^1.5.7</td>
+<td>^1.8.3</td>
 </tr>
 <tr>
 <td>linkml-owl</td>
 <td>^0.3.0</td>
 </tr>
 <tr>
-<td>llm</td>
-<td>&gt;=0.8</td>
-</tr>
-<tr>
-<td>llm-gpt4all</td>
-<td>{'version': '&gt;=0.2', 'extras': ['gpt4all'], 'optional': True}</td>
-</tr>
-<tr>
 <td>myst-parser</td>
 <td>{'version': '&gt;=0.18.1', 'extras': ['docs'], 'optional': True}</td>
-</tr>
-<tr>
-<td>nlpcloud</td>
-<td>&gt;=1.0.39</td>
 </tr>
 <tr>
 <td>oaklib</td>
 <td>&gt;=0.5.28</td>
 </tr>
 <tr>
-<td>openai</td>
-<td>^1.10.0</td>
-</tr>
-<tr>
 <td>pydantic</td>
 <td>&gt;=2.4.0</td>
+</tr>
+<tr>
+<td>python-multipart</td>
+<td>{'version': '&gt;=0.0.7', 'extras': ['web'], 'optional': True}</td>
 </tr>
 <tr>
 <td>recipe-scrapers</td>
@@ -2520,14 +2500,6 @@
 <tr>
 <td>sphinx-rtd-theme</td>
 <td>{'version': '&gt;=1.0.0', 'extras': ['docs'], 'optional': True}</td>
-</tr>
-<tr>
-<td>streamlit</td>
-<td>&gt;=1.22.0</td>
-</tr>
-<tr>
-<td>textract</td>
-<td>{'version': '*', 'extras': ['textract'], 'optional': True}</td>
 </tr>
 <tr>
 <td>tiktoken</td>
@@ -2561,10 +2533,23 @@
 <td>frontend</td>
 <td>^0.0.3</td>
 </tr>
+<tr>
+<td>litellm</td>
+<td>^1.44.28</td>
+</tr>
+<tr>
+<td>diskcache</td>
+<td>^5.6.3</td>
+</tr>
+<tr>
+<td>pymupdf</td>
+<td>^1.24.9</td>
+</tr>
 </tbody>
 </table>
 <h3 id="documentation">Documentation</h3>
 <h1 id="ontogpt_1">OntoGPT</h1>
+<p><img alt="OntoGPT Logo" src="/images/ontogpt_logo_3.jpg" /></p>
 <p><a href="https://zenodo.org/badge/latestdoi/13996/monarch-initiative/ontogpt"><img alt="DOI" src="https://zenodo.org/badge/13996/monarch-initiative/ontogpt.svg" /></a>
 <img alt="PyPI" src="https://img.shields.io/pypi/v/ontogpt" /></p>
 <h2 id="introduction">Introduction</h2>
@@ -2606,6 +2591,29 @@ ontogpt<span class="w"> </span>extract<span class="w"> </span>-i<span class="w">
 <div class="highlight"><pre><span></span><code>web-ontogpt
 </code></pre></div>
 <p>NOTE: We do not recommend hosting this webapp publicly without authentication.</p>
+<h2 id="model-apis">Model APIs</h2>
+<p>OntoGPT uses the <code>litellm</code> package (<a href="https://litellm.vercel.app/">https://litellm.vercel.app/</a>) to interface with LLMs.</p>
+<p>This means most APIs are supported, including OpenAI, Azure, Anthropic, Mistral, Replicate, and beyond.</p>
+<p>The model name to use may be found from the command <code>ontogpt list-models</code> - use the name in the first column with the <code>--model</code> option.</p>
+<p>In most cases, this will require setting the API key for a particular service as above:</p>
+<div class="highlight"><pre><span></span><code>runoak<span class="w"> </span>set-apikey<span class="w"> </span>-e<span class="w"> </span>anthropic-key<span class="w"> </span>&lt;your<span class="w"> </span>anthropic<span class="w"> </span>api<span class="w"> </span>key&gt;
+</code></pre></div>
+<p>Some endpoints, such as OpenAI models through Azure, require setting additional details. These may be set similarly:</p>
+<div class="highlight"><pre><span></span><code>runoak<span class="w"> </span>set-apikey<span class="w"> </span>-e<span class="w"> </span>azure-key<span class="w"> </span>&lt;your<span class="w"> </span>azure<span class="w"> </span>api<span class="w"> </span>key&gt;
+runoak<span class="w"> </span>set-apikey<span class="w"> </span>-e<span class="w"> </span>azure-base<span class="w"> </span>&lt;your<span class="w"> </span>azure<span class="w"> </span>endpoint<span class="w"> </span>url&gt;
+runoak<span class="w"> </span>set-apikey<span class="w"> </span>-e<span class="w"> </span>azure-version<span class="w"> </span>&lt;your<span class="w"> </span>azure<span class="w"> </span>api<span class="w"> </span>version,<span class="w"> </span>e.g.<span class="w"> </span><span class="s2">&quot;2023-05-15&quot;</span>&gt;
+</code></pre></div>
+<p>These details may also be set as environment variables as follows:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">AZURE_API_KEY</span><span class="o">=</span><span class="s2">&quot;my-azure-api-key&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">AZURE_API_BASE</span><span class="o">=</span><span class="s2">&quot;https://example-endpoint.openai.azure.com&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">AZURE_API_VERSION</span><span class="o">=</span><span class="s2">&quot;2023-05-15&quot;</span>
+</code></pre></div>
+<h2 id="open-models">Open Models</h2>
+<p>Open LLMs may be retrieved and run through the <code>ollama</code> package (<a href="https://ollama.com/">https://ollama.com/</a>).</p>
+<p>You will need to install <code>ollama</code> (see the <a href="https://github.com/ollama/ollama">GitHub repo</a>), and you may need to start it as a service with a command like <code>ollama serve</code> or <code>sudo systemctl start ollama</code>.</p>
+<p>Then retrieve a model with <code>ollama pull &lt;modelname&gt;</code>, e.g., <code>ollama pull llama3</code>.</p>
+<p>The model may then be used in OntoGPT by prefixing its name with <code>ollama/</code>, e.g., <code>ollama/llama3</code>, along with the <code>--model</code> option.</p>
+<p>Some ollama models may not be listed in <code>ontogpt list-models</code> but the full list of downloaded LLMs can be seen with <code>ollama list</code> command.</p>
 <h2 id="evaluations">Evaluations</h2>
 <p>OntoGPT's functions have been evaluated on test data. Please see the full documentation for details on these evaluations and how to reproduce them.</p>
 <h2 id="related-projects">Related Projects</h2>

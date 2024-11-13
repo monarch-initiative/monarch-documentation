@@ -2469,11 +2469,68 @@
 <td>scikit-learn</td>
 <td>^1.4.0</td>
 </tr>
+<tr>
+<td>duckdb</td>
+<td>^1.0.0</td>
+</tr>
 </tbody>
 </table>
 <h3 id="documentation">Documentation</h3>
 <h1 id="pheval-phenotypic-inference-evaluation-framework">PhEval - Phenotypic Inference Evaluation Framework</h1>
-<p>There is currently no empirical framework to evaluate the performance of phenotype matching and prioritization tools, much needed to guide tuning for cross species inference. Many algorithms are evaluated using simulations, which may fail to capture real-world scenarios. This gap presents a number of problems: it is difficult to optimize algorithms if we do not know which choices lead to better results; performance may be sensitive to factors that are subject to change, such as ontology structure or annotation completeness. We will develop a modular Phenotypic Inference Evaluation Framework, PhEval and use it to optimize our own algorithms, as well as deliver it as a community resource.</p>
+<p><img alt="PyPI" src="https://img.shields.io/pypi/v/pheval" />
+<img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/monarch-initiative/pheval/pypi-publish.yml?branch=main" />
+<img alt="License" src="https://img.shields.io/github/license/monarch-initiative/pheval" />
+<img alt="Python Version" src="https://img.shields.io/badge/python-3.8%2B-blue" />
+<img alt="Issues" src="https://img.shields.io/github/issues/monarch-initiative/pheval" /></p>
+<h2 id="overview">Overview</h2>
+<p>The absence of standardised benchmarks and data standardisation for Variant and Gene Prioritisation Algorithms (VGPAs) presents a significant challenge in the field of genomic research. To address this, we developed PhEval, a novel framework designed to streamline the evaluation of VGPAs that incorporate phenotypic data. PhEval offers several key benefits:</p>
+<ul>
+<li>Automated Processes: Reduces manual effort by automating various evaluation tasks, thus enhancing efficiency.</li>
+<li>Standardisation: Ensures consistency and comparability in evaluation methodologies, leading to more reliable and standardised assessments.</li>
+<li>Reproducibility: Facilitates reproducibility in research by providing a standardised platform, allowing for consistent validation of algorithms.</li>
+<li>Comprehensive Benchmarking: Enables thorough benchmarking of algorithms, providing well-founded comparisons and deeper insights into their performance. </li>
+</ul>
+<p>PhEval is a valuable tool for researchers looking to improve the accuracy and reliability of VGPA evaluations through a structured and standardised approach.</p>
+<p>For more information please see the full <a href="https://monarch-initiative.github.io/pheval/">documentation</a>.</p>
+<h2 id="download-and-installation">Download and Installation</h2>
+<ol>
+<li>Ensure you have Python 3.8 or greater installed.</li>
+<li>Install with <code>pip</code>:
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>pheval
+</code></pre></div></li>
+<li>See list of all PhEval utility commands:
+<div class="highlight"><pre><span></span><code>pheval-utils<span class="w"> </span>--help
+</code></pre></div></li>
+</ol>
+<h2 id="usage">Usage</h2>
+<p>The PhEval CLI offers a variety of commands categorised into two main types: <strong>Runner Implementations</strong> and <strong>Utility Commands</strong>. Below is an overview of each category, detailing how they can be utilised to perform various tasks within PhEval.</p>
+<h3 id="runner-implementations">Runner Implementations</h3>
+<p>The primary command used within PhEval is <code>pheval run</code>. This command is responsible for executing concrete VGPA runner implementations, that we sometimes term as plugins. By using pheval run, users can leverage these runner implementations to: execute the VGPA on a set of test corpora, produce tool-specific result outputs, and post-process tool-specific outputs to PhEval standardised TSV outputs.</p>
+<p>Some concrete PhEval runner implementations include the <a href="https://github.com/monarch-initiative/pheval.exomiser">Exomiser runner</a> and the <a href="https://github.com/monarch-initiative/pheval.phen2gene">Phen2Gene runner</a>. The full list of currently implemented runners can be found <a href="https://monarch-initiative.github.io/pheval/plugins/">here</a></p>
+<p>Please read the <a href="https://monarch-initiative.github.io/pheval/developing_a_pheval_plugin/">documentation</a> for a step-by-step for creating your own PhEval plugin. </p>
+<h3 id="utility-commands">Utility Commands</h3>
+<p>In addition to the main <code>run</code> command, PhEval provides a set of utility commands designed to enhance the overall functionality of the CLI. These commands can be used to set up and configure experiments, streamline data preparation, and benchmark the performance of various VGPA runner implementations. By utilising these utilities, users can optimise their experimental workflows, ensure reproducibility, and compare the efficiency and accuracy of different approaches. The utility commands offer a range of options that facilitate the customisation and fine-tuning to suit diverse research objectives.</p>
+<h4 id="example-usage">Example Usage</h4>
+<p>To add noise to an existing corpus of phenopackets, this could be used to assess the robustness of VGPAs when less relevant or unreliable phenotype data is introduced:
+<div class="highlight"><pre><span></span><code>pheval-utils<span class="w"> </span>scramble-phenopackets<span class="w"> </span>--phenopacket-dir<span class="w"> </span>/phenopackets<span class="w"> </span>--scramble-factor<span class="w"> </span><span class="m">0</span>.5<span class="w"> </span>--output-dir<span class="w"> </span>/scrambled_phenopackets_0.5
+</code></pre></div></p>
+<p>To update the gene symbols and identifiers to a specific namespace:
+<div class="highlight"><pre><span></span><code>pheval-utils<span class="w"> </span>update-phenopackets<span class="w"> </span>--phenopacket-dir<span class="w"> </span>/phenopackets<span class="w"> </span>--output-dir<span class="w"> </span>/updated_phenopackets<span class="w"> </span>--gene-identifier<span class="w"> </span>ensembl_id
+</code></pre></div></p>
+<p>To prepare VCF files for a corpus of phenopackets, spiking in the known causative variants:
+<div class="highlight"><pre><span></span><code>pheval-utils<span class="w"> </span>create-spiked-vcfs<span class="w"> </span>--phenopacket-dir<span class="w"> </span>/phenopackets<span class="w"> </span>--hg19-template-vcf<span class="w"> </span>/template_hg19.vcf<span class="w"> </span>--hg38-template-vcf<span class="w"> </span>/template_hg38.vcf<span class="w"> </span>--output-dir<span class="w"> </span>/vcf
+</code></pre></div></p>
+<p>Alternatively, you can wrap all corpus preparatory commands into a single step. Specifying <code>--variant-analysis</code>/<code>--gene-analysis</code>/<code>--disease-analysis</code> will check the phenopackets for complete records documenting the known entities. If template vcf(s) are provided this will spike VCFs with the known variant for the corpus. If a <code>--gene-identifier</code> is specified then the corpus of phenopackets is updated.
+<div class="highlight"><pre><span></span><code>pheval-utils<span class="w"> </span>prepare-corpus<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--phenopacket-dir<span class="w"> </span>/phenopackets<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--variant-analysis<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--gene-analysis<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--gene-identifier<span class="w"> </span>ensembl_id<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--hg19-template-vcf<span class="w"> </span>/template_hg19.vcf<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--hg38-template-vcf<span class="w"> </span>/template_hg38.vcf<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--output-dir<span class="w"> </span>/vcf
+</code></pre></div></p>
+<p>See the <a href="https://monarch-initiative.github.io/pheval/executing_a_benchmark/">documentation</a> for instructions on benchmarking and evaluating the performance of various VGPAs.</p>
 
 
 
