@@ -856,6 +856,12 @@ tools:
         email: kevin@tislab.org
         orcid: https://orcid.org/0000-0003-3311-7320
         github: "@kevinschaper"
+  - id: https://github.com/monarch-initiative/pheval.llm
+    name: pheval.llm
+  - id: https://github.com/monarch-initiative/
+    name: phenopacket2prompt
+  - id: https://github.com/monarch-initiative/automaxo/
+    name: AutoMAxO
 documentations:
   - id: https://oboacademy.github.io/obook/
     name: OBO Academy
@@ -968,4 +974,9 @@ repositories:
     name: Fenominal
   - id: https://github.com/monarch-initiative/monarch-ontology-dashboard
     name: Monarch Ontology Dashboard
-
+  - id: https://github.com/monarch-initiative/pheval.llm
+    name: pheval.llm
+  - id: https://github.com/monarch-initiative/
+    name: phenopacket2prompt
+  - id: https://github.com/monarch-initiative/automaxo/
+    name: AutoMAxO
