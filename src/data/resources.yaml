@@ -858,10 +858,43 @@ tools:
         github: "@kevinschaper"
   - id: https://github.com/monarch-initiative/pheval.llm
     name: pheval.llm
-  - id: https://github.com/monarch-initiative/
+    category: Clinical Diagnostics, LLM
+    description: LLM Benchmarking in differential diagnostics.
+    repository: https://github.com/monarch-initiative/pheval.llm
+    documentation: https://monarch-initiative.github.io/pheval.llm
+    monarch_role: Support
+    monarch_contribution: Co-Lead
+    contact:
+        name: Leonardo Chimirri
+        email: leonardo.chimirri@bih-charite.de
+        orcid: https://orcid.org/0000-0002-6912-8518
+        github: "@leokim-l"
+  - id: https://github.com/monarch-initiative/phenopacket2prompt
     name: phenopacket2prompt
+    category: Diagnostics, LLM, phenopackets
+    description: Creation of prompts from phenopackets, in multiple languages, intended for prompting LLMs.
+    repository: https://github.com/monarch-initiative/phenopacket2prompt
+    documentation: https://monarch-initiative.github.io/phenopacket2prompt/
+    monarch_role: Support
+    monarch_contribution: Co-Lead
+    contact:
+        name: Leonardo Chimirri
+        email: leonardo.chimirri@bih-charite.de
+        orcid: https://orcid.org/0000-0002-6912-8518
+        github: "@leokim-l"
   - id: https://github.com/monarch-initiative/automaxo/
     name: AutoMAxO
+    category: Data Curation, LLM, Ontology
+    description: Streamline the creation of ontology annotations of MAxO via LLMs.
+    repository: https://github.com/monarch-initiative/automaxo/
+    documentation: https://monarch-initiative.github.io/automaxo
+    monarch_role: Core
+    monarch_contribution: Lead
+    contact:
+        name: @Enock Niyonkuru
+        email: mailto:enockniyonkuru250@gmail.com
+        orcid: https://orcid.org/0000-0002-7981-8133
+        github: "@enockniyonkuru"
 documentations:
   - id: https://oboacademy.github.io/obook/
     name: OBO Academy
