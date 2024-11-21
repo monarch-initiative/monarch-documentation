@@ -858,7 +858,7 @@ tools:
         github: "@kevinschaper"
   - id: https://github.com/monarch-initiative/pheval.llm
     name: pheval.llm
-    category: Clinical Diagnostics, LLM
+    category: Benchmarking
     description: LLM Benchmarking in differential diagnostics.
     repository: https://github.com/monarch-initiative/pheval.llm
     documentation: https://monarch-initiative.github.io/pheval.llm
@@ -871,7 +871,7 @@ tools:
         github: "@leokim-l"
   - id: https://github.com/monarch-initiative/phenopacket2prompt
     name: phenopacket2prompt
-    category: Diagnostics, LLM, phenopackets
+    category: Clinical Diagnosis
     description: Creation of prompts from phenopackets, in multiple languages, intended for prompting LLMs.
     repository: https://github.com/monarch-initiative/phenopacket2prompt
     documentation: https://monarch-initiative.github.io/phenopacket2prompt/
@@ -884,7 +884,7 @@ tools:
         github: "@leokim-l"
   - id: https://github.com/monarch-initiative/automaxo/
     name: AutoMAxO
-    category: Data Curation, LLM, Ontology
+    category: Data Curation
     description: Streamline the creation of ontology annotations of MAxO via LLMs.
     repository: https://github.com/monarch-initiative/automaxo/
     documentation: https://monarch-initiative.github.io/automaxo
