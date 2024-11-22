@@ -1009,7 +1009,7 @@ repositories:
     name: Monarch Ontology Dashboard
   - id: https://github.com/monarch-initiative/pheval.llm
     name: pheval.llm
-  - id: https://github.com/monarch-initiative/
+  - id: https://github.com/monarch-initiative/phenopacket2prompt
     name: phenopacket2prompt
   - id: https://github.com/monarch-initiative/automaxo/
     name: AutoMAxO
