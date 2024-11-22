@@ -2070,8 +2070,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../phenopacket2prompt/" class="md-nav__link">
+        phenopacket2prompt
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../pheval.exomiser/" class="md-nav__link">
         pheval.exomiser
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pheval.llm/" class="md-nav__link">
+        pheval.llm
       </a>
     </li>
   
@@ -2511,52 +2539,23 @@ For an example, see <a href="example/download.yaml">example/download.yaml</a></p
 </code></pre></div>
 <h4 id="command-line">Command Line</h4>
 <p>To download files listed in a download.yaml file:</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>downloader<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>ARGS
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>downloader<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>YAML_FILE<span class="o">]</span>
 </code></pre></div>
-<table>
-<thead>
-<tr>
-<th>OPTIONS</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>yaml_file</td>
-<td>Path to the download.yaml file, to be parsed for things to download.<br>Defaults to <code>./download.yaml</code></td>
-</tr>
-<tr>
-<td>ignore_cache</td>
-<td>Ignore cache and download files even if they exist (Default <code>False</code>)</td>
-</tr>
-<tr>
-<td>snippet_only</td>
-<td>Downloads only the first 5 kB of each uncompressed source, for testing and file checks</td>
-</tr>
-<tr>
-<td>tags</td>
-<td>Limit to only downloads with this tag</td>
-</tr>
-<tr>
-<td>mirror</td>
-<td>Remote storage URL to upload downloaded files to.<br/>Supported buckets: Google Cloud Storage</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>ARGUMENTS</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>output_dir</td>
-<td>Where to save downloaded files.</td>
-</tr>
-</tbody>
-</table>
+<p><strong>Arguments</strong>:</p>
+<ul>
+<li><code>[YAML_FILE]</code>: List of files to download in YAML format  [default: download.yaml]</li>
+</ul>
+<p><strong>Options</strong>:</p>
+<ul>
+<li><code>--output-dir TEXT</code>: Path to output directory  [default: .]</li>
+<li><code>--ignore-cache / --no-ignore-cache</code>: Ignoring already downloaded files and download again  [default: no-ignore-cache]</li>
+<li><code>--progress / --no-progress</code>: Show progress for individual downloads  [default: progress]</li>
+<li><code>--fail-on-error / --no-fail-on-error</code>: Do not attempt to download more files if one raises an error  [default: no-fail-on-error]</li>
+<li><code>--snippet-only / --no-snippet-only</code>: Only download a snippet of the file. [HTTP(S) resources only.  [default: no-snippet-only]</li>
+<li><code>--verbose / --no-verbose</code>: Show verbose output  [default: no-verbose]</li>
+<li><code>--tags TEXT</code>: Optional list of tags to limit downloading to</li>
+<li><code>--mirror TEXT</code>: Optional remote storage URL to mirror download to. Supported buckets: Google Cloud Storage</li>
+</ul>
 <p>Examples:</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>downloader<span class="w"> </span>--output_dir<span class="w"> </span>example_output<span class="w"> </span>--tags<span class="w"> </span>zfin_gene_to_phenotype<span class="w"> </span>example.yaml
 $<span class="w"> </span>downloader<span class="w"> </span>--output_dir<span class="w"> </span>example_output<span class="w"> </span>--mirror<span class="w"> </span>gs://your-bucket/desired/directory
