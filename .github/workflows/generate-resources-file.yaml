@@ -27,7 +27,7 @@ jobs:
         run: poetry install
 
       - name: Generate Resources File
-        run: make gen-monarch-resources
+        run: make gen-monarch-resources -B
 
       - name: Commit changes
         run: |
