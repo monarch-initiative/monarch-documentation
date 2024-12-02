@@ -28,7 +28,7 @@ jobs:
     
     - name: Build and Deploy Documentation.
       run: |
-        make build-docs
+        make build-docs -B
         poetry run mkdocs gh-deploy --force
       env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
