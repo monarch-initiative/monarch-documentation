@@ -842,14 +842,14 @@ tools:
         email: kevin@tislab.org
         orcid: https://orcid.org/0000-0003-3311-7320
         github: "@kevinschaper"
-  - id: https://github.com/monarch-initiative/monarch-assistant
-    name: Monarch Assistant
+  - id: https://github.com/monarch-initiative/phenomics-assistant
+    name: Phenomics Assistant
     monarch_role: Core
     category: Clinical Diagnosis
     description: An LLM retrieval augmented generation (RAG) agent for Monarch Initiative.
-    repository: https://github.com/monarch-initiative/monarch-assistant
-    documentation: https://github.com/monarch-initiative/monarch-assistant
-    url: https://github.com/monarch-initiative/monarch-assistant
+    repository: https://github.com/monarch-initiative/phenomics-assistant
+    documentation: https://github.com/monarch-initiative/phenomics-assistant
+    url: https://github.com/monarch-initiative/phenomics-assistant
     monarch_contribution: Lead
     contact:
         name: Kevin Schaper
