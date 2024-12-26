@@ -842,6 +842,20 @@ tools:
         email: kevin@tislab.org
         orcid: https://orcid.org/0000-0003-3311-7320
         github: "@kevinschaper"
+  - id: https://github.com/monarch-initiative/monarchr
+    name: monarchr
+    monarch_role: Core
+    category: Ontology Use
+    description: R package for easy access, manipulation, and analysis of the Monarch Initiative or other KGX-formatted knowledge graphs. 
+    repository: https://github.com/monarch-initiative/monarchr
+    documentation: https://github.com/monarch-initiative/monarchr
+    url: https://github.com/monarch-initiative/monarchr
+    monarch_contribution: Lead
+    contact:
+        name: Shawn O'Neil
+        email: shawn@tislab.org
+        orcid: https://orcid.org/0000-0001-6220-7080
+        github: "@oneilsh"
   - id: https://github.com/monarch-initiative/phenomics-assistant
     name: Phenomics Assistant
     monarch_role: Core
