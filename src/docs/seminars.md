@@ -11,8 +11,6 @@ To join the Monarch Seminar Series, please email info@monarchinitiative.org with
 ### Schedule 
 | Date   | Topic   | Presenter(s) | Slides | Recording |
 | -- | -- | -- | -- | --|
-| Mar 18, 2025 | Human Phenotype Ontology  | Peter Robinson & Nico Matenzoglu |    |
-| Feb 18, 2025 | Exomiser  | Damian Smedley & Jules Jacobsen   |    |    |
 | Dec 10, 2024 | Rare Diseases and Ontology Use in Consumer Health Content | Eric Sid (NIH/NCATS) | | [Rare Disease and Ontology Use in Consumer Health Content](https://youtu.be/kWqDLtOW-TY?si=H58v5hVGrnk0NVhY) |
 | Nov 26, 2024 | Mondo Disease Ontology  | Sabrina Toro & Chris Mungall  | [Link](https://docs.google.com/presentation/d/1yFwKudg8ShXRJmWQaO7LGW-D2EazgetSuVlWARFHhn8/edit#slide=id.g2e6f9305531_0_128) | [An Introduction to the Mondo Disease Ontology](https://youtu.be/f3aDoNmcR0M?si=B1Aa-4mMSLN6lF8j) |
 | Oct 29, 2024 | Monarch Knowledge Graph & Services  | Kevin Schaper & Moni Munoz Torres  | [Link](https://docs.google.com/presentation/d/1_R6bjhiTXu9TemzqB2k770G2BndxE73aQZUH2LlnhEM/edit#slide=id.g2878b95946a_1_64)  | [An Introduction to the Monarch Knowledge Graph and Services](https://youtu.be/z11xZKBEO-U?si=B2VkbsgIz1irjm3H)   |
