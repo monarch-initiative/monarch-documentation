@@ -909,6 +909,110 @@ tools:
         email: enock.niyonkuru@trincoll.edu
         orcid: https://orcid.org/0000-0002-7981-8133
         github: "@enockniyonkuru"
+  - id: https://github.com/monarch-initiative/pheval.exomiser
+    name: pheval.exomiser
+    category: Benchmarking
+    description: Exomiser plugin for PhEval.
+    repository: https://github.com/monarch-initiative/pheval.exomiser
+    documentation: https://github.com/monarch-initiative/pheval.exomiser
+    monarch_role: Core
+    monarch_contribution: Lead
+    contact:
+        name: Yasemin Bridges
+        email: y.bridges@qmul.ac.uk
+        orcid: https://orcid.org/0009-0002-1371-3782
+        github: "@yaseminbridges"
+  - id: https://github.com/monarch-initiative/pheval.ai_marrvel
+    name: pheval.ai_marrvel
+    category: Benchmarking
+    description: A PhEval plugin for integrating AI-MARRVEL, enabling variant prioritisation based on phenotypic data in a standardised pipeline
+    repository: https://github.com/monarch-initiative/pheval.ai_marrvel
+    documentation: https://github.com/monarch-initiative/pheval.ai_marrvel
+    monarch_role: Core
+    monarch_contribution: Lead
+    contact:
+        name: Yasemin Bridges
+        email: y.bridges@qmul.ac.uk
+        orcid: https://orcid.org/0009-0002-1371-3782
+        github: "@yaseminbridges"
+  - id: https://github.com/monarch-initiative/pheval.phen2gene
+    name: pheval.phen2gene
+    category: Benchmarking
+    description: A PhEval plugin for integrating Phen2Gene, enabling gene prioritisation based on phenotypic data in a standardised pipeline.
+    repository: https://github.com/monarch-initiative/pheval.phen2gene
+    documentation: https://github.com/monarch-initiative/pheval.phen2gene
+    monarch_role: Core
+    monarch_contribution: Lead
+    contact:
+        name: Yasemin Bridges
+        email: y.bridges@qmul.ac.uk
+        orcid: https://orcid.org/0009-0002-1371-3782
+        github: "@yaseminbridges"
+  - id: https://github.com/monarch-initiative/pheval.gado
+    name: pheval.gado
+    category: Benchmarking
+    description: A PhEval plugin for integrating GADO, enabling gene prioritisation based on phenotypic data in a standardised pipeline.
+    repository: https://github.com/monarch-initiative/pheval.gado
+    documentation: https://github.com/monarch-initiative/pheval.gado
+    monarch_role: Core
+    monarch_contribution: Lead
+    contact:
+        name: Yasemin Bridges
+        email: y.bridges@qmul.ac.uk
+        orcid: https://orcid.org/0009-0002-1371-3782
+        github: "@yaseminbridges"
+  - id: https://github.com/monarch-initiative/pheval.svanna
+    name: pheval.svanna
+    category: Benchmarking
+    description: A PhEval plugin for integrating SvAnna, enabling structural variant prioritisation in a standardised pipeline.
+    repository: https://github.com/monarch-initiative/pheval.svanna
+    documentation: https://github.com/monarch-initiative/pheval.svanna
+    monarch_role: Core
+    monarch_contribution: Lead
+    contact:
+        name: Yasemin Bridges
+        email: y.bridges@qmul.ac.uk
+        orcid: https://orcid.org/0009-0002-1371-3782
+        github: "@yaseminbridges"
+  - id: https://github.com/monarch-initiative/pheval.lirical
+    name: pheval.lirical
+    category: Benchmarking
+    description: A PhEval plugin integrating LIRICAL for efficient phenotype and variant prioritisation in a standardised pipeline.
+    repository: https://github.com/monarch-initiative/pheval.lirical
+    documentation: https://github.com/monarch-initiative/pheval.lirical
+    monarch_role: Core
+    monarch_contribution: Lead
+    contact:
+        name: Yasemin Bridges
+        email: y.bridges@qmul.ac.uk
+        orcid: https://orcid.org/0009-0002-1371-3782
+        github: "@yaseminbridges"
+  - id: https://github.com/monarch-initiative/pheval.phenogenius
+    name: pheval.phenogenius
+    category: Benchmarking
+    description: A PhEval plugin for integrating PhenoGenius, enabling gene prioritisation based on phenotypic data in a standardised pipeline.
+    repository: https://github.com/monarch-initiative/pheval.phenogenius
+    documentation: https://github.com/monarch-initiative/pheval.phenogenius
+    monarch_role: Core
+    monarch_contribution: Lead
+    contact:
+        name: Yasemin Bridges
+        email: y.bridges@qmul.ac.uk
+        orcid: https://orcid.org/0009-0002-1371-3782
+        github: "@yaseminbridges"
+  - id: https://github.com/monarch-initiative/phenotype2phenopacket
+    name: phenotype2phenopacket
+    category: Data Curation
+    description: Phenotype2Phenopacket is a command-line tool that converts a phenotype annotation into GA4GH Phenopackets, facilitating standardised phenotypic data representation.
+    repository: https://github.com/monarch-initiative/phenotype2phenopacket
+    documentation: https://github.com/monarch-initiative/phenotype2phenopacket
+    monarch_role: Core
+    monarch_contribution: Lead
+    contact:
+        name: Yasemin Bridges
+        email: y.bridges@qmul.ac.uk
+        orcid: https://orcid.org/0009-0002-1371-3782
+        github: "@yaseminbridges"
 documentations:
   - id: https://oboacademy.github.io/obook/
     name: OBO Academy
@@ -1027,3 +1131,17 @@ repositories:
     name: phenopacket2prompt
   - id: https://github.com/monarch-initiative/automaxo/
     name: AutoMAxO
+  - id: https://github.com/monarch-initiative/pheval.ai_marrvel
+    name: pheval.ai_marrvel
+  - id: https://github.com/monarch-initiative/pheval.phen2gene
+    name: pheval.phen2gene
+  - id: https://github.com/monarch-initiative/pheval.gado
+    name: pheval.gado
+  - id: https://github.com/monarch-initiative/pheval.svanna
+    name: pheval.svanna
+  - id: https://github.com/monarch-initiative/pheval.lirical
+    name: pheval.lirical
+  - id: https://github.com/monarch-initiative/pheval.phenogenius
+    name: pheval.phenogenius
+  - id: https://github.com/monarch-initiative/phenotype2phenopacket
+    name: phenotype2phenopacket
