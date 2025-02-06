@@ -571,7 +571,27 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/phenotype2phenopacket/</loc>
+         <lastmod>2025-02-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/pheval.ai_marrvel/</loc>
+         <lastmod>2025-02-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/pheval.exomiser/</loc>
+         <lastmod>2025-02-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/pheval.gado/</loc>
+         <lastmod>2025-02-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/pheval.lirical/</loc>
          <lastmod>2025-02-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -582,6 +602,21 @@
     </url>
     <url>
          <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/pheval/</loc>
+         <lastmod>2025-02-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/pheval.phen2gene/</loc>
+         <lastmod>2025-02-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/pheval.phenogenius/</loc>
+         <lastmod>2025-02-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://monarch-initiative.github.io/monarch-documentation/Repositories/pheval.svanna/</loc>
          <lastmod>2025-02-06</lastmod>
          <changefreq>daily</changefreq>
     </url>
