@@ -11,11 +11,12 @@ To join the Monarch Seminar Series, please email info@monarchinitiative.org with
 ### Schedule 
 | Date   | Topic   | Presenter(s) | Slides | Recording |
 | -- | -- | -- | -- | --|
-| Dec 10, 2024 | Rare Diseases and Ontology Use in Consumer Health Content | Eric Sid (NIH/NCATS) | | [Rare Disease and Ontology Use in Consumer Health Content](https://youtu.be/kWqDLtOW-TY?si=H58v5hVGrnk0NVhY) |
-| Nov 26, 2024 | Mondo Disease Ontology  | Sabrina Toro & Chris Mungall  | [Link](https://docs.google.com/presentation/d/1yFwKudg8ShXRJmWQaO7LGW-D2EazgetSuVlWARFHhn8/edit#slide=id.g2e6f9305531_0_128) | [An Introduction to the Mondo Disease Ontology](https://youtu.be/f3aDoNmcR0M?si=B1Aa-4mMSLN6lF8j) |
-| Oct 29, 2024 | Monarch Knowledge Graph & Services  | Kevin Schaper & Moni Munoz Torres  | [Link](https://docs.google.com/presentation/d/1_R6bjhiTXu9TemzqB2k770G2BndxE73aQZUH2LlnhEM/edit#slide=id.g2878b95946a_1_64)  | [An Introduction to the Monarch Knowledge Graph and Services](https://youtu.be/z11xZKBEO-U?si=B2VkbsgIz1irjm3H)   |
-| Jul 9, 2024  | Phenopackets | Peter Robinson & Jules Jacobsen | [Link](https://docs.google.com/presentation/d/1_fvQnUSXTFTGEALbuBFjniGuMYd-yE0W8tBbReio-MU/edit#slide=id.g2db6772adf1_0_319)       | [An Introduction to Phenopackets](https://youtu.be/Ym5rC2Op_PM?si=fzLmLd4IiIRLI2R4) |
-| May 14, 2024 | Uberon Anatomy Ontology | Chris Mungall & Damien Goutte-Gattat | [Link1](https://docs.google.com/presentation/d/15JyOunBw6R_xcs7wBWdZZPvmcQsPLKUDa6ycEqa5NE4/edit#slide=id.g2445be87c8e_0_0)<br> [Link2](https://drive.google.com/file/d/1nNFfNWcuT30wlGrkxqRWnq2Q5l_r87w7/view?usp=sharing) | [An Introduction to the Uberon Anatomy Ontology](https://youtu.be/HmFhTk0Bahs?feature=shared)      |
+| March 18, 2025 | Publication highlight: [An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets](https://www.nature.com/articles/s41597-025-04558-z) | Adam Graefe |  | |
+| Dec 10, 2024 | Rare Diseases and Ontology Use in Consumer Health Content | Eric Sid (NIH/NCATS) | | [Here](https://youtu.be/kWqDLtOW-TY?si=H58v5hVGrnk0NVhY) |
+| Nov 26, 2024 | An Introduction to the Mondo Disease Ontology  | Sabrina Toro & Chris Mungall  | [Link](https://docs.google.com/presentation/d/1yFwKudg8ShXRJmWQaO7LGW-D2EazgetSuVlWARFHhn8/edit#slide=id.g2e6f9305531_0_128) | [Here](https://youtu.be/f3aDoNmcR0M?si=B1Aa-4mMSLN6lF8j) |
+| Oct 29, 2024 | An Introduction to the Monarch Knowledge Graph & Services  | Kevin Schaper & Moni Munoz Torres  | [Link](https://docs.google.com/presentation/d/1_R6bjhiTXu9TemzqB2k770G2BndxE73aQZUH2LlnhEM/edit#slide=id.g2878b95946a_1_64)  | [Here](https://youtu.be/z11xZKBEO-U?si=B2VkbsgIz1irjm3H)   |
+| Jul 9, 2024  | An Introduction to Phenopackets | Peter Robinson & Jules Jacobsen | [Link](https://docs.google.com/presentation/d/1_fvQnUSXTFTGEALbuBFjniGuMYd-yE0W8tBbReio-MU/edit#slide=id.g2db6772adf1_0_319)       | [Here](https://youtu.be/Ym5rC2Op_PM?si=fzLmLd4IiIRLI2R4) |
+| May 14, 2024 | An Introduction to the Uberon Anatomy Ontology | Chris Mungall & Damien Goutte-Gattat | [Link1](https://docs.google.com/presentation/d/15JyOunBw6R_xcs7wBWdZZPvmcQsPLKUDa6ycEqa5NE4/edit#slide=id.g2445be87c8e_0_0)<br> [Link2](https://drive.google.com/file/d/1nNFfNWcuT30wlGrkxqRWnq2Q5l_r87w7/view?usp=sharing) | [Here](https://youtu.be/HmFhTk0Bahs?feature=shared)      |
 
 
 
