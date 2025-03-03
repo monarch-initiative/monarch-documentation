@@ -2596,6 +2596,9 @@ from a phenotype annotation file.</p>
 <p>To convert all OMIM diseases in a phenotype annotation file to disease phenopackets, where all phenotypes are retained:</p>
 <div class="highlight"><pre><span></span><code>p2p<span class="w"> </span>convert<span class="w"> </span>--phenotype-annotation<span class="w"> </span>/path/to/phenotype.hpoa<span class="w"> </span>--output-dir<span class="w"> </span>/path/to/output-dir
 </code></pre></div>
+<p>To convert all OMIM diseases in a phenotype annotation file to lightweight disease phenopackets (without phenotypic features):
+<div class="highlight"><pre><span></span><code>p2p<span class="w"> </span>convert<span class="w"> </span>--phenotype-annotation<span class="w"> </span>/path/to/phenotype.hpoa<span class="w"> </span>--output-dir<span class="w"> </span>/path/to/output-dir<span class="w"> </span>--skip-phenotypic-features
+</code></pre></div></p>
 <p>To create synthetic patient disease phenopackets, where the dataset is more variable and frequencies are taken
 into account and constrained noise is applied :</p>
 <div class="highlight"><pre><span></span><code>p2p<span class="w"> </span>create<span class="w"> </span>--phenotype-annotation<span class="w"> </span>/path/to/phenotype.hpoa<span class="w"> </span>--output-dir<span class="w"> </span>/path/to/output-dir
