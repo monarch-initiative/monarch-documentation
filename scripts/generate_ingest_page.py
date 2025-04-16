@@ -26,6 +26,7 @@ These data sources are "ingested" into the KG using a variety of tools and packa
 This page describes the principles that guide the ingestion process.  
 
 For details on the ingestion process, see [this page](https://monarch-initiative.github.io/monarch-ingest/).
+A list of all data sources ingested into the KG can be found [here](https://monarch-initiative.github.io/monarch-ingest/Sources/).
 
 ## General Principles
 
