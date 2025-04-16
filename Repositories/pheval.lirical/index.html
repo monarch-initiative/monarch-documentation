@@ -2556,7 +2556,7 @@
 <tbody>
 <tr>
 <td>python</td>
-<td>&gt;=3.9,&lt;4.0.0</td>
+<td>&gt;=3.10,&lt;4.0.0</td>
 </tr>
 <tr>
 <td>click</td>
@@ -2584,7 +2584,7 @@
 </tr>
 <tr>
 <td>pheval</td>
-<td>^0.4.0</td>
+<td>^0.5.2</td>
 </tr>
 </tbody>
 </table>
@@ -2592,8 +2592,11 @@
 <h1 id="lirical-runner-for-pheval">LIRICAL Runner for PhEval</h1>
 <p>This is the LIRICAL plugin for PhEval. With this plugin, you can leverage the prioritisation tool, LIRICAL, to run the PhEval pipeline seamlessly. he setup process for running the full PhEval Makefile pipeline differs from setting up for a single run. The Makefile pipeline creates directory structures for corpora and configurations to handle multiple run configurations. Detailed instructions on setting up the appropriate directory layout, including the input directory and test data directory, can be found here.</p>
 <h2 id="installation">Installation</h2>
-<p>Clone the pheval.lirical repo and set up the poetry environment:</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/yaseminbridges/pheval.lirical.git
+<p>Install with pip:</p>
+<p><div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>pheval.lirical
+</code></pre></div>
+Alternatively clone the pheval.lirical repo and set up the poetry environment:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/monarch-initiative/pheval.lirical.git
 <span class="nb">cd</span><span class="w"> </span>pheval.lirical
 poetry<span class="w"> </span>shell
 poetry<span class="w"> </span>install
