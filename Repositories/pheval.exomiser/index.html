@@ -2708,6 +2708,10 @@ directory:</p>
    ├── phenopackets
    └── vcf
 </code></pre></div>
+<blockquote>
+<p>[!IMPORTANT]<br />
+If a <code>vcf</code> directory is not found in the testdata directory then the path to the VCF will be taken from the phenopacket if <code>variant_analysis</code> is set to True.</p>
+</blockquote>
 <h2 id="run-command">Run command</h2>
 <p>Once the testdata and input directories are correctly configured for the run, the <code>pheval run</code> command can be executed.</p>
 <div class="highlight"><pre><span></span><code>pheval<span class="w"> </span>run<span class="w"> </span>--input-dir<span class="w"> </span>/path/to/input_dir<span class="w"> </span><span class="se">\</span>

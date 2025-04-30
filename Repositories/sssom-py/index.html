@@ -2638,6 +2638,7 @@
     <a href="https://github.com/psf/black">
         <img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style: black">
     </a>
+    <a href="https://doi.org/10.5281/zenodo.14296666"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.14296666.svg" alt="DOI"></a>
 </p>
 
 <p><img src="https://github.com/tis-lab/closed-illustrations/raw/master/logos/sssom-logos/sssom_logo_black_banner.png" /></p>
@@ -2651,8 +2652,8 @@
 <h2 id="documentation_1">Documentation</h2>
 <p>See <a href="https://mapping-commons.github.io/sssom-py/index.html#">documentation</a></p>
 <h3 id="deploy-documentation">Deploy documentation</h3>
-<div class="highlight"><pre><span></span><code>make<span class="w"> </span>sphinx
-make<span class="w"> </span>deploy-docs
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>make<span class="w"> </span>sphinx
+<span class="gp">$ </span>make<span class="w"> </span>deploy-docs
 </code></pre></div>
 <h2 id="schema">Schema</h2>
 <p>See the <a href="schema">schema/</a> folder for source schema in YAML, plus
@@ -2661,8 +2662,8 @@ derivations to JSON-Schema, ShEx, etc. </p>
 <p><code>tox</code> is similar to <code>make</code>, but specific for Python software projects. Its
 configuration is stored in <a href="tox.ini"><code>tox.ini</code></a> in different "environments"
 whose headers look like <code>[testenv:...]</code>. All tests can be run with:</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>tox
-$<span class="w"> </span>tox
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>tox
+<span class="gp">$ </span>tox
 </code></pre></div>
 <p>A specific environment can be run using the <code>-e</code> flag, such as <code>tox -e lint</code> to run
 the linting environment.</p>
@@ -2678,6 +2679,44 @@ and the <a href="https://hits.harvard.edu">Harvard Program in Therapeutic Scienc
 natural language processing and large-scale knowledge assembly. Their work on SSSOM is funded by the
 DARPA Young Faculty Award W911NF2010255 (PI: Benjamin M. Gyori).</p>
 <p>https://indralab.github.io</p>
+<h2 id="citation">Citation</h2>
+<p>SSSOM itself can be cited with:</p>
+<div class="highlight"><pre><span></span><code><span class="nc">@article</span><span class="p">{</span><span class="nl">10.1093/database/baac035</span><span class="p">,</span>
+<span class="w">    </span><span class="na">author</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Matentzoglu, Nicolas and Balhoff, James P and Bello, Susan M and Bizon, Chris and Brush, Matthew and Callahan, Tiffany J and Chute, Christopher G and Duncan, William D and Evelo, Chris T and Gabriel, Davera and Graybeal, John and Gray, Alasdair and Gyori, Benjamin M and Haendel, Melissa and Harmse, Henriette and Harris, Nomi L and Harrow, Ian and Hegde, Harshad B and Hoyt, Amelia L and Hoyt, Charles T and Jiao, Dazhi and Jiménez-Ruiz, Ernesto and Jupp, Simon and Kim, Hyeongsik and Koehler, Sebastian and Liener, Thomas and Long, Qinqin and Malone, James and McLaughlin, James A and McMurry, Julie A and Moxon, Sierra and Munoz-Torres, Monica C and Osumi-Sutherland, David and Overton, James A and Peters, Bjoern and Putman, Tim and Queralt-Rosinach, Núria and Shefchek, Kent and Solbrig, Harold and Thessen, Anne and Tudorache, Tania and Vasilevsky, Nicole and Wagner, Alex H and Mungall, Christopher J}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{A Simple Standard for Sharing Ontological Mappings (SSSOM)}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">journal</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{Database}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">volume</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2022}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">pages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{baac035}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">year</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{2022}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">month</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{05}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">issn</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{1758-0463}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">doi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{10.1093/database/baac035}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">url</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://doi.org/10.1093/database/baac035}</span><span class="p">,</span>
+<span class="w">    </span><span class="na">eprint</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{https://academic.oup.com/database/article-pdf/doi/10.1093/database/baac035/43832024/baac035.pdf}</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>To cite the SSSOM-py software package specifically, use:</p>
+<div class="highlight"><pre><span></span><code><span class="nc">@software</span><span class="p">{</span><span class="nl">sssom-py</span><span class="p">,</span>
+<span class="w">  </span><span class="na">author</span><span class="w">       </span><span class="p">=</span><span class="w"> </span><span class="s">{Harshad Hegde and</span>
+<span class="s">                  Nico Matentzoglu and</span>
+<span class="s">                  Charles Tapley Hoyt and</span>
+<span class="s">                  Chris Mungall and</span>
+<span class="s">                  Joe Flack and</span>
+<span class="s">                  Benjamin M. Gyori and</span>
+<span class="s">                  Damien Goutte-Gattat and</span>
+<span class="s">                  Glass and</span>
+<span class="s">                  Syphax Bouazzouni}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">title</span><span class="w">        </span><span class="p">=</span><span class="w"> </span><span class="s">{mapping-commons/sssom-py: v0.4.15 release (minor</span>
+<span class="s">                   fixes)</span>
+<span class="s">                  }</span><span class="p">,</span>
+<span class="w">  </span><span class="na">month</span><span class="w">        </span><span class="p">=</span><span class="w"> </span><span class="nv">dec</span><span class="p">,</span>
+<span class="w">  </span><span class="na">year</span><span class="w">         </span><span class="p">=</span><span class="w"> </span><span class="m">2024</span><span class="p">,</span>
+<span class="w">  </span><span class="na">publisher</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">{Zenodo}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">version</span><span class="w">      </span><span class="p">=</span><span class="w"> </span><span class="s">{v0.4.15}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">doi</span><span class="w">          </span><span class="p">=</span><span class="w"> </span><span class="s">{10.5281/zenodo.14296666}</span><span class="p">,</span>
+<span class="w">  </span><span class="na">url</span><span class="w">          </span><span class="p">=</span><span class="w"> </span><span class="s">{https://doi.org/10.5281/zenodo.14296666}</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div>
 
 
 
