@@ -36,7 +36,13 @@ classes:
       - contact
       - project_boards
       - icon
+      - icon_url
+      - tagline
+      - visual_explainer
       - url
+      - website_include
+      - see_also
+      - license
     class_uri: schema:Thing
 
   DataAsset:
@@ -196,6 +202,25 @@ slots:
   icon:
     description: An icon representing the asset.
     range: string
+  icon_url:
+    description: A URL to an icon representing the asset.
+    range: uriorcurie
+  tagline:
+    description: A short tagline for the resource.
+    range: string
+  visual_explainer:  
+    description: A visual abstract for the resource.
+    range: uriorcurie
+  website_include:
+    description: Flag if this resource should be shown on the website.
+    range: boolean
+  see_also:
+    description: A list of related resources.
+    range: uriorcurie
+    multivalued: true
+  license:
+    description: A URL to the license.
+    range: uriorcurie
   documentation:
     description: A URL to the documentation about this asset.
     range: uriorcurie
@@ -269,6 +294,7 @@ enums:
       Mapping:
       Data Curation:
       Benchmarking:
+      Registry:
   documentation_asset_enum:
     permissible_values:
       Technical Documentation:

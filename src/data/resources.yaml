@@ -181,6 +181,7 @@ standards:
         email: Peter.Robinson@jax.org
         orcid: https://orcid.org/0000-0002-0736-9199
         github: "@pnrobinson"
+    website_include: true
   - id: https://standards.monarchinitiative.org/sssom
     name: Simple Standard for Ontology Mappings (SSSOM)
     short_name: SSSOM
@@ -205,15 +206,17 @@ standards:
         email: nicolas.matentzoglu@gmail.com
         orcid: https://orcid.org/0000-0002-7356-1779
         github: "@matentzn"
+    website_include: true
   - id: http://purl.obolibrary.org/obo/hp.owl
     name: Human Phenotype Ontology
     short_name: HPO
+    license: https://hpo.jax.org/license
     icon: resource-hpo
     monarch_contribution: Lead
     category: Ontology
     monarch_role: Foundational
     documentation: https://obophenotype.github.io/human-phenotype-ontology/
-    description: Provides a standardized vocabulary of phenotypic abnormalities in human disease.
+    description: The **Human Phenotype Ontology (HPO)** is a structured vocabulary used to describe human health conditions and symptoms in a standardized way. It helps doctors, researchers, and computer systems consistently record and analyze patient characteristics, especially in the context of rare diseases. By organizing thousands of clinical features into a searchable hierarchy, HPO supports better diagnosis, data sharing, and discovery in genetic medicine.
     repository: https://github.com/obophenotype/human-phenotype-ontology
     url: https://hpo.jax.org/app/
     contact:
@@ -224,6 +227,11 @@ standards:
     grants:
       - HPO
       - Phenomics First
+    icons_url: https://github.com/jmcmurry/open-illustrations/tree/master/logos
+    tagline: A standardized vocabulary of phenotypic abnormalities in human disease.
+    visual_explainer: https://github.com/jmcmurry/open-illustrations/tree/master/logos
+    website_include: true
+    see_also: []
   - id: https://github.com/geneontology/obographs
     documentation: https://incatools.github.io/ontology-access-kit/datamodels/obograph/index.html
     url: https://github.com/geneontology/obographs
@@ -249,8 +257,10 @@ standards:
     monarch_contribution: Lead
     category: Ontology
     monarch_role: Foundational
-    description: Aims to harmonize disease definitions across the world.
+    description: A disease ontology that integrates and harmonizes disease definitions from multiple sources.
+    tagline: Harmonizing disease definitions globally 
     repository: https://github.com/monarch-initiative/mondo
+    icons_url: https://github.com/tis-lab/closed-illustrations/tree/master/logos/mondo-logos
     contact:
         name: Chris Mungall
         email: cjmungall@lbl.gov
@@ -258,6 +268,7 @@ standards:
         github: "@cmungall"
     grants:
       - Phenomics First
+    website_include: true
   - id: http://purl.obolibrary.org/obo/geno.owl
     documentation: https://github.com/monarch-initiative/GENO-ontology
     url: https://github.com/monarch-initiative/GENO-ontology
@@ -275,6 +286,7 @@ standards:
         github: "@mbrush"
     grants:
       - Monarch R24
+    website_include: true
   - id: http://purl.obolibrary.org/obo/sepio.owl
     documentation: https://github.com/monarch-initiative/SEPIO-ontology
     url: https://github.com/monarch-initiative/SEPIO-ontology
@@ -292,6 +304,7 @@ standards:
         github: "@mbrush"
     grants:
       - Monarch R24
+    website_include: true
   - id: http://purl.obolibrary.org/obo/vbo.owl
     documentation: https://github.com/monarch-initiative/vertebrate-breed-ontology
     url: https://github.com/monarch-initiative/vertebrate-breed-ontology
@@ -309,6 +322,7 @@ standards:
         github: "@sabrinatoro"
     grants:
       - Monarch R24
+    website_include: true
   - id: https://github.com/obophenotype/upheno
     name: The Unified Phenotype Ontology (uPheno)
     short_name: uPheno
@@ -330,8 +344,10 @@ standards:
         github: "@udp"
     grants:
       - Phenomics First
+    website_include: true
   - id: http://purl.obolibrary.org/obo/maxo.owl
     name: Medical Action Ontology
+    short_name: MAxO
     monarch_contribution: Lead
     category: Ontology
     documentation: https://github.com/monarch-initiative/MAxO
@@ -343,8 +359,10 @@ standards:
         github: "@pnrobinson"
     grants:
       - HPO
+    website_include: true
   - id: http://purl.obolibrary.org/obo/oba.owl
     name: Ontology of Biological Attributes
+    short_name: OBA
     monarch_contribution: Lead
     category: Ontology
     documentation: https://obophenotype.github.io/upheno/
@@ -359,8 +377,10 @@ standards:
         github: "@cmungall"
     grants:
       - Phenomics First
+    website_include: true
   - id: http://purl.obolibrary.org/obo/uberon.owl
     name: Uberon Anatomy Ontology
+    short_name: Uberon
     description: An integrated cross-species anatomy ontology.
     monarch_contribution: Co-Lead
     category: Ontology
@@ -375,6 +395,7 @@ standards:
         github: "@cmungall"
     grants:
       - Phenomics First
+    website_include: true
   - id: https://github.com/monarch-initiative/phenio
     name: Phenomics Integrated Ontology (PHENIO)
     monarch_contribution: Lead
@@ -387,9 +408,11 @@ standards:
         github: "@cmungall"
     grants:
       - Monarch R24
+    website_include: true
   - id: http://purl.obolibrary.org/obo/ecto.owl
     documentation: https://github.com/EnvironmentOntology/environmental-exposure-ontology
     name: Environmental Exposure Ontology
+    short_name: ECTO
     monarch_contribution: Lead
     category: Ontology
     monarch_role: Support
@@ -400,6 +423,7 @@ standards:
         github: "@cmungall"
     grants:
       - TBD
+    website_include: true
   - id: https://github.com/INCATools/dead_simple_owl_design_patterns
     name: Dead simple owl design pattern (DOS-DP) exchange format
     monarch_contribution: Lead
@@ -456,6 +480,7 @@ tools:
         email: j.jacobsen@qmul.ac.uk
         orcid: https://orcid.org/0000-0002-3265-1591
         github: "@julesjacobsen"
+    website_include: true
   - id: https://monarchinitiative.org/
     name: Monarch Knowledge Graph & Services
     category: Clinical Diagnosis
@@ -502,6 +527,7 @@ tools:
         github: "@kevinschaper"
   - id: https://tools.monarchinitiative.org/odk
     name: Ontology Development Kit (ODK)
+    short_name: ODK
     category: Ontology Maintenance
     description: A toolkit and workflow system for managing the ontology life-cycle.
     monarch_contribution: Lead
@@ -515,6 +541,21 @@ tools:
     project_boards:
       - name: ODK Milestones
         id: "https://github.com/orgs/INCATools/projects/2/views/1?groupedBy%5BcolumnId%5D=Milestone"
+    website_include: true
+  - id: https://ols.monarchinitiative.org/
+    name: Monarch OLS
+    category: Registry
+    description: An instance of EBI's OLS with Monarch-specific ontologies.
+    monarch_contribution: Lead
+    monarch_role: Support
+    url: https://ols.monarchinitiative.org/
+    documentation: https://github.com/monarch-initiative/ontotools-docker
+    contact:
+        name: Nicolas Matentzoglu
+        email: nicolas.matentzoglu@gmail.com
+        orcid: https://orcid.org/0000-0002-7356-1779
+        github: "@matentzn"
+    website_include: true
   - id: https://tools.monarchinitiative.org/oak
     name: Ontology Access Kit (OAK)
     short_name: OAK
@@ -531,6 +572,7 @@ tools:
         email: cjmungall@lbl.gov
         orcid: https://orcid.org/0000-0002-6601-2165
         github: "@cmungall"
+    website_include: true
   - id: https://tools.monarchinitiative.org/sssom-toolkit
     name: SSSOM Toolkit
     category: Mapping
@@ -595,6 +637,7 @@ tools:
         email: j.jacobsen@qmul.ac.uk
         orcid: https://orcid.org/0000-0002-3265-1591
         github: "@julesjacobsen"
+    website_include: true
   - id: https://github.com/INCATools/obographviz
     name: obographviz
     category: Ontology Use
@@ -664,6 +707,68 @@ tools:
         email: cjmungall@lbl.gov
         orcid: https://orcid.org/0000-0002-6601-2165
         github: "@cmungall"
+    website_include: true
+  - id: https://github.com/monarch-initiative/aurelian
+    name: Aurelian
+    category: Data Curation
+    documentation: https://github.com/monarch-initiative/aurelian
+    monarch_contribution: Lead
+    monarch_role: Core
+    icon: onto-gpt
+    url: https://github.com/monarch-initiative/aurelian
+    repository: https://github.com/monarch-initiative/aurelian
+    description: Aurelian is an Agentic Universal Research Engine for Literature, Integration, Annotation, and Navigation.
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
+  - id: https://github.com/Knowledge-Graph-Hub/kg-registry
+    name: KG Registry
+    category: Registry
+    documentation: https://github.com/Knowledge-Graph-Hub/kg-registry
+    monarch_contribution: Lead
+    monarch_role: Core
+    icon: onto-gpt
+    url: https://kghub.org/kg-registry/
+    repository: https://github.com/Knowledge-Graph-Hub/kg-registry
+    description: A simple registry for knowledge graphs, including KG-Hub projects.
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
+    website_include: true
+  - id: https://github.com/Knowledge-Graph-Hub/knowledge-graph-hub.github.io
+    name: KG Hub
+    category: Registry
+    documentation: https://github.com/Knowledge-Graph-Hub/knowledge-graph-hub.github.io
+    monarch_contribution: Lead
+    monarch_role: Core
+    url: https://kghub.org/
+    repository: https://github.com/Knowledge-Graph-Hub/knowledge-graph-hub.github.io
+    description: A collection of biological and biomedical Knowledge Graphs, including their component data sources.
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
+    website_include: true
+  - id: https://github.com/linkml/linkml-registry 
+    name: LinkML Registry
+    category: Registry
+    documentation: https://linkml.io/linkml-registry/registry/
+    monarch_contribution: Lead
+    monarch_role: Support
+    url: https://linkml.io/linkml-registry/registry/
+    repository: https://github.com/linkml/linkml-registry
+    description: A collection of LinkML schemas.
+    contact:
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
+    website_include: true
   - id: https://github.com/monarch-initiative/talisman
     name: TALISMAN
     category: Data Curation
@@ -693,6 +798,7 @@ tools:
         email: cjmungall@lbl.gov
         orcid: https://orcid.org/0000-0002-6601-2165
         github: "@cmungall"
+    website_include: true
   - id: https://github.com/monarch-initiative/semsimian
     name: semsimian
     category: Mapping
@@ -772,6 +878,7 @@ tools:
         email: cjmungall@lbl.gov
         orcid: https://orcid.org/0000-0002-6601-2165
         github: "@cmungall"
+    website_include: true
   - id: https://monarch-initiative.github.io/monarch-ingest
     name: Monarch Ingest
     documentation: https://monarch-initiative.github.io/monarch-ingest
@@ -789,7 +896,7 @@ tools:
     name: Monarch Mapping Commons
     icon: resource-monarch
     monarch_role: Core
-    category: Mapping
+    category: Registry
     description: SSSOM Mappings collected and curated by the Monarch Initiative.
     repository: https://github.com/monarch-initiative/monarch-mapping-commons
     documentation: https://github.com/monarch-initiative/monarch-mapping-commons
@@ -800,6 +907,7 @@ tools:
         email: kevin@tislab.org
         orcid: https://orcid.org/0000-0003-3311-7320
         github: "@kevinschaper"
+    website_include: true
   - id: https://github.com/obophenotype/hpo-translations
     name: HPO Language Translations
     monarch_role: Support
