@@ -36,7 +36,7 @@ classes:
       - contact
       - project_boards
       - icon
-      - icon_url
+      - icons_url
       - tagline
       - visual_explainer
       - url
@@ -202,8 +202,8 @@ slots:
   icon:
     description: An icon representing the asset.
     range: string
-  icon_url:
-    description: A URL to an icon representing the asset.
+  icons_url:
+    description: A URL to an icon or set of icon representing the asset. We dont expect this to resolve to a specific icon, more to the place where to get the icons from.
     range: uriorcurie
   tagline:
     description: A short tagline for the resource.
