@@ -586,19 +586,6 @@ tools:
         email: nicolas.matentzoglu@gmail.com
         orcid: https://orcid.org/0000-0002-7356-1779
         github: "@matentzn"
-  - id: monarch_ols
-    url: https://ols.monarchinitiative.org/
-    name: Monarch Ontology Lookup Service
-    category: Ontology Use
-    description: An instance of EBI's OLS for hosting Monarch-specific development snapshots of ontologies.
-    monarch_contribution: Lead
-    monarch_role: Support
-    repository: https://github.com/monarch-initiative/ontotools-docker
-    contact:
-        name: Nicolas Matentzoglu
-        email: nicolas.matentzoglu@gmail.com
-        orcid: https://orcid.org/0000-0002-7356-1779
-        github: "@matentzn"
   - id: poet
     url: https://poet.jax.org/
     name: POET
@@ -814,7 +801,7 @@ tools:
         email: cjmungall@lbl.gov
         orcid: https://orcid.org/0000-0002-6601-2165
         github: "@cmungall"
-  - id: monarch_app
+  - id: monarch_py
     name: Monarch Python Toolkit
     category: Data Curation
     monarch_role: Support
