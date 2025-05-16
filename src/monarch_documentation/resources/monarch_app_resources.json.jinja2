@@ -2,7 +2,7 @@
   "Standards":
     {%- set standards_items = [] %}
     {%- for d in standards %}
-      {%- if d.category != 'Ontology' and (d.monarch_role == 'Flagship' or d.monarch_role == 'Core') %}
+      {%- if d.category != 'Ontology' and (d.monarch_role == 'Foundational') %}
         {%- set item = {
           "name": d.short_name if 'short_name' in d else d.name,
           "icon": d.icon if 'icon' in d else None,
@@ -17,7 +17,7 @@
   "Ontologies":
     {%- set ontology_items = [] %}
     {%- for d in standards %}
-      {%- if d.category == 'Ontology' and d.monarch_role == 'Flagship' %}
+      {%- if d.category == 'Ontology' and d.monarch_role == 'Foundational' %}
         {%- set item = {
           "name": d.short_name if 'short_name' in d else d.name,
           "icon": d.icon if 'icon' in d else None,
@@ -32,7 +32,7 @@
   "Tools":
     {%- set tools_items = [] %}
     {%- for d in tools %}
-      {%- if d.monarch_role == 'Flagship' %}
+      {%- if d.monarch_role == 'Foundational' %}
         {%- set item = {
           "name": d.short_name if 'short_name' in d else d.name,
           "icon": d.icon if 'icon' in d else None,
