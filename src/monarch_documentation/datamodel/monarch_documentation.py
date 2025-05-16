@@ -1,5 +1,5 @@
 # Auto generated from monarch_documentation.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-05-29T19:45:00
+# Generation date: 2025-05-16T12:19:02
 # Schema: monarch-documentation-schema
 #
 # id: https://w3id.org/monarch-initiative/monarch-documentation
@@ -21,8 +21,8 @@ from linkml_runtime.utils.formatutils import camelcase, underscore, sfx
 from linkml_runtime.utils.enumerations import EnumDefinitionImpl
 from rdflib import Namespace, URIRef
 from linkml_runtime.utils.curienamespace import CurieNamespace
-from linkml_runtime.linkml_model.types import String, Uriorcurie
-from linkml_runtime.utils.metamodelcore import URIorCURIE
+from linkml_runtime.linkml_model.types import Boolean, String, Uriorcurie
+from linkml_runtime.utils.metamodelcore import Bool, URIorCURIE
 
 metamodel_version = "1.7.0"
 version = None
@@ -98,7 +98,13 @@ class Resource(YAMLRoot):
     contact: Optional[Union[dict, "Contact"]] = None
     project_boards: Optional[Union[Dict[Union[str, ProjectBoardId], Union[dict, "ProjectBoard"]], List[Union[dict, "ProjectBoard"]]]] = empty_dict()
     icon: Optional[str] = None
+    icons_url: Optional[Union[str, URIorCURIE]] = None
+    tagline: Optional[str] = None
+    visual_explainer: Optional[Union[str, URIorCURIE]] = None
     url: Optional[Union[str, URIorCURIE]] = None
+    website_include: Optional[Union[bool, Bool]] = None
+    see_also: Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]] = empty_list()
+    license: Optional[Union[str, "LicenseEnum"]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.id):
@@ -142,8 +148,27 @@ class Resource(YAMLRoot):
         if self.icon is not None and not isinstance(self.icon, str):
             self.icon = str(self.icon)
 
+        if self.icons_url is not None and not isinstance(self.icons_url, URIorCURIE):
+            self.icons_url = URIorCURIE(self.icons_url)
+
+        if self.tagline is not None and not isinstance(self.tagline, str):
+            self.tagline = str(self.tagline)
+
+        if self.visual_explainer is not None and not isinstance(self.visual_explainer, URIorCURIE):
+            self.visual_explainer = URIorCURIE(self.visual_explainer)
+
         if self.url is not None and not isinstance(self.url, URIorCURIE):
             self.url = URIorCURIE(self.url)
+
+        if self.website_include is not None and not isinstance(self.website_include, Bool):
+            self.website_include = Bool(self.website_include)
+
+        if not isinstance(self.see_also, list):
+            self.see_also = [self.see_also] if self.see_also is not None else []
+        self.see_also = [v if isinstance(v, URIorCURIE) else URIorCURIE(v) for v in self.see_also]
+
+        if self.license is not None and not isinstance(self.license, LicenseEnum):
+            self.license = LicenseEnum(self.license)
 
         super().__post_init__(**kwargs)
 
@@ -442,6 +467,50 @@ class Contact(YAMLRoot):
 
 
 # Enumerations
+class LicenseEnum(EnumDefinitionImpl):
+
+    GPLv3 = PermissibleValue(
+        text="GPLv3",
+        description="GNU General Public License v3.0")
+    MIT = PermissibleValue(
+        text="MIT",
+        description="MIT License")
+
+    _defn = EnumDefinition(
+        name="LicenseEnum",
+    )
+
+    @classmethod
+    def _addvals(cls):
+        setattr(cls, "CC-BY-4.0",
+            PermissibleValue(
+                text="CC-BY-4.0",
+                description="Creative Commons Attribution 4.0 International"))
+        setattr(cls, "CC-BY-NC-4.0",
+            PermissibleValue(
+                text="CC-BY-NC-4.0",
+                description="Creative Commons Attribution-NonCommercial 4.0 International"))
+        setattr(cls, "CC-BY-SA-4.0",
+            PermissibleValue(
+                text="CC-BY-SA-4.0",
+                description="Creative Commons Attribution-ShareAlike 4.0 International"))
+        setattr(cls, "CC-BY-NC-SA-4.0",
+            PermissibleValue(
+                text="CC-BY-NC-SA-4.0",
+                description="Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International"))
+        setattr(cls, "BSD-3-Clause",
+            PermissibleValue(
+                text="BSD-3-Clause",
+                description="BSD 3-Clause License"))
+        setattr(cls, "Apache-2.0",
+            PermissibleValue(
+                text="Apache-2.0",
+                description="Apache License 2.0"))
+        setattr(cls, "JAX-CUSTOM",
+            PermissibleValue(
+                text="JAX-CUSTOM",
+                description="JAX Custom License (https://hpo.jax.org/license)"))
+
 class ReleaseStatusEnum(EnumDefinitionImpl):
 
     public = PermissibleValue(text="public")
@@ -508,6 +577,7 @@ class ToolAssetEnum(EnumDefinitionImpl):
 
     Mapping = PermissibleValue(text="Mapping")
     Benchmarking = PermissibleValue(text="Benchmarking")
+    Registry = PermissibleValue(text="Registry")
 
     _defn = EnumDefinition(
         name="ToolAssetEnum",
@@ -651,6 +721,24 @@ slots.category = Slot(uri=MTD.category, name="category", curie=MTD.curie('catego
 
 slots.icon = Slot(uri=MTD.icon, name="icon", curie=MTD.curie('icon'),
                    model_uri=MTD.icon, domain=None, range=Optional[str])
+
+slots.icons_url = Slot(uri=MTD.icons_url, name="icons_url", curie=MTD.curie('icons_url'),
+                   model_uri=MTD.icons_url, domain=None, range=Optional[Union[str, URIorCURIE]])
+
+slots.tagline = Slot(uri=MTD.tagline, name="tagline", curie=MTD.curie('tagline'),
+                   model_uri=MTD.tagline, domain=None, range=Optional[str])
+
+slots.visual_explainer = Slot(uri=MTD.visual_explainer, name="visual_explainer", curie=MTD.curie('visual_explainer'),
+                   model_uri=MTD.visual_explainer, domain=None, range=Optional[Union[str, URIorCURIE]])
+
+slots.website_include = Slot(uri=MTD.website_include, name="website_include", curie=MTD.curie('website_include'),
+                   model_uri=MTD.website_include, domain=None, range=Optional[Union[bool, Bool]])
+
+slots.see_also = Slot(uri=MTD.see_also, name="see_also", curie=MTD.curie('see_also'),
+                   model_uri=MTD.see_also, domain=None, range=Optional[Union[Union[str, URIorCURIE], List[Union[str, URIorCURIE]]]])
+
+slots.license = Slot(uri=MTD.license, name="license", curie=MTD.curie('license'),
+                   model_uri=MTD.license, domain=None, range=Optional[Union[str, "LicenseEnum"]])
 
 slots.documentation = Slot(uri=MTD.documentation, name="documentation", curie=MTD.curie('documentation'),
                    model_uri=MTD.documentation, domain=None, range=Optional[Union[str, URIorCURIE]])
