@@ -220,7 +220,7 @@ slots:
     multivalued: true
   license:
     description: A URL to the license.
-    range: uriorcurie
+    range: license_enum
   documentation:
     description: A URL to the documentation about this asset.
     range: uriorcurie
@@ -263,6 +263,26 @@ slots:
     slot_uri: mtd:organization
 
 enums:
+  license_enum:
+    permissible_values:
+      CC-BY-4.0:
+        description: Creative Commons Attribution 4.0 International
+      CC-BY-NC-4.0:
+        description: Creative Commons Attribution-NonCommercial 4.0 International
+      CC-BY-SA-4.0:
+        description: Creative Commons Attribution-ShareAlike 4.0 International
+      CC-BY-NC-SA-4.0:
+        description: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+      GPLv3:
+        description: GNU General Public License v3.0
+      BSD-3-Clause:
+        description: BSD 3-Clause License
+      Apache-2.0:
+        description: Apache License 2.0
+      MIT:
+        description: MIT License
+      JAX-CUSTOM:
+        description: JAX Custom License (https://hpo.jax.org/license)
   release_status_enum:
     permissible_values:
       public:
