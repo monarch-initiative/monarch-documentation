@@ -1,56 +1,170 @@
+type Contact
+  {
+    name: String
+    orcid: Uriorcurie
+    github: String
+    email: String
+  }
+
 type DataAsset
   {
     id: Uriorcurie!
     name: String
+    shortName: String
     description: String
     grants: [GrantEnum]
     documentation: Uriorcurie
     monarchContribution: MonarchContributionEnum
-    download: String
-    category: DataAssetEnum
+    repository: Uriorcurie
+    monarchRole: MonarchRoleEnum
+    citation: Uriorcurie
+    contact: Contact
+    projectBoards: [ProjectBoard]
+    icon: String
+    iconsUrl: Uriorcurie
+    tagline: String
+    visualExplainer: Uriorcurie
+    url: Uriorcurie
+    websiteInclude: Boolean
+    seeAlso: [Uriorcurie]
+    license: LicenseEnum
+    download: [Download]
+    category: DataAssetEnum!
   }
 
 type Documentation
   {
     id: Uriorcurie!
     name: String
+    shortName: String
     description: String
     grants: [GrantEnum]
     documentation: Uriorcurie
     monarchContribution: MonarchContributionEnum
-    url: Uriorcurie
     repository: Uriorcurie
-    category: DocumentationAssetEnum
+    monarchRole: MonarchRoleEnum
+    citation: Uriorcurie
+    contact: Contact
+    projectBoards: [ProjectBoard]
+    icon: String
+    iconsUrl: Uriorcurie
+    tagline: String
+    visualExplainer: Uriorcurie
+    url: Uriorcurie
+    websiteInclude: Boolean
+    seeAlso: [Uriorcurie]
+    license: LicenseEnum
+    category: DocumentationAssetEnum!
   }
 
 type Download
   {
-    url: String
-    releaseStatus: String
-    fileFormat: String
+    url: Uriorcurie
+    releaseStatus: ReleaseStatusEnum
+    fileFormat: FileFormatEnum
+  }
+
+type ProjectBoard
+  {
+    id: Uriorcurie!
+    name: String
+    shortName: String
+    description: String
+    grants: [GrantEnum]
+    documentation: Uriorcurie
+    monarchContribution: MonarchContributionEnum
+    repository: Uriorcurie
+    monarchRole: MonarchRoleEnum
+    citation: Uriorcurie
+    contact: Contact
+    projectBoards: [ProjectBoard]
+    icon: String
+    iconsUrl: Uriorcurie
+    tagline: String
+    visualExplainer: Uriorcurie
+    websiteInclude: Boolean
+    seeAlso: [Uriorcurie]
+    license: LicenseEnum
+    url: Uriorcurie
+  }
+
+type Repository
+  {
+    id: Uriorcurie!
+    name: String
+    shortName: String
+    description: String
+    grants: [GrantEnum]
+    documentation: Uriorcurie
+    monarchContribution: MonarchContributionEnum
+    repository: Uriorcurie
+    monarchRole: MonarchRoleEnum
+    citation: Uriorcurie
+    contact: Contact
+    projectBoards: [ProjectBoard]
+    icon: String
+    iconsUrl: Uriorcurie
+    tagline: String
+    visualExplainer: Uriorcurie
+    url: Uriorcurie
+    websiteInclude: Boolean
+    seeAlso: [Uriorcurie]
+    license: LicenseEnum
+    dependsOn: Repository
+    repoUrl: String
+    organization: String
   }
 
 type Resource
   {
     id: Uriorcurie!
     name: String
+    shortName: String
     description: String
     grants: [GrantEnum]
     documentation: Uriorcurie
     monarchContribution: MonarchContributionEnum
+    repository: Uriorcurie
+    monarchRole: MonarchRoleEnum
+    citation: Uriorcurie
+    contact: Contact
+    projectBoards: [ProjectBoard]
+    icon: String
+    iconsUrl: Uriorcurie
+    tagline: String
+    visualExplainer: Uriorcurie
+    url: Uriorcurie
+    websiteInclude: Boolean
+    seeAlso: [Uriorcurie]
+    license: LicenseEnum
   }
 
 type ResourceRegistry
   {
     id: Uriorcurie!
-    name: String
+    shortName: String
     description: String
     grants: [GrantEnum]
+    documentation: Uriorcurie
     monarchContribution: MonarchContributionEnum
+    repository: Uriorcurie
+    monarchRole: MonarchRoleEnum
+    citation: Uriorcurie
+    contact: Contact
+    projectBoards: [ProjectBoard]
+    icon: String
+    iconsUrl: Uriorcurie
+    tagline: String
+    visualExplainer: Uriorcurie
+    url: Uriorcurie
+    websiteInclude: Boolean
+    seeAlso: [Uriorcurie]
+    license: LicenseEnum
+    name: String
     data: [DataAsset]
     standards: [Standard]
     tools: [Tool]
-    documentation: [Documentation]
+    documentations: [Documentation]
     repositories: [Resource]
   }
 
@@ -58,23 +172,49 @@ type Standard
   {
     id: Uriorcurie!
     name: String
+    shortName: String
     description: String
     grants: [GrantEnum]
     documentation: Uriorcurie
     monarchContribution: MonarchContributionEnum
-    category: StandardEnum
+    repository: Uriorcurie
+    monarchRole: MonarchRoleEnum
+    citation: Uriorcurie
+    contact: Contact
+    projectBoards: [ProjectBoard]
+    icon: String
+    iconsUrl: Uriorcurie
+    tagline: String
+    visualExplainer: Uriorcurie
+    url: Uriorcurie
+    websiteInclude: Boolean
+    seeAlso: [Uriorcurie]
+    license: LicenseEnum
+    category: StandardEnum!
   }
 
 type Tool
   {
     id: Uriorcurie!
     name: String
+    shortName: String
     description: String
     grants: [GrantEnum]
     documentation: Uriorcurie
     monarchContribution: MonarchContributionEnum
-    url: Uriorcurie
     repository: Uriorcurie
-    category: ToolAssetEnum
+    monarchRole: MonarchRoleEnum
+    citation: Uriorcurie
+    contact: Contact
+    projectBoards: [ProjectBoard]
+    icon: String
+    iconsUrl: Uriorcurie
+    tagline: String
+    visualExplainer: Uriorcurie
+    url: Uriorcurie
+    websiteInclude: Boolean
+    seeAlso: [Uriorcurie]
+    license: LicenseEnum
+    category: ToolAssetEnum!
   }
 

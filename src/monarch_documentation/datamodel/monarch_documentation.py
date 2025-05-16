@@ -1,5 +1,5 @@
 # Auto generated from monarch_documentation.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-05-16T12:19:02
+# Generation date: 2025-05-16T12:20:15
 # Schema: monarch-documentation-schema
 #
 # id: https://w3id.org/monarch-initiative/monarch-documentation

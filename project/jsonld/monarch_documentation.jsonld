@@ -25,15 +25,21 @@
       "prefix_reference": "http://schema.org/"
     }
   ],
-  "default_prefix": "https://w3id.org/monarch-initiative/monarch-documentation/",
+  "default_prefix": "mtd",
   "default_range": "string",
   "types": [
     {
       "name": "string",
       "definition_uri": "https://w3id.org/linkml/String",
       "description": "A character string",
+      "notes": [
+        "In RDF serializations, a slot with range of string is treated as a literal or type xsd:string.   If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"string\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Text"
+      ],
       "base": "str",
       "uri": "http://www.w3.org/2001/XMLSchema#string",
       "@type": "TypeDefinition"
@@ -42,8 +48,14 @@
       "name": "integer",
       "definition_uri": "https://w3id.org/linkml/Integer",
       "description": "An integer",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"integer\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Integer"
+      ],
       "base": "int",
       "uri": "http://www.w3.org/2001/XMLSchema#integer",
       "@type": "TypeDefinition"
@@ -52,8 +64,14 @@
       "name": "boolean",
       "definition_uri": "https://w3id.org/linkml/Boolean",
       "description": "A binary (true or false) value",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"boolean\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Boolean"
+      ],
       "base": "Bool",
       "uri": "http://www.w3.org/2001/XMLSchema#boolean",
       "repr": "bool",
@@ -63,8 +81,14 @@
       "name": "float",
       "definition_uri": "https://w3id.org/linkml/Float",
       "description": "A real number that conforms to the xsd:float specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"float\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Float"
+      ],
       "base": "float",
       "uri": "http://www.w3.org/2001/XMLSchema#float",
       "@type": "TypeDefinition"
@@ -73,8 +97,14 @@
       "name": "double",
       "definition_uri": "https://w3id.org/linkml/Double",
       "description": "A real number that conforms to the xsd:double specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"double\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
+      "close_mappings": [
+        "schema:Float"
+      ],
       "base": "float",
       "uri": "http://www.w3.org/2001/XMLSchema#double",
       "@type": "TypeDefinition"
@@ -83,8 +113,14 @@
       "name": "decimal",
       "definition_uri": "https://w3id.org/linkml/Decimal",
       "description": "A real number with arbitrary precision that conforms to the xsd:decimal specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"decimal\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
+      "broad_mappings": [
+        "schema:Number"
+      ],
       "base": "Decimal",
       "uri": "http://www.w3.org/2001/XMLSchema#decimal",
       "@type": "TypeDefinition"
@@ -94,12 +130,16 @@
       "definition_uri": "https://w3id.org/linkml/Time",
       "description": "A time object represents a (local) time of day, independent of any particular day",
       "notes": [
-        "URI is dateTime because OWL reasoners do not work with straight date or time"
+        "URI is dateTime because OWL reasoners do not work with straight date or time",
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"time\"."
       ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Time"
+      ],
       "base": "XSDTime",
-      "uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "uri": "http://www.w3.org/2001/XMLSchema#time",
       "repr": "str",
       "@type": "TypeDefinition"
     },
@@ -108,10 +148,14 @@
       "definition_uri": "https://w3id.org/linkml/Date",
       "description": "a date (year, month and day) in an idealized calendar",
       "notes": [
-        "URI is dateTime because OWL reasoners don't work with straight date or time"
+        "URI is dateTime because OWL reasoners don't work with straight date or time",
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date\"."
       ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Date"
+      ],
       "base": "XSDDate",
       "uri": "http://www.w3.org/2001/XMLSchema#date",
       "repr": "str",
@@ -121,8 +165,14 @@
       "name": "datetime",
       "definition_uri": "https://w3id.org/linkml/Datetime",
       "description": "The combination of a date and time",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"datetime\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:DateTime"
+      ],
       "base": "XSDDateTime",
       "uri": "http://www.w3.org/2001/XMLSchema#dateTime",
       "repr": "str",
@@ -132,6 +182,9 @@
       "name": "date_or_datetime",
       "definition_uri": "https://w3id.org/linkml/DateOrDatetime",
       "description": "Either a date or a datetime",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date_or_datetime\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "base": "str",
@@ -143,6 +196,9 @@
       "name": "uriorcurie",
       "definition_uri": "https://w3id.org/linkml/Uriorcurie",
       "description": "a URI or a CURIE",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uriorcurie\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "base": "URIorCURIE",
@@ -151,11 +207,40 @@
       "@type": "TypeDefinition"
     },
     {
-      "name": "uri",
-      "definition_uri": "https://w3id.org/linkml/Uri",
-      "description": "a complete URI",
+      "name": "curie",
+      "definition_uri": "https://w3id.org/linkml/Curie",
+      "conforms_to": "https://www.w3.org/TR/curie/",
+      "description": "a compact URI",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"curie\"."
+      ],
+      "comments": [
+        "in RDF serializations this MUST be expanded to a URI",
+        "in non-RDF serializations MAY be serialized as the compact representation"
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
+      "base": "Curie",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "uri",
+      "definition_uri": "https://w3id.org/linkml/Uri",
+      "conforms_to": "https://www.ietf.org/rfc/rfc3987.txt",
+      "description": "a complete URI",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uri\"."
+      ],
+      "comments": [
+        "in RDF serializations a slot with range of uri is treated as a literal or type xsd:anyURI unless it is an identifier or a reference to an identifier, in which case it is translated directly to a node"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "close_mappings": [
+        "schema:URL"
+      ],
       "base": "URI",
       "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
       "repr": "str",
@@ -165,6 +250,9 @@
       "name": "ncname",
       "definition_uri": "https://w3id.org/linkml/Ncname",
       "description": "Prefix part of CURIE",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"ncname\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "base": "NCName",
@@ -176,8 +264,11 @@
       "name": "objectidentifier",
       "definition_uri": "https://w3id.org/linkml/Objectidentifier",
       "description": "A URI or CURIE that represents an object in the model.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"objectidentifier\"."
+      ],
       "comments": [
-        "Used for inheritence and type checking"
+        "Used for inheritance and type checking"
       ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
@@ -190,15 +281,106 @@
       "name": "nodeidentifier",
       "definition_uri": "https://w3id.org/linkml/Nodeidentifier",
       "description": "A URI, CURIE or BNODE that represents a node in a model.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"nodeidentifier\"."
+      ],
       "from_schema": "https://w3id.org/linkml/types",
       "imported_from": "linkml:types",
       "base": "NodeIdentifier",
       "uri": "http://www.w3.org/ns/shex#nonLiteral",
       "repr": "str",
       "@type": "TypeDefinition"
+    },
+    {
+      "name": "jsonpointer",
+      "definition_uri": "https://w3id.org/linkml/Jsonpointer",
+      "conforms_to": "https://datatracker.ietf.org/doc/html/rfc6901",
+      "description": "A string encoding a JSON Pointer. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to a valid object within the current instance document when encoded in tree form.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpointer\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "jsonpath",
+      "definition_uri": "https://w3id.org/linkml/Jsonpath",
+      "conforms_to": "https://www.ietf.org/archive/id/draft-goessner-dispatch-jsonpath-00.html",
+      "description": "A string encoding a JSON Path. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded in tree form.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpath\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "sparqlpath",
+      "definition_uri": "https://w3id.org/linkml/Sparqlpath",
+      "conforms_to": "https://www.w3.org/TR/sparql11-query/#propertypaths",
+      "description": "A string encoding a SPARQL Property Path. The value of the string MUST conform to SPARQL syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded as RDF.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"sparqlpath\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
     }
   ],
   "enums": [
+    {
+      "name": "license_enum",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/LicenseEnum",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "permissible_values": [
+        {
+          "text": "CC-BY-4.0",
+          "description": "Creative Commons Attribution 4.0 International"
+        },
+        {
+          "text": "CC-BY-NC-4.0",
+          "description": "Creative Commons Attribution-NonCommercial 4.0 International"
+        },
+        {
+          "text": "CC-BY-SA-4.0",
+          "description": "Creative Commons Attribution-ShareAlike 4.0 International"
+        },
+        {
+          "text": "CC-BY-NC-SA-4.0",
+          "description": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International"
+        },
+        {
+          "text": "GPLv3",
+          "description": "GNU General Public License v3.0"
+        },
+        {
+          "text": "BSD-3-Clause",
+          "description": "BSD 3-Clause License"
+        },
+        {
+          "text": "Apache-2.0",
+          "description": "Apache License 2.0"
+        },
+        {
+          "text": "MIT",
+          "description": "MIT License"
+        },
+        {
+          "text": "JAX-CUSTOM",
+          "description": "JAX Custom License (https://hpo.jax.org/license)"
+        }
+      ]
+    },
     {
       "name": "release_status_enum",
       "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/ReleaseStatusEnum",
@@ -231,6 +413,9 @@
         },
         {
           "text": "rdfxml"
+        },
+        {
+          "text": "nt.gz"
         }
       ]
     },
@@ -247,6 +432,9 @@
         },
         {
           "text": "Data Exchange"
+        },
+        {
+          "text": "Ontology Curation"
         }
       ]
     },
@@ -260,6 +448,9 @@
         },
         {
           "text": "Knowledge Graph Ingestibles"
+        },
+        {
+          "text": "Knowledge Graph"
         }
       ]
     },
@@ -282,6 +473,12 @@
         },
         {
           "text": "Data Curation"
+        },
+        {
+          "text": "Benchmarking"
+        },
+        {
+          "text": "Registry"
         }
       ]
     },
@@ -292,6 +489,9 @@
       "permissible_values": [
         {
           "text": "Technical Documentation"
+        },
+        {
+          "text": "Training Materials"
         }
       ]
     },
@@ -305,6 +505,9 @@
         },
         {
           "text": "Co-Lead"
+        },
+        {
+          "text": "Contributor"
         }
       ]
     },
@@ -325,6 +528,39 @@
         },
         {
           "text": "Exomiser"
+        },
+        {
+          "text": "Bosch Gift"
+        },
+        {
+          "text": "TBD"
+        }
+      ]
+    },
+    {
+      "name": "monarch_role_enum",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/MonarchRoleEnum",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "permissible_values": [
+        {
+          "text": "Foundational",
+          "description": "A foundational product is a product that fulfills a strategic role for the Monarch Initiative. In particular it (1) *directly* supports the Monarch mission (excluding products of general utility) (2) has stakeholders outside of the Monarch Initiative (3) has stakeholders among most major member organisations of the Monarch Initiative An important corrolary of (3) is that all major member organisations of the Monarch Initiative should feel a sense of commitment to contributing to the success of the foundational product."
+        },
+        {
+          "text": "Core",
+          "description": "A core product is a product that contributes to the Monarch mission, but is not a foundational product. In particular it (1) may support the Monarch mission in an indirect manner, such as core infrastructure for ontology lifecycle management or querying (2) has stakeholders outside of the Monarch Initiative (3) has stakeholders among at least one major member organisation of the Monarch Initiative An important corrolary of (3) is that at least one major member organisation of the Monarch Initiative should feel a sense of commitment to contributing to the success of the core product."
+        },
+        {
+          "text": "Support",
+          "description": "A support product is a product that only indirectly contributes to the Monarch mission, usually by supporting the development of a foundational or core product. A support product (1) does not directly support the Monarch mission, but is essential for the development of a foundational or core product (2) has few stakeholders outside of the Monarch Initiative"
+        },
+        {
+          "text": "Research",
+          "description": "A research product is a product that supports our own research efforts. The research outcome may or may not be used in a foundational product, core or support product. A research product (1) does not directly support the Monarch mission, but leads to insights that support our mission (2) has no stakeholders outside of the Monarch Initiative (the research itself may!)"
+        },
+        {
+          "text": "Community",
+          "description": "A community product is a product that does not directly support the Monarch mission, but supports community efforts towards the mission. A community product (1) is usually a community resource, such as training materials, a community website, a standard specification, etc. (2) is usually more *general-purpose* (3) is community-driven, rather than mission-driven"
         }
       ]
     }
@@ -357,11 +593,65 @@
         "http://schema.org/name"
       ],
       "slot_uri": "http://schema.org/name",
+      "owner": "Contact",
+      "domain_of": [
+        "Resource",
+        "ResourceRegistry",
+        "Contact"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "short_name",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/short_name",
+      "description": "A short name for a resource",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/short_name",
       "owner": "Resource",
       "domain_of": [
         "Resource"
       ],
       "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "email",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/email",
+      "description": "The email of the contact.",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/email",
+      "owner": "Contact",
+      "domain_of": [
+        "Contact"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "github",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/github",
+      "description": "The GitHub handle of the contact.",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/github",
+      "owner": "Contact",
+      "domain_of": [
+        "Contact"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "orcid",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/orcid",
+      "description": "The ORCID of the contact.",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/orcid",
+      "owner": "Contact",
+      "domain_of": [
+        "Contact"
+      ],
+      "range": "uriorcurie",
       "@type": "SlotDefinition"
     },
     {
@@ -381,13 +671,45 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "contact",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/contact",
+      "description": "The person responsible for a resources.",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/contact",
+      "owner": "Resource",
+      "domain_of": [
+        "Resource"
+      ],
+      "range": "Contact",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "download",
       "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/download",
       "description": "The web location this asset can be obtained from.",
       "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
       "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/download",
+      "multivalued": true,
+      "owner": "DataAsset",
+      "domain_of": [
+        "DataAsset"
+      ],
       "range": "Download",
       "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "citation",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/citation",
+      "description": "A citation for the resource",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/citation",
+      "owner": "Resource",
+      "domain_of": [
+        "Resource"
+      ],
+      "range": "uriorcurie",
       "@type": "SlotDefinition"
     },
     {
@@ -405,11 +727,31 @@
       "@type": "SlotDefinition"
     },
     {
+      "name": "project_boards",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/project_boards",
+      "description": "The project board associated with this resource",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/project_boards",
+      "multivalued": true,
+      "owner": "Resource",
+      "domain_of": [
+        "Resource"
+      ],
+      "range": "ProjectBoard",
+      "inlined": true,
+      "inlined_as_list": true,
+      "@type": "SlotDefinition"
+    },
+    {
       "name": "release_status",
       "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/release_status",
       "description": "The maturity of the asset, e.g. whether it is under development, or public.",
       "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
       "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/release_status",
+      "owner": "Download",
+      "domain_of": [
+        "Download"
+      ],
       "range": "release_status_enum",
       "@type": "SlotDefinition"
     },
@@ -419,10 +761,9 @@
       "description": "The repository associated with this resource",
       "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
       "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/repository",
-      "owner": "Documentation",
+      "owner": "Resource",
       "domain_of": [
-        "Tool",
-        "Documentation"
+        "Resource"
       ],
       "range": "uriorcurie",
       "@type": "SlotDefinition"
@@ -433,6 +774,10 @@
       "description": "The format of the file.",
       "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
       "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/file_format",
+      "owner": "Download",
+      "domain_of": [
+        "Download"
+      ],
       "range": "file_format_enum",
       "@type": "SlotDefinition"
     },
@@ -442,10 +787,11 @@
       "description": "A web location",
       "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
       "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/url",
-      "owner": "Documentation",
+      "owner": "Download",
       "domain_of": [
-        "Tool",
-        "Documentation"
+        "Resource",
+        "ProjectBoard",
+        "Download"
       ],
       "range": "uriorcurie",
       "@type": "SlotDefinition"
@@ -456,7 +802,107 @@
       "description": "Monarch asset category. This allows grouping related assets (like data assets) together in sensible categories.",
       "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
       "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/category",
+      "owner": "Documentation",
+      "domain_of": [
+        "DataAsset",
+        "Standard",
+        "Tool",
+        "Documentation"
+      ],
       "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "icon",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/icon",
+      "description": "An icon representing the asset.",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/icon",
+      "owner": "Resource",
+      "domain_of": [
+        "Resource"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "icons_url",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/icons_url",
+      "description": "A URL to an icon or set of icon representing the asset. We dont expect this to resolve to a specific icon, more to the place where to get the icons from.",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/icons_url",
+      "owner": "Resource",
+      "domain_of": [
+        "Resource"
+      ],
+      "range": "uriorcurie",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "tagline",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/tagline",
+      "description": "A short tagline for the resource.",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/tagline",
+      "owner": "Resource",
+      "domain_of": [
+        "Resource"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "visual_explainer",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/visual_explainer",
+      "description": "A visual abstract for the resource.",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/visual_explainer",
+      "owner": "Resource",
+      "domain_of": [
+        "Resource"
+      ],
+      "range": "uriorcurie",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "website_include",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/website_include",
+      "description": "Flag if this resource should be shown on the website.",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/website_include",
+      "owner": "Resource",
+      "domain_of": [
+        "Resource"
+      ],
+      "range": "boolean",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "see_also",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/see_also",
+      "description": "A list of related resources.",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/see_also",
+      "multivalued": true,
+      "owner": "Resource",
+      "domain_of": [
+        "Resource"
+      ],
+      "range": "uriorcurie",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "license",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/license",
+      "description": "A URL to the license.",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/license",
+      "owner": "Resource",
+      "domain_of": [
+        "Resource"
+      ],
+      "range": "license_enum",
       "@type": "SlotDefinition"
     },
     {
@@ -486,71 +932,24 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "dataAsset__download",
+      "name": "monarch_role",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/monarch_role",
+      "description": "The strategic role the asset has for the Monarch core mission.",
       "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
-      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/download",
-      "alias": "download",
-      "owner": "DataAsset",
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/monarch_role",
+      "owner": "Resource",
       "domain_of": [
-        "DataAsset"
+        "Resource"
       ],
-      "range": "string",
+      "range": "monarch_role_enum",
       "@type": "SlotDefinition"
     },
     {
-      "name": "dataAsset__category",
-      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
-      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/category",
-      "alias": "category",
-      "owner": "DataAsset",
-      "domain_of": [
-        "DataAsset"
-      ],
-      "range": "data_asset_enum",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "standard__category",
-      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
-      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/category",
-      "alias": "category",
-      "owner": "Standard",
-      "domain_of": [
-        "Standard"
-      ],
-      "range": "standard_enum",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "tool__category",
-      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
-      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/category",
-      "alias": "category",
-      "owner": "Tool",
-      "domain_of": [
-        "Tool"
-      ],
-      "range": "tool_asset_enum",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "documentation__category",
-      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
-      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/category",
-      "alias": "category",
-      "owner": "Documentation",
-      "domain_of": [
-        "Documentation"
-      ],
-      "range": "documentation_asset_enum",
-      "@type": "SlotDefinition"
-    },
-    {
-      "name": "resourceRegistry__data",
+      "name": "data",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/data",
       "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
       "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/data",
       "multivalued": true,
-      "alias": "data",
       "owner": "ResourceRegistry",
       "domain_of": [
         "ResourceRegistry"
@@ -561,11 +960,11 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "resourceRegistry__standards",
+      "name": "standards",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/standards",
       "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
       "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/standards",
       "multivalued": true,
-      "alias": "standards",
       "owner": "ResourceRegistry",
       "domain_of": [
         "ResourceRegistry"
@@ -576,11 +975,11 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "resourceRegistry__tools",
+      "name": "tools",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/tools",
       "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
       "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/tools",
       "multivalued": true,
-      "alias": "tools",
       "owner": "ResourceRegistry",
       "domain_of": [
         "ResourceRegistry"
@@ -591,11 +990,11 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "resourceRegistry__documentation",
+      "name": "documentations",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/documentations",
       "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
-      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/documentation",
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/documentations",
       "multivalued": true,
-      "alias": "documentation",
       "owner": "ResourceRegistry",
       "domain_of": [
         "ResourceRegistry"
@@ -606,11 +1005,11 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "resourceRegistry__repositories",
+      "name": "repositories",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/repositories",
       "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
       "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/repositories",
       "multivalued": true,
-      "alias": "repositories",
       "owner": "ResourceRegistry",
       "domain_of": [
         "ResourceRegistry"
@@ -621,39 +1020,127 @@
       "@type": "SlotDefinition"
     },
     {
-      "name": "download__url",
+      "name": "depends_on",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/depends_on",
+      "description": "A list of packages a resource depends on",
       "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
-      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/url",
-      "alias": "url",
-      "owner": "Download",
+      "mappings": [
+        "https://w3id.org/monarch-initiative/monarch-documentation/depends_on"
+      ],
+      "domain": "Repository",
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/depends_on",
+      "owner": "Repository",
       "domain_of": [
-        "Download"
+        "Repository"
+      ],
+      "range": "Repository",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "repo_url",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/repo_url",
+      "description": "(str) URL to",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "mappings": [
+        "https://w3id.org/monarch-initiative/monarch-documentation/repo_url"
+      ],
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/repo_url",
+      "owner": "Repository",
+      "domain_of": [
+        "Repository"
       ],
       "range": "string",
       "@type": "SlotDefinition"
     },
     {
-      "name": "download__release_status",
+      "name": "organization",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/organization",
       "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
-      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/release_status",
-      "alias": "release_status",
-      "owner": "Download",
+      "mappings": [
+        "https://w3id.org/monarch-initiative/monarch-documentation/organization"
+      ],
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/organization",
+      "owner": "Repository",
       "domain_of": [
-        "Download"
+        "Repository"
       ],
       "range": "string",
       "@type": "SlotDefinition"
     },
     {
-      "name": "download__file_format",
+      "name": "DataAsset_category",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/category",
+      "description": "Monarch asset category. This allows grouping related assets (like data assets) together in sensible categories.",
       "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
-      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/file_format",
-      "alias": "file_format",
-      "owner": "Download",
+      "is_a": "category",
+      "domain": "DataAsset",
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/category",
+      "alias": "category",
+      "owner": "DataAsset",
       "domain_of": [
-        "Download"
+        "DataAsset"
       ],
-      "range": "string",
+      "is_usage_slot": true,
+      "usage_slot_name": "category",
+      "range": "data_asset_enum",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "Standard_category",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/category",
+      "description": "Monarch asset category. This allows grouping related assets (like data assets) together in sensible categories.",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "is_a": "category",
+      "domain": "Standard",
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/category",
+      "alias": "category",
+      "owner": "Standard",
+      "domain_of": [
+        "Standard"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "category",
+      "range": "standard_enum",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "Tool_category",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/category",
+      "description": "Monarch asset category. This allows grouping related assets (like data assets) together in sensible categories.",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "is_a": "category",
+      "domain": "Tool",
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/category",
+      "alias": "category",
+      "owner": "Tool",
+      "domain_of": [
+        "Tool"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "category",
+      "range": "tool_asset_enum",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "Documentation_category",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/category",
+      "description": "Monarch asset category. This allows grouping related assets (like data assets) together in sensible categories.",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "is_a": "category",
+      "domain": "Documentation",
+      "slot_uri": "https://w3id.org/monarch-initiative/monarch-documentation/category",
+      "alias": "category",
+      "owner": "Documentation",
+      "domain_of": [
+        "Documentation"
+      ],
+      "is_usage_slot": true,
+      "usage_slot_name": "category",
+      "range": "documentation_asset_enum",
+      "required": true,
       "@type": "SlotDefinition"
     }
   ],
@@ -669,10 +1156,24 @@
       "slots": [
         "id",
         "name",
+        "short_name",
         "description",
         "grants",
         "documentation",
-        "monarch_contribution"
+        "monarch_contribution",
+        "repository",
+        "monarch_role",
+        "citation",
+        "contact",
+        "project_boards",
+        "icon",
+        "icons_url",
+        "tagline",
+        "visual_explainer",
+        "url",
+        "website_include",
+        "see_also",
+        "license"
       ],
       "slot_usage": {},
       "class_uri": "http://schema.org/Thing",
@@ -681,114 +1182,201 @@
     {
       "name": "DataAsset",
       "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/DataAsset",
-      "description": "A data asset.",
+      "description": "A data asset is a resource that contains data, either manually curated, or generated by a computational (ETL) process. Data are raw facts (associations) generated by observations.",
       "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
       "is_a": "Resource",
       "slots": [
         "id",
         "name",
+        "short_name",
         "description",
         "grants",
         "documentation",
         "monarch_contribution",
-        "dataAsset__download",
-        "dataAsset__category"
+        "repository",
+        "monarch_role",
+        "citation",
+        "contact",
+        "project_boards",
+        "icon",
+        "icons_url",
+        "tagline",
+        "visual_explainer",
+        "url",
+        "website_include",
+        "see_also",
+        "license",
+        "download",
+        "DataAsset_category"
       ],
       "slot_usage": {},
-      "attributes": [
-        {
-          "name": "download",
-          "@type": "SlotDefinition"
-        },
-        {
-          "name": "category",
-          "range": "data_asset_enum",
-          "@type": "SlotDefinition"
-        }
-      ],
       "class_uri": "https://w3id.org/monarch-initiative/monarch-documentation/DataAsset",
       "@type": "ClassDefinition"
     },
     {
       "name": "Standard",
       "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/Standard",
-      "description": "A reference to a repository.",
+      "description": "Standards are agreed-upon conventions or guidelines that ensure uniformity, consistency, and compatibility in various fields and practices. They are like the common languages or rulebooks that different parties use to ensure they understand each other and can work together efficiently. Standards include both exchange standards, like KGX or SSSOM, and ontologies, like HPO or Mondo.",
       "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
       "is_a": "Resource",
       "slots": [
         "id",
         "name",
+        "short_name",
         "description",
         "grants",
         "documentation",
         "monarch_contribution",
-        "standard__category"
+        "repository",
+        "monarch_role",
+        "citation",
+        "contact",
+        "project_boards",
+        "icon",
+        "icons_url",
+        "tagline",
+        "visual_explainer",
+        "url",
+        "website_include",
+        "see_also",
+        "license",
+        "Standard_category"
       ],
       "slot_usage": {},
-      "attributes": [
-        {
-          "name": "category",
-          "range": "standard_enum",
-          "@type": "SlotDefinition"
-        }
-      ],
       "class_uri": "https://w3id.org/monarch-initiative/monarch-documentation/Standard",
       "@type": "ClassDefinition"
     },
     {
       "name": "Tool",
       "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/Tool",
-      "description": "A reference to a repository.",
+      "description": "A software tool is a computer program designed to help users perform specific tasks or functions, typically making complex or time-consuming processes more efficient and user-friendly. These tasks can range from simple data manipulation to sophisticated design and analysis.",
       "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
       "is_a": "Resource",
       "slots": [
         "id",
         "name",
+        "short_name",
         "description",
         "grants",
         "documentation",
         "monarch_contribution",
-        "url",
         "repository",
-        "tool__category"
+        "monarch_role",
+        "citation",
+        "contact",
+        "project_boards",
+        "icon",
+        "icons_url",
+        "tagline",
+        "visual_explainer",
+        "url",
+        "website_include",
+        "see_also",
+        "license",
+        "Tool_category"
       ],
       "slot_usage": {},
-      "attributes": [
-        {
-          "name": "category",
-          "range": "tool_asset_enum",
-          "@type": "SlotDefinition"
-        }
-      ],
       "class_uri": "https://w3id.org/monarch-initiative/monarch-documentation/Tool",
       "@type": "ClassDefinition"
     },
     {
       "name": "Documentation",
       "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/Documentation",
-      "description": "A reference to a repository.",
+      "description": "A resource that contains documentation, like a wiki, a webpage with training materials, etc.",
       "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
       "is_a": "Resource",
       "slots": [
         "id",
         "name",
+        "short_name",
         "description",
         "grants",
         "documentation",
         "monarch_contribution",
-        "url",
         "repository",
-        "documentation__category"
+        "monarch_role",
+        "citation",
+        "contact",
+        "project_boards",
+        "icon",
+        "icons_url",
+        "tagline",
+        "visual_explainer",
+        "url",
+        "website_include",
+        "see_also",
+        "license",
+        "Documentation_category"
       ],
       "slot_usage": {},
-      "attributes": [
-        {
-          "name": "category",
-          "range": "documentation_asset_enum",
-          "@type": "SlotDefinition"
-        }
-      ],
       "class_uri": "https://w3id.org/monarch-initiative/monarch-documentation/Documentation",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "ProjectBoard",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/ProjectBoard",
+      "description": "A reference to a project board, like a kanban board.",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "is_a": "Resource",
+      "slots": [
+        "id",
+        "name",
+        "short_name",
+        "description",
+        "grants",
+        "documentation",
+        "monarch_contribution",
+        "repository",
+        "monarch_role",
+        "citation",
+        "contact",
+        "project_boards",
+        "icon",
+        "icons_url",
+        "tagline",
+        "visual_explainer",
+        "website_include",
+        "see_also",
+        "license",
+        "url"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/monarch-initiative/monarch-documentation/ProjectBoard",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Repository",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/Repository",
+      "description": "A reference to a version control repository.",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "is_a": "Resource",
+      "slots": [
+        "id",
+        "name",
+        "short_name",
+        "description",
+        "grants",
+        "documentation",
+        "monarch_contribution",
+        "repository",
+        "monarch_role",
+        "citation",
+        "contact",
+        "project_boards",
+        "icon",
+        "icons_url",
+        "tagline",
+        "visual_explainer",
+        "url",
+        "website_include",
+        "see_also",
+        "license",
+        "depends_on",
+        "repo_url",
+        "organization"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/monarch-initiative/monarch-documentation/Repository",
       "@type": "ClassDefinition"
     },
     {
@@ -799,54 +1387,32 @@
       "is_a": "Resource",
       "slots": [
         "id",
-        "name",
+        "short_name",
         "description",
         "grants",
+        "documentation",
         "monarch_contribution",
-        "resourceRegistry__data",
-        "resourceRegistry__standards",
-        "resourceRegistry__tools",
-        "resourceRegistry__documentation",
-        "resourceRegistry__repositories"
+        "repository",
+        "monarch_role",
+        "citation",
+        "contact",
+        "project_boards",
+        "icon",
+        "icons_url",
+        "tagline",
+        "visual_explainer",
+        "url",
+        "website_include",
+        "see_also",
+        "license",
+        "name",
+        "data",
+        "standards",
+        "tools",
+        "documentations",
+        "repositories"
       ],
       "slot_usage": {},
-      "attributes": [
-        {
-          "name": "data",
-          "multivalued": true,
-          "range": "DataAsset",
-          "inlined_as_list": true,
-          "@type": "SlotDefinition"
-        },
-        {
-          "name": "standards",
-          "multivalued": true,
-          "range": "Standard",
-          "inlined_as_list": true,
-          "@type": "SlotDefinition"
-        },
-        {
-          "name": "tools",
-          "multivalued": true,
-          "range": "Tool",
-          "inlined_as_list": true,
-          "@type": "SlotDefinition"
-        },
-        {
-          "name": "documentation",
-          "multivalued": true,
-          "range": "Documentation",
-          "inlined_as_list": true,
-          "@type": "SlotDefinition"
-        },
-        {
-          "name": "repositories",
-          "multivalued": true,
-          "range": "Resource",
-          "inlined_as_list": true,
-          "@type": "SlotDefinition"
-        }
-      ],
       "class_uri": "https://w3id.org/monarch-initiative/monarch-documentation/ResourceRegistry",
       "@type": "ClassDefinition"
     },
@@ -856,34 +1422,35 @@
       "description": "A downloadable asset, i.e. a data file, an software component, etc.",
       "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
       "slots": [
-        "download__url",
-        "download__release_status",
-        "download__file_format"
+        "url",
+        "release_status",
+        "file_format"
       ],
       "slot_usage": {},
-      "attributes": [
-        {
-          "name": "url",
-          "@type": "SlotDefinition"
-        },
-        {
-          "name": "release_status",
-          "@type": "SlotDefinition"
-        },
-        {
-          "name": "file_format",
-          "@type": "SlotDefinition"
-        }
-      ],
       "class_uri": "https://w3id.org/monarch-initiative/monarch-documentation/Download",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Contact",
+      "definition_uri": "https://w3id.org/monarch-initiative/monarch-documentation/Contact",
+      "description": "The person responsible for a resources.",
+      "from_schema": "https://w3id.org/monarch-initiative/monarch-documentation",
+      "slots": [
+        "name",
+        "orcid",
+        "github",
+        "email"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/monarch-initiative/monarch-documentation/Contact",
       "@type": "ClassDefinition"
     }
   ],
   "metamodel_version": "1.7.0",
   "source_file": "monarch_documentation.yaml",
-  "source_file_date": "2022-12-01T08:03:40",
-  "source_file_size": 4624,
-  "generation_date": "2022-12-01T08:05:59",
+  "source_file_date": "2025-05-16T10:02:38",
+  "source_file_size": 11642,
+  "generation_date": "2025-05-16T12:20:11",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/monarch_documentation.context.jsonld",
