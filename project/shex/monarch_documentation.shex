@@ -1,0 +1,198 @@
+BASE <https://w3id.org/monarch-initiative/monarch-documentation/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX linkml: <https://w3id.org/linkml/>
+PREFIX schema1: <http://schema.org/>
+
+
+linkml:String xsd:string
+
+linkml:Integer xsd:integer
+
+linkml:Boolean xsd:boolean
+
+linkml:Float xsd:float
+
+linkml:Double xsd:double
+
+linkml:Decimal xsd:decimal
+
+linkml:Time xsd:time
+
+linkml:Date xsd:date
+
+linkml:Datetime xsd:dateTime
+
+linkml:DateOrDatetime linkml:DateOrDatetime
+
+linkml:Uriorcurie IRI
+
+linkml:Curie xsd:string
+
+linkml:Uri IRI
+
+linkml:Ncname xsd:string
+
+linkml:Objectidentifier IRI
+
+linkml:Nodeidentifier NONLITERAL
+
+linkml:Jsonpointer xsd:string
+
+linkml:Jsonpath xsd:string
+
+linkml:Sparqlpath xsd:string
+
+<Contact> CLOSED {
+    (  $<Contact_tes> (  schema1:name @linkml:String ? ;
+          <orcid> @linkml:Uriorcurie ? ;
+          <github> @linkml:String ? ;
+          <email> @linkml:String ?
+       ) ;
+       rdf:type [ <Contact> ] ?
+    )
+}
+
+<DataAsset> CLOSED {
+    (  $<DataAsset_tes> (  &<Resource_tes> ;
+          rdf:type [ schema1:Thing ] ? ;
+          <download> @<Download> * ;
+          <category> [ <https://w3id.org/monarch-initiative/monarch-documentation/DataAssetEnum#Biomedical%20Data>
+             <https://w3id.org/monarch-initiative/monarch-documentation/DataAssetEnum#Knowledge%20Graph%20Ingestibles>
+             <https://w3id.org/monarch-initiative/monarch-documentation/DataAssetEnum#Knowledge%20Graph> ]
+       ) ;
+       rdf:type [ <DataAsset> ]
+    )
+}
+
+<Documentation> CLOSED {
+    (  $<Documentation_tes> (  &<Resource_tes> ;
+          rdf:type [ schema1:Thing ] ? ;
+          <category> [ <https://w3id.org/monarch-initiative/monarch-documentation/DocumentationAssetEnum#Technical%20Documentation>
+             <https://w3id.org/monarch-initiative/monarch-documentation/DocumentationAssetEnum#Training%20Materials> ]
+       ) ;
+       rdf:type [ <Documentation> ]
+    )
+}
+
+<Download> CLOSED {
+    (  $<Download_tes> (  <url> @linkml:Uriorcurie ? ;
+          <release_status> [ <https://w3id.org/monarch-initiative/monarch-documentation/ReleaseStatusEnum#public>
+             <https://w3id.org/monarch-initiative/monarch-documentation/ReleaseStatusEnum#development%20snapshot> ] ? ;
+          <file_format> [ <https://w3id.org/monarch-initiative/monarch-documentation/FileFormatEnum#tsv>
+             <https://w3id.org/monarch-initiative/monarch-documentation/FileFormatEnum#csv>
+             <https://w3id.org/monarch-initiative/monarch-documentation/FileFormatEnum#ttl>
+             <https://w3id.org/monarch-initiative/monarch-documentation/FileFormatEnum#json>
+             <https://w3id.org/monarch-initiative/monarch-documentation/FileFormatEnum#rdfxml>
+             <https://w3id.org/monarch-initiative/monarch-documentation/FileFormatEnum#nt.gz> ] ?
+       ) ;
+       rdf:type [ <Download> ] ?
+    )
+}
+
+<ProjectBoard> CLOSED {
+    (  $<ProjectBoard_tes> (  &<Resource_tes> ;
+          rdf:type [ schema1:Thing ] ?
+       ) ;
+       rdf:type [ <ProjectBoard> ]
+    )
+}
+
+<Repository> CLOSED {
+    (  $<Repository_tes> (  &<Resource_tes> ;
+          rdf:type [ schema1:Thing ] ? ;
+          <depends_on> @<Repository> ? ;
+          <repo_url> @linkml:String ? ;
+          <organization> @linkml:String ?
+       ) ;
+       rdf:type [ <Repository> ]
+    )
+}
+
+<Resource>  (
+    CLOSED {
+       (  $<Resource_tes> (  schema1:name @linkml:String ? ;
+             <short_name> @linkml:String ? ;
+             schema1:description @linkml:String ? ;
+             <grants> [ <https://w3id.org/monarch-initiative/monarch-documentation/GrantEnum#Phenomics%20First>
+                <https://w3id.org/monarch-initiative/monarch-documentation/GrantEnum#Monarch%20R24>
+                <https://w3id.org/monarch-initiative/monarch-documentation/GrantEnum#HPO>
+                <https://w3id.org/monarch-initiative/monarch-documentation/GrantEnum#Exomiser>
+                <https://w3id.org/monarch-initiative/monarch-documentation/GrantEnum#Bosch%20Gift>
+                <https://w3id.org/monarch-initiative/monarch-documentation/GrantEnum#TBD> ] * ;
+             <documentation> @linkml:Uriorcurie ? ;
+             <monarch_contribution> [ <https://w3id.org/monarch-initiative/monarch-documentation/MonarchContributionEnum#Lead>
+                <https://w3id.org/monarch-initiative/monarch-documentation/MonarchContributionEnum#Co-Lead>
+                <https://w3id.org/monarch-initiative/monarch-documentation/MonarchContributionEnum#Contributor> ] ? ;
+             <repository> @linkml:Uriorcurie ? ;
+             <monarch_role> [ <https://w3id.org/monarch-initiative/monarch-documentation/MonarchRoleEnum#Foundational>
+                <https://w3id.org/monarch-initiative/monarch-documentation/MonarchRoleEnum#Core>
+                <https://w3id.org/monarch-initiative/monarch-documentation/MonarchRoleEnum#Support>
+                <https://w3id.org/monarch-initiative/monarch-documentation/MonarchRoleEnum#Research>
+                <https://w3id.org/monarch-initiative/monarch-documentation/MonarchRoleEnum#Community> ] ? ;
+             <citation> @linkml:Uriorcurie ? ;
+             <contact> @<Contact> ? ;
+             <project_boards> @<ProjectBoard> * ;
+             <icon> @linkml:String ? ;
+             <icons_url> @linkml:Uriorcurie ? ;
+             <tagline> @linkml:String ? ;
+             <visual_explainer> @linkml:Uriorcurie ? ;
+             <url> @linkml:Uriorcurie ? ;
+             <website_include> @linkml:Boolean ? ;
+             <see_also> @linkml:Uriorcurie * ;
+             <license> [ <https://w3id.org/monarch-initiative/monarch-documentation/LicenseEnum#CC-BY-4.0>
+                <https://w3id.org/monarch-initiative/monarch-documentation/LicenseEnum#CC-BY-NC-4.0>
+                <https://w3id.org/monarch-initiative/monarch-documentation/LicenseEnum#CC-BY-SA-4.0>
+                <https://w3id.org/monarch-initiative/monarch-documentation/LicenseEnum#CC-BY-NC-SA-4.0>
+                <https://w3id.org/monarch-initiative/monarch-documentation/LicenseEnum#GPLv3>
+                <https://w3id.org/monarch-initiative/monarch-documentation/LicenseEnum#BSD-3-Clause>
+                <https://w3id.org/monarch-initiative/monarch-documentation/LicenseEnum#Apache-2.0>
+                <https://w3id.org/monarch-initiative/monarch-documentation/LicenseEnum#MIT>
+                <https://w3id.org/monarch-initiative/monarch-documentation/LicenseEnum#JAX-CUSTOM> ] ?
+          ) ;
+          rdf:type [ schema1:Thing ]
+       )
+    } OR @<DataAsset> OR @<Documentation> OR @<ProjectBoard> OR @<Repository> OR @<ResourceRegistry> OR @<Standard> OR @<Tool>
+)
+
+<ResourceRegistry> CLOSED {
+    (  $<ResourceRegistry_tes> (  &<Resource_tes> ;
+          rdf:type [ schema1:Thing ] ? ;
+          <data> @<DataAsset> * ;
+          <standards> @<Standard> * ;
+          <tools> @<Tool> * ;
+          <documentations> @<Documentation> * ;
+          <repositories> @<Resource> *
+       ) ;
+       rdf:type [ <ResourceRegistry> ]
+    )
+}
+
+<Standard> CLOSED {
+    (  $<Standard_tes> (  &<Resource_tes> ;
+          rdf:type [ schema1:Thing ] ? ;
+          <category> [ <https://w3id.org/monarch-initiative/monarch-documentation/StandardEnum#Ontology>
+             <https://w3id.org/monarch-initiative/monarch-documentation/StandardEnum#Data%20Standard>
+             <https://w3id.org/monarch-initiative/monarch-documentation/StandardEnum#Data%20Exchange>
+             <https://w3id.org/monarch-initiative/monarch-documentation/StandardEnum#Ontology%20Curation> ]
+       ) ;
+       rdf:type [ <Standard> ]
+    )
+}
+
+<Tool> CLOSED {
+    (  $<Tool_tes> (  &<Resource_tes> ;
+          rdf:type [ schema1:Thing ] ? ;
+          <category> [ <https://w3id.org/monarch-initiative/monarch-documentation/ToolAssetEnum#Clinical%20Diagnosis>
+             <https://w3id.org/monarch-initiative/monarch-documentation/ToolAssetEnum#Ontology%20Maintenance>
+             <https://w3id.org/monarch-initiative/monarch-documentation/ToolAssetEnum#Ontology%20Use>
+             <https://w3id.org/monarch-initiative/monarch-documentation/ToolAssetEnum#Mapping>
+             <https://w3id.org/monarch-initiative/monarch-documentation/ToolAssetEnum#Data%20Curation>
+             <https://w3id.org/monarch-initiative/monarch-documentation/ToolAssetEnum#Benchmarking>
+             <https://w3id.org/monarch-initiative/monarch-documentation/ToolAssetEnum#Registry> ]
+       ) ;
+       rdf:type [ <Tool> ]
+    )
+}
+
+

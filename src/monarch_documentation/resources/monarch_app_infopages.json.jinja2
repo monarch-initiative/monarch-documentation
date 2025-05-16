@@ -1,0 +1,131 @@
+{# --- Collect registries as a dict keyed by ID --- #}
+{%- set registry_items={} %}
+{%- for d in tools %}
+  {%- if d.category == 'Registry' and (d.website_include is defined and d.website_include) %}
+    {%- set cid = d.id %}
+    {%- set item = {
+      "title": d.name,
+      "title_short": d.short_name if 'short_name' in d else d.name,
+      "icon": d.icon if 'icon' in d else None,
+      "license": d.license if 'license' in d else None,
+      "about": d.description if 'description' in d else None,
+      "tagline": d.tagline if 'tagline' in d else None,
+      "visual_explainer": d.visual_explainer if 'visual_explainer' in d else None,
+      "description": d.description if 'description' in d else None,
+      "see_also": {
+        "documentation": d.documentation if 'documentation' in d else None,
+        "repository": d.repository if 'repository' in d else None,
+        "website": d.url if 'url' in d else None,
+        "other": d.see_also if 'see_also' in d else None
+      },
+      "contact": {
+        "email": d.contact.email if 'email' in d.contact else None,
+        "name": d.contact.name if 'name' in d.contact else None,
+        "github": d.contact.github if 'github' in d.contact else None,
+        "orcid": d.contact.orcid if 'orcid' in d.contact else None
+      }
+    } %}
+    {%- do registry_items.update({cid: item}) %}
+  {%- endif %}
+{%- endfor %}
+
+{# --- Collect ontologies --- #}
+{%- set ontology_items = {} %}
+{%- for d in standards %}
+  {%- if d.category == 'Ontology' and (d.website_include is defined and d.website_include) %}
+    {%- set cid = d.id %}
+    {%- set item = {
+      "title": d.name,
+      "title_short": d.short_name if 'short_name' in d else d.name,
+      "icon": d.icon if 'icon' in d else None,
+      "license": d.license if 'license' in d else None,
+      "about": d.description if 'description' in d else None,
+      "tagline": d.tagline if 'tagline' in d else None,
+      "visual_explainer": d.visual_explainer if 'visual_explainer' in d else None,
+      "description": d.description if 'description' in d else None,
+      "see_also": {
+        "documentation": d.documentation if 'documentation' in d else None,
+        "repository": d.repository if 'repository' in d else None,
+        "website": d.url if 'url' in d else None,
+        "other": d.see_also if 'see_also' in d else None
+      },
+      "contact": {
+        "email": d.contact.email if 'email' in d.contact else None,
+        "name": d.contact.name if 'name' in d.contact else None,
+        "github": d.contact.github if 'github' in d.contact else None,
+        "orcid": d.contact.orcid if 'orcid' in d.contact else None
+      }
+    } %}
+    {%- do ontology_items.update({cid: item}) %}
+  {%- endif %}
+{%- endfor %}
+
+{# --- Collect standards (excluding ontologies) --- #}
+{%- set standards_items = {} %}
+{%- for d in standards %}
+  {%- if d.category != 'Ontology' and (d.website_include is defined and d.website_include) %}
+    {%- set cid = d.id %}
+    {%- set item = {
+      "title": d.name,
+      "title_short": d.short_name if 'short_name' in d else d.name,
+      "icon": d.icon if 'icon' in d else None,
+      "license": d.license if 'license' in d else None,
+      "about": d.description if 'description' in d else None,
+      "tagline": d.tagline if 'tagline' in d else None,
+      "visual_explainer": d.visual_explainer if 'visual_explainer' in d else None,
+      "description": d.description if 'description' in d else None,
+      "see_also": {
+        "documentation": d.documentation if 'documentation' in d else None,
+        "repository": d.repository if 'repository' in d else None,
+        "website": d.url if 'url' in d else None,
+        "other": d.see_also if 'see_also' in d else None
+      },
+      "contact": {
+        "email": d.contact.email if 'email' in d.contact else None,
+        "name": d.contact.name if 'name' in d.contact else None,
+        "github": d.contact.github if 'github' in d.contact else None,
+        "orcid": d.contact.orcid if 'orcid' in d.contact else None
+      }
+    } %}
+    {%- do standards_items.update({cid: item}) %}
+  {%- endif %}
+{%- endfor %}
+
+{# --- Collect tools (excluding registries) --- #}
+{%- set tools_items = {} %}
+{%- for d in tools %}
+  {%- if d.category != 'Registry' and (d.website_include is defined and d.website_include) %}
+    {%- set cid = d.id %}
+    {%- set item = {
+      "title": d.name,
+      "title_short": d.short_name if 'short_name' in d else d.name,
+      "icon": d.icon if 'icon' in d else None,
+      "license": d.license if 'license' in d else None,
+      "about": d.description if 'description' in d else None,
+      "tagline": d.tagline if 'tagline' in d else None,
+      "visual_explainer": d.visual_explainer if 'visual_explainer' in d else None,
+      "description": d.description if 'description' in d else None,
+      "see_also": {
+        "documentation": d.documentation if 'documentation' in d else None,
+        "repository": d.repository if 'repository' in d else None,
+        "website": d.url if 'url' in d else None,
+        "other": d.see_also if 'see_also' in d else None
+      },
+      "contact": {
+        "email": d.contact.email if 'email' in d.contact else None,
+        "name": d.contact.name if 'name' in d.contact else None,
+        "github": d.contact.github if 'github' in d.contact else None,
+        "orcid": d.contact.orcid if 'orcid' in d.contact else None
+      }
+    } %}
+    {%- do tools_items.update({cid: item}) %}
+  {%- endif %}
+{%- endfor %}
+
+{# --- Final JSON Output --- #}
+{{ {
+  "registries": registry_items,
+  "ontologies": ontology_items,
+  "standards": standards_items,
+  "tools": tools_items
+} | tojson(indent=2) }}
