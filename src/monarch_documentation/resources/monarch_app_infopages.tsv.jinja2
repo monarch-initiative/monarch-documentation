@@ -1,0 +1,36 @@
+title	item_type	id	title_short	icon	license	about	tagline	visual_explainer	description	documentation	repository	website	other	email	name	github	orcid
+{%- macro make_row(d, item_type) -%}
+{%- set row = [
+  d.name,
+  item_type,
+  d.id,
+  d.short_name if 'short_name' in d else d.name,
+  d.icon if 'icon' in d else '',
+  d.license if 'license' in d else '',
+  d.description if 'description' in d else '',
+  d.tagline if 'tagline' in d else '',
+  d.visual_explainer if 'visual_explainer' in d else '',
+  d.documentation if 'documentation' in d else '',
+  d.repository if 'repository' in d else '',
+  d.url if 'url' in d else '',
+  d.see_also if 'see_also' in d else '',
+  d.contact.email if d.contact is defined and 'email' in d.contact else '',
+  d.contact.name if d.contact is defined and 'name' in d.contact else '',
+  d.contact.github if d.contact is defined and 'github' in d.contact else '',
+  d.contact.orcid if d.contact is defined and 'orcid' in d.contact else ''
+] -%}
+{{ row | join('\t') }}
+{%- endmacro %}
+
+{%- for d in tools if d.category == 'Registry' and (d.website_include is defined and d.website_include) %}
+{{ make_row(d, "registry") }}
+{%- endfor %}
+{%- for d in standards if d.category == 'Ontology' and (d.website_include is defined and d.website_include) %}
+{{ make_row(d, "ontology") }}
+{%- endfor %}
+{%- for d in standards if d.category != 'Ontology' and (d.website_include is defined and d.website_include) %}
+{{ make_row(d, "standard") }}
+{%- endfor %}
+{%- for d in tools if d.category != 'Registry' and (d.website_include is defined and d.website_include) %}
+{{ make_row(d, "tool") }}
+{%- endfor %}
