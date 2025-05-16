@@ -9,13 +9,13 @@
   ],
   "Ontologies": [
     {
-      "description": "Provides a standardized vocabulary of phenotypic abnormalities in human disease.",
+      "description": "The **Human Phenotype Ontology (HPO)** is a structured vocabulary used to describe human health conditions and symptoms in a standardized way. It helps doctors, researchers, and computer systems consistently record and analyze patient characteristics, especially in the context of rare diseases. By organizing thousands of clinical features into a searchable hierarchy, HPO supports better diagnosis, data sharing, and discovery in genetic medicine.",
       "icon": "resource-hpo",
       "link": "https://hpo.jax.org/app/",
       "name": "HPO"
     },
     {
-      "description": "Aims to harmonize disease definitions across the world.",
+      "description": "A disease ontology that integrates and harmonizes disease definitions from multiple sources.",
       "icon": "resource-mondo",
       "link": "https://mondo.monarchinitiative.org/",
       "name": "Mondo"
@@ -24,7 +24,7 @@
       "description": "An integrated cross-species anatomy ontology.",
       "icon": "resource-uberon",
       "link": "https://obophenotype.github.io/uberon/",
-      "name": "Uberon Anatomy Ontology"
+      "name": "Uberon"
     }
   ],
   "Tools": [

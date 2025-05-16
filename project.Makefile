@@ -59,4 +59,4 @@ src/docs/resources/monarch-app-infopages.json: src/monarch_documentation/resourc
 	mkdir -p src/docs/resources/
 	$(RUN) j2 $^ | jq . > $@
 
-gen-monarch-resources: src/docs/resources/monarch-app-resources.json
+gen-monarch-resources: src/docs/resources/monarch-app-resources.json src/docs/resources/monarch-app-infopages.json
