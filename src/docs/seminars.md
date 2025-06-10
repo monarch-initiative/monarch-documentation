@@ -11,7 +11,7 @@ To join the Monarch Seminar Series, please email info@monarchinitiative.org with
 ### Schedule 
 | Date   | Topic   | Presenter(s) | Slides | Recording |
 | -- | -- | -- | -- | --|
-| June 10, 2025 | Write your own PhEval runner | Yasemin Bridges |  | |
+| June 10, 2025 | Write your own PhEval runner | Yasemin Bridges | -- | [Here](https://youtu.be/GMYzQO4OcfU?si=bBW0zNzTzBixWs3z) |
 | May 13, 2025 | Introduction to Variant Prioritisation using Exomiser | Letizia Vestito | -- | [Here](https://youtu.be/Se5nRnbrWKs?si=kTI_TJstgrahF8TY) |
 | April 15, 2025 | Introduction to PhEval & How to run a simple benchmark | Yasemin Bridges | -- | [Here](https://youtu.be/nIPzVN99UWc?si=gnUjOewlFrtBgfKf) |
 | March 18, 2025 | Publication highlight: [An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets](https://www.nature.com/articles/s41597-025-04558-z) | Adam Graefe | -- | [here](https://youtu.be/0uytK1S4kKI?si=KUb0jSyNTl1V2ZYf)|
