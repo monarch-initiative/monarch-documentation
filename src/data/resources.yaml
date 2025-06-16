@@ -731,28 +731,58 @@ tools:
     icon: onto-gpt
     url: https://kghub.org/kg-registry/
     repository: https://github.com/Knowledge-Graph-Hub/kg-registry
-    description: A simple registry for knowledge graphs, including KG-Hub projects.
+    description:
+      A simple registry for knowledge graphs, including Knowledge Graph Hub (KG-Hub)
+      https://github.com/monarch-initiative/kghub-downloader projects.
     contact:
-        name: Chris Mungall
-        email: cjmungall@lbl.gov
-        orcid: https://orcid.org/0000-0002-6601-2165
-        github: "@cmungall"
+      name: Chris Mungall
+      email: cjmungall@lbl.gov
+      orcid: https://orcid.org/0000-0002-6601-2165
+      github: "@cmungall"
     website_include: true
+    title: Knowledge Graph Registry
+    type: registry
+    short_name: KG Registry
+    license: GPL-3.0, CC0-1.0, BSD-3-Clause
+    citation: 'Cite the GH repo: https://github.com/Knowledge-Graph-Hub/kg-registry'
+    tagline: An aggregation of Knowledge Graphs and their parts.
+    website: https://kghub.org/kg-registry/
   - id: kg_hub
+    title: Knowledge Graph Hub
+    type: registry
+    short_name: KG Hub
+    license: ''
+    citation: 
+      Caufield JH, Putman T, Schaper K, Unni DR, Hegde H, Callahan TJ, Cappelletti L, Moxon SAT,
+      Ravanmehr V, Carbon S, Chan LE, Cortes K, Shefchek KA, Elsarboukh G, Balhoff JP, Fontana T, Matentzoglu
+      N, Bruskiewich RM, Thessen AE, Harris NL, Munoz-Torres MC, Haendel MA, Robinson PN, Joachimiak MP,
+      Mungall CJ, Reese JT. KG-Hub -- Building and Exchanging Biological Knowledge Graphs. arXiv [q-bio.QM].
+      2023. http://arxiv.org/abs/2302.10800
+    description: 
+      The Knowledge Graph Hub (KG-Hub) is a platform that provides software development patterns
+      for the standardized construction, exchange, and reuse of knowledge graphs. Features include a simple,
+      modular extract-transform-load (ETL) pattern for ingest of upstream data in a Biolink-model compliant
+      manner, cached downloads of upstream data, versioned and automatically updated builds, web-browsable
+      storage of KG artifacts on cloud infrastructure, easy reuse of transformed subgraphs of upstream data
+      across different projects, and easy integration of any OBO ontology.
+    tagline: 
+      A collection of biological and biomedical Knowledge Graphs, including their component data
+      sources.
+    repository: https://github.com/Knowledge-Graph-Hub/knowledge-graph-hub.github.io
+    documentation: https://github.com/Knowledge-Graph-Hub/knowledge-graph-hub.github.io
+    other_link: https://github.com/Knowledge-Graph-Hub/knowledge-graph-hub-support
     name: KG Hub
     category: Registry
-    documentation: https://github.com/Knowledge-Graph-Hub/knowledge-graph-hub.github.io
     monarch_contribution: Lead
     monarch_role: Core
     url: https://kghub.org/
-    repository: https://github.com/Knowledge-Graph-Hub/knowledge-graph-hub.github.io
-    description: A collection of biological and biomedical Knowledge Graphs, including their component data sources.
     contact:
-        name: Chris Mungall
-        email: cjmungall@lbl.gov
-        orcid: https://orcid.org/0000-0002-6601-2165
-        github: "@cmungall"
+      name: Chris Mungall
+      email: cjmungall@lbl.gov
+      orcid: https://orcid.org/0000-0002-6601-2165
+      github: "@cmungall"
     website_include: true
+
   - id: linkml_registry 
     name: LinkML Registry
     category: Registry
