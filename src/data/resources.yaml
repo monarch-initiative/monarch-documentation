@@ -443,7 +443,7 @@ standards:
   - id: uberon
     name: Uberon Anatomy Ontology
     short_name: Uberon
-    description: An integrated cross-species anatomy ontology.
+    description: "Uberon is an anatomical ontology that represents body parts, organs and tissues in a variety of animal species, with a focus on vertebrates. It has been constructed to integrate seamlessly with other ontologies, such as the Cell Ontology workflows, the Gene Ontology, Trait and Phenotype ontologies, as well as other anatomical ontologies. The ontology includes comprehensive relationships to taxon-specific anatomical ontologies, allowing integration of functional, phenotype and expression data. Currently Uberon consists of over 13000 classes representing structures that are shared across a variety of metazoans."
     monarch_contribution: Co-Lead
     category: Ontology
     monarch_role: Foundational
@@ -458,6 +458,14 @@ standards:
     grants:
       - Phenomics First
     website_include: true
+    title: Uberon Anatomy Ontology
+    type: ontology
+    license: CC0-1.0
+    citation: "(1) Uberon, an integrative multi-species anatomy ontology Mungall, C. J., Torniai, C., Gkoutos, G. V., Lewis, S. E., and Haendel, M. A. (2012) Genome Biology 13, R5. PMID:22293552 (2) Unification of multi-species vertebrate anatomy ontologies for comparative biology in Uberon Haendel, Melissa A; Balhoff, James P; Bastian, Frederic B; Blackburn, David C; Blake, Judith A; Bradford, Yvonne; Comte, Aurelie; Dahdul, Wasila M; Dececchi, Thomas A; Druzinsky, Robert E; Hayamizu, Terry F; Ibrahim, Nizar; Lewis, Suzanna E; Mabee, Paula M; Niknejad, Anne; Robinson-Rechavi, Marc; Sereno, Paul C; Mungall, Christopher J (2014) Journal of Biomedical Semantics, 5(1), 21. doi:10.1186/2041-1480-5-21"
+    tagline: An integrated cross-species anatomy ontology
+    repository: https://github.com/obophenotype/uberon
+    visual_explainer: "https://www.youtube.com/watch?v=HmFhTk0Bahs|||figure-uberon||| Uberon is an anatomical ontology that represents body parts, organs and tissues in a variety of animal species, with a focus on vertebrates. It has been constructed to integrate seamlessly with other ontologies, such as the OBO Cell Ontology workflows, the Gene Ontology, Trait and Phenotype ontologies, as well as other anatomical ontologies. The ontology includes comprehensive relationships to taxon-specific anatomical ontologies, allowing integration of functional, phenotype and expression data. Currently Uberon consists of over 13000 classes representing structures that are shared across a variety of metazoans. As one of the main uses of Uberon is translational science, we have extensive coverage of structures shared between humans and other species. However, thanks to the involvement of many collaborators, we have deep coverage of broad areas of anatomy across diverse taxa. We also make available an ontology called composite-metazoan which brings in subsets of federated ontologies, with a total of over 40000 classes."
+    other_link: https://obofoundry.org/ontology/uberon.html
   - id: phenio
     name: Phenomics Integrated Ontology (PHENIO)
     monarch_contribution: Lead
@@ -471,6 +479,15 @@ standards:
     grants:
       - Monarch R24
     website_include: true
+    title: Phenomics Integrated Ontology
+    type: ontology
+    short_name: PHENIO
+    license: BSD-3-Clause
+    citation: 'Cite the GH repo: https://github.com/monarch-initiative/phenio'
+    description: An ontology for accessing and comparing knowledge concerning phenotypes across species and genetic backgrounds.
+    tagline: An integrated ontology for Phenomics
+    repository: https://github.com/monarch-initiative/phenio
+    documentation: https://monarch-initiative.github.io/phenio/
   - id: ecto
     documentation: https://github.com/EnvironmentOntology/environmental-exposure-ontology
     name: Environmental Exposure Ontology
@@ -486,7 +503,19 @@ standards:
     grants:
       - TBD
     website_include: true
-  - id: dead_simple_owl_design_patterns
+    title: "Environmental Conditions, Treatments and Exposures Ontology"
+    type: ontology
+    license: CC BY 3.0
+    citation: "https://link.springer.com/article/10.1186/s13326-023-00283-x"
+    description: >
+      The Environmental Conditions, Treatments and Exposures Ontology (ECTO) describes exposures to experimental treatments of plants and model organisms (e.g. exposures to modification of diet, lighting levels, temperature); exposures of humans or any other organisms to stressors through a variety of routes, for purposes of public health, environmental monitoring etc, stimuli, natural and experimental, any kind of environmental condition or change in condition that can be experienced by an organism or population of organisms on earth. The scope is very general and can include for example plant treatment regimens, as well as human clinical exposures (although these may better be handled by a more specialized ontology).
+    tagline: "An ontology connecting toxicology and exposure data to human health and beyond"
+    repository: https://github.com/EnvironmentOntology/environmental-exposure-ontology
+    icon: resource-ecto
+    visual_explainer: >
+      figure-ecto|||ECTO unifies exposure attributes. Existing ontologies contain terms describing common exposure stimuli, exposure routes, and potential exposure media, however unifying terms to describe the exposure process were not yet represented. Utilizing the schema of the Exposure Ontology (ExO), ECTO classes can coordinate the stimulus, route, and exposure components into a single process term for consistent exposure classes. Logical axioms can be used to define the relationships between exposure receptors, ECTO classes, and documented exposure outcomes from the literature. Instance level schemas can also be developed using individual data points as the exposure receptor or exposure outcomes. Abbreviations: ENVO, The Environment Ontology; ChEBI, Chemical Entities of Biological Interest; NCBI Taxon, National Center for Biotechnology Information Taxonomy; FoodOn, Food Ontology; NCIt, National Cancer Institute Thesaurus; MAxO, Medical Actions Ontology; HPO, Human Phenotype Ontology; Mondo, Mondo Disease Ontology; GO, Gene Ontology
+    other_link: https://obofoundry.org/ontology/ecto.html
+ - id: dead_simple_owl_design_patterns
     name: Dead simple owl design pattern (DOS-DP) exchange format
     monarch_contribution: Lead
     category: Data Exchange
