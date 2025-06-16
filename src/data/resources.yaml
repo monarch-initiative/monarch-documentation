@@ -168,27 +168,42 @@ standards:
     name: Phenopackets
     monarch_contribution: Lead
     category: Data Exchange
-    documentation: https://phenopacket-schema.readthedocs.io/en/latest/
+    documentation: https://phenopacket-schema.readthedocs.io/en/latest/introduction.html
     url: http://phenopackets.org/
     icon: resource-phenopackets
     grants:
       - Phenomics First
     monarch_role: Foundational
-    description: An ISO-endorsed open standard for sharing disease and phenotype information.
-    repository: https://github.com/phenopackets/phenopacket-schema
+    description: 
+      The Phenopacket Schema represents an open standard for sharing disease and phenotype information to improve our ability to understand, diagnose, and treat both rare and common diseases. A Phenopacket links detailed phenotype descriptions with disease, patient, and genetic information, enabling clinicians, biologists, and disease and drug researchers to build more complete models of disease. The standard is designed to encourage wide adoption and synergy between the people, organizations and systems that comprise the joint effort to address human disease and biological understanding.
+    repository: https://github.com/phenopackets
     contact:
-        name: Peter Robinson
-        email: Peter.Robinson@jax.org
-        orcid: https://orcid.org/0000-0002-0736-9199
-        github: "@pnrobinson"
+      name: Peter Robinson
+      email: Peter.Robinson@jax.org
+      orcid: https://orcid.org/0000-0002-0736-9199
+      github: "@pnrobinson"
     website_include: true
+    title: Phenopackets
+    type: tool
+    short_name: Phenopackets
+    license: BSD-3-Clause
+    citation: M. S. Ladewig, J. O. B. Jacobsen, A. H. Wagner, D. Danis, B. El Kassaby, M. Gargano, T. Groza, M. Baudis, R. Steinhaus, D. Seelow, N. E. Bechrakis, C. J. Mungall, P. N. Schofield, O. Elemento, L. Smith, J. A. McMurry, M. Munoz-Torres, M. A. Haendel, P. N. Robinson, GA4GH Phenopackets: A Practical Introduction. Advanced Genetics 2023, 4, 2200016. https://doi.org/10.1002/ggn2.202200016
+    tagline: An ISO-endorsed open standard for sharing disease and phenotype information
+    visual_explainer: https://www.youtube.com/watch?v=Ym5rC2Op_PM
+    other_link: https://www.ga4gh.org/product/phenopackets/
   - id: sssom
     name: Simple Standard for Ontology Mappings (SSSOM)
     short_name: SSSOM
     monarch_contribution: Lead
-    documentation: https://mapping-commons.github.io/sssom/spec/
+    documentation: https://mapping-commons.github.io/sssom/
     url: https://mapping-commons.github.io/sssom/spec/
-    description: A simple metadata standard for describing semantic mappings.
+    description: 
+      SSSOM is a Simple Standard for Sharing Ontological Mappings, providing
+      - a TSV-based representation for ontology term mappings
+      - a comprehensive set of standard metadata elements to describe mappings, and
+      - a standard translation between the TSV and the Web Ontology Language (OWL).
+      The SSSOM TSV format in particular is geared towards the needs of the wider bioinformatics community
+      as a way to safely exchange mappings in an easily readable yet semantically well-specified manner.
     repository: https://github.com/mapping-commons/sssom/
     icon: resource-sssom
     project_boards:
@@ -200,13 +215,19 @@ standards:
     grants:
       - Phenomics First
     monarch_role: Core
-    citation: https://doi.org/10.1093/database/baac035
+    citation: 
+      Nicolas Matentzoglu, James P Balhoff, Susan M Bello, Chris Bizon, Matthew Brush, Tiffany J Callahan, Christopher G Chute, William D Duncan, Chris T Evelo, Davera Gabriel, John Graybeal, Alasdair Gray, Benjamin M Gyori, Melissa Haendel, Henriette Harmse, Nomi L Harris, Ian Harrow, Harshad B Hegde, Amelia L Hoyt, Charles T Hoyt, Dazhi Jiao, Ernesto Jiménez-Ruiz, Simon Jupp, Hyeongsik Kim, Sebastian Koehler, Thomas Liener, Qinqin Long, James Malone, James A McLaughlin, Julie A McMurry, Sierra Moxon, Monica C Munoz-Torres, David Osumi-Sutherland, James A Overton, Bjoern Peters, Tim Putman, Núria Queralt-Rosinach, Kent Shefchek, Harold Solbrig, Anne Thessen, Tania Tudorache, Nicole Vasilevsky, Alex H Wagner, Christopher J Mungall. A Simple Standard for Sharing Ontological Mappings (SSSOM). Database 2022: baac035. https://doi.org/10.1093/database/baac035
     contact:
         name: Nicolas Matentzoglu
         email: nicolas.matentzoglu@gmail.com
         orcid: https://orcid.org/0000-0002-7356-1779
         github: "@matentzn"
     website_include: true
+    title: Simple Standard for Ontology Mappings
+    type: tool
+    license: BSD-3-Clause
+    tagline: A simple metadata standard for describing semantic mappings
+    visual_explainer: https://www.youtube.com/watch?v=T-YP-Lv9k2s
   - id: hp
     name: Human Phenotype Ontology
     short_name: HPOid: hp
@@ -507,12 +528,12 @@ standards:
     type: ontology
     license: CC BY 3.0
     citation: "https://link.springer.com/article/10.1186/s13326-023-00283-x"
-    description: >
+    description: 
       The Environmental Conditions, Treatments and Exposures Ontology (ECTO) describes exposures to experimental treatments of plants and model organisms (e.g. exposures to modification of diet, lighting levels, temperature); exposures of humans or any other organisms to stressors through a variety of routes, for purposes of public health, environmental monitoring etc, stimuli, natural and experimental, any kind of environmental condition or change in condition that can be experienced by an organism or population of organisms on earth. The scope is very general and can include for example plant treatment regimens, as well as human clinical exposures (although these may better be handled by a more specialized ontology).
     tagline: "An ontology connecting toxicology and exposure data to human health and beyond"
     repository: https://github.com/EnvironmentOntology/environmental-exposure-ontology
     icon: resource-ecto
-    visual_explainer: >
+    visual_explainer: 
       figure-ecto|||ECTO unifies exposure attributes. Existing ontologies contain terms describing common exposure stimuli, exposure routes, and potential exposure media, however unifying terms to describe the exposure process were not yet represented. Utilizing the schema of the Exposure Ontology (ExO), ECTO classes can coordinate the stimulus, route, and exposure components into a single process term for consistent exposure classes. Logical axioms can be used to define the relationships between exposure receptors, ECTO classes, and documented exposure outcomes from the literature. Instance level schemas can also be developed using individual data points as the exposure receptor or exposure outcomes. Abbreviations: ENVO, The Environment Ontology; ChEBI, Chemical Entities of Biological Interest; NCBI Taxon, National Center for Biotechnology Information Taxonomy; FoodOn, Food Ontology; NCIt, National Cancer Institute Thesaurus; MAxO, Medical Actions Ontology; HPO, Human Phenotype Ontology; Mondo, Mondo Disease Ontology; GO, Gene Ontology
     other_link: https://obofoundry.org/ontology/ecto.html
  - id: dead_simple_owl_design_patterns
@@ -558,20 +579,45 @@ standards:
 tools:
   - id: exomiser
     name: Exomiser
-    monarch_contribution: Lead
+    title: Exomiser
+    type: tool
+    short_name: Exomiser
     category: Clinical Diagnosis
+    monarch_contribution: Lead
     monarch_role: Foundational
-    icon: resource-exomiser
-    url: https://exomiser.monarchinitiative.org/exomiser/
-    documentation: https://exomiser.readthedocs.io/en/latest/
-    description: A tool for finding potential disease-causing variants in whole-exome or whole-genome sequencing data.
+    license: AGPL-3.0
+    citation: A Whole-Genome Analysis Framework for Effective Identification of Pathogenic Regulatory Variants in Mendelian Disease. Smedley D, Schubach M, Jacobsen JOB, Köhler S, Zemojtel T, Spielmann M, Jäger M, Hochheiser H, Washington NL, McMurry JA, Haendel MA, Mungall CJ, Lewis SE, Groza T, Valentini G, Robinson PN. The American Journal of Human Genetics 2016;99(3):595-606. PMID:27569544. DOI:10.1016/j.ajhg.2016.07.005
+    description: "The Exomiser is a Java program that finds potential disease-causing variants from whole-exome
+      or whole-genome sequencing data.
+
+      Starting from a VCF file and a set of phenotypes encoded using the Human Phenotype Ontology (HPO)
+      it will annotate, filter and prioritise likely causative variants. The program does this based on
+      user-defined criteria such as a variant's predicted pathogenicity, frequency of occurrence in a population
+      and also how closely the given phenotype matches the known phenotype of diseased genes from human
+      and model organism data.
+
+      The functional annotation of variants is handled by Jannovar and uses any of UCSC, RefSeq or Ensembl
+      KnownGene transcript definitions and hg19 or hg38 genomic coordinates.
+
+      Variants are prioritised according to user-defined criteria on variant frequency, pathogenicity, quality,
+      inheritance pattern, and model organism phenotype data. Predicted pathogenicity data is extracted
+      from the dbNSFP resource. Variant frequency data is taken from the 1000 Genomes, ESP, TOPMed, UK10K,
+      ExAC and gnomAD datasets. Subsets of these frequency and pathogenicity data can be defined to further
+      tune the analysis. Cross-species phenotype comparisons come from our PhenoDigm tool powered by the
+      OWLTools OWLSim algorithm."
+    tagline: A Tool to Annotate and Prioritize Exome Variants
     repository: https://github.com/exomiser/Exomiser
+    icon: resource-exomiser
+    documentation: https://exomiser.readthedocs.io/
+    website: https://exomiser.monarchinitiative.org/exomiser/
+    visual_explainer: 'https://www.youtube.com/watch?v=XU10oT7c2VI ||| https://www.youtube.com/watch?v=tzwvWkb3s8A'
     contact:
         name: Jules Jacobsen
         email: j.jacobsen@qmul.ac.uk
         orcid: https://orcid.org/0000-0002-3265-1591
         github: "@julesjacobsen"
     website_include: true
+
   - id: monarch_kg_services
     name: Monarch Knowledge Graph & Services
     category: Clinical Diagnosis
@@ -617,13 +663,33 @@ tools:
         orcid: https://orcid.org/0000-0003-3311-7320
         github: "@kevinschaper"
   - id: odk
-    name: Ontology Development Kit (ODK)
+    title: Ontology Development Kit
+    type: tool
     short_name: ODK
     category: Ontology Maintenance
-    description: A toolkit and workflow system for managing the ontology life-cycle.
     monarch_contribution: Lead
     monarch_role: Support
-    documentation: https://github.com/INCATools/ontology-development-kit
+    license: BSD-3-Clause
+    citation:
+      'Nicolas Matentzoglu, Damien Goutte-Gattat, Shawn Zheng Kai Tan, James P Balhoff, Seth Carbon,
+      Anita R Caron, William D Duncan, Joe E Flack, Melissa Haendel, Nomi L Harris, William R Hogan, Charles
+      Tapley Hoyt, Rebecca C Jackson, HyeongSik Kim, Huseyin Kir, Martin Larralde, Julie A McMurry, James
+      A Overton, Bjoern Peters, Clare Pilgrim, Ray Stefancsik, Sofia MC Robb, Sabrina Toro, Nicole A Vasilevsky,
+      Ramona Walls, Christopher J Mungall, David Osumi-Sutherland, Ontology Development Kit: a toolkit for
+      building, maintaining and standardizing biomedical ontologies, Database, Volume 2022, 2022, baac087,
+      https://doi.org/10.1093/database/baac087'
+    description: |
+      "Manage your ontology's life cycle with the Ontology Development Kit (ODK)!
+      The ODK is:
+      - a toolbox of various ontology related tools such as ROBOT, owltools, dosdp-tools and many more,
+      bundled as a docker image.
+      - a set of executable workflows for managing your ontology's continuous integration, quality control,
+      releases and dynamic imports."
+    tagline: A toolkit and workflow system for managing the ontology life-cycle
+    repository: 'https://github.com/INCATools/ontology-development-kit '
+    icon: resource-odk
+    visual_explainer: "https://www.youtube.com/watch?v=cd7750JVDaw"
+    documentation: ' https://incatools.github.io/ontology-development-kit'
     contact:
         name: Nicolas Matentzoglu
         email: nicolas.matentzoglu@gmail.com
@@ -659,10 +725,33 @@ tools:
     website: https://ols.monarchinitiative.org/
     website_include: true
   - id: oak
+    title: Ontology Access Kit
     name: Ontology Access Kit (OAK)
+    type: tool
     short_name: OAK
+    license: 'Apache-2.0'
+    citation: 'Cite the GH repo: https://github.com/INCATools/ontology-access-kit'
     category: Ontology Use
-    description: A python toolkit for accessing and visualising ontologies.
+    description: 
+      The Ontology Access Kit (OAK) is for both technical and non-technical users of ontologies.
+      Non-technical users can use the command line interface to query ontologies in a variety of ways. Technical
+      users can write Python code that uses the OAK library to perform ontology-related tasks.
+
+      OAK provides a collection of interfaces for various ontology operations, including:
+      - look up basic features of an ontology element, such as its label, definition, relationships, or aliases
+      - search an ontology for a term
+      - validate an ontology
+      - modify or delete terms
+      - generate and visualize subgraphs
+      - identify lexical matches and export as SSSOM mapping tables
+      - perform more advanced operations, such as graph traversal, OWL axiom processing, or text annotation
+
+      These interfaces are separated from any particular backend, for which there a number of different adapters. This means the same Python API and command line can be used regardless of whether the ontology:
+      - is served by a remote API such as OLS or BioPortal
+      - is present locally on the filesystem in owl, obo, obojson, or sqlite formats
+      - is to be downloaded from a remote repository such as the OBO library
+      - is queried from a remote database, including SPARQL endpoints (Ontobee/Ubergraph), a SQL database, a Solr/ES endpoint
+    tagline: A python toolkit for accessing and visualising ontologies
     icon: resource-oak
     url: https://github.com/INCATools/ontology-access-kit
     monarch_contribution: Lead
@@ -674,6 +763,10 @@ tools:
         email: cjmungall@lbl.gov
         orcid: https://orcid.org/0000-0002-6601-2165
         github: "@cmungall"
+    project_boards:
+      - name: OAK Project Board
+        id: "https://github.com/orgs/INCATools/projects/5/views/1"
+    visual_explainer: "https://www.youtube.com/watch?v=zO6tS7gZtvw"
     website_include: true
   - id: sssom_py
     name: SSSOM Toolkit
