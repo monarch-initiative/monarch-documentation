@@ -338,14 +338,16 @@ standards:
     other_link: https://obofoundry.org/ontology/sepio.html
 
   - id: vbo
-    documentation: https://github.com/monarch-initiative/vertebrate-breed-ontology
+    documentation: 
+      - https://github.com/monarch-initiative/vertebrate-breed-ontology
+      - https://monarch-initiative.github.io/vertebrate-breed-ontology/
     url: https://github.com/monarch-initiative/vertebrate-breed-ontology
     name: Vertebrate Breed Ontology
     short_name: VBO
     monarch_contribution: Lead
     category: Ontology
     monarch_role: Core
-    description: An ontology created to serve as a single computable resource for vertebrate breed names.
+    description: "The Vertebrate Breed Ontology (VBO) is an open, community-driven ontology representing over 19,500 livestock and companion animal breed concepts covering 49 species. Breeds are classified based on community and expert conventions (e.g., cattle breed) and supported by relations to the breed's genus and species indicated by National Center for Biotechnology Information (NCBI) Taxonomy terms. Relationships between VBO terms (e.g., relating breeds to their foundation stock) provide additional context to support advanced data analytics. VBO term metadata includes synonyms, breed identifiers/codes, and attributed cross-references to other databases."
     repository: https://github.com/monarch-initiative/vertebrate-breed-ontology
     contact:
         name: Sabrina Toro
@@ -355,6 +357,14 @@ standards:
     grants:
       - Monarch R24
     website_include: true
+    title: Vertebrate Breed Ontology
+    type: ontology
+    license: CC-BY 4.0
+    citation: "Mullen, K. R., Tammen, I., Matentzoglu, N. A., Mather, M., Balhoff, J. P., Esdaile, E., Leroy, G., Park, C. A., Rando, H. M., Saklou, N. T., Webb, T. L., Vasilevsky, N. A., Mungall, C. J., Haendel, M. A., Nicholas, F. W., & Toro, S. (2025). The Vertebrate Breed Ontology: Toward effective breed data standardization. Journal of Veterinary Internal Medicine, 39(4), e70133. https://doi.org/10.1111/jvim.70133"
+    tagline: "A single, computable resource for vertebrate breed names"
+    other_link: 
+      - https://ols.monarchinitiative.org/ontologies/vbo
+      - https://obofoundry.org/ontology/vbo.html
   - id: upheno
     name: The Unified Phenotype Ontology (uPheno)
     short_name: uPheno
@@ -363,12 +373,13 @@ standards:
     monarch_role: Core
     icon: resource-upheno
     url: https://obophenotype.github.io/upheno/
-    documentation: https://obophenotype.github.io/upheno/
-    description: Aims to unify the annotation of phenotypes across species.
-    repository: https://obophenotype.github.io/upheno/
+    documentation:
+      - https://obophenotype.github.io/upheno/
     project_boards:
       - name: uPheno 2 Ontology Development
         id: "https://github.com/orgs/obophenotype/projects/15/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C13049768%5D&groupedBy%5BcolumnId%5D=13049768"
+    description: "The Unified Phenotype Ontology (uPheno) framework is a community effort to provide an integration layer over domain-specific phenotype ontologies, as a single, unified, logical representation. It comprises (1) a system for consistent computational definition of phenotype terms using ontology design patterns, maintained as a community library; (2) a hierarchical vocabulary of species-neutral phenotype terms under which their species-specific counterparts are grouped; and (3) mapping tables between species-specific ontologies."
+    repository: https://github.com/obophenotype/upheno
     contact:
         name: James McLaughlin
         email: jmcl@ebi.ac.uk
@@ -377,6 +388,15 @@ standards:
     grants:
       - Phenomics First
     website_include: true
+    title: Unified Phenotype Ontology
+    type: ontology
+    license: CC0-1.0
+    citation: "Nicolas Matentzoglu, Susan M. Bello, Ray Stefancsik, Sarah M. Alghamdi, Anna V. Anagnostopoulos, James P. Balhoff, Meghan A. Balk, Yvonne M. Bradford, Yasemin Bridges, Tiffany J. Callahan, Harry Caufield, Alayne Cuzick, Leigh C. Carmody, Anita R. Caron, Vinicius de Souza, Stacia R. Engel, Petra Fey, Malcolm Fisher, Sarah Gehrke, Christian Grove, Peter Hansen, Nomi L. Harris, Midori A. Harris, Laura Harris, Arwa Ibrahim, Julius O. B. Jacobsen, Sebastian Köhler, Julie A. McMurry, Violeta Munoz-Fuentes, Monica C. Munoz-Torres, Helen Parkinson, Zoë M. Pendlington, Clare Pilgrim, Sofia M. Robb, Peter N. Robinson, James Seager, Erik Segerdell, Damian Smedley, Elliot Sollis, Sabrina Toro, Nicole Vasilevsky, Valerie Wood, Melissa A. Haendel, Christopher J. Mungall, James A. McLaughlin, and David Osumi-Sutherland. 2025. \"The Unified Phenotype Ontology: A Framework for Cross-Species Integrative Phenomics.\" Genetics 229 (3): iyaf027. https://doi.org/10.1093/genetics/iyaf027."
+    tagline: "A framework for cross-species integrative phenomics"
+    visual_explainer: "figure-upheno|||Structure of the uPheno ontology. uPheno is a framework for consistent and logical definition of phenotype categories using ontology design patterns that provides a hierarchical vocabulary of species-neutral phenotype terms under which their species-specific counterparts are grouped. The ontology design templates are based on shared features of existing phenotypic descriptions from various model organisms and represent community consensus. The phenotype pattern template-adherent terms are adopted by species-specific ontologies, thereby contributing to the community-built uPheno framework. uPheno accelerates cross-species inference and computationally amenable comparative phenotype analysis. For example, the interoperable representation of heart phenotypes characterized by increased size, compared with wild-type in distinct species, such as zebrafish and humans, allows the cross-species identification of genes whose alleles can cause similar phenotypes. uPheno contextual hierarchy for increased size of the heart as displayed in the OLS."
+    other_link:
+      - https://ols.monarchinitiative.org/ontologies/upheno_reordered
+      - https://obofoundry.org/ontology/upheno.html
   - id: maxo
     name: Medical Action Ontology
     short_name: MAxO
@@ -397,7 +417,9 @@ standards:
     short_name: OBA
     monarch_contribution: Lead
     category: Ontology
-    documentation: https://obophenotype.github.io/upheno/
+    documentation:
+      - https://obophenotype.github.io/upheno/
+      - https://obophenotype.github.io/bio-attribute-ontology/
     project_boards:
       - name: OBA Ontology Development (uPheno board)
         id: "https://github.com/orgs/obophenotype/projects/15/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C13049768%5D&groupedBy%5BcolumnId%5D=13049768"
@@ -410,6 +432,14 @@ standards:
     grants:
       - Phenomics First
     website_include: true
+    title: Ontology of Biological Attributes
+    type: ontology
+    license: CC0-1.0
+    citation: "Stefancsik, R., Balhoff, J.P., Balk, M.A. et al. The Ontology of Biological Attributes (OBA)—computational traits for the life sciences. Mamm Genome 34, 364–378 (2023). https://doi.org/10.1007/s00335-023-09992-1"
+    description: "The Ontology of Biological Attributes (OBA) is a formalised, species-independent collection of interoperable phenotypic trait categories that is intended to fulfil a data integration role. OBA is a standardised representational framework for observable attributes that are characteristics of biological entities, organisms, or parts of organisms. It is a collection of biological attributes (traits) covering all kingdoms of life and is interoperable with other ontologies in the Open Biological and Biomedical Ontologies Foundry."
+    tagline: A species-independent framework for integrating phenotypic traits
+    repository: https://github.com/obophenotype/bio-attribute-ontology
+    other_link: https://obofoundry.org/ontology/oba.html
   - id: uberon
     name: Uberon Anatomy Ontology
     short_name: Uberon
