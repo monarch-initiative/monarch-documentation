@@ -209,14 +209,16 @@ standards:
     website_include: true
   - id: hp
     name: Human Phenotype Ontology
+    short_name: HPOid: hp
+    name: Human Phenotype Ontology
     short_name: HPO
-    license: JAX-CUSTOM
+    license: 'https://hpo.jax.org/license '
     icon: resource-hpo
     monarch_contribution: Lead
     category: Ontology
     monarch_role: Foundational
     documentation: https://obophenotype.github.io/human-phenotype-ontology/
-    description: The **Human Phenotype Ontology (HPO)** is a structured vocabulary used to describe human health conditions and symptoms in a standardized way. It helps doctors, researchers, and computer systems consistently record and analyze patient characteristics, especially in the context of rare diseases. By organizing thousands of clinical features into a searchable hierarchy, HPO supports better diagnosis, data sharing, and discovery in genetic medicine.
+    description: The Human Phenotype Ontology (HPO) is a structured vocabulary used to describe human health conditions and symptoms in a standardized way. It helps doctors, researchers, and computer systems consistently record and analyze patient characteristics, especially in the context of rare diseases. By organizing thousands of clinical features into a searchable hierarchy, HPO supports better diagnosis, data sharing, and discovery in genetic medicine.
     repository: https://github.com/obophenotype/human-phenotype-ontology
     url: https://hpo.jax.org/app/
     contact:
@@ -228,10 +230,15 @@ standards:
       - HPO
       - Phenomics First
     icons_url: https://github.com/jmcmurry/open-illustrations/tree/master/logos
-    tagline: A standardized vocabulary of phenotypic abnormalities in human disease.
+    tagline: "The standard vocabulary of human phenotypic abnormalities"
     visual_explainer: https://github.com/jmcmurry/open-illustrations/tree/master/logos
     website_include: true
     see_also: []
+    title: Human Phenotype Ontology
+    type: ontology
+    citation: "Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, Anagnostopoulos AV, Anderton J, Avillach P, Bagley AM, Bakštein E, Balhoff JP, Baynam G, Bello SM, Berk M, Bertram H, Bishop S, Blau H, Bodenstein DF, Botas P, Boztug K, Čady J, Callahan TJ, Cameron R, Carbon SJ, Castellanos F, Caufield JH, Chan LE, Chute CG, Cruz-Rojo J, Dahan-Oliel N, Davids JR, de Dieuleveult M, de Souza V, de Vries BBA, de Vries E, DePaulo JR, Derfalvi B, Dhombres F, Diaz-Byrd C, Dingemans AJM, Donadille B, Duyzend M, Elfeky R, Essaid S, Fabrizzi C, Fico G, Firth HV, Freudenberg-Hua Y, Fullerton JM, Gabriel DL, Gilmour K, Giordano J, Goes FS, Moses RG, Green I, Griese M, Groza T, Gu W, Guthrie J, Gyori B, Hamosh A, Hanauer M, Hanušová K, He YO, Hegde H, Helbig I, Holasová K, Hoyt CT, Huang S, Hurwitz E, Jacobsen JOB, Jiang X, Joseph L, Keramatian K, King B, Knoflach K, Koolen DA, Kraus ML, Kroll C, Kusters M, Ladewig MS, Lagorce D, Lai MC, Lapunzina P, Laraway B, Lewis-Smith D, Li X, Lucano C, Majd M, Marazita ML, Martinez-Glez V, McHenry TH, McInnis MG, McMurry JA, Mihulová M, Millett CE, Mitchell PB, Moslerová V, Narutomi K, Nematollahi S, Nevado J, Nierenberg AA, Čajbiková NN, Nurnberger JI Jr, Ogishima S, Olson D, Ortiz A, Pachajoa H, Perez de Nanclares G, Peters A, Putman T, Rapp CK, Rath A, Reese J, Rekerle L, Roberts AM, Roy S, Sanders SJ, Schuetz C, Schulte EC, Schulze TG, Schwarz M, Scott K, Seelow D, Seitz B, Shen Y, Similuk MN, Simon ES, Singh B, Smedley D, Smith CL, Smolinsky JT, Sperry S, Stafford E, Stefancsik R, Steinhaus R, Strawbridge R, Sundaramurthi JC, Talapova P, Tenorio Castano JA, Tesner P, Thomas RH, Thurm A, Turnovec M, van Gijn ME, Vasilevsky NA, Vlčková M, Walden A, Wang K, Wapner R, Ware JS, Wiafe AA, Wiafe SA, Wiggins LD, Williams AE, Wu C, Wyrwoll MJ, Xiong H, Yalin N, Yamamoto Y, Yatham LN, Yocum AK, Young AH, Yüksel Z, Zandi PP, Zankl A, Zarante I, Zvolský M, Toro S, Carmody LC, Harris NL, Munoz-Torres MC, Danis D, Mungall CJ, Köhler S, Haendel MA, Robinson PN. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975., https://doi.org/10.1093/nar/gkad1005"
+    other_link: "https://obofoundry.org/ontology/hp.html"
+
   - id: obographs
     documentation: https://incatools.github.io/ontology-access-kit/datamodels/obograph/index.html
     url: https://github.com/geneontology/obographs
@@ -791,13 +798,21 @@ tools:
     monarch_role: Support
     url: https://linkml.io/linkml-registry/registry/
     repository: https://github.com/linkml/linkml-registry
-    description: A collection of LinkML schemas.
+    description: "A collection of Linked Data Modeling Language (LinkML) https://github.com/linkml/linkml-registry schemas."
     contact:
         name: Chris Mungall
         email: cjmungall@lbl.gov
         orcid: https://orcid.org/0000-0002-6601-2165
         github: "@cmungall"
     website_include: true
+    title: LinkML Registry
+    type: registry
+    short_name: LinkML Registry
+    license: CC0-1.0
+    citation: "Cite the GH repo: https://github.com/linkml/linkml-registry"
+    tagline: "A collection of LinkML schemas"
+    website: https://linkml.io/linkml-registry/registry/
+  
   - id: talisman
     name: TALISMAN
     category: Data Curation
@@ -926,7 +941,7 @@ tools:
     icon: resource-monarch
     monarch_role: Core
     category: Registry
-    description: SSSOM Mappings collected and curated by the Monarch Initiative.
+    description: Simple Standard for Ontology Mappings (SSSOM) [<-- link to SSSOM info page] mappings collected and curated by the Monarch Initiative.
     repository: https://github.com/monarch-initiative/monarch-mapping-commons
     documentation: https://github.com/monarch-initiative/monarch-mapping-commons
     url: https://github.com/monarch-initiative/monarch-mapping-commons
@@ -937,6 +952,13 @@ tools:
         orcid: https://orcid.org/0000-0003-3311-7320
         github: "@kevinschaper"
     website_include: true
+    title: Monarch Mapping Commons
+    type: registry
+    short_name: Monarch Mapping Commons
+    license: CC0-1.0
+    citation: "Cite the GH repo: https://github.com/monarch-initiative/monarch-mapping-commons"
+    tagline: "A collection of SSSOM mappings"
+
   - id: hpo_translations
     name: HPO Language Translations
     monarch_role: Support
