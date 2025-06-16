@@ -543,29 +543,30 @@ tools:
       - name: ODK Milestones
         id: "https://github.com/orgs/INCATools/projects/2/views/1?groupedBy%5BcolumnId%5D=Milestone"
     website_include: true
-  - id: monarch_ols
+  -id: monarch_ols
     name: Monarch OLS
+    short_name: Monarch OLS
+    type: registry
     category: Registry
-    citation: "https://arxiv.org/abs/2501.13034"
-    description:
-      The Ontology Lookup Service (OLS) is a repository for biomedical ontologies that aims to provide a single point of access to the latest ontology versions. 
-      You can browse the ontologies through the website as well as programmatically via the OLS API. 
-      OLS is developed and maintained by the Samples, Phenotypes and Ontologies Team at EMBL's European Bioinformatics Institute.
-      The Monarch OLS instance highlights only Monarch-specific ontologies. 
+    citation: 'Cite the EBI OLS GH: https://github.com/EBISPOT/ols4'
+    description: "The Ontology Lookup Service (OLS) is a repository for biomedical ontologies that aims to provide a single point of access to the latest ontology versions. You can browse the ontologies through the website as well as programmatically via the OLS API. OLS is developed and maintained by the Samples, Phenotypes and Ontologies Team at EMBL's European Bioinformatics Institute. The Monarch OLS instance highlights only Monarch-specific ontologies.  "
     license: Apache-2.0
     monarch_contribution: Lead
     monarch_role: Support
     url: https://ols.monarchinitiative.org/
     documentation: https://github.com/monarch-initiative/ontotools-docker
-    repository: https://github.com/monarch-initiative/ontotools-docker
+    repository:
+      'Monarch OLS instance GH: https://github.com/monarch-initiative/ontotools-docker
+      EBI OLS GH: https://github.com/EBISPOT/ols4'
     contact:
-        name: Nicolas Matentzoglu
-        email: nicolas.matentzoglu@gmail.com
-        orcid: https://orcid.org/0000-0002-7356-1779
-        github: "@matentzn"
+      name: Nicolas Matentzoglu
+      email: nicolas.matentzoglu@gmail.com
+      orcid: https://orcid.org/0000-0002-7356-1779
+      github: '@matentzn'
     see_also:
       - https://www.ebi.ac.uk/ols/
     tagline: "A Monarch Ontology specific instance of the EMBL European Bioinformatics Institute's OLS."
+    website: https://ols.monarchinitiative.org/
     website_include: true
   - id: oak
     name: Ontology Access Kit (OAK)
