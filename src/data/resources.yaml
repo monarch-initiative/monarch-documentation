@@ -218,7 +218,7 @@ standards:
     category: Ontology
     monarch_role: Foundational
     documentation: https://obophenotype.github.io/human-phenotype-ontology/
-    description: The Human Phenotype Ontology (HPO) is a structured vocabulary used to describe human health conditions and symptoms in a standardized way. It helps doctors, researchers, and computer systems consistently record and analyze patient characteristics, especially in the context of rare diseases. By organizing thousands of clinical features into a searchable hierarchy, HPO supports better diagnosis, data sharing, and discovery in genetic medicine.
+    description: "The Human Phenotype Ontology (HPO) is a structured vocabulary used to describe human health conditions and symptoms in a standardized way. It helps doctors, researchers, and computer systems consistently record and analyze patient characteristics, especially in the context of rare diseases. By organizing thousands of clinical features into a searchable hierarchy, HPO supports better diagnosis, data sharing, and discovery in genetic medicine."
     repository: https://github.com/obophenotype/human-phenotype-ontology
     url: https://hpo.jax.org/app/
     contact:
@@ -256,7 +256,9 @@ standards:
     grants:
       - Phenomics First
   - id: mondo
-    documentation: https://mondo.readthedocs.io/en/latest/
+    documentation: 
+      - https://mondo.readthedocs.io/en/latest/
+      - https://monarch-initiative.github.io/mondo-ingest/
     url: https://mondo.monarchinitiative.org/
     name: Mondo Disease Ontology
     short_name: Mondo
@@ -265,8 +267,8 @@ standards:
     monarch_contribution: Lead
     category: Ontology
     monarch_role: Foundational
-    description: A disease ontology that integrates and harmonizes disease definitions from multiple sources.
-    tagline: Harmonizing disease definitions globally 
+    description: "The Mondo Disease Ontology (Mondo) aims to harmonize disease definitions across the world, with a particular focus on rare diseases. Mondo goes beyond loose database cross-references. It curates precise 1:1 equivalence axioms connecting to other resources, validated by OWL reasoning. This means it is safe to propagate across these from Online Mendelian Inheritance in Man (OMIM), ORDO (Orphanet), Experimental Factor Ontology (EFO), Disease Ontology (DOID) and the neoplasm branch of National Cancer Institute Thesaurus (NCIt)."
+    tagline: "A unified disease ontology that harmonizes diverse disease terminologies into a consistent, computable framework."
     repository: https://github.com/monarch-initiative/mondo
     icons_url: https://github.com/tis-lab/closed-illustrations/tree/master/logos/mondo-logos
     contact:
@@ -277,16 +279,30 @@ standards:
     grants:
       - Phenomics First
     website_include: true
+    title: Mondo Disease Ontology
+    type: ontology
+    citation: "Mondo: Unifying diseases for the world, by the world, Nicole A Vasilevsky, Nicolas A Matentzoglu, Sabrina Toro, Joe E Flack, Harshad Hegde, Deepak R Unni, Gioconda Alyea, Joanna S Amberger, Larry Babb, James P Balhoff, Taylor I Bingaman, Gully A Burns, Tiffany J Callahan, Leigh C Carmody, Lauren E Chan, George S Chang, Michel Dumontier, Laura E Failla, May J Flowers, H A Garrett, Dylan Gration, Tudor Groza, Marc Hanauer, Nomi L Harris, Ingo Helbig, Jason A Hilton, Daniel S Himmelstein, Charles T Hoyt, Megan S Kane, Sebastian Köhler, David Lagorce, Martin Larralde, Antonia Lock, Irene López Santiago, Donna R Maglott, Adriana J Malheiro, Birgit HM Meldal, Julie A McMurry, Moni Munoz-Torres, Tristan H Nelson, David Ochoa, Tudor I Oprea, David Osumi-Sutherland, Helen Parkinson, Zoë M Pendlington, Ana Rath, Heidi L Rehm, Lyubov Remennik, Erin R Riggs, Paola Roncaglia, Justyne E Ross, Marion F Shadbolt, Kent A Shefchek, Morgan N Similuk, Nicholas Sioutos, Rachel Sparks, Ray Stefancsik, Ralf Stephan, Doron Stupp, Jagadish Chandrabose Sundaramurthi, Imke Tammen, Courtney L Thaxton, Eloise Valasek, Alex H Wagner, Danielle Welter, Patricia L Whetzel, Lori L Whiteman, Valerie Wood, Colleen H Xu, Andreas Zankl, Xingmin A Zhang, Christopher G Chute, Peter N Robinson, Christopher J Mungall, Ada Hamosh, Melissa A Haendel, medRxiv 2022.04.13.22273750; doi: https://doi.org/10.1101/2022.04.13.22273750"
+    visual_explainer: "https://www.youtube.com/watch?v=f3aDoNmcR0M"
+    other_link: 
+      - https://ols.monarchinitiative.org/ontologies/mondo
+      - https://obofoundry.org/ontology/mondo.html
+
   - id: geno
+    title: Genotype Ontology
+    type: ontology
+    short_name: GENO
+    license: CC-BY 4.0
+    citation: "Cite the GH repo: https://github.com/monarch-initiative/GENO-ontology"
+    description: "GENO is an OWL2 ontology that represents the levels of genetic variation specified in genotypes, to support genotype-to-phenotype (G2P) data aggregation and analysis across diverse research communities and sources. The core of the ontology is a graph decomposing a genotype into smaller components of variation, from a complete genotype specifying sequence variation across an entire genome, down to specific allelic variants and sequence alterations. Structuring genotype instance data according to this model supports a primary use case of GENO to enable integrated analysis of G2P data where phenotype annotations are made at different levels of granularity in this genotype partonomy. GENO also enables description of various attributes of genotypes and genetic variants. These attributes include zygosity, genomic position, expression, dominance, and functional dependencies or consequences of a given variant. In addition to heritable variation in genomic sequence specified by traditional genotypes, GENO also represents transient variation in gene expression, as seen in experiments where genes are targeted by knockdown reagents or overexpressed by DNA constructs at the time a phenotype is assessed. This variation in gene expression is represented in terms of the targeted genes themselves, to parallel representation of sequence variation and facilitate integrated description and analysis of data about any genetic contribution to a measured phenotype. Finally, GENO also supports modelling of G2P associations, focusing on the interplay between genotype, phenotype, and environment. GENO describes provenance and experimental evidence for these associations using the Scientific Evidence and Provenance Information Ontology (SEPIO) (https://github.com/monarch-initiative/SEPIO-ontology) model."
+    tagline: "An integrated ontology for representing the genetic variations described in genotypes, and their causal relationships to phenotype and diseases"
+    repository: https://github.com/monarch-initiative/GENO-ontology
+    other_link: https://obofoundry.org/ontology/geno.html
     documentation: https://github.com/monarch-initiative/GENO-ontology
     url: https://github.com/monarch-initiative/GENO-ontology
     name: Genotype Ontology
-    short_name: GENO
     monarch_contribution: Lead
     category: Ontology
     monarch_role: Core
-    description: An ontology that represents the levels of genetic variation specified in genotypes.
-    repository: https://github.com/monarch-initiative/GENO-ontology
     contact:
         name: Matt Brush
         email: matt@tislab.org
@@ -294,7 +310,7 @@ standards:
         github: "@mbrush"
     grants:
       - Monarch R24
-    website_include: true
+    website_include: true   
   - id: sepio
     documentation: https://github.com/monarch-initiative/SEPIO-ontology
     url: https://github.com/monarch-initiative/SEPIO-ontology
@@ -303,16 +319,24 @@ standards:
     monarch_contribution: Lead
     category: Ontology
     monarch_role: Core
-    description: An ontology that supports the description of evidence and provenance information for scientific claims.
+    description: "The Scientific Evidence and Provenance Information Ontology (SEPIO) was developed to support description of evidence and provenance information for scientific claims. The core model represents the relationships between claims, their evidence lines, the information items that comprise these lines of evidence, and the methods, tools, and agents involved in the creation of these entities. Use cases driving SEPIO development include integration of scientific claims and their associated evidence/provenance metadata, and support for the discovery, analysis, and evaluation of claims based on this metadata."
     repository: https://github.com/monarch-initiative/SEPIO-ontology
     contact:
-        name: Matt Brush
-        email: matt@tislab.org
-        orcid: https://orcid.org/0000-0002-1048-5019
-        github: "@mbrush"
+      name: Matt Brush
+      email: matt@tislab.org
+      orcid: https://orcid.org/0000-0002-1048-5019
+      github: "@mbrush"
     grants:
       - Monarch R24
     website_include: true
+    title: Scientific Evidence and Provenance Information Ontology
+    type: ontology
+    license: CC-BY 3.0
+    citation: "Cite the GH repo: https://github.com/monarch-initiative/SEPIO-ontology"
+    tagline: "An ontology for representing the provenance of scientific claims and the evidence that supports them"
+    icon: resource-sepio
+    other_link: https://obofoundry.org/ontology/sepio.html
+
   - id: vbo
     documentation: https://github.com/monarch-initiative/vertebrate-breed-ontology
     url: https://github.com/monarch-initiative/vertebrate-breed-ontology
