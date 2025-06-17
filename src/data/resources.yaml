@@ -228,7 +228,7 @@ standards:
     name: Human Phenotype Ontology
     short_name: HPOid: hp
     short_name: HPO
-    license: 'https://hpo.jax.org/license '
+    license: "https://hpo.jax.org/license"
     icon: resource-hpo
     monarch_contribution: Lead
     category: Ontology
@@ -472,7 +472,7 @@ standards:
     website_include: true
     short_name: PHENIO
     license: BSD-3-Clause
-    citation: 'Cite the GH repo: https://github.com/monarch-initiative/phenio'
+    citation: "Cite the GH repo: https://github.com/monarch-initiative/phenio"
     description: An ontology for accessing and comparing knowledge concerning phenotypes across species and genetic backgrounds.
     tagline: An integrated ontology for Phenomics
     repository: https://github.com/monarch-initiative/phenio
@@ -574,7 +574,7 @@ tools:
     icon: resource-exomiser
     documentation: https://exomiser.readthedocs.io/
     website: https://exomiser.monarchinitiative.org/exomiser/
-    visual_explainer: 'https://www.youtube.com/watch?v=XU10oT7c2VI ||| https://www.youtube.com/watch?v=tzwvWkb3s8A'
+    visual_explainer: "https://www.youtube.com/watch?v=XU10oT7c2VI ||| https://www.youtube.com/watch?v=tzwvWkb3s8A"
     contact:
         name: Jules Jacobsen
         email: j.jacobsen@qmul.ac.uk
@@ -634,13 +634,13 @@ tools:
     monarch_role: Support
     license: BSD-3-Clause
     citation:
-      'Nicolas Matentzoglu, Damien Goutte-Gattat, Shawn Zheng Kai Tan, James P Balhoff, Seth Carbon,
+      "Nicolas Matentzoglu, Damien Goutte-Gattat, Shawn Zheng Kai Tan, James P Balhoff, Seth Carbon,
       Anita R Caron, William D Duncan, Joe E Flack, Melissa Haendel, Nomi L Harris, William R Hogan, Charles
       Tapley Hoyt, Rebecca C Jackson, HyeongSik Kim, Huseyin Kir, Martin Larralde, Julie A McMurry, James
       A Overton, Bjoern Peters, Clare Pilgrim, Ray Stefancsik, Sofia MC Robb, Sabrina Toro, Nicole A Vasilevsky,
       Ramona Walls, Christopher J Mungall, David Osumi-Sutherland, Ontology Development Kit: a toolkit for
       building, maintaining and standardizing biomedical ontologies, Database, Volume 2022, 2022, baac087,
-      https://doi.org/10.1093/database/baac087'
+      https://doi.org/10.1093/database/baac087"
     description: |
       "Manage your ontology's life cycle with the Ontology Development Kit (ODK)!
       The ODK is:
@@ -649,7 +649,7 @@ tools:
       - a set of executable workflows for managing your ontology's continuous integration, quality control,
       releases and dynamic imports."
     tagline: A toolkit and workflow system for managing the ontology life-cycle
-    repository: 'https://github.com/INCATools/ontology-development-kit '
+    repository: "https://github.com/INCATools/ontology-development-kit"
     icon: resource-odk
     visual_explainer: "https://www.youtube.com/watch?v=cd7750JVDaw"
     documentation: ' https://incatools.github.io/ontology-development-kit'
@@ -666,7 +666,7 @@ tools:
     name: Monarch OLS
     short_name: Monarch OLS
     category: Registry
-    citation: 'Cite the EBI OLS GH: https://github.com/EBISPOT/ols4'
+    citation: "Cite the EBI OLS GH: https://github.com/EBISPOT/ols4"
     description: "The Ontology Lookup Service (OLS) is a repository for biomedical ontologies that aims to provide a single point of access to the latest ontology versions. You can browse the ontologies through the website as well as programmatically via the OLS API. OLS is developed and maintained by the Samples, Phenotypes and Ontologies Team at EMBL's European Bioinformatics Institute. The Monarch OLS instance highlights only Monarch-specific ontologies.  "
     license: Apache-2.0
     monarch_contribution: Lead
@@ -678,15 +678,15 @@ tools:
       name: Nicolas Matentzoglu
       email: nicolas.matentzoglu@gmail.com
       orcid: https://orcid.org/0000-0002-7356-1779
-      github: '@matentzn'
+      github: "@matentzn"
     tagline: "A Monarch Ontology specific instance of the EMBL European Bioinformatics Institute's OLS."
     website: https://ols.monarchinitiative.org/
     website_include: true
   - id: oak
     name: Ontology Access Kit (OAK)
     short_name: OAK
-    license: 'Apache-2.0'
-    citation: 'Cite the GH repo: https://github.com/INCATools/ontology-access-kit'
+    license: "Apache-2.0"
+    citation: "Cite the GH repo: https://github.com/INCATools/ontology-access-kit"
     category: Ontology Use
     description: 
       The Ontology Access Kit (OAK) is for both technical and non-technical users of ontologies.
@@ -767,7 +767,7 @@ tools:
     name: PhEval
     short_name: PhEval
     category: Benchmarking
-    license: 'Apache-2.0'
+    license: "Apache-2.0"
     citation: 
       Bridges Y, Souza V, Cortes KG, Haendel M, Harris NL, Korn DR, Marinakis NM, Matentzoglu N,
       McLaughlin JA, Mungall CJ, Odell A, Osumi-Sutherland D, Robinson PN, Smedley D, Jacobsen JOB.
@@ -921,7 +921,7 @@ tools:
     website_include: true
     short_name: KG Registry
     license: GPL-3.0, CC0-1.0, BSD-3-Clause
-    citation: 'Cite the GH repo: https://github.com/Knowledge-Graph-Hub/kg-registry'
+    citation: "Cite the GH repo: https://github.com/Knowledge-Graph-Hub/kg-registry"
     tagline: An aggregation of Knowledge Graphs and their parts.
     website: https://kghub.org/kg-registry/
   - id: kg_hub
