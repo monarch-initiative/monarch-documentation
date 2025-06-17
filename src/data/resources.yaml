@@ -183,7 +183,6 @@ standards:
       orcid: https://orcid.org/0000-0002-0736-9199
       github: "@pnrobinson"
     website_include: true
-    type: tool
     short_name: Phenopackets
     license: BSD-3-Clause
     citation: M. S. Ladewig, J. O. B. Jacobsen, A. H. Wagner, D. Danis, B. El Kassaby, M. Gargano, T. Groza, M. Baudis, R. Steinhaus, D. Seelow, N. E. Bechrakis, C. J. Mungall, P. N. Schofield, O. Elemento, L. Smith, J. A. McMurry, M. Munoz-Torres, M. A. Haendel, P. N. Robinson, GA4GH Phenopackets: A Practical Introduction. Advanced Genetics 2023, 4, 2200016. https://doi.org/10.1002/ggn2.202200016
@@ -222,7 +221,6 @@ standards:
         orcid: https://orcid.org/0000-0002-7356-1779
         github: "@matentzn"
     website_include: true
-    type: tool
     license: BSD-3-Clause
     tagline: A simple metadata standard for describing semantic mappings
     visual_explainer: https://www.youtube.com/watch?v=T-YP-Lv9k2s
@@ -252,7 +250,6 @@ standards:
     visual_explainer: https://github.com/jmcmurry/open-illustrations/tree/master/logos
     website_include: true
     see_also: []
-    type: ontology
     citation: "Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, Anagnostopoulos AV, Anderton J, Avillach P, Bagley AM, Bakštein E, Balhoff JP, Baynam G, Bello SM, Berk M, Bertram H, Bishop S, Blau H, Bodenstein DF, Botas P, Boztug K, Čady J, Callahan TJ, Cameron R, Carbon SJ, Castellanos F, Caufield JH, Chan LE, Chute CG, Cruz-Rojo J, Dahan-Oliel N, Davids JR, de Dieuleveult M, de Souza V, de Vries BBA, de Vries E, DePaulo JR, Derfalvi B, Dhombres F, Diaz-Byrd C, Dingemans AJM, Donadille B, Duyzend M, Elfeky R, Essaid S, Fabrizzi C, Fico G, Firth HV, Freudenberg-Hua Y, Fullerton JM, Gabriel DL, Gilmour K, Giordano J, Goes FS, Moses RG, Green I, Griese M, Groza T, Gu W, Guthrie J, Gyori B, Hamosh A, Hanauer M, Hanušová K, He YO, Hegde H, Helbig I, Holasová K, Hoyt CT, Huang S, Hurwitz E, Jacobsen JOB, Jiang X, Joseph L, Keramatian K, King B, Knoflach K, Koolen DA, Kraus ML, Kroll C, Kusters M, Ladewig MS, Lagorce D, Lai MC, Lapunzina P, Laraway B, Lewis-Smith D, Li X, Lucano C, Majd M, Marazita ML, Martinez-Glez V, McHenry TH, McInnis MG, McMurry JA, Mihulová M, Millett CE, Mitchell PB, Moslerová V, Narutomi K, Nematollahi S, Nevado J, Nierenberg AA, Čajbiková NN, Nurnberger JI Jr, Ogishima S, Olson D, Ortiz A, Pachajoa H, Perez de Nanclares G, Peters A, Putman T, Rapp CK, Rath A, Reese J, Rekerle L, Roberts AM, Roy S, Sanders SJ, Schuetz C, Schulte EC, Schulze TG, Schwarz M, Scott K, Seelow D, Seitz B, Shen Y, Similuk MN, Simon ES, Singh B, Smedley D, Smith CL, Smolinsky JT, Sperry S, Stafford E, Stefancsik R, Steinhaus R, Strawbridge R, Sundaramurthi JC, Talapova P, Tenorio Castano JA, Tesner P, Thomas RH, Thurm A, Turnovec M, van Gijn ME, Vasilevsky NA, Vlčková M, Walden A, Wang K, Wapner R, Ware JS, Wiafe AA, Wiafe SA, Wiggins LD, Williams AE, Wu C, Wyrwoll MJ, Xiong H, Yalin N, Yamamoto Y, Yatham LN, Yocum AK, Young AH, Yüksel Z, Zandi PP, Zankl A, Zarante I, Zvolský M, Toro S, Carmody LC, Harris NL, Munoz-Torres MC, Danis D, Mungall CJ, Köhler S, Haendel MA, Robinson PN. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975., https://doi.org/10.1093/nar/gkad1005"
     other_link: "https://obofoundry.org/ontology/hp.html"
 
@@ -296,7 +293,6 @@ standards:
     grants:
       - Phenomics First
     website_include: true
-    type: ontology
     citation: "Mondo: Unifying diseases for the world, by the world, Nicole A Vasilevsky, Nicolas A Matentzoglu, Sabrina Toro, Joe E Flack, Harshad Hegde, Deepak R Unni, Gioconda Alyea, Joanna S Amberger, Larry Babb, James P Balhoff, Taylor I Bingaman, Gully A Burns, Tiffany J Callahan, Leigh C Carmody, Lauren E Chan, George S Chang, Michel Dumontier, Laura E Failla, May J Flowers, H A Garrett, Dylan Gration, Tudor Groza, Marc Hanauer, Nomi L Harris, Ingo Helbig, Jason A Hilton, Daniel S Himmelstein, Charles T Hoyt, Megan S Kane, Sebastian Köhler, David Lagorce, Martin Larralde, Antonia Lock, Irene López Santiago, Donna R Maglott, Adriana J Malheiro, Birgit HM Meldal, Julie A McMurry, Moni Munoz-Torres, Tristan H Nelson, David Ochoa, Tudor I Oprea, David Osumi-Sutherland, Helen Parkinson, Zoë M Pendlington, Ana Rath, Heidi L Rehm, Lyubov Remennik, Erin R Riggs, Paola Roncaglia, Justyne E Ross, Marion F Shadbolt, Kent A Shefchek, Morgan N Similuk, Nicholas Sioutos, Rachel Sparks, Ray Stefancsik, Ralf Stephan, Doron Stupp, Jagadish Chandrabose Sundaramurthi, Imke Tammen, Courtney L Thaxton, Eloise Valasek, Alex H Wagner, Danielle Welter, Patricia L Whetzel, Lori L Whiteman, Valerie Wood, Colleen H Xu, Andreas Zankl, Xingmin A Zhang, Christopher G Chute, Peter N Robinson, Christopher J Mungall, Ada Hamosh, Melissa A Haendel, medRxiv 2022.04.13.22273750; doi: https://doi.org/10.1101/2022.04.13.22273750"
     visual_explainer: "https://www.youtube.com/watch?v=f3aDoNmcR0M"
     other_link: 
@@ -305,7 +301,6 @@ standards:
 
   - id: geno
     name: Genotype Ontology
-    type: ontology
     short_name: GENO
     license: CC-BY 4.0
     citation: "Cite the GH repo: https://github.com/monarch-initiative/GENO-ontology"
@@ -344,7 +339,6 @@ standards:
     grants:
       - Monarch R24
     website_include: true
-    type: ontology
     license: CC-BY 3.0
     citation: "Cite the GH repo: https://github.com/monarch-initiative/SEPIO-ontology"
     tagline: "An ontology for representing the provenance of scientific claims and the evidence that supports them"
@@ -371,7 +365,6 @@ standards:
     grants:
       - Monarch R24
     website_include: true
-    type: ontology
     license: CC-BY 4.0
     citation: "Mullen, K. R., Tammen, I., Matentzoglu, N. A., Mather, M., Balhoff, J. P., Esdaile, E., Leroy, G., Park, C. A., Rando, H. M., Saklou, N. T., Webb, T. L., Vasilevsky, N. A., Mungall, C. J., Haendel, M. A., Nicholas, F. W., & Toro, S. (2025). The Vertebrate Breed Ontology: Toward effective breed data standardization. Journal of Veterinary Internal Medicine, 39(4), e70133. https://doi.org/10.1111/jvim.70133"
     tagline: "A single, computable resource for vertebrate breed names"
@@ -401,7 +394,6 @@ standards:
     grants:
       - Phenomics First
     website_include: true
-    type: ontology
     license: CC0-1.0
     citation: "Nicolas Matentzoglu, Susan M. Bello, Ray Stefancsik, Sarah M. Alghamdi, Anna V. Anagnostopoulos, James P. Balhoff, Meghan A. Balk, Yvonne M. Bradford, Yasemin Bridges, Tiffany J. Callahan, Harry Caufield, Alayne Cuzick, Leigh C. Carmody, Anita R. Caron, Vinicius de Souza, Stacia R. Engel, Petra Fey, Malcolm Fisher, Sarah Gehrke, Christian Grove, Peter Hansen, Nomi L. Harris, Midori A. Harris, Laura Harris, Arwa Ibrahim, Julius O. B. Jacobsen, Sebastian Köhler, Julie A. McMurry, Violeta Munoz-Fuentes, Monica C. Munoz-Torres, Helen Parkinson, Zoë M. Pendlington, Clare Pilgrim, Sofia M. Robb, Peter N. Robinson, James Seager, Erik Segerdell, Damian Smedley, Elliot Sollis, Sabrina Toro, Nicole Vasilevsky, Valerie Wood, Melissa A. Haendel, Christopher J. Mungall, James A. McLaughlin, and David Osumi-Sutherland. 2025. \"The Unified Phenotype Ontology: A Framework for Cross-Species Integrative Phenomics.\" Genetics 229 (3): iyaf027. https://doi.org/10.1093/genetics/iyaf027."
     tagline: "A framework for cross-species integrative phenomics"
@@ -444,7 +436,6 @@ standards:
     grants:
       - Phenomics First
     website_include: true
-    type: ontology
     license: CC0-1.0
     citation: "Stefancsik, R., Balhoff, J.P., Balk, M.A. et al. The Ontology of Biological Attributes (OBA)—computational traits for the life sciences. Mamm Genome 34, 364–378 (2023). https://doi.org/10.1007/s00335-023-09992-1"
     description: "The Ontology of Biological Attributes (OBA) is a formalised, species-independent collection of interoperable phenotypic trait categories that is intended to fulfil a data integration role. OBA is a standardised representational framework for observable attributes that are characteristics of biological entities, organisms, or parts of organisms. It is a collection of biological attributes (traits) covering all kingdoms of life and is interoperable with other ontologies in the Open Biological and Biomedical Ontologies Foundry."
@@ -469,7 +460,6 @@ standards:
     grants:
       - Phenomics First
     website_include: true
-    type: ontology
     license: CC0-1.0
     citation: "(1) Uberon, an integrative multi-species anatomy ontology Mungall, C. J., Torniai, C., Gkoutos, G. V., Lewis, S. E., and Haendel, M. A. (2012) Genome Biology 13, R5. PMID:22293552 (2) Unification of multi-species vertebrate anatomy ontologies for comparative biology in Uberon Haendel, Melissa A; Balhoff, James P; Bastian, Frederic B; Blackburn, David C; Blake, Judith A; Bradford, Yvonne; Comte, Aurelie; Dahdul, Wasila M; Dececchi, Thomas A; Druzinsky, Robert E; Hayamizu, Terry F; Ibrahim, Nizar; Lewis, Suzanna E; Mabee, Paula M; Niknejad, Anne; Robinson-Rechavi, Marc; Sereno, Paul C; Mungall, Christopher J (2014) Journal of Biomedical Semantics, 5(1), 21. doi:10.1186/2041-1480-5-21"
     tagline: An integrated cross-species anatomy ontology
@@ -489,7 +479,6 @@ standards:
     grants:
       - Monarch R24
     website_include: true
-    type: ontology
     short_name: PHENIO
     license: BSD-3-Clause
     citation: 'Cite the GH repo: https://github.com/monarch-initiative/phenio'
@@ -512,7 +501,6 @@ standards:
     grants:
       - TBD
     website_include: true
-    type: ontology
     license: CC BY 3.0
     citation: "https://link.springer.com/article/10.1186/s13326-023-00283-x"
     description: 
@@ -566,7 +554,6 @@ standards:
 tools:
   - id: exomiser
     name: Exomiser
-    type: tool
     short_name: Exomiser
     category: Clinical Diagnosis
     monarch_contribution: Lead
@@ -650,7 +637,6 @@ tools:
         github: "@kevinschaper"
   - id: odk
     name: Ontology Development Kit
-    type: tool
     short_name: ODK
     category: Ontology Maintenance
     monarch_contribution: Lead
@@ -688,7 +674,6 @@ tools:
   - id: monarch_ols
     name: Monarch OLS
     short_name: Monarch OLS
-    type: registry
     category: Registry
     citation: 'Cite the EBI OLS GH: https://github.com/EBISPOT/ols4'
     description: "The Ontology Lookup Service (OLS) is a repository for biomedical ontologies that aims to provide a single point of access to the latest ontology versions. You can browse the ontologies through the website as well as programmatically via the OLS API. OLS is developed and maintained by the Samples, Phenotypes and Ontologies Team at EMBL's European Bioinformatics Institute. The Monarch OLS instance highlights only Monarch-specific ontologies.  "
@@ -713,7 +698,6 @@ tools:
     other_link:"https://www.ebi.ac.uk/ols4/"
   - id: oak
     name: Ontology Access Kit (OAK)
-    type: tool
     short_name: OAK
     license: 'Apache-2.0'
     citation: 'Cite the GH repo: https://github.com/INCATools/ontology-access-kit'
@@ -795,7 +779,6 @@ tools:
         github: "@pnrobinson"
   - id: pheval
     name: PhEval
-    type: tool
     short_name: PhEval
     category: Benchmarking
     license: 'Apache-2.0'
@@ -888,7 +871,6 @@ tools:
         github: "@cmungall"
   - id: ontogpt
     name: OntoGPT
-    type: tool
     short_name: OntoGPT
     category: Data Curation
     license: BSD-3-Clause
@@ -952,7 +934,6 @@ tools:
       orcid: https://orcid.org/0000-0002-6601-2165
       github: "@cmungall"
     website_include: true
-    type: registry
     short_name: KG Registry
     license: GPL-3.0, CC0-1.0, BSD-3-Clause
     citation: 'Cite the GH repo: https://github.com/Knowledge-Graph-Hub/kg-registry'
@@ -960,7 +941,6 @@ tools:
     website: https://kghub.org/kg-registry/
   - id: kg_hub
     name: Knowledge Graph Hub
-    type: registry
     short_name: KG Hub
     license: ''
     citation: 
@@ -1009,7 +989,6 @@ tools:
         orcid: https://orcid.org/0000-0002-6601-2165
         github: "@cmungall"
     website_include: true
-    type: registry
     short_name: LinkML Registry
     license: CC0-1.0
     citation: "Cite the GH repo: https://github.com/linkml/linkml-registry"
@@ -1032,7 +1011,6 @@ tools:
         github: "@realmarcin"
   - id: curate_gpt
     name: CurateGPT
-    type: tool
     short_name: CurateGPT
     category: Data Curation
     license: BSD-3-Clause
@@ -1128,7 +1106,6 @@ tools:
         github: "@kevinschaper"
   - id: linkml
     name: Linked Data Modeling Language
-    type: tool
     short_name: LinkML
     category: Data Curation
     license: CC-0
@@ -1186,12 +1163,10 @@ tools:
         orcid: https://orcid.org/0000-0003-3311-7320
         github: "@kevinschaper"
     website_include: true
-    type: registry
     short_name: Monarch Mapping Commons
     license: CC0-1.0
     citation: "Cite the GH repo: https://github.com/monarch-initiative/monarch-mapping-commons"
     tagline: "A collection of SSSOM mappings"
-
   - id: hpo_translations
     name: HPO Language Translations
     monarch_role: Support
