@@ -173,7 +173,7 @@ slots:
     multivalued: true
   citation:
     description: A citation for the resource
-    range: uriorcurie
+    range: string
   grants:
     description: The grant used to finance the production of an asset.
     range: grant_enum
@@ -210,7 +210,7 @@ slots:
     range: string
   visual_explainer:  
     description: A visual abstract for the resource.
-    range: uriorcurie
+    range: string
   website_include:
     description: Flag if this resource should be shown on the website.
     range: boolean
@@ -265,6 +265,10 @@ slots:
 enums:
   license_enum:
     permissible_values:
+      CC0:
+        description: Creative Commons Zero v1.0 Universal
+      CC-BY-3.0:
+        description: Creative Commons Attribution 3.0 Unported
       CC-BY-4.0:
         description: Creative Commons Attribution 4.0 International
       CC-BY-NC-4.0:
@@ -279,6 +283,8 @@ enums:
         description: BSD 3-Clause License
       Apache-2.0:
         description: Apache License 2.0
+      AGPL-3.0:
+        description: GNU Affero General Public License v3.0
       MIT:
         description: MIT License
       JAX-CUSTOM:
