@@ -178,16 +178,16 @@ standards:
       The Phenopacket Schema represents an open standard for sharing disease and phenotype information to improve our ability to understand, diagnose, and treat both rare and common diseases. A Phenopacket links detailed phenotype descriptions with disease, patient, and genetic information, enabling clinicians, biologists, and disease and drug researchers to build more complete models of disease. The standard is designed to encourage wide adoption and synergy between the people, organizations and systems that comprise the joint effort to address human disease and biological understanding.
     repository:  https://github.com/phenopackets/phenopacket-schema
     contact:
-      name: Peter Robinson
-      email: Peter.Robinson@jax.org
-      orcid: https://orcid.org/0000-0002-0736-9199
-      github: "@pnrobinson"
+        name: Peter Robinson
+        email: Peter.Robinson@jax.org
+        orcid: https://orcid.org/0000-0002-0736-9199
+        github: "@pnrobinson"
     website_include: true
     short_name: Phenopackets
     license: BSD-3-Clause
     citation: "M. S. Ladewig, J. O. B. Jacobsen, A. H. Wagner, D. Danis, B. El Kassaby, M. Gargano, T. Groza, M. Baudis, R. Steinhaus, D. Seelow, N. E. Bechrakis, C. J. Mungall, P. N. Schofield, O. Elemento, L. Smith, J. A. McMurry, M. Munoz-Torres, M. A. Haendel, P. N. Robinson, GA4GH Phenopackets: A Practical Introduction. Advanced Genetics 2023, 4, 2200016. https://doi.org/10.1002/ggn2.202200016"
     tagline: An ISO-endorsed open standard for sharing disease and phenotype information
-    visual_explainer: https://www.youtube.com/watch?v=Ym5rC2Op_PM
+    visual_explainer: "https://www.youtube.com/watch?v=Ym5rC2Op_PM"
   - id: sssom
     name: Simple Standard for Ontology Mappings (SSSOM)
     short_name: SSSOM
@@ -226,7 +226,7 @@ standards:
     website_include: true
     license: BSD-3-Clause
     tagline: A simple metadata standard for describing semantic mappings
-    visual_explainer: https://www.youtube.com/watch?v=T-YP-Lv9k2s
+    visual_explainer: "https://www.youtube.com/watch?v=T-YP-Lv9k2s"
   - id: hp
     name: Human Phenotype Ontology
     short_name: HPO
@@ -249,7 +249,6 @@ standards:
       - Phenomics First
     icons_url: https://github.com/jmcmurry/open-illustrations/tree/master/logos
     tagline: "The standard vocabulary of human phenotypic abnormalities"
-    visual_explainer: https://github.com/jmcmurry/open-illustrations/tree/master/logos
     website_include: true
     citation: "Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, Anagnostopoulos AV, Anderton J, Avillach P, Bagley AM, Bakštein E, Balhoff JP, Baynam G, Bello SM, Berk M, Bertram H, Bishop S, Blau H, Bodenstein DF, Botas P, Boztug K, Čady J, Callahan TJ, Cameron R, Carbon SJ, Castellanos F, Caufield JH, Chan LE, Chute CG, Cruz-Rojo J, Dahan-Oliel N, Davids JR, de Dieuleveult M, de Souza V, de Vries BBA, de Vries E, DePaulo JR, Derfalvi B, Dhombres F, Diaz-Byrd C, Dingemans AJM, Donadille B, Duyzend M, Elfeky R, Essaid S, Fabrizzi C, Fico G, Firth HV, Freudenberg-Hua Y, Fullerton JM, Gabriel DL, Gilmour K, Giordano J, Goes FS, Moses RG, Green I, Griese M, Groza T, Gu W, Guthrie J, Gyori B, Hamosh A, Hanauer M, Hanušová K, He YO, Hegde H, Helbig I, Holasová K, Hoyt CT, Huang S, Hurwitz E, Jacobsen JOB, Jiang X, Joseph L, Keramatian K, King B, Knoflach K, Koolen DA, Kraus ML, Kroll C, Kusters M, Ladewig MS, Lagorce D, Lai MC, Lapunzina P, Laraway B, Lewis-Smith D, Li X, Lucano C, Majd M, Marazita ML, Martinez-Glez V, McHenry TH, McInnis MG, McMurry JA, Mihulová M, Millett CE, Mitchell PB, Moslerová V, Narutomi K, Nematollahi S, Nevado J, Nierenberg AA, Čajbiková NN, Nurnberger JI Jr, Ogishima S, Olson D, Ortiz A, Pachajoa H, Perez de Nanclares G, Peters A, Putman T, Rapp CK, Rath A, Reese J, Rekerle L, Roberts AM, Roy S, Sanders SJ, Schuetz C, Schulte EC, Schulze TG, Schwarz M, Scott K, Seelow D, Seitz B, Shen Y, Similuk MN, Simon ES, Singh B, Smedley D, Smith CL, Smolinsky JT, Sperry S, Stafford E, Stefancsik R, Steinhaus R, Strawbridge R, Sundaramurthi JC, Talapova P, Tenorio Castano JA, Tesner P, Thomas RH, Thurm A, Turnovec M, van Gijn ME, Vasilevsky NA, Vlčková M, Walden A, Wang K, Wapner R, Ware JS, Wiafe AA, Wiafe SA, Wiggins LD, Williams AE, Wu C, Wyrwoll MJ, Xiong H, Yalin N, Yamamoto Y, Yatham LN, Yocum AK, Young AH, Yüksel Z, Zandi PP, Zankl A, Zarante I, Zvolský M, Toro S, Carmody LC, Harris NL, Munoz-Torres MC, Danis D, Mungall CJ, Köhler S, Haendel MA, Robinson PN. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975., https://doi.org/10.1093/nar/gkad1005"
   - id: obographs
@@ -326,10 +325,10 @@ standards:
     description: "The Scientific Evidence and Provenance Information Ontology (SEPIO) was developed to support description of evidence and provenance information for scientific claims. The core model represents the relationships between claims, their evidence lines, the information items that comprise these lines of evidence, and the methods, tools, and agents involved in the creation of these entities. Use cases driving SEPIO development include integration of scientific claims and their associated evidence/provenance metadata, and support for the discovery, analysis, and evaluation of claims based on this metadata."
     repository: https://github.com/monarch-initiative/SEPIO-ontology
     contact:
-      name: Matt Brush
-      email: matt@tislab.org
-      orcid: https://orcid.org/0000-0002-1048-5019
-      github: "@mbrush"
+        name: Matt Brush
+        email: matt@tislab.org
+        orcid: https://orcid.org/0000-0002-1048-5019
+        github: "@mbrush"
     grants:
       - Monarch R24
     website_include: true
@@ -569,7 +568,7 @@ tools:
     icon: resource-exomiser
     documentation: https://exomiser.readthedocs.io/
     url: "https://exomiser.monarchinitiative.org/exomiser/"
-    visual_explainer: "https://www.youtube.com/watch?v=XU10oT7c2VI ||| https://www.youtube.com/watch?v=tzwvWkb3s8A"
+    visual_explainer: "https://www.youtube.com/watch?v=XU10oT7c2VI|||https://www.youtube.com/watch?v=tzwvWkb3s8A"
     contact:
         name: Jules Jacobsen
         email: j.jacobsen@qmul.ac.uk
@@ -647,7 +646,7 @@ tools:
     repository: "https://github.com/INCATools/ontology-development-kit"
     icon: resource-odk
     visual_explainer: "https://www.youtube.com/watch?v=cd7750JVDaw"
-    documentation: ' https://incatools.github.io/ontology-development-kit'
+    documentation: https://incatools.github.io/ontology-development-kit
     contact:
         name: Nicolas Matentzoglu
         email: nicolas.matentzoglu@gmail.com
@@ -670,10 +669,10 @@ tools:
     documentation: https://github.com/monarch-initiative/ontotools-docker
     repository: "https://github.com/monarch-initiative/ontotools-docker"
     contact:
-      name: Nicolas Matentzoglu
-      email: nicolas.matentzoglu@gmail.com
-      orcid: https://orcid.org/0000-0002-7356-1779
-      github: "@matentzn"
+        name: Nicolas Matentzoglu
+        email: nicolas.matentzoglu@gmail.com
+        orcid: https://orcid.org/0000-0002-7356-1779
+        github: "@matentzn"
     tagline: "A Monarch Ontology specific instance of the EMBL European Bioinformatics Institute's OLS."
     website_include: true
   - id: oak
@@ -906,10 +905,10 @@ tools:
     description:
       "A simple registry for knowledge graphs, including Knowledge Graph Hub (KG-Hub) projects."
     contact:
-      name: Chris Mungall
-      email: cjmungall@lbl.gov
-      orcid: https://orcid.org/0000-0002-6601-2165
-      github: "@cmungall"
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
     website_include: true
     short_name: KG Registry
     citation: "Cite the GH repo: https://github.com/Knowledge-Graph-Hub/kg-registry"
@@ -943,10 +942,10 @@ tools:
     monarch_role: Core
     url: https://kghub.org/
     contact:
-      name: Chris Mungall
-      email: cjmungall@lbl.gov
-      orcid: https://orcid.org/0000-0002-6601-2165
-      github: "@cmungall"
+        name: Chris Mungall
+        email: cjmungall@lbl.gov
+        orcid: https://orcid.org/0000-0002-6601-2165
+        github: "@cmungall"
     website_include: true
   - id: linkml_registry 
     name: LinkML Registry
@@ -1090,7 +1089,7 @@ tools:
     tagline: A general purpose modeling language that can be used with linked data, JSON, and other formalisms
     repository: https://github.com/linkml/
     documentation: https://linkml.io/linkml-model/docs/
-    visual_explainer: https://www.youtube.com/@LinkML-org
+    visual_explainer: "https://www.youtube.com/@LinkML-org"
     icon: resource-linkml
     url: https://linkml.io/
     monarch_role: Core
