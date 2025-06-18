@@ -1,7 +1,7 @@
 {
   "Standards": [
     {
-      "description": "An ISO-endorsed open standard for sharing disease and phenotype information.",
+      "description": "The Phenopacket Schema represents an open standard for sharing disease and phenotype information to improve our ability to understand, diagnose, and treat both rare and common diseases. A Phenopacket links detailed phenotype descriptions with disease, patient, and genetic information, enabling clinicians, biologists, and disease and drug researchers to build more complete models of disease. The standard is designed to encourage wide adoption and synergy between the people, organizations and systems that comprise the joint effort to address human disease and biological understanding.",
       "icon": "resource-phenopackets",
       "link": "http://phenopackets.org/",
       "name": "Phenopackets"
@@ -9,19 +9,19 @@
   ],
   "Ontologies": [
     {
-      "description": "The **Human Phenotype Ontology (HPO)** is a structured vocabulary used to describe human health conditions and symptoms in a standardized way. It helps doctors, researchers, and computer systems consistently record and analyze patient characteristics, especially in the context of rare diseases. By organizing thousands of clinical features into a searchable hierarchy, HPO supports better diagnosis, data sharing, and discovery in genetic medicine.",
+      "description": "The Human Phenotype Ontology (HPO) is a structured vocabulary used to describe human health conditions and symptoms in a standardized way. It helps doctors, researchers, and computer systems consistently record and analyze patient characteristics, especially in the context of rare diseases. By organizing thousands of clinical features into a searchable hierarchy, HPO supports better diagnosis, data sharing, and discovery in genetic medicine.",
       "icon": "resource-hpo",
       "link": "https://hpo.jax.org/app/",
       "name": "HPO"
     },
     {
-      "description": "A disease ontology that integrates and harmonizes disease definitions from multiple sources.",
+      "description": "The Mondo Disease Ontology (Mondo) aims to harmonize disease definitions across the world, with a particular focus on rare diseases. Mondo goes beyond loose database cross-references. It curates precise 1:1 equivalence axioms connecting to other resources, validated by OWL reasoning. This means it is safe to propagate across these from Online Mendelian Inheritance in Man (OMIM), ORDO (Orphanet), Experimental Factor Ontology (EFO), Disease Ontology (DOID) and the neoplasm branch of National Cancer Institute Thesaurus (NCIt).",
       "icon": "resource-mondo",
       "link": "https://mondo.monarchinitiative.org/",
       "name": "Mondo"
     },
     {
-      "description": "An integrated cross-species anatomy ontology.",
+      "description": "Uberon is an anatomical ontology that represents body parts, organs and tissues in a variety of animal species, with a focus on vertebrates. It has been constructed to integrate seamlessly with other ontologies, such as the Cell Ontology workflows, the Gene Ontology, Trait and Phenotype ontologies, as well as other anatomical ontologies. The ontology includes comprehensive relationships to taxon-specific anatomical ontologies, allowing integration of functional, phenotype and expression data. Currently Uberon consists of over 13000 classes representing structures that are shared across a variety of metazoans.",
       "icon": "resource-uberon",
       "link": "https://obophenotype.github.io/uberon/",
       "name": "Uberon"
@@ -29,7 +29,7 @@
   ],
   "Tools": [
     {
-      "description": "A tool for finding potential disease-causing variants in whole-exome or whole-genome sequencing data.",
+      "description": "The Exomiser is a Java program that finds potential disease-causing variants from whole-exome or whole-genome sequencing data.\nStarting from a VCF file and a set of phenotypes encoded using the Human Phenotype Ontology (HPO) it will annotate, filter and prioritise likely causative variants. The program does this based on user-defined criteria such as a variant's predicted pathogenicity, frequency of occurrence in a population and also how closely the given phenotype matches the known phenotype of diseased genes from human and model organism data.\nThe functional annotation of variants is handled by Jannovar and uses any of UCSC, RefSeq or Ensembl KnownGene transcript definitions and hg19 or hg38 genomic coordinates.\nVariants are prioritised according to user-defined criteria on variant frequency, pathogenicity, quality, inheritance pattern, and model organism phenotype data. Predicted pathogenicity data is extracted from the dbNSFP resource. Variant frequency data is taken from the 1000 Genomes, ESP, TOPMed, UK10K, ExAC and gnomAD datasets. Subsets of these frequency and pathogenicity data can be defined to further tune the analysis. Cross-species phenotype comparisons come from our PhenoDigm tool powered by the OWLTools OWLSim algorithm.",
       "icon": "resource-exomiser",
       "link": "https://exomiser.monarchinitiative.org/exomiser/",
       "name": "Exomiser"
