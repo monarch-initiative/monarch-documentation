@@ -3,8 +3,8 @@ on:
   push:
     branches: [ main ]
 
-#env:
-#  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+env:
+ GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   build-docs:
@@ -30,8 +30,8 @@ jobs:
       run: |
         make build-docs -B
         poetry run mkdocs gh-deploy --force
- #     env:
- #         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+     env:
+         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
     # - name: Deploy to Pages
     #   run: poetry run mkdocs gh-deploy
