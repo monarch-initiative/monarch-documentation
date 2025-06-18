@@ -661,7 +661,10 @@ tools:
     short_name: Monarch OLS
     category: Registry
     citation: "Cite the EBI OLS GH: https://github.com/EBISPOT/ols4"
-    description: "The Ontology Lookup Service (OLS) is a repository for biomedical ontologies that aims to provide a single point of access to the latest ontology versions. You can browse the ontologies through the website as well as programmatically via the OLS API. OLS is developed and maintained by the Samples, Phenotypes and Ontologies Team at EMBL's European Bioinformatics Institute. The Monarch OLS instance highlights only Monarch-specific ontologies.  "
+    description: >
+      A browsable collection of ontologies provided by the Monarch Initiative using OLS4 (developed by EMBL-EBI).
+      This instance of OLS is tailored to the needs of the Monarch Initiative and provides access to a range of ontologies relevant to genomics, phenomics, and biomedical research, which are not available through normal OLS. 
+      It also provides development snapshots of various unreleased ontologies for early access of the wider community.
     license: Apache-2.0
     monarch_contribution: Lead
     monarch_role: Support
@@ -1113,8 +1116,8 @@ tools:
         email: kevin@tislab.org
         orcid: https://orcid.org/0000-0003-3311-7320
         github: "@kevinschaper"
-  - id: monarch_mapping_commons
-    name: Monarch Mapping Commons
+  - id: monarch_mapping_registry
+    name: Monarch Mapping Registry
     icon: resource-monarch
     monarch_role: Core
     category: Registry
@@ -1129,10 +1132,10 @@ tools:
         orcid: https://orcid.org/0000-0003-3311-7320
         github: "@kevinschaper"
     website_include: true
-    short_name: Monarch Mapping Commons
+    short_name: Monarch Mapping Registry
     license: CC0
     citation: "Cite the GH repo: https://github.com/monarch-initiative/monarch-mapping-commons"
-    tagline: "A collection of SSSOM mappings"
+    tagline: "A collection of SSSOM mappings provided by the Monarch Initiative"
   - id: hpo_translations
     name: HPO Language Translations
     monarch_role: Support
