@@ -901,7 +901,7 @@ tools:
     documentation: https://github.com/Knowledge-Graph-Hub/kg-registry
     monarch_contribution: Lead
     monarch_role: Core
-      url: https://kghub.org/kg-registry/
+    url: https://kghub.org/kg-registry/
     repository: https://github.com/Knowledge-Graph-Hub/kg-registry
     description:
       "A simple registry for knowledge graphs, including Knowledge Graph Hub (KG-Hub) projects."
