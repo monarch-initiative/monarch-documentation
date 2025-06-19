@@ -886,7 +886,6 @@ tools:
     documentation: https://github.com/monarch-initiative/aurelian
     monarch_contribution: Lead
     monarch_role: Core
-    icon: ""
     url: https://github.com/monarch-initiative/aurelian
     repository: https://github.com/monarch-initiative/aurelian
     description: Aurelian is an Agentic Universal Research Engine for Literature, Integration, Annotation, and Navigation.
