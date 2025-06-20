@@ -192,8 +192,8 @@ standards:
     name: Simple Standard for Ontology Mappings (SSSOM)
     short_name: SSSOM
     monarch_contribution: Lead
-    documentation: https://mapping-commons.github.io/sssom/
-    url: https://mapping-commons.github.io/sssom/spec/
+    documentation: https://mapping-commons.github.io/sssom
+    url: https://mapping-commons.github.io/sssom/spec
     description: 
       SSSOM is a Simple Standard for Sharing Ontological Mappings, providing
       - a TSV-based representation for ontology term mappings
@@ -201,7 +201,7 @@ standards:
       - a standard translation between the TSV and the Web Ontology Language (OWL).
       The SSSOM TSV format in particular is geared towards the needs of the wider bioinformatics community
       as a way to safely exchange mappings in an easily readable yet semantically well-specified manner.
-    repository: https://github.com/mapping-commons/sssom/
+    repository: https://github.com/mapping-commons/sssom
     icon: resource-sssom
     project_boards:
       - name: SSSOM Toolkit
@@ -268,8 +268,8 @@ standards:
     grants:
       - Phenomics First
   - id: mondo
-    documentation: https://mondo.readthedocs.io/en/latest/
-    url: https://mondo.monarchinitiative.org/
+    documentation: https://mondo.readthedocs.io/en/latest
+    url: https://mondo.monarchinitiative.org
     name: Mondo Disease Ontology
     short_name: Mondo
     license: CC-BY-4.0
@@ -292,7 +292,7 @@ standards:
     citation: "Mondo: Unifying diseases for the world, by the world, Nicole A Vasilevsky, Nicolas A Matentzoglu, Sabrina Toro, Joe E Flack, Harshad Hegde, Deepak R Unni, Gioconda Alyea, Joanna S Amberger, Larry Babb, James P Balhoff, Taylor I Bingaman, Gully A Burns, Tiffany J Callahan, Leigh C Carmody, Lauren E Chan, George S Chang, Michel Dumontier, Laura E Failla, May J Flowers, H A Garrett, Dylan Gration, Tudor Groza, Marc Hanauer, Nomi L Harris, Ingo Helbig, Jason A Hilton, Daniel S Himmelstein, Charles T Hoyt, Megan S Kane, Sebastian Köhler, David Lagorce, Martin Larralde, Antonia Lock, Irene López Santiago, Donna R Maglott, Adriana J Malheiro, Birgit HM Meldal, Julie A McMurry, Moni Munoz-Torres, Tristan H Nelson, David Ochoa, Tudor I Oprea, David Osumi-Sutherland, Helen Parkinson, Zoë M Pendlington, Ana Rath, Heidi L Rehm, Lyubov Remennik, Erin R Riggs, Paola Roncaglia, Justyne E Ross, Marion F Shadbolt, Kent A Shefchek, Morgan N Similuk, Nicholas Sioutos, Rachel Sparks, Ray Stefancsik, Ralf Stephan, Doron Stupp, Jagadish Chandrabose Sundaramurthi, Imke Tammen, Courtney L Thaxton, Eloise Valasek, Alex H Wagner, Danielle Welter, Patricia L Whetzel, Lori L Whiteman, Valerie Wood, Colleen H Xu, Andreas Zankl, Xingmin A Zhang, Christopher G Chute, Peter N Robinson, Christopher J Mungall, Ada Hamosh, Melissa A Haendel, medRxiv 2022.04.13.22273750; doi: https://doi.org/10.1101/2022.04.13.22273750"
     visual_explainer: "https://www.youtube.com/watch?v=f3aDoNmcR0M"
     see_also:
-      - https://monarch-initiative.github.io/mondo-ingest/
+      - https://monarch-initiative.github.io/mondo-ingest
   - id: geno
     name: Genotype Ontology
     short_name: GENO
@@ -337,7 +337,7 @@ standards:
     tagline: "An ontology for representing the provenance of scientific claims and the evidence that supports them"
     icon: resource-sepio
   - id: vbo
-    documentation: https://monarch-initiative.github.io/vertebrate-breed-ontology/
+    documentation: https://monarch-initiative.github.io/vertebrate-breed-ontology
     url: https://github.com/monarch-initiative/vertebrate-breed-ontology
     name: Vertebrate Breed Ontology
     short_name: VBO
@@ -366,8 +366,8 @@ standards:
     category: Ontology
     monarch_role: Core
     icon: resource-upheno
-    url: https://obophenotype.github.io/upheno/
-    documentation: https://obophenotype.github.io/upheno/
+    url: https://obophenotype.github.io/upheno
+    documentation: https://obophenotype.github.io/upheno
     project_boards:
       - name: uPheno 2 Ontology Development
         id: "https://github.com/orgs/obophenotype/projects/15/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C13049768%5D&groupedBy%5BcolumnId%5D=13049768"
@@ -384,7 +384,7 @@ standards:
     license: CC0
     citation: "Nicolas Matentzoglu, Susan M. Bello, Ray Stefancsik, Sarah M. Alghamdi, Anna V. Anagnostopoulos, James P. Balhoff, Meghan A. Balk, Yvonne M. Bradford, Yasemin Bridges, Tiffany J. Callahan, Harry Caufield, Alayne Cuzick, Leigh C. Carmody, Anita R. Caron, Vinicius de Souza, Stacia R. Engel, Petra Fey, Malcolm Fisher, Sarah Gehrke, Christian Grove, Peter Hansen, Nomi L. Harris, Midori A. Harris, Laura Harris, Arwa Ibrahim, Julius O. B. Jacobsen, Sebastian Köhler, Julie A. McMurry, Violeta Munoz-Fuentes, Monica C. Munoz-Torres, Helen Parkinson, Zoë M. Pendlington, Clare Pilgrim, Sofia M. Robb, Peter N. Robinson, James Seager, Erik Segerdell, Damian Smedley, Elliot Sollis, Sabrina Toro, Nicole Vasilevsky, Valerie Wood, Melissa A. Haendel, Christopher J. Mungall, James A. McLaughlin, and David Osumi-Sutherland. 2025. \"The Unified Phenotype Ontology: A Framework for Cross-Species Integrative Phenomics.\" Genetics 229 (3): iyaf027. https://doi.org/10.1093/genetics/iyaf027."
     tagline: "A framework for cross-species integrative phenomics"
-    visual_explainer: "figure-upheno|||Structure of the uPheno ontology. uPheno is a framework for consistent and logical definition of phenotype categories using ontology design patterns that provides a hierarchical vocabulary of species-neutral phenotype terms under which their species-specific counterparts are grouped. The ontology design templates are based on shared features of existing phenotypic descriptions from various model organisms and represent community consensus. The phenotype pattern template-adherent terms are adopted by species-specific ontologies, thereby contributing to the community-built uPheno framework. uPheno accelerates cross-species inference and computationally amenable comparative phenotype analysis. For example, the interoperable representation of heart phenotypes characterized by increased size, compared with wild-type in distinct species, such as zebrafish and humans, allows the cross-species identification of genes whose alleles can cause similar phenotypes. uPheno contextual hierarchy for increased size of the heart as displayed in the OLS."
+    visual_explainer: "Structure of the uPheno ontology. uPheno is a framework for consistent and logical definition of phenotype categories using ontology design patterns that provides a hierarchical vocabulary of species-neutral phenotype terms under which their species-specific counterparts are grouped. The ontology design templates are based on shared features of existing phenotypic descriptions from various model organisms and represent community consensus. The phenotype pattern template-adherent terms are adopted by species-specific ontologies, thereby contributing to the community-built uPheno framework. uPheno accelerates cross-species inference and computationally amenable comparative phenotype analysis. For example, the interoperable representation of heart phenotypes characterized by increased size, compared with wild-type in distinct species, such as zebrafish and humans, allows the cross-species identification of genes whose alleles can cause similar phenotypes. uPheno contextual hierarchy for increased size of the heart as displayed in the OLS."
     see_also: 
       - "https://ols.monarchinitiative.org/ontologies/upheno_reordered"
   - id: maxo
@@ -407,9 +407,9 @@ standards:
     short_name: OBA
     monarch_contribution: Lead
     category: Ontology
-    documentation: https://obophenotype.github.io/bio-attribute-ontology/
+    documentation: https://obophenotype.github.io/bio-attribute-ontology
     see_also:
-      - https://obophenotype.github.io/upheno/
+      - https://obophenotype.github.io/upheno
     project_boards:
       - name: OBA Ontology Development (uPheno board)
         id: "https://github.com/orgs/obophenotype/projects/15/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C13049768%5D&groupedBy%5BcolumnId%5D=13049768"
@@ -431,13 +431,13 @@ standards:
   - id: uberon
     name: Uberon Anatomy Ontology
     short_name: Uberon
-    description: "Uberon is an anatomical ontology that represents body parts, organs and tissues in a variety of animal species, with a focus on vertebrates. It has been constructed to integrate seamlessly with other ontologies, such as the Cell Ontology workflows, the Gene Ontology, Trait and Phenotype ontologies, as well as other anatomical ontologies. The ontology includes comprehensive relationships to taxon-specific anatomical ontologies, allowing integration of functional, phenotype and expression data. Currently Uberon consists of over 13000 classes representing structures that are shared across a variety of metazoans."
+    description: "Uberon is an anatomical ontology that represents body parts, organs and tissues in a variety of animal species, with a focus on vertebrates. It has been constructed to integrate seamlessly with other ontologies, such as the Cell Ontology workflows, the Gene Ontology, Trait and Phenotype ontologies, as well as other anatomical ontologies. The ontology includes comprehensive relationships to taxon-specific anatomical ontologies, allowing integration of functional, phenotype and expression data. Currently Uberon consists of over 13000 classes representing structures that are shared across a variety of metazoans.As one of the main uses of Uberon is translational science, we have extensive coverage of structures shared between humans and other species. However, thanks to the involvement of many collaborators, we have deep coverage of broad areas of anatomy across diverse taxa. We also make available an ontology called composite-metazoan which brings in subsets of federated ontologies, with a total of over 40000 classes."
     monarch_contribution: Co-Lead
     category: Ontology
     monarch_role: Foundational
     icon: resource-uberon
-    url: https://obophenotype.github.io/uberon/
-    documentation: https://obophenotype.github.io/uberon/
+    url: https://obophenotype.github.io/uberon
+    documentation: https://obophenotype.github.io/uberon
     contact:
         name: Chris Mungall
         email: cjmungall@lbl.gov
@@ -450,7 +450,7 @@ standards:
     citation: "(1) Uberon, an integrative multi-species anatomy ontology Mungall, C. J., Torniai, C., Gkoutos, G. V., Lewis, S. E., and Haendel, M. A. (2012) Genome Biology 13, R5. PMID:22293552 (2) Unification of multi-species vertebrate anatomy ontologies for comparative biology in Uberon Haendel, Melissa A; Balhoff, James P; Bastian, Frederic B; Blackburn, David C; Blake, Judith A; Bradford, Yvonne; Comte, Aurelie; Dahdul, Wasila M; Dececchi, Thomas A; Druzinsky, Robert E; Hayamizu, Terry F; Ibrahim, Nizar; Lewis, Suzanna E; Mabee, Paula M; Niknejad, Anne; Robinson-Rechavi, Marc; Sereno, Paul C; Mungall, Christopher J (2014) Journal of Biomedical Semantics, 5(1), 21. doi:10.1186/2041-1480-5-21"
     tagline: An integrated cross-species anatomy ontology
     repository: https://github.com/obophenotype/uberon
-    visual_explainer: "https://www.youtube.com/watch?v=HmFhTk0Bahs|||figure-uberon|||  As one of the main uses of Uberon is translational science, we have extensive coverage of structures shared between humans and other species. However, thanks to the involvement of many collaborators, we have deep coverage of broad areas of anatomy across diverse taxa. We also make available an ontology called composite-metazoan which brings in subsets of federated ontologies, with a total of over 40000 classes."
+    visual_explainer: "https://www.youtube.com/watch?v=HmFhTk0Bahs"
   - id: phenio
     name: Phenomics Integrated Ontology (PHENIO)
     monarch_contribution: Lead
@@ -470,7 +470,7 @@ standards:
     description: An ontology for accessing and comparing knowledge concerning phenotypes across species and genetic backgrounds.
     tagline: An integrated ontology for Phenomics
     repository: https://github.com/monarch-initiative/phenio
-    documentation: https://monarch-initiative.github.io/phenio/
+    documentation: https://monarch-initiative.github.io/phenio
   - id: ecto
     documentation: https://github.com/EnvironmentOntology/environmental-exposure-ontology
     name: Environmental Conditions, Treatments and Exposures Ontology
@@ -566,8 +566,8 @@ tools:
     tagline: A Tool to Annotate and Prioritize Exome Variants
     repository: https://github.com/exomiser/Exomiser
     icon: resource-exomiser
-    documentation: https://exomiser.readthedocs.io/
-    url: "https://exomiser.monarchinitiative.org/exomiser/"
+    documentation: https://exomiser.readthedocs.io
+    url: "https://exomiser.monarchinitiative.org/exomiser"
     visual_explainer: "https://www.youtube.com/watch?v=XU10oT7c2VI|||https://www.youtube.com/watch?v=tzwvWkb3s8A"
     contact:
         name: Jules Jacobsen
@@ -668,7 +668,7 @@ tools:
     license: Apache-2.0
     monarch_contribution: Lead
     monarch_role: Support
-    url: https://ols.monarchinitiative.org/
+    url: https://ols.monarchinitiative.org
     documentation: https://github.com/monarch-initiative/ontotools-docker
     repository: "https://github.com/monarch-initiative/ontotools-docker"
     contact:
@@ -708,7 +708,7 @@ tools:
     url: https://github.com/INCATools/ontology-access-kit
     monarch_contribution: Lead
     monarch_role: Support
-    documentation: https://incatools.github.io/ontology-access-kit/
+    documentation: https://incatools.github.io/ontology-access-kit
     repository: https://github.com/INCATools/ontology-access-kit
     contact:
         name: Chris Mungall
@@ -786,8 +786,8 @@ tools:
     tagline: A Python library for assisting in benchmarking tools for Variant, Gene, and Disease prioritisation
     repository: https://github.com/monarch-initiative/pheval
     icon: resource-pheval
-    documentation: https://monarch-initiative.github.io/pheval/
-    url: https://monarch-initiative.github.io/pheval/
+    documentation: https://monarch-initiative.github.io/pheval
+    url: https://monarch-initiative.github.io/pheval
     monarch_role: Core
     monarch_contribution: Lead
     contact:
@@ -869,7 +869,7 @@ tools:
       and relation extraction), summarization, knowledge base and knowledge graph construction, and more."
     tagline: A Python package for extracting structured information from text with large language models
     repository: https://github.com/monarch-initiative/ontogpt
-    documentation: https://monarch-initiative.github.io/ontogpt/
+    documentation: https://monarch-initiative.github.io/ontogpt
     monarch_contribution: Lead
     monarch_role: Core
     url: https://github.com/monarch-initiative/ontogpt
@@ -897,11 +897,12 @@ tools:
         github: "@cmungall"
   - id: kg_registry
     name: Knowledge Graph Registry
+    license: BSD-3-Clause
     category: Registry
     documentation: https://github.com/Knowledge-Graph-Hub/kg-registry
     monarch_contribution: Lead
     monarch_role: Core
-    url: https://kghub.org/kg-registry/
+    url: https://kghub.org/kg-registry
     repository: https://github.com/Knowledge-Graph-Hub/kg-registry
     description:
       "A simple registry for knowledge graphs, including Knowledge Graph Hub (KG-Hub) projects."
@@ -951,10 +952,10 @@ tools:
   - id: linkml_registry 
     name: LinkML Registry
     category: Registry
-    documentation: https://linkml.io/linkml-registry/registry/
+    documentation: https://linkml.io/linkml-registry/registry
     monarch_contribution: Lead
     monarch_role: Support
-    url: https://linkml.io/linkml-registry/registry/
+    url: https://linkml.io/linkml-registry/registry
     repository: https://github.com/linkml/linkml-registry
     description: "A collection of Linked Data Modeling Language (LinkML)schemas."
     contact:
@@ -1000,8 +1001,8 @@ tools:
       efforts to keep pace with the ever-increasing volume of scientific data."
     tagline: A large language model-driven curation assistance tool
     repository: https://github.com/monarch-initiative/curate-gpt
-    documentation: https://monarch-initiative.github.io/curategpt/
-    url: https://curategpt.io/
+    documentation: https://monarch-initiative.github.io/curategpt
+    url: https://curategpt.io
     monarch_contribution: Lead
     monarch_role: Core
     contact:
@@ -1087,11 +1088,11 @@ tools:
       for working with and validating data in a variety of formats (JSON, RDF, TSV), with generators for
       compiling LinkML schemas to other frameworks."
     tagline: A general purpose modeling language that can be used with linked data, JSON, and other formalisms
-    repository: https://github.com/linkml/
-    documentation: https://linkml.io/linkml-model/docs/
+    repository: https://github.com/linkml
+    documentation: https://linkml.io/linkml-model/docs
     visual_explainer: "https://www.youtube.com/watch?v=nuy_yGT9g2U"
     icon: resource-linkml
-    url: https://linkml.io/
+    url: https://linkml.io
     monarch_role: Core
     monarch_contribution: Lead
     contact:
@@ -1139,8 +1140,8 @@ tools:
     category: Ontology Maintenance
     description: Infrastructure to collect and coordinate HPO language translations.
     repository: https://github.com/obophenotype/hpo-translations
-    documentation: https://obophenotype.github.io/hpo-translations/
-    url: https://obophenotype.github.io/hpo-translations/
+    documentation: https://obophenotype.github.io/hpo-translations
+    url: https://obophenotype.github.io/hpo-translations
     monarch_contribution: Lead
     contact:
         name: Nicolas Matentzoglu
@@ -1221,7 +1222,7 @@ tools:
     category: Clinical Diagnosis
     description: Creation of prompts from phenopackets, in multiple languages, intended for prompting LLMs.
     repository: https://github.com/monarch-initiative/phenopacket2prompt
-    documentation: https://monarch-initiative.github.io/phenopacket2prompt/
+    documentation: https://monarch-initiative.github.io/phenopacket2prompt
     monarch_role: Support
     monarch_contribution: Co-Lead
     contact:
