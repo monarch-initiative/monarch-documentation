@@ -897,7 +897,7 @@ tools:
         github: "@cmungall"
   - id: kg_registry
     name: Knowledge Graph Registry
-    license: GPL-3.0, CC0-1.0, BSD-3-Clause
+    license: BSD-3-Clause
     category: Registry
     documentation: https://github.com/Knowledge-Graph-Hub/kg-registry
     monarch_contribution: Lead
