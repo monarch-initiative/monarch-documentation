@@ -185,7 +185,8 @@ standards:
     website_include: true
     short_name: Phenopackets
     license: BSD-3-Clause
-    citation: "M. S. Ladewig, J. O. B. Jacobsen, A. H. Wagner, D. Danis, B. El Kassaby, M. Gargano, T. Groza, M. Baudis, R. Steinhaus, D. Seelow, N. E. Bechrakis, C. J. Mungall, P. N. Schofield, O. Elemento, L. Smith, J. A. McMurry, M. Munoz-Torres, M. A. Haendel, P. N. Robinson, GA4GH Phenopackets: A Practical Introduction. Advanced Genetics 2023, 4, 2200016. https://doi.org/10.1002/ggn2.202200016"
+    citation: 
+      "Ladewig, M. S., Jacobsen, J. O. B., Wagner, A. H., Danis, D., El Kassaby, B., Gargano, M., Groza, T., Baudis, M., Steinhaus, R., Seelow, D., Bechrakis, N. E., Mungall, C. J., Schofield, P. N., Elemento, O., Smith, L., McMurry, J. A., Munoz-Torres, M., Haendel, M. A., & Robinson, P. N. (2023). GA4GH Phenopackets: A practical introduction. Advanced Genetics, 4(1), 2200016. https://doi.org/10.1002/ggn2.202200016"
     tagline: An ISO-endorsed open standard for sharing disease and phenotype information
     visual_explainer: "https://www.youtube.com/watch?v=Ym5rC2Op_PM"
   - id: sssom
@@ -213,11 +214,7 @@ standards:
       - Phenomics First
     monarch_role: Core
     citation: >
-      Nicolas Matentzoglu, James P Balhoff, Susan M Bello, Chris Bizon, Matthew Brush, Tiffany J Callahan, Christopher G Chute, William D Duncan, Chris T Evelo, Davera Gabriel, John Graybeal, Alasdair Gray, 
-      Benjamin M Gyori, Melissa Haendel, Henriette Harmse, Nomi L Harris, Ian Harrow, Harshad B Hegde, Amelia L Hoyt, Charles T Hoyt, Dazhi Jiao, Ernesto Jiménez-Ruiz, Simon Jupp, Hyeongsik Kim, Sebastian Koehler, 
-      Thomas Liener, Qinqin Long, James Malone, James A McLaughlin, Julie A McMurry, Sierra Moxon, Monica C Munoz-Torres, David Osumi-Sutherland, James A Overton, Bjoern Peters, Tim Putman, Núria Queralt-Rosinach, 
-      Kent Shefchek, Harold Solbrig, Anne Thessen, Tania Tudorache, Nicole Vasilevsky, Alex H Wagner, Christopher J Mungall. A Simple Standard for Sharing Ontological Mappings (SSSOM). 
-      Database 2022: baac035. https://doi.org/10.1093/database/baac035
+      Matentzoglu, N., Balhoff, J. P., Bello, S. M., Bizon, C., Brush, M., Callahan, T. J., Chute, C. G., Duncan, W. D., Evelo, C. T., Gabriel, D., Graybeal, J., Gray, A., Gyori, B. M., Haendel, M., Harmse, H., Harris, N. L., Harrow, I., Hegde, H. B., Hoyt, A. L., Hoyt, C. T., Jiao, D., Jiménez-Ruiz, E., Jupp, S., Kim, H., Köhler, S., Liener, T., Long, Q., Malone, J., McLaughlin, J. A., McMurry, J. A., Moxon, S., Munoz-Torres, M. C., Osumi-Sutherland, D., Overton, J. A., Peters, B., Putman, T., Queralt-Rosinach, N., Shefchek, K., Solbrig, H., Thessen, A., Tudorache, T., Vasilevsky, N., Wagner, A. H., & Mungall, C. J. (2022). A simple standard for sharing ontological mappings (SSSOM). Database, 2022, baac035. https://doi.org/10.1093/database/baac035
     contact:
         name: Nicolas Matentzoglu
         email: nicolas.matentzoglu@gmail.com
@@ -250,7 +247,8 @@ standards:
     icons_url: https://github.com/jmcmurry/open-illustrations/tree/master/logos
     tagline: "The standard vocabulary of human phenotypic abnormalities"
     website_include: true
-    citation: "Gargano MA, Matentzoglu N, Coleman B, Addo-Lartey EB, Anagnostopoulos AV, Anderton J, Avillach P, Bagley AM, Bakštein E, Balhoff JP, Baynam G, Bello SM, Berk M, Bertram H, Bishop S, Blau H, Bodenstein DF, Botas P, Boztug K, Čady J, Callahan TJ, Cameron R, Carbon SJ, Castellanos F, Caufield JH, Chan LE, Chute CG, Cruz-Rojo J, Dahan-Oliel N, Davids JR, de Dieuleveult M, de Souza V, de Vries BBA, de Vries E, DePaulo JR, Derfalvi B, Dhombres F, Diaz-Byrd C, Dingemans AJM, Donadille B, Duyzend M, Elfeky R, Essaid S, Fabrizzi C, Fico G, Firth HV, Freudenberg-Hua Y, Fullerton JM, Gabriel DL, Gilmour K, Giordano J, Goes FS, Moses RG, Green I, Griese M, Groza T, Gu W, Guthrie J, Gyori B, Hamosh A, Hanauer M, Hanušová K, He YO, Hegde H, Helbig I, Holasová K, Hoyt CT, Huang S, Hurwitz E, Jacobsen JOB, Jiang X, Joseph L, Keramatian K, King B, Knoflach K, Koolen DA, Kraus ML, Kroll C, Kusters M, Ladewig MS, Lagorce D, Lai MC, Lapunzina P, Laraway B, Lewis-Smith D, Li X, Lucano C, Majd M, Marazita ML, Martinez-Glez V, McHenry TH, McInnis MG, McMurry JA, Mihulová M, Millett CE, Mitchell PB, Moslerová V, Narutomi K, Nematollahi S, Nevado J, Nierenberg AA, Čajbiková NN, Nurnberger JI Jr, Ogishima S, Olson D, Ortiz A, Pachajoa H, Perez de Nanclares G, Peters A, Putman T, Rapp CK, Rath A, Reese J, Rekerle L, Roberts AM, Roy S, Sanders SJ, Schuetz C, Schulte EC, Schulze TG, Schwarz M, Scott K, Seelow D, Seitz B, Shen Y, Similuk MN, Simon ES, Singh B, Smedley D, Smith CL, Smolinsky JT, Sperry S, Stafford E, Stefancsik R, Steinhaus R, Strawbridge R, Sundaramurthi JC, Talapova P, Tenorio Castano JA, Tesner P, Thomas RH, Thurm A, Turnovec M, van Gijn ME, Vasilevsky NA, Vlčková M, Walden A, Wang K, Wapner R, Ware JS, Wiafe AA, Wiafe SA, Wiggins LD, Williams AE, Wu C, Wyrwoll MJ, Xiong H, Yalin N, Yamamoto Y, Yatham LN, Yocum AK, Young AH, Yüksel Z, Zandi PP, Zankl A, Zarante I, Zvolský M, Toro S, Carmody LC, Harris NL, Munoz-Torres MC, Danis D, Mungall CJ, Köhler S, Haendel MA, Robinson PN. The Human Phenotype Ontology in 2024: phenotypes around the world. Nucleic Acids Res. 2024 Jan 5;52(D1):D1333-D1346. doi: 10.1093/nar/gkad1005. PMID: 37953324; PMCID: PMC10767975., https://doi.org/10.1093/nar/gkad1005"
+    citation:
+     "Gargano, M. A., Matentzoglu, N., Coleman, B., Addo-Lartey, E. B., Anagnostopoulos, A. V., Anderton, J., Avillach, P., Bagley, A. M., Bakštein, E., Balhoff, J. P., Baynam, G., Bello, S. M.,   Berk, M., Bertram, H., Bishop, S., Blau, H., Bodenstein, D. F., Botas, P., Boztug, K., Čady, J., Callahan, T. J., Cameron, R., Carbon, S. J., Castellanos, F., Caufield, J. H., Chan, L. E., Chute, C. G., Cruz-Rojo, J., Dahan-Oliel, N., Davids, J. R., de Dieuleveult, M., de Souza, V., de Vries, B. B. A., de Vries, E., DePaulo, J. R., Derfalvi, B., Dhombres, F., Diaz-Byrd, C., Dingemans, A. J. M., Donadille, B., Duyzend, M., Elfeky, R., Essaid, S., Fabrizzi, C., Fico, G., Firth, H. V., Freudenberg-Hua, Y., Fullerton, J. M., Gabriel, D. L., Gilmour, K., Giordano, J., Goes, F. S., Moses, R. G., Green, I., Griese, M., Groza, T., Gu, W., Guthrie, J., Gyori, B., Hamosh, A., Hanauer, M., Hanušová, K., He, Y. O., Hegde, H., Helbig, I., Holasová, K., Hoyt, C. T., Huang, S., Hurwitz, E., Jacobsen, J. O. B., Jiang, X., Joseph, L., Keramatian, K., King, B., Knoflach, K., Koolen, D. A., Kraus, M. L., Kroll, C., Kusters, M., Ladewig, M. S., Lagorce, D., Lai, M. C., Lapunzina, P., Laraway, B., Lewis-Smith, D., Li, X., Lucano, C., Majd, M., Marazita, M. L., Martinez-Glez, V., McHenry, T. H., McInnis, M. G., McMurry, J. A., Mihulová, M., Millett, C. E., Mitchell, P. B., Moslerová, V., Narutomi, K., Nematollahi, S., Nevado, J., Nierenberg, A. A., Čajbiková, N. N., Nurnberger, J. I., Ogishima, S., Olson, D., Ortiz, A., Pachajoa, H., Perez de Nanclares, G., Peters, A., Putman, T., Rapp, C. K., Rath, A., Reese, J., Rekerle, L., Roberts, A. M., Roy, S., Sanders, S. J., Schuetz, C., Schulte, E. C., Schulze, T. G., Schwarz, M., Scott, K., Seelow, D., Seitz, B., Shen, Y., Similuk, M. N., Simon, E. S., Singh, B., Smedley, D., Smith, C. L., Smolinsky, J. T., Sperry, S., Stafford, E., Stefancsik, R., Steinhaus, R., Strawbridge, R., Sundaramurthi, J. C., Talapova, P., Tenorio Castano, J. A., Tesner, P., Thomas, R. H., Thurm, A., Turnovec, M., van Gijn, M. E., Vasilevsky, N. A., Vlčková, M., Walden, A., Wang, K., Wapner, R., Ware, J. S., Wiafe, A. A., Wiafe, S. A., Wiggins, L. D., Williams, A. E., Wu, C., Wyrwoll, M. J., Xiong, H., Yalin, N., Yamamoto, Y., Yatham, L. N., Yocum, A. K., Young, A. H., Yüksel, Z., Zandi, P. P., Zankl, A., Zarante, I., Zvolský, M., Toro, S., Carmody, L. C., Harris, N. L., Munoz-Torres, M. C., Danis, D., Mungall, C. J., Köhler, S., Haendel, M. A., & Robinson, P. N. (2024). The Human Phenotype Ontology in 2024: Phenotypes around the world. Nucleic Acids Research, 52(D1), D1333–D1346. https://doi.org/10.1093/nar/gkad1005"
   - id: obographs
     documentation: https://incatools.github.io/ontology-access-kit/datamodels/obograph/index.html
     url: https://github.com/geneontology/obographs
@@ -289,7 +287,8 @@ standards:
     grants:
       - Phenomics First
     website_include: true
-    citation: "Mondo: Unifying diseases for the world, by the world, Nicole A Vasilevsky, Nicolas A Matentzoglu, Sabrina Toro, Joe E Flack, Harshad Hegde, Deepak R Unni, Gioconda Alyea, Joanna S Amberger, Larry Babb, James P Balhoff, Taylor I Bingaman, Gully A Burns, Tiffany J Callahan, Leigh C Carmody, Lauren E Chan, George S Chang, Michel Dumontier, Laura E Failla, May J Flowers, H A Garrett, Dylan Gration, Tudor Groza, Marc Hanauer, Nomi L Harris, Ingo Helbig, Jason A Hilton, Daniel S Himmelstein, Charles T Hoyt, Megan S Kane, Sebastian Köhler, David Lagorce, Martin Larralde, Antonia Lock, Irene López Santiago, Donna R Maglott, Adriana J Malheiro, Birgit HM Meldal, Julie A McMurry, Moni Munoz-Torres, Tristan H Nelson, David Ochoa, Tudor I Oprea, David Osumi-Sutherland, Helen Parkinson, Zoë M Pendlington, Ana Rath, Heidi L Rehm, Lyubov Remennik, Erin R Riggs, Paola Roncaglia, Justyne E Ross, Marion F Shadbolt, Kent A Shefchek, Morgan N Similuk, Nicholas Sioutos, Rachel Sparks, Ray Stefancsik, Ralf Stephan, Doron Stupp, Jagadish Chandrabose Sundaramurthi, Imke Tammen, Courtney L Thaxton, Eloise Valasek, Alex H Wagner, Danielle Welter, Patricia L Whetzel, Lori L Whiteman, Valerie Wood, Colleen H Xu, Andreas Zankl, Xingmin A Zhang, Christopher G Chute, Peter N Robinson, Christopher J Mungall, Ada Hamosh, Melissa A Haendel, medRxiv 2022.04.13.22273750; doi: https://doi.org/10.1101/2022.04.13.22273750"
+    citation: 
+      "Vasilevsky, N. A., Matentzoglu, N. A., Toro, S., Flack, J. E., Hegde, H., Unni, D. R., Alyea, G., Amberger, J. S., Babb, L., Balhoff, J. P., Bingaman, T. I., Burns, G. A., Callahan, T. J., Carmody, L. C., Chan, L. E., Chang, G. S., Dumontier, M., Failla, L. E., Flowers, M. J., Garrett, H. A., Gration, D., Groza, T., Hanauer, M., Harris, N. L., Helbig, I., Hilton, J. A., Himmelstein, D. S., Hoyt, C. T., Kane, M. S., Köhler, S., Lagorce, D., Larralde, M., Lock, A., López Santiago, I., Maglott, D. R., Malheiro, A. J., Meldal, B. H. M., McMurry, J. A., Munoz-Torres, M., Nelson, T. H., Ochoa, D., Oprea, T. I., Osumi-Sutherland, D., Parkinson, H., Pendlington, Z. M., Rath, A., Rehm, H. L., Remennik, L., Riggs, E. R., Roncaglia, P., Ross, J. E., Shadbolt, M. F., Shefchek, K. A., Similuk, M. N., Sioutos, N., Sparks, R., Stefancsik, R., Stephan, R., Stupp, D., Sundaramurthi, J. C., Tammen, I., Thaxton, C. L., Valasek, E., Wagner, A. H., Welter, D., Whetzel, P. L., Whiteman, L. L., Wood, V., Xu, C. H., Zankl, A., Zhang, X. A., Chute, C. G., Robinson, P. N., Mungall, C. J., Hamosh, A., & Haendel, M. A. (2022). Mondo: Unifying diseases for the world, by the world [Preprint]. medRxiv. https://doi.org/10.1101/2022.04.13.22273750"
     visual_explainer: "https://www.youtube.com/watch?v=f3aDoNmcR0M"
     see_also:
       - https://monarch-initiative.github.io/mondo-ingest
@@ -297,7 +296,7 @@ standards:
     name: Genotype Ontology
     short_name: GENO
     license: CC-BY-4.0
-    citation: "Cite the GH repo: https://github.com/monarch-initiative/GENO-ontology"
+    citation: "Monarch Initiative. (n.d.). GENO-ontology [Source code]. GitHub. https://github.com/monarch-initiative/GENO-ontology"
     description: "GENO is an OWL2 ontology that represents the levels of genetic variation specified in genotypes, to support genotype-to-phenotype (G2P) data aggregation and analysis across diverse research communities and sources. The core of the ontology is a graph decomposing a genotype into smaller components of variation, from a complete genotype specifying sequence variation across an entire genome, down to specific allelic variants and sequence alterations. Structuring genotype instance data according to this model supports a primary use case of GENO to enable integrated analysis of G2P data where phenotype annotations are made at different levels of granularity in this genotype partonomy. GENO also enables description of various attributes of genotypes and genetic variants. These attributes include zygosity, genomic position, expression, dominance, and functional dependencies or consequences of a given variant. In addition to heritable variation in genomic sequence specified by traditional genotypes, GENO also represents transient variation in gene expression, as seen in experiments where genes are targeted by knockdown reagents or overexpressed by DNA constructs at the time a phenotype is assessed. This variation in gene expression is represented in terms of the targeted genes themselves, to parallel representation of sequence variation and facilitate integrated description and analysis of data about any genetic contribution to a measured phenotype. Finally, GENO also supports modelling of G2P associations, focusing on the interplay between genotype, phenotype, and environment. GENO describes provenance and experimental evidence for these associations using the Scientific Evidence and Provenance Information Ontology (SEPIO) model."
     tagline: "An integrated ontology for representing the genetic variations described in genotypes, and their causal relationships to phenotype and diseases"
     repository: https://github.com/monarch-initiative/GENO-ontology
@@ -333,7 +332,7 @@ standards:
       - Monarch R24
     website_include: true
     license: CC-BY-3.0
-    citation: "Cite the GH repo: https://github.com/monarch-initiative/SEPIO-ontology"
+    citation: "Monarch Initiative. (n.d.). SEPIO-ontology [Source code]. GitHub. https://github.com/monarch-initiative/SEPIO-ontology"
     tagline: "An ontology for representing the provenance of scientific claims and the evidence that supports them"
     icon: resource-sepio
   - id: vbo
@@ -382,7 +381,8 @@ standards:
       - Phenomics First
     website_include: true
     license: CC0
-    citation: "Nicolas Matentzoglu, Susan M. Bello, Ray Stefancsik, Sarah M. Alghamdi, Anna V. Anagnostopoulos, James P. Balhoff, Meghan A. Balk, Yvonne M. Bradford, Yasemin Bridges, Tiffany J. Callahan, Harry Caufield, Alayne Cuzick, Leigh C. Carmody, Anita R. Caron, Vinicius de Souza, Stacia R. Engel, Petra Fey, Malcolm Fisher, Sarah Gehrke, Christian Grove, Peter Hansen, Nomi L. Harris, Midori A. Harris, Laura Harris, Arwa Ibrahim, Julius O. B. Jacobsen, Sebastian Köhler, Julie A. McMurry, Violeta Munoz-Fuentes, Monica C. Munoz-Torres, Helen Parkinson, Zoë M. Pendlington, Clare Pilgrim, Sofia M. Robb, Peter N. Robinson, James Seager, Erik Segerdell, Damian Smedley, Elliot Sollis, Sabrina Toro, Nicole Vasilevsky, Valerie Wood, Melissa A. Haendel, Christopher J. Mungall, James A. McLaughlin, and David Osumi-Sutherland. 2025. \"The Unified Phenotype Ontology: A Framework for Cross-Species Integrative Phenomics.\" Genetics 229 (3): iyaf027. https://doi.org/10.1093/genetics/iyaf027."
+    citation: 
+      "Matentzoglu, N., Bello, S. M., Stefancsik, R., Alghamdi, S. M., Anagnostopoulos, A. V., Balhoff, J. P., Balk, M. A., Bradford, Y. M., Bridges, Y., Callahan, T. J., Caufield, H., Cuzick, A., Carmody, L. C., Caron, A. R., de Souza, V., Engel, S. R., Fey, P., Fisher, M., Gehrke, S., Grove, C., Hansen, P., Harris, N. L., Harris, M. A., Harris, L., Ibrahim, A., Jacobsen, J. O. B., Köhler, S., McMurry, J. A., Munoz-Fuentes, V., Munoz-Torres, M. C., Parkinson, H., Pendlington, Z. M., Pilgrim, C., Robb, S. M., Robinson, P. N., Seager, J., Segerdell, E., Smedley, D., Sollis, E., Toro, S., Vasilevsky, N., Wood, V., Haendel, M. A., Mungall, C. J., McLaughlin, J. A., & Osumi-Sutherland, D. (2025). The Unified Phenotype Ontology: A framework for cross-species integrative phenomics. Genetics, 229(3), iyaf027. https://doi.org/10.1093/genetics/iyaf027"
     tagline: "A framework for cross-species integrative phenomics"
     visual_explainer: "Structure of the uPheno ontology. uPheno is a framework for consistent and logical definition of phenotype categories using ontology design patterns that provides a hierarchical vocabulary of species-neutral phenotype terms under which their species-specific counterparts are grouped. The ontology design templates are based on shared features of existing phenotypic descriptions from various model organisms and represent community consensus. The phenotype pattern template-adherent terms are adopted by species-specific ontologies, thereby contributing to the community-built uPheno framework. uPheno accelerates cross-species inference and computationally amenable comparative phenotype analysis. For example, the interoperable representation of heart phenotypes characterized by increased size, compared with wild-type in distinct species, such as zebrafish and humans, allows the cross-species identification of genes whose alleles can cause similar phenotypes. uPheno contextual hierarchy for increased size of the heart as displayed in the OLS."
     see_also: 
@@ -423,7 +423,8 @@ standards:
       - Phenomics First
     website_include: true
     license: CC0
-    citation: "Stefancsik, R., Balhoff, J.P., Balk, M.A. et al. The Ontology of Biological Attributes (OBA)—computational traits for the life sciences. Mamm Genome 34, 364–378 (2023). https://doi.org/10.1007/s00335-023-09992-1"
+    citation: 
+      "Stefancsik, R., Balhoff, J. P., Balk, M. A., et al. (2023). The Ontology of Biological Attributes (OBA)—Computational traits for the life sciences. Mammalian Genome, 34, 364–378. https://doi.  org/10.1007/s00335-023-09992-1"
     description: "The Ontology of Biological Attributes (OBA) is a formalised, species-independent collection of interoperable phenotypic trait categories that is intended to fulfil a data integration role. OBA is a standardised representational framework for observable attributes that are characteristics of biological entities, organisms, or parts of organisms. It is a collection of biological attributes (traits) covering all kingdoms of life and is interoperable with other ontologies in the Open Biological and Biomedical Ontologies Foundry."
     tagline: A species-independent framework for integrating phenotypic traits
     repository: https://github.com/obophenotype/bio-attribute-ontology
@@ -447,7 +448,15 @@ standards:
       - Phenomics First
     website_include: true
     license: CC0
-    citation: "(1) Uberon, an integrative multi-species anatomy ontology Mungall, C. J., Torniai, C., Gkoutos, G. V., Lewis, S. E., and Haendel, M. A. (2012) Genome Biology 13, R5. PMID:22293552 (2) Unification of multi-species vertebrate anatomy ontologies for comparative biology in Uberon Haendel, Melissa A; Balhoff, James P; Bastian, Frederic B; Blackburn, David C; Blake, Judith A; Bradford, Yvonne; Comte, Aurelie; Dahdul, Wasila M; Dececchi, Thomas A; Druzinsky, Robert E; Hayamizu, Terry F; Ibrahim, Nizar; Lewis, Suzanna E; Mabee, Paula M; Niknejad, Anne; Robinson-Rechavi, Marc; Sereno, Paul C; Mungall, Christopher J (2014) Journal of Biomedical Semantics, 5(1), 21. doi:10.1186/2041-1480-5-21"
+    citation: >
+      1) Mungall, C. J., Torniai, C., Gkoutos, G. V., Lewis, S. E., & Haendel, M. A. (2012).
+      Uberon, an integrative multi-species anatomy ontology. Genome Biology, 13, R5. PMID:22293552.
+
+      2) Haendel, M. A., Balhoff, J. P., Bastian, F. B., Blackburn, D. C., Blake, J. A., Bradford, Y.,
+      Comte, A., Dahdul, W. M., Dececchi, T. A., Druzinsky, R. E., Hayamizu, T. F., Ibrahim, N.,
+      Lewis, S. E., Mabee, P. M., Niknejad, A., Robinson-Rechavi, M., Sereno, P. C., & Mungall, C. J. (2014).
+      Unification of multi-species vertebrate anatomy ontologies for comparative biology in Uberon.
+      Journal of Biomedical Semantics, 5(1), 21. https://doi.org/10.1186/2041-1480-5-21
     tagline: An integrated cross-species anatomy ontology
     repository: https://github.com/obophenotype/uberon
     visual_explainer: "https://www.youtube.com/watch?v=HmFhTk0Bahs"
@@ -466,7 +475,7 @@ standards:
     website_include: true
     short_name: PHENIO
     license: BSD-3-Clause
-    citation: "Cite the GH repo: https://github.com/monarch-initiative/phenio"
+    citation: "Monarch Initiative. (n.d.). phenio [Source code]. GitHub. https://github.com/monarch-initiative/phenio"
     description: An ontology for accessing and comparing knowledge concerning phenotypes across species and genetic backgrounds.
     tagline: An integrated ontology for Phenomics
     repository: https://github.com/monarch-initiative/phenio
@@ -487,7 +496,8 @@ standards:
       - TBD
     website_include: true
     license: CC-BY-3.0
-    citation: "https://link.springer.com/article/10.1186/s13326-023-00283-x"
+    citation: 
+      "Matentzoglu, N. A., Vasilevsky, N. A., Balhoff, J. P., Bello, S. M., Brush, M. H., Carbon, S., Carmody, L. C., Cooper, L., Courtot, M., Diehl, A. D., Duncan, W.   D., Harris, N. L., Haendel, M. A., Mungall, C. J.,  Osumi-Sutherland, D., Relevo, R., Segerdell, E., Smith, C. L., & Robinson, P. N. (2023). Improving phenotype representation with the Human Phenotype Ontology: A community perspective. Journal of Biomedical Semantics, 14, 7. https://doi.org/10.1186/s13326-023-00283-x"
     description: 
       The Environmental Conditions, Treatments and Exposures Ontology (ECTO) describes exposures to experimental treatments of plants and model organisms (e.g. exposures to modification of diet, lighting levels, temperature); exposures of humans or any other organisms to stressors through a variety of routes, for purposes of public health, environmental monitoring etc, stimuli, natural and experimental, any kind of environmental condition or change in condition that can be experienced by an organism or population of organisms on earth. The scope is very general and can include for example plant treatment regimens, as well as human clinical exposures (although these may better be handled by a more specialized ontology).
     tagline: "An ontology connecting toxicology and exposure data to human health and beyond"
@@ -660,7 +670,7 @@ tools:
     name: Monarch OLS
     short_name: Monarch OLS
     category: Registry
-    citation: "Cite the EBI OLS GH: https://github.com/EBISPOT/ols4"
+    citation: "EBISPOT. (n.d.). OLS4 [Source code]. GitHub. https://github.com/EBISPOT/ols4"
     description: >
       A browsable collection of ontologies provided by the Monarch Initiative using OLS4 (developed by EMBL-EBI).
       This instance of OLS is tailored to the needs of the Monarch Initiative and provides access to a range of ontologies relevant to genomics, phenomics, and biomedical research, which are not available through normal OLS. 
@@ -913,18 +923,14 @@ tools:
         github: "@cmungall"
     website_include: true
     short_name: KG Registry
-    citation: "Cite the GH repo: https://github.com/Knowledge-Graph-Hub/kg-registry"
+    citation: "Knowledge Graph Hub. (n.d.). kg-registry [Source code]. GitHub. https://github.com/Knowledge-Graph-Hub/kg-registry"
     tagline: An aggregation of Knowledge Graphs and their parts.
   - id: kg_hub
     name: Knowledge Graph Hub
     short_name: KG Hub
     license: BSD-3-Clause
     citation: 
-      "Caufield JH, Putman T, Schaper K, Unni DR, Hegde H, Callahan TJ, Cappelletti L, Moxon SAT,
-      Ravanmehr V, Carbon S, Chan LE, Cortes K, Shefchek KA, Elsarboukh G, Balhoff JP, Fontana T, Matentzoglu
-      N, Bruskiewich RM, Thessen AE, Harris NL, Munoz-Torres MC, Haendel MA, Robinson PN, Joachimiak MP,
-      Mungall CJ, Reese JT. KG-Hub -- Building and Exchanging Biological Knowledge Graphs. arXiv [q-bio.QM].
-      2023. http://arxiv.org/abs/2302.10800"
+      "Caufield, J. H., Putman, T., Schaper, K., Unni, D. R., Hegde, H., Callahan, T. J., Cappelletti, L., Moxon, S. A. T., Ravanmehr, V., Carbon, S., Chan, L. E., Cortes, K., Shefchek, K. A., Elsarboukh, G., Balhoff, J. P., Fontana, T., Matentzoglu, N., Bruskiewich, R. M., Thessen, A. E., Harris, N. L., Munoz-Torres, M. C., Haendel, M. A., Robinson, P. N., Joachimiak, M. P., Mungall, C. J., & Reese, J. T. (2023). KG-Hub — Building and exchanging biological knowledge graphs (arXiv:2302.10800). arXiv. https://arxiv.org/abs/2302.10800"
     description: 
       "The Knowledge Graph Hub (KG-Hub) is a platform that provides software development patterns
       for the standardized construction, exchange, and reuse of knowledge graphs. Features include a simple,
@@ -966,7 +972,7 @@ tools:
     website_include: true
     short_name: LinkML Registry
     license: CC0
-    citation: "Cite the GH repo: https://github.com/linkml/linkml-registry"
+    citation: "LinkML. (n.d.). linkml-registry [Source code]. GitHub. https://github.com/linkml/linkml-registry"
     tagline: "A collection of LinkML schemas"
   - id: talisman
     name: TALISMAN
@@ -1132,7 +1138,7 @@ tools:
     website_include: true
     short_name: Monarch Mapping Registry
     license: CC0
-    citation: "Cite the GH repo: https://github.com/monarch-initiative/monarch-mapping-commons"
+    citation: "Monarch Initiative. (n.d.). monarch-mapping-commons [Source code]. GitHub. https://github.com/monarch-initiative/monarch-mapping-commons"
     tagline: "A collection of SSSOM mappings provided by the Monarch Initiative"
   - id: hpo_translations
     name: HPO Language Translations
