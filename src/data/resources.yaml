@@ -759,7 +759,7 @@ tools:
     short_name: PhEval
     category: Benchmarking
     license: "Apache-2.0"
-    citation: "Bridges, Y., Souza, V., Cortes, K. G., Haendel, M., Harris, N. L., Korn, D. R., Marinakis, N. M., Matentzoglu, N., McLaughlin, J. A., Mungall, C. J., Odell, A., Osumi-Sutherland, D., Robinson, P. N., Smedley, D., & Jacobsen, J. O. B. (2025). Towards a standard benchmark for phenotype-driven variant and gene prioritisation algorithms: PhEval – Phenotypic inference evaluation framework. BMC Bioinformatics, 26(1), 87. https://doi.org/10.1186/s12859-025-06105-4.""
+    citation: "Bridges, Y., Souza, V., Cortes, K. G., Haendel, M., Harris, N. L., Korn, D. R., Marinakis, N. M., Matentzoglu, N., McLaughlin, J. A., Mungall, C. J., Odell, A., Osumi-Sutherland, D., Robinson, P. N., Smedley, D., & Jacobsen, J. O. B. (2025). Towards a standard benchmark for phenotype-driven variant and gene prioritisation algorithms: PhEval – Phenotypic inference evaluation framework. BMC Bioinformatics, 26(1), 87. https://doi.org/10.1186/s12859-025-06105-4."
     description: >
       The absence of standardised benchmarks and data standardisation for Variant and Gene Prioritisation
       Algorithms (VGPAs) presents a significant challenge in the field of genomic research. PhEval addresses
