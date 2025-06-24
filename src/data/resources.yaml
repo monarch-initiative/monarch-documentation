@@ -178,10 +178,10 @@ standards:
       The Phenopacket Schema represents an open standard for sharing disease and phenotype information to improve our ability to understand, diagnose, and treat both rare and common diseases. A Phenopacket links detailed phenotype descriptions with disease, patient, and genetic information, enabling clinicians, biologists, and disease and drug researchers to build more complete models of disease. The standard is designed to encourage wide adoption and synergy between the people, organizations and systems that comprise the joint effort to address human disease and biological understanding.
     repository:  https://github.com/phenopackets/phenopacket-schema
     contact:
-        name: Peter Robinson
-        email: Peter.Robinson@jax.org
-        orcid: https://orcid.org/0000-0002-0736-9199
-        github: "@pnrobinson"
+        name: Jules Jacobsen
+        email: j.jacobsen@qmul.ac.uk
+        orcid: https://orcid.org/0000-0002-3265-1591
+        github: "@julesjacobsen"
     website_include: true
     short_name: Phenopackets
     license: BSD-3-Clause
