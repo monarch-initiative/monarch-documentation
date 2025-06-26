@@ -1056,8 +1056,7 @@ tools:
     short_name: LinkML
     category: Data Curation
     license: CC0
-    citation: 
-      "Moxon, S., Solbrig, H., Unni, D., Jiao, D., Bruskiewich, R., Balhoff, J., Vaidya, G., Duncan, W., Hegde, H., Miller, M., Brush, M., Harris, N., Haendel, M., & Mungall, C. (2021). The Linked Data Modeling Language (LinkML): A general-purpose data modeling framework grounded in machine-readable semantics. CEUR Workshop Proceedings, 3073, 148–151"
+    citation: "Moxon, S., Solbrig, H., Unni, D., Jiao, D., Bruskiewich, R., Balhoff, J., Vaidya, G., Duncan, W., Hegde, H., Miller, M., Brush, M., Harris, N., Haendel, M., & Mungall, C. (2021). The Linked Data Modeling Language (LinkML): A general-purpose data modeling framework grounded in machine-readable semantics. CEUR Workshop Proceedings, 3073, 148–151"
     description: 
       "LinkML (Linked data Modeling Language; linkml.io) is an open and
       extensible data modeling framework that provides a simple and
