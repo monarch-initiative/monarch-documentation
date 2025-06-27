@@ -200,8 +200,7 @@ standards:
       - a TSV-based representation for ontology term mappings
       - a comprehensive set of standard metadata elements to describe mappings, and
       - a standard translation between the TSV and the Web Ontology Language (OWL).
-      The SSSOM TSV format in particular is geared towards the needs of the wider bioinformatics community
-      as a way to safely exchange mappings in an easily readable yet semantically well-specified manner.
+      The SSSOM TSV format in particular is geared towards the needs of the wider bioinformatics community as a way to safely exchange mappings in an easily readable yet semantically well-specified manner.
     repository: https://github.com/mapping-commons/sssom
     icon: resource-sssom
     project_boards:
@@ -639,10 +638,8 @@ tools:
     description: |
       Manage your ontology's life cycle with the Ontology Development Kit (ODK)!The ODK is:
 
-      - a toolbox of various ontology related tools such as ROBOT, owltools, dosdp-tools and many more,
-      bundled as a docker image.
-      - a set of executable workflows for managing your ontology's continuous integration, quality control,
-      releases and dynamic imports.
+      - a toolbox of various ontology related tools such as ROBOT, owltools, dosdp-tools and many more, bundled as a docker image.
+      - a set of executable workflows for managing your ontology's continuous integration, quality control, releases and dynamic imports.
     tagline: A toolkit and workflow system for managing the ontology life-cycle
     repository: "https://github.com/INCATools/ontology-development-kit"
     icon: resource-odk
