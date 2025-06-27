@@ -367,7 +367,14 @@ standards:
     project_boards:
       - name: uPheno 2 Ontology Development
         id: "https://github.com/orgs/obophenotype/projects/15/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C13049768%5D&groupedBy%5BcolumnId%5D=13049768"
-    description: "The Unified Phenotype Ontology (uPheno) framework is a community effort to provide an integration layer over domain-specific phenotype ontologies, as a single, unified, logical representation. It comprises (1) a system for consistent computational definition of phenotype terms using ontology design patterns, maintained as a community library; (2) a hierarchical vocabulary of species-neutral phenotype terms under which their species-specific counterparts are grouped; and (3) mapping tables between species-specific ontologies."
+    description: |
+      The Unified Phenotype Ontology (uPheno) framework is a community effort to provide an integration layer over domain-specific phenotype ontologies, as a single, unified, logical representation.
+
+      uPheno comprises:
+
+      - a system for consistent computational definition of phenotype terms using ontology design patterns, maintained as a community library  
+      - a hierarchical vocabulary of species-neutral phenotype terms under which their species-specific counterparts are grouped  
+      - mapping tables between species-specific ontologies
     repository: https://github.com/obophenotype/upheno
     contact:
         name: James McLaughlin
@@ -679,12 +686,11 @@ tools:
     license: "Apache-2.0"
     citation: "INCATools. (n.d.). ontology-access-kit [Source code]. GitHub. https://github.com/INCATools/ontology-access-kit"
     category: Ontology Use
-    description: >
-      The Ontology Access Kit (OAK) is for both technical and non-technical users of ontologies.
-      Non-technical users can use the command line interface to query ontologies in a variety of ways. Technical
-      users can write Python code that uses the OAK library to perform ontology-related tasks.
+    description: |
+      The Ontology Access Kit (OAK) is for both technical and non-technical users of ontologies. Non-technical users can use the command line interface to query ontologies in a variety of ways. Technical users can write Python code that uses the OAK library to perform ontology-related tasks.
 
       OAK provides a collection of interfaces for various ontology operations, including:
+
       - look up basic features of an ontology element, such as its label, definition, relationships, or aliases
       - search an ontology for a term
       - validate an ontology
@@ -693,7 +699,8 @@ tools:
       - identify lexical matches and export as SSSOM mapping tables
       - perform more advanced operations, such as graph traversal, OWL axiom processing, or text annotation
 
-      These interfaces are separated from any particular backend, for which there a number of different adapters. This means the same Python API and command line can be used regardless of whether the ontology:
+      These interfaces are separated from any particular backend, for which there are a number of different adapters. This means the same Python API and command line can be used regardless of whether the ontology:
+
       - is served by a remote API such as OLS or BioPortal
       - is present locally on the filesystem in owl, obo, obojson, or sqlite formats
       - is to be downloaded from a remote repository such as the OBO library
@@ -760,11 +767,10 @@ tools:
     category: Benchmarking
     license: "Apache-2.0"
     citation: "Bridges, Y., Souza, V., Cortes, K. G., Haendel, M., Harris, N. L., Korn, D. R., Marinakis, N. M., Matentzoglu, N., McLaughlin, J. A., Mungall, C. J., Odell, A., Osumi-Sutherland, D., Robinson, P. N., Smedley, D., & Jacobsen, J. O. B. (2025). Towards a standard benchmark for phenotype-driven variant and gene prioritisation algorithms: PhEval – Phenotypic inference evaluation framework. BMC Bioinformatics, 26(1), 87. https://doi.org/10.1186/s12859-025-06105-4."
-    description: >
-      The absence of standardised benchmarks and data standardisation for Variant and Gene Prioritisation
-      Algorithms (VGPAs) presents a significant challenge in the field of genomic research. PhEval addresses
-      this gap. It is a novel framework designed to streamline the evaluation of VGPAs that incorporate
-      phenotypic data. PhEval offers several key benefits:
+    description: |
+      The absence of standardised benchmarks and data standardisation for Variant and Gene Prioritisation Algorithms (VGPAs) presents a significant challenge in the field of genomic research. PhEval addresses this gap. It is a novel framework designed to streamline the evaluation of VGPAs that incorporate phenotypic data.
+
+      PhEval offers several key benefits:
 
       - Automated Processes: Reduces manual effort by automating various evaluation tasks, thus enhancing efficiency.
       - Standardisation: Ensures consistency and comparability in evaluation methodologies, leading to more reliable and standardised assessments.
