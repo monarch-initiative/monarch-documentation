@@ -196,6 +196,7 @@ standards:
     url: https://mapping-commons.github.io/sssom/spec
     description: 
       SSSOM is a Simple Standard for Sharing Ontological Mappings, providing
+      
       - a TSV-based representation for ontology term mappings
       - a comprehensive set of standard metadata elements to describe mappings, and
       - a standard translation between the TSV and the Web Ontology Language (OWL).
@@ -369,7 +370,6 @@ standards:
         id: "https://github.com/orgs/obophenotype/projects/15/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C13049768%5D&groupedBy%5BcolumnId%5D=13049768"
     description: |
       The Unified Phenotype Ontology (uPheno) framework is a community effort to provide an integration layer over domain-specific phenotype ontologies, as a single, unified, logical representation.
-
       uPheno comprises:
 
       - a system for consistent computational definition of phenotype terms using ontology design patterns, maintained as a community library  
@@ -688,7 +688,6 @@ tools:
     category: Ontology Use
     description: |
       The Ontology Access Kit (OAK) is for both technical and non-technical users of ontologies. Non-technical users can use the command line interface to query ontologies in a variety of ways. Technical users can write Python code that uses the OAK library to perform ontology-related tasks.
-
       OAK provides a collection of interfaces for various ontology operations, including:
 
       - look up basic features of an ontology element, such as its label, definition, relationships, or aliases
@@ -698,9 +697,8 @@ tools:
       - generate and visualize subgraphs
       - identify lexical matches and export as SSSOM mapping tables
       - perform more advanced operations, such as graph traversal, OWL axiom processing, or text annotation
-
       These interfaces are separated from any particular backend, for which there are a number of different adapters. This means the same Python API and command line can be used regardless of whether the ontology:
-
+     
       - is served by a remote API such as OLS or BioPortal
       - is present locally on the filesystem in owl, obo, obojson, or sqlite formats
       - is to be downloaded from a remote repository such as the OBO library
