@@ -369,8 +369,7 @@ standards:
       - name: uPheno 2 Ontology Development
         id: "https://github.com/orgs/obophenotype/projects/15/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C13049768%5D&groupedBy%5BcolumnId%5D=13049768"
     description: |
-      The Unified Phenotype Ontology (uPheno) framework is a community effort to provide an integration layer over domain-specific phenotype ontologies, as a single, unified, logical representation.
-      uPheno comprises:
+      The Unified Phenotype Ontology (uPheno) framework is a community effort to provide an integration layer over domain-specific phenotype ontologies, as a single, unified, logical representation.uPheno comprises:
 
       - a system for consistent computational definition of phenotype terms using ontology design patterns, maintained as a community library  
       - a hierarchical vocabulary of species-neutral phenotype terms under which their species-specific counterparts are grouped  
@@ -554,13 +553,13 @@ tools:
     monarch_role: Foundational
     license: AGPL-3.0
     citation: "Smedley, D., Schubach, M., Jacobsen, J. O. B., Köhler, S., Zemojtel, T., Spielmann, M., Jäger, M., Hochheiser, H., Washington, N. L., McMurry, J. A., Haendel, M. A., Mungall, C. J., Lewis, S. E., Groza, T., Valentini, G., & Robinson, P. N. (2016). A whole-genome analysis framework for effective identification of pathogenic regulatory variants in Mendelian disease. The American Journal of Human Genetics, 99(3), 595–606. https://doi.org/10.1016/j.ajhg.2016.07.005"
-    description: "The Exomiser is a Java program that finds potential disease-causing variants from whole-exome
+    description: "Exomiser is a Java program that finds potential disease-causing variants from whole-exome
       or whole-genome sequencing data.
 
       Starting from a VCF file and a set of phenotypes encoded using the Human Phenotype Ontology (HPO)
       it will annotate, filter and prioritise likely causative variants. The program does this based on
-      user-defined criteria such as a variant's predicted pathogenicity, frequency of occurrence in a population
-      and also how closely the given phenotype matches the known phenotype of diseased genes from human
+      criteria such as a variant's predicted pathogenicity, frequency of occurrence in a population
+      and also how closely the given phenotype matches the phenotypic features of disease genes from human
       and model organism data.
 
       The functional annotation of variants is handled by Jannovar and uses any of UCSC, RefSeq or Ensembl
@@ -638,8 +637,8 @@ tools:
     license: BSD-3-Clause
     citation: "Matentzoglu, N., Goutte-Gattat, D., Tan, S. Z. K., Balhoff, J. P., Carbon, S., Caron, A. R., Duncan, W. D., Flack, J. E., Haendel, M., Harris, N. L., Hogan, W. R., Hoyt, C. T., Jackson, R. C., Kim, H., Kir, H., Larralde, M., McMurry, J. A., Overton, J. A., Peters, B., Pilgrim, C., Stefancsik, R., Robb, S. M. C., Toro, S., Vasilevsky, N. A., Walls, R., Mungall, C. J., & Osumi-Sutherland, D. (2022). Ontology Development Kit: A toolkit for building, maintaining and standardizing biomedical ontologies. Database, 2022, baac087. https://doi.org/10.1093/database/baac087"
     description: |
-      Manage your ontology's life cycle with the Ontology Development Kit (ODK)!
-      The ODK is:
+      Manage your ontology's life cycle with the Ontology Development Kit (ODK)!The ODK is:
+
       - a toolbox of various ontology related tools such as ROBOT, owltools, dosdp-tools and many more,
       bundled as a docker image.
       - a set of executable workflows for managing your ontology's continuous integration, quality control,
@@ -697,6 +696,7 @@ tools:
       - generate and visualize subgraphs
       - identify lexical matches and export as SSSOM mapping tables
       - perform more advanced operations, such as graph traversal, OWL axiom processing, or text annotation
+      
       These interfaces are separated from any particular backend, for which there are a number of different adapters. This means the same Python API and command line can be used regardless of whether the ontology:
      
       - is served by a remote API such as OLS or BioPortal
@@ -766,9 +766,7 @@ tools:
     license: "Apache-2.0"
     citation: "Bridges, Y., Souza, V., Cortes, K. G., Haendel, M., Harris, N. L., Korn, D. R., Marinakis, N. M., Matentzoglu, N., McLaughlin, J. A., Mungall, C. J., Odell, A., Osumi-Sutherland, D., Robinson, P. N., Smedley, D., & Jacobsen, J. O. B. (2025). Towards a standard benchmark for phenotype-driven variant and gene prioritisation algorithms: PhEval – Phenotypic inference evaluation framework. BMC Bioinformatics, 26(1), 87. https://doi.org/10.1186/s12859-025-06105-4."
     description: |
-      The absence of standardised benchmarks and data standardisation for Variant and Gene Prioritisation Algorithms (VGPAs) presents a significant challenge in the field of genomic research. PhEval addresses this gap. It is a novel framework designed to streamline the evaluation of VGPAs that incorporate phenotypic data.
-
-      PhEval offers several key benefits:
+      The absence of standardised benchmarks and data standardisation for Variant and Gene Prioritisation Algorithms (VGPAs) presents a significant challenge in the field of genomic research. PhEval addresses this gap. It is a novel framework designed to streamline the evaluation of VGPAs that incorporate phenotypic data.PhEval offers several key benefits:
 
       - Automated Processes: Reduces manual effort by automating various evaluation tasks, thus enhancing efficiency.
       - Standardisation: Ensures consistency and comparability in evaluation methodologies, leading to more reliable and standardised assessments.
@@ -974,13 +972,13 @@ tools:
     citation: 
       "Caufield, H., Kroll, C., O’Neil, S. T., Reese, J. T., Joachimiak, M. P., Hegde, H., Harris, N. L., Krishnamurthy, M., McLaughlin, J. A., Smedley, D., Haendel, M. A., Robinson, P. N., & Mungall, C. J. (2024). CurateGPT: A flexible language-model assisted biocuration tool. arXiv [cs.CL]. http://arxiv.org/abs/2411.00046"
     description: 
-      "CurateGPT is a prototype web application and framework for performing general purpose AI-guided
-      curation and curation-related operations over collections of objects. CurateGPT melds the power of generative
+      "CurateGPT is a framework for performing general purpose AI-guided
+      curation and curation-related operations over collections of objects, including ontologies and biological datasets. CurateGPT melds the power of generative
       AI together with trusted knowledge bases and literature sources. CurateGPT streamlines the curation process,
       enhancing collaboration and efficiency in common workflows. Compared to direct interaction with an LLM,
       CurateGPT's agents enable access to information beyond that in the LLM's training data and they provide direct
       links to the data supporting each claim. This helps curators, researchers, and engineers scale up curation
-      efforts to keep pace with the ever-increasing volume of scientific data."
+      efforts to keep pace with the ever-increasing volume of scientific data.CurateGPT also contains other tools and features, such as a prototype web application that allows LLMs to answer user questions using knowledge bases."
     tagline: A large language model-driven curation assistance tool
     repository: https://github.com/monarch-initiative/curate-gpt
     documentation: https://monarch-initiative.github.io/curategpt
