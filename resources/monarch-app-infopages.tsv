@@ -28,8 +28,7 @@ Simple Standard for Ontology Mappings (SSSOM)	standard	sssom	SSSOM	resource-ssso
 - a TSV-based representation for ontology term mappings
 - a comprehensive set of standard metadata elements to describe mappings, and
 - a standard translation between the TSV and the Web Ontology Language (OWL).
-The SSSOM TSV format in particular is geared towards the needs of the wider bioinformatics community
-as a way to safely exchange mappings in an easily readable yet semantically well-specified manner.
+The SSSOM TSV format in particular is geared towards the needs of the wider bioinformatics community as a way to safely exchange mappings in an easily readable yet semantically well-specified manner.
 	A simple metadata standard for describing semantic mappings	https://www.youtube.com/watch?v=T-YP-Lv9k2s	https://mapping-commons.github.io/sssom	https://github.com/mapping-commons/sssom	https://mapping-commons.github.io/sssom/spec		nicolas.matentzoglu@gmail.com	Nicolas Matentzoglu	@matentzn	https://orcid.org/0000-0002-7356-1779
 Exomiser	tool	exomiser	Exomiser	resource-exomiser	AGPL-3.0	Exomiser is a Java program that finds potential disease-causing variants from whole-exome or whole-genome sequencing data.
 Starting from a VCF file and a set of phenotypes encoded using the Human Phenotype Ontology (HPO) it will annotate, filter and prioritise likely causative variants. The program does this based on criteria such as a variant's predicted pathogenicity, frequency of occurrence in a population and also how closely the given phenotype matches the phenotypic features of disease genes from human and model organism data.
@@ -37,10 +36,8 @@ The functional annotation of variants is handled by Jannovar and uses any of UCS
 Variants are prioritised according to user-defined criteria on variant frequency, pathogenicity, quality, inheritance pattern, and model organism phenotype data. Predicted pathogenicity data is extracted from the dbNSFP resource. Variant frequency data is taken from the 1000 Genomes, ESP, TOPMed, UK10K, ExAC and gnomAD datasets. Subsets of these frequency and pathogenicity data can be defined to further tune the analysis. Cross-species phenotype comparisons come from our PhenoDigm tool powered by the OWLTools OWLSim algorithm.	A Tool to Annotate and Prioritize Exome Variants	https://www.youtube.com/watch?v=XU10oT7c2VI|||https://www.youtube.com/watch?v=tzwvWkb3s8A	https://exomiser.readthedocs.io	https://github.com/exomiser/Exomiser	https://exomiser.monarchinitiative.org/exomiser		j.jacobsen@qmul.ac.uk	Jules Jacobsen	@julesjacobsen	https://orcid.org/0000-0002-3265-1591
 Ontology Development Kit	tool	odk	ODK	resource-odk	BSD-3-Clause	Manage your ontology's life cycle with the Ontology Development Kit (ODK)!The ODK is:
 
-- a toolbox of various ontology related tools such as ROBOT, owltools, dosdp-tools and many more,
-bundled as a docker image.
-- a set of executable workflows for managing your ontology's continuous integration, quality control,
-releases and dynamic imports.
+- a toolbox of various ontology related tools such as ROBOT, owltools, dosdp-tools and many more, bundled as a docker image.
+- a set of executable workflows for managing your ontology's continuous integration, quality control, releases and dynamic imports.
 	A toolkit and workflow system for managing the ontology life-cycle	https://www.youtube.com/watch?v=cd7750JVDaw	https://incatools.github.io/ontology-development-kit	https://github.com/INCATools/ontology-development-kit			nicolas.matentzoglu@gmail.com	Nicolas Matentzoglu	@matentzn	https://orcid.org/0000-0002-7356-1779
 Ontology Access Kit (OAK)	tool	oak	OAK	resource-oak	Apache-2.0	The Ontology Access Kit (OAK) is for both technical and non-technical users of ontologies. Non-technical users can use the command line interface to query ontologies in a variety of ways. Technical users can write Python code that uses the OAK library to perform ontology-related tasks.
 OAK provides a collection of interfaces for various ontology operations, including:
