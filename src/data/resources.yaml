@@ -415,7 +415,7 @@ standards:
     monarch_contribution: Lead
     category: Ontology
     documentation: https://obophenotype.github.io/bio-attribute-ontology
-      project_boards:
+    project_boards:
       - name: OBA Ontology Development (uPheno board)
         id: "https://github.com/orgs/obophenotype/projects/15/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C13049768%5D&groupedBy%5BcolumnId%5D=13049768"
     monarch_role: Core
