@@ -850,6 +850,7 @@ tools:
     name: OntoGPT
     short_name: OntoGPT
     category: Data Curation
+    icon: resource-ontogpt
     license: BSD-3-Clause
     citation: "Caufield, J. H., Hegde, H., Emonet, V., Harris, N. L., Joachimiak, M. P., Matentzoglu, N., Kim, H., Moxon, S., Reese, J. T., Haendel, M. A., Robinson, P. N., & Mungall, C. J. (2024). Structured Prompt Interrogation and Recursive Extraction of Semantics (SPIRES): A method for populating knowledge bases using zero-shot learning. Bioinformatics, 40(3). https://doi.org/10.1093/bioinformatics/btae104"
     description: 
