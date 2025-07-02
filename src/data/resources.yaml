@@ -376,8 +376,8 @@ standards:
     description: |
       The Unified Phenotype Ontology (uPheno) framework is a community effort to provide an integration layer over domain-specific phenotype ontologies, as a single, unified, logical representation. uPheno comprises:
 
-      - a system for consistent computational definition of phenotype terms using ontology design patterns, maintained as a community library.  
-      - a hierarchical vocabulary of species-neutral phenotype terms under which their species-specific counterparts are grouped.  
+      - a system for consistent computational definition of phenotype terms using ontology design patterns, maintained as a community library  
+      - a hierarchical vocabulary of species-neutral phenotype terms under which their species-specific counterparts are grouped  
       - mapping tables between species-specific ontologies
     repository: https://github.com/obophenotype/upheno
     contact:
