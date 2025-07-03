@@ -452,13 +452,14 @@ standards:
       - Phenomics First
     website_include: true
     license: CC-BY-3.0
-    citation: "Mungall, C. J., Torniai, C., Gkoutos, G. V., Lewis, S. E., & Haendel, M. A. (2012). Uberon, an integrative multi-species anatomy ontology. Genome Biology, 13(1), R5.  
+    citation: |
+        Mungall, C. J., Torniai, C., Gkoutos, G. V., Lewis, S. E., & Haendel, M. A. (2012). Uberon, an integrative multi-species anatomy ontology. Genome Biology, 13(1), R5.  
         DOI: https://doi.org/10.1186/gb-2012-13-1-r5  
         PubMed: https://pubmed.ncbi.nlm.nih.gov/22293552
 
         Haendel, M. A., Balhoff, J. P., Bastian, F. B., Blackburn, D. C., Blake, J. A., Bradford, Y., Comte, A., Dahdul, W. M., Dececchi, T. A., Druzinsky, R. E., Hayamizu, T. F., Ibrahim, N., Lewis, S. E., Mabee, P. M., Niknejad, A., Robinson-Rechavi, M., Sereno, P. C., & Mungall, C. J. (2014). Unification of multi-species vertebrate anatomy ontologies for comparative biology in Uberon. Journal of Biomedical Semantics, 5(1), 21.  
         DOI: https://doi.org/10.1186/2041-1480-5-21  
-        PubMed: https://pubmed.ncbi.nlm.nih.gov/24742169"
+        PubMed: https://pubmed.ncbi.nlm.nih.gov/24742169
     tagline: An integrated cross-species anatomy ontology
     repository: https://github.com/obophenotype/uberon
     visual_explainer: "https://www.youtube.com/watch?v=HmFhTk0Bahs"
