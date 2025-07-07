@@ -11,6 +11,7 @@ To join the Monarch Seminar Series, please email info@monarchinitiative.org with
 ### Schedule 
 | Date   | Topic   | Presenter(s) | Slides | Recording |
 | -- | -- | -- | -- | --|
+| July 8, 2025 | Vertebrate Breed Ontology (VBO): A Standard for Breeds and Breed Information ([learn more in the 2025 VBO publication](https://onlinelibrary.wiley.com/doi/10.1111/jvim.70133)) | Katie Mullen | | 
 | June 10, 2025 | Write your own PhEval runner | Yasemin Bridges | -- | [Here](https://youtu.be/GMYzQO4OcfU?si=bBW0zNzTzBixWs3z) |
 | May 13, 2025 | Introduction to Variant Prioritisation using Exomiser | Letizia Vestito | -- | [Here](https://youtu.be/Se5nRnbrWKs?si=kTI_TJstgrahF8TY) |
 | April 15, 2025 | Introduction to PhEval & How to run a simple benchmark | Yasemin Bridges | -- | [Here](https://youtu.be/nIPzVN99UWc?si=gnUjOewlFrtBgfKf) |
