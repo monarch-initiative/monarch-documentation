@@ -194,7 +194,7 @@ standards:
     monarch_contribution: Lead
     documentation: https://mapping-commons.github.io/sssom
     url: https://mapping-commons.github.io/sssom/spec
-    description: >
+    description: 
         SSSOM is a Simple Standard for Sharing Ontological Mappings, providing
         - a TSV-based representation for ontology term mappings
         - a comprehensive set of standard metadata elements to describe mappings, and
@@ -366,8 +366,8 @@ standards:
     project_boards:
       - name: uPheno 2 Ontology Development
         id: "https://github.com/orgs/obophenotype/projects/15/views/1?visibleFields=%5B%22Title%22%2C%22Assignees%22%2C13049768%5D&groupedBy%5BcolumnId%5D=13049768"
-    description: >
-      The Unified Phenotype Ontology (uPheno) framework is a community effort to provide an integration layer over domain-specific phenotype ontologies, as a single, unified, logical representation. uPheno comprises:
+    description: 
+      The Unified Phenotype Ontology (uPheno) framework is a community effort to provide an integration layer over domain-specific phenotype ontologies, as a single, unified, logical representation. uPheno comprises-
       - a system for consistent computational definition of phenotype terms using ontology design patterns, maintained as a community library  
       - a hierarchical vocabulary of species-neutral phenotype terms under which their species-specific counterparts are grouped  
       - mapping tables between species-specific ontologies
@@ -629,8 +629,8 @@ tools:
     monarch_role: Support
     license: BSD-3-Clause
     citation: "Matentzoglu, N., Goutte-Gattat, D., Tan, S. Z. K., Balhoff, J. P., Carbon, S., Caron, A. R., Duncan, W. D., Flack, J. E., Haendel, M., Harris, N. L., Hogan, W. R., Hoyt, C. T., Jackson, R. C., Kim, H., Kir, H., Larralde, M., McMurry, J. A., Overton, J. A., Peters, B., Pilgrim, C., Stefancsik, R., Robb, S. M. C., Toro, S., Vasilevsky, N. A., Walls, R., Mungall, C. J., & Osumi-Sutherland, D. (2022). Ontology Development Kit: A toolkit for building, maintaining and standardizing biomedical ontologies. Database, 2022, baac087. https://doi.org/10.1093/database/baac087"
-    description: >
-      Manage your ontology's life cycle with the Ontology Development Kit (ODK)!The ODK is:
+    description: 
+      Manage your ontology's life cycle with the Ontology Development Kit (ODK)!The ODK is-
       - a toolbox of various ontology related tools such as ROBOT, owltools, dosdp-tools and many more, bundled as a docker image.
       - a set of executable workflows for managing your ontology's continuous integration, quality control, releases and dynamic imports.
     tagline: A toolkit and workflow system for managing the ontology life-cycle
@@ -652,7 +652,7 @@ tools:
     short_name: Monarch OLS
     category: Registry
     citation: "EBISPOT. (n.d.). OLS4 [Source code]. GitHub. https://github.com/EBISPOT/ols4"
-    description: >
+    description:
       A browsable collection of ontologies provided by the Monarch Initiative using OLS4 (developed by EMBL-EBI).
       This instance of OLS is tailored to the needs of the Monarch Initiative and provides access to a range of ontologies relevant to genomics, phenomics, and biomedical research, which are not available through normal OLS. 
       It also provides development snapshots of various unreleased ontologies for early access of the wider community.
@@ -675,9 +675,9 @@ tools:
     license: "Apache-2.0"
     citation: "INCATools. (n.d.). ontology-access-kit [Source code]. GitHub. https://github.com/INCATools/ontology-access-kit"
     category: Ontology Use
-    description: >
+    description:
       The Ontology Access Kit (OAK) is for both technical and non-technical users of ontologies. Non-technical users can use the command line interface to query ontologies in a variety of ways. Technical users can write Python code that uses the OAK library to perform ontology-related tasks.
-      OAK provides a collection of interfaces for various ontology operations, including:
+      OAK provides a collection of interfaces for various ontology operations, including-
       - look up basic features of an ontology element, such as its label, definition, relationships, or aliases
       - search an ontology for a term
       - validate an ontology
@@ -685,7 +685,7 @@ tools:
       - generate and visualize subgraphs
       - identify lexical matches and export as SSSOM mapping tables
       - perform more advanced operations, such as graph traversal, OWL axiom processing, or text annotation
-      These interfaces are separated from any particular backend, for which there are a number of different adapters. This means the same Python API and command line can be used regardless of whether the ontology:
+      These interfaces are separated from any particular backend, for which there are a number of different adapters. This means the same Python API and command line can be used regardless of whether the ontolog-
       - is served by a remote API such as OLS or BioPortal
       - is present locally on the filesystem in owl, obo, obojson, or sqlite formats
       - is to be downloaded from a remote repository such as the OBO library
@@ -752,12 +752,12 @@ tools:
     category: Benchmarking
     license: "Apache-2.0"
     citation: "Bridges, Y., Souza, V., Cortes, K. G., Haendel, M., Harris, N. L., Korn, D. R., Marinakis, N. M., Matentzoglu, N., McLaughlin, J. A., Mungall, C. J., Odell, A., Osumi-Sutherland, D., Robinson, P. N., Smedley, D., & Jacobsen, J. O. B. (2025). Towards a standard benchmark for phenotype-driven variant and gene prioritisation algorithms: PhEval – Phenotypic inference evaluation framework. BMC Bioinformatics, 26(1), 87. https://doi.org/10.1186/s12859-025-06105-4."
-    description: >
-      The absence of standardised benchmarks and data standardisation for Variant and Gene Prioritisation Algorithms (VGPAs) presents a significant challenge in the field of genomic research. PhEval addresses this gap. It is a novel framework designed to streamline the evaluation of VGPAs that incorporate phenotypic data.PhEval offers several key benefits:
-      - Automated Processes: Reduces manual effort by automating various evaluation tasks, thus enhancing efficiency.
-      - Standardisation: Ensures consistency and comparability in evaluation methodologies, leading to more reliable and standardised assessments.
-      - Reproducibility: Facilitates reproducibility in research by providing a standardised platform, allowing for consistent validation of algorithms.
-      - Comprehensive Benchmarking: Enables thorough benchmarking of algorithms, providing well-founded comparisons and deeper insights into their performance.
+    description:
+      The absence of standardised benchmarks and data standardisation for Variant and Gene Prioritisation Algorithms (VGPAs) presents a significant challenge in the field of genomic research. PhEval addresses this gap. It is a novel framework designed to streamline the evaluation of VGPAs that incorporate phenotypic data.PhEval offers several key benefits-
+      - Automated Processes -- Reduces manual effort by automating various evaluation tasks, thus enhancing efficiency.
+      - Standardisation -- Ensures consistency and comparability in evaluation methodologies, leading to more reliable and standardised assessments.
+      - Reproducibility -- Facilitates reproducibility in research by providing a standardised platform, allowing for consistent validation of algorithms.
+      - Comprehensive Benchmarking -- Enables thorough benchmarking of algorithms, providing well-founded comparisons and deeper insights into their performance.
       PhEval is a valuable tool for researchers looking to improve the accuracy and reliability of VGPA evaluations through a structured and standardised approach.
     tagline: A Python library for assisting in benchmarking tools for Variant, Gene, and Disease prioritisation
     repository: https://github.com/monarch-initiative/pheval
