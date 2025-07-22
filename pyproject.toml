@@ -25,10 +25,15 @@ dependencies = [
     "loguru",
 ]
 
-
 [project.optional-dependencies]
 dev = ["pytest>=8.4.1", "ruff"]
 
+[build-system]
+requires = ["hatchling", "uv-dynamic-versioning"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/monarch_documentation"]
 
 [tool.ruff]
 line-length = 120
