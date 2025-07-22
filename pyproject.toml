@@ -1,36 +1,39 @@
-[tool.poetry]
+[project]
 name = "Monarch-Documentation"
-version = "0.1.1"
+version = "0.1.2"
 description = ""
+requires-python = ">=3.12,<4"
 authors = [
-    "Monarch Initiative <info@monarchinitiative.org>",
-    "Glass Elsarboukh <glass@tislab.org>",
-    "Tim Putman <tim@tislab.org>",
-    "Kevin Schaper <kevin@tislab.org>",
-    "Corey Cox <corey@tislab.org>"
+    { name = "Monarch Initiative", email = "info@monarchinitiative.org" },
+    { name = "Glass Elsarboukh", email = "glass@tislab.org" },
+    { name = "Tim Putman", email = "tim@tislab.org" },
+    { name = "Kevin Schaper", email = "kevin@tislab.org" },
+    { name = "Corey Cox", email = "corey@tislab.org" },
 ]
 
-[tool.poetry.dependencies]
-python = "^3.11"
-requests = "^2.31.0"
-PyYAML = "^6.0"
-PyGithub = "^1.59"
-linkml = ">=1.6.7"
-linkml-runtime = ">=1.6.0"
-click = "^8.1.7"
-cruft = "^2.15.0"
-mkdocs-material = "^8.5.11"
-mkdocs-mermaid2-plugin = "^0.6.0"
-j2cli = "^0.3.10"
-loguru = "*"
+dependencies = [
+    "requests>=2.32.4",
+    "PyYAML>=6.0.2",
+    "PyGithub>=2.6.1",
+    "linkml>=1.9.2",
+    "linkml-runtime>=1.9.4",
+    "click>=8.2.1",
+    "cruft>=2.16.0",
+    "mkdocs-material>=9.6.15",
+    "mkdocs-mermaid2-plugin>=1.2.1",
+    "jinja2-cli[yaml] >=0.8.2",
+    "loguru",
+]
 
-[tool.poetry.extras]
-j2cli = ["yaml"]
+[project.optional-dependencies]
+dev = ["pytest>=8.4.1", "ruff"]
 
-[tool.poetry.group.dev.dependencies]
-pytest = "^6.2.4"
-ruff = "*"
+[build-system]
+requires = ["hatchling", "uv-dynamic-versioning"]
+build-backend = "hatchling.build"
 
+[tool.hatch.build.targets.wheel]
+packages = ["src/monarch_documentation"]
 
 [tool.ruff]
 line-length = 120
@@ -39,8 +42,3 @@ ignore = [
     "E501", # line too long
 ]
 # exclude = []
-
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
