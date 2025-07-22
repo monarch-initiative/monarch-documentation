@@ -1,6 +1,5 @@
 name: Build and Deploy Docs to GitHub Pages
 on:
-  pull_request:
   push:
     branches: [main]
 
@@ -32,7 +31,6 @@ jobs:
           uv sync --extra dev
 
       - name: Build and Deploy Documentation.
-        if: github.ref == 'refs/heads/main'
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
