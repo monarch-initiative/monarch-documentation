@@ -1,37 +1,40 @@
 name: Build and Deploy Docs to GitHub Pages
 on:
+  pull_request:
   push:
-    branches: [ main ]
+    branches: [main]
 
 env:
- GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  UV_VERSION: "0.7.x"
 
 jobs:
   build-docs:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@main
-      with:
-        fetch-depth: 0 # otherwise, you will fail to push refs to dest repo
-    
-    - name: Set up Python 3
-      uses: actions/setup-python@main
-      with:
-        python-version: '3.11'
+      - name: Checkout
+        uses: actions/checkout@main
+        with:
+          fetch-depth: 0 # otherwise, you will fail to push refs to dest repo
 
-    - name: Install Poetry
-      uses: snok/install-poetry@v1
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+          version: ${{ env.UV_VERSION }}
 
-    - name: Install Dependencies
-      run: poetry install
-    
-    - name: Build and Deploy Documentation.
-      run: |
-        make build-docs -B
-        poetry run mkdocs gh-deploy --force
-      env:
-         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Verify lockfile is up-to-date
+        run: |
+          uv lock --check
 
-    # - name: Deploy to Pages
-    #   run: poetry run mkdocs gh-deploy
+      - name: Install library
+        run: |
+          uv sync --extra dev
+
+      - name: Build and Deploy Documentation.
+        if: github.ref == 'refs/heads/main'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          make build-docs -B
+          uv run mkdocs gh-deploy --force
