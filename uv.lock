@@ -841,7 +841,7 @@ wheels = [
 [[package]]
 name = "monarch-documentation"
 version = "0.1.2"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "click" },
     { name = "cruft" },
