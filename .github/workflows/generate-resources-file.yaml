@@ -42,6 +42,7 @@ jobs:
           git config --global user.name "GitHub Actions"
           git add src/docs/resources/monarch-app-resources.json
           git add src/docs/resources/monarch-app-infopages.json
+          git add src/docs/resources/monarch-app-infopages.tsv
           git commit -m "Update resources.json"
           git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}
           git push
