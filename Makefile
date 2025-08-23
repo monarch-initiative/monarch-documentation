@@ -6,7 +6,7 @@ SHELL := bash
 .SUFFIXES:
 .SECONDARY:
 
-RUN = poetry run
+RUN = uv run
 # get values from about.yaml file
 SCHEMA_NAME = $(shell ./utils/get-value.sh name)
 SOURCE_SCHEMA_PATH = $(shell ./utils/get-value.sh source_schema_path)
@@ -47,9 +47,10 @@ status: check-config
 setup: install gen-project gen-examples gendoc git-init-add
 
 # install any dependencies required for building
-install:
-	poetry install
 .PHONY: install
+install:
+	uv venv --allow-existing
+	uv pip install -e .[dev]
 
 # ---
 # Project Syncronization
@@ -68,7 +69,7 @@ update-template:
 
 # todo: consider pinning to template
 update-linkml:
-	poetry add -D linkml@latest
+	uv add -D linkml@latest
 
 # EXPERIMENTAL
 create-data-harmonizer:
@@ -141,7 +142,7 @@ git-init-add: git-init git-add git-commit git-status
 git-init:
 	git init
 git-add: .cruft.json
-	git add .gitignore .github .cruft.json Makefile LICENSE *.md examples utils about.yaml mkdocs.yml poetry.lock project.Makefile pyproject.toml src/monarch_documentation/schema/*yaml src/*/datamodel/*py src/data src/docs tests
+	git add .gitignore .github .cruft.json Makefile LICENSE *.md examples utils about.yaml mkdocs.yml uv.lock project.Makefile pyproject.toml src/monarch_documentation/schema/*yaml src/*/datamodel/*py src/data src/docs tests
 	git add $(patsubst %, project/%, $(PROJECT_FOLDERS))
 git-commit:
 	git commit -m 'Initial commit' -a

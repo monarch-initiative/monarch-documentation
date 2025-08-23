@@ -27,7 +27,7 @@ build-docs: genindex genpython genschemadoc genrepodocs geningestdoc gen-monarch
 ############################################
 
 src/docs/registry.md: src/monarch_documentation/resources/monarch_resources.md.jinja2 src/data/resources.yaml
-	$(RUN) j2 $^ > $@
+	$(RUN) jinja2 $^ > $@
 
 src/docs/registry_2.md: $(SOURCE_SCHEMA_PATH) src/data/resources.yaml
 	$(RUN) linkml-convert -f yaml -C ResourceRegistry -t ttl -s $^
@@ -53,15 +53,15 @@ gen-monarch-overview:
 
 src/docs/resources/monarch-app-resources.json: src/monarch_documentation/resources/monarch_app_resources.json.jinja2 src/data/resources.yaml
 	mkdir -p src/docs/resources/
-	$(RUN) j2 $^ | jq . > $@
+	$(RUN) jinja2 $^ | jq . > $@
 
 src/docs/resources/monarch-app-infopages.json: src/monarch_documentation/resources/monarch_app_infopages.json.jinja2 src/data/resources.yaml
 	mkdir -p src/docs/resources/
-	$(RUN) j2 $^ | jq . > $@
+	$(RUN) jinja2 $^ | jq . > $@
 
 src/docs/resources/monarch-app-infopages.tsv: src/monarch_documentation/resources/monarch_app_infopages.tsv.jinja2 src/data/resources.yaml
 	mkdir -p src/docs/resources/
-	$(RUN) j2 $^ > $@
+	$(RUN) jinja2 $^ > $@
 
 gen-monarch-resources: src/docs/resources/monarch-app-resources.json \
 	src/docs/resources/monarch-app-infopages.json \
