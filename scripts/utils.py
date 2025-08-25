@@ -4,6 +4,7 @@ import time
 import tomllib
 from datetime import datetime
 from pathlib import Path
+from typing import List
 
 import github
 import yaml
@@ -69,6 +70,21 @@ def get_dependencies(repo: github.Repository.Repository) -> dict | None:
     """
     Returns a dictionary of the dependencies of a GitHub Repository object
     """
+
+    def _parse_deps(deps_list: List[str]) -> dict:
+        deps_dict = {}
+        for dep in deps_list:
+            # Split on version operators
+            match = re.match(r"^([a-zA-Z0-9_-]+)\s*([><=!~]+.*)?$", dep.strip())
+            if match:
+                name = match.group(1)
+                version = match.group(2) if match.group(2) else ""
+                deps_dict[name] = version
+            else:
+                # Fallback for packages without version constraints
+                deps_dict[dep.strip()] = ""
+        return deps_dict
+
     try:
         project_toml = repo.get_contents("pyproject.toml").decoded_content.decode("UTF-8")
         pyproject = tomllib.loads(project_toml)
@@ -79,35 +95,26 @@ def get_dependencies(repo: github.Repository.Repository) -> dict | None:
     if pyproject is None:
         return None
 
+    deps = {}
     # Check if project uses poetry or flit
     if "tool" in pyproject and "flit" in pyproject["tool"].keys():
-        deps = {}
         deplist = pyproject["tool"]["flit"]["metadata"]["requires"]
         for dep in deplist:
             d = dep.split()
             deps[d[0]] = "".join(d[1:])
-        # dev_deps = pyproject['tool']['flit']['metadata']['requires-extra']['dev']
     elif "tool" in pyproject and "poetry" in pyproject["tool"].keys():
-        deps = pyproject["tool"]["poetry"]["dependencies"]
-        # dev_deps =  pyproject['tool']['poetry']['dev-dependencies']
+        try:
+            deps = pyproject["tool"]["poetry"]["dependencies"]
+        except KeyError:
+            # poetry also supports PEP 631 dependency specifications
+            deps_list = pyproject["project"]["dependencies"]
+            deps = _parse_deps(deps_list)
     else:
         try:
             deps_list = pyproject["project"]["dependencies"]
-            deps = {}
-            for dep in deps_list:
-                # Split on version operators
-                match = re.match(r'^([a-zA-Z0-9_-]+)\s*([><=!~]+.*)?$', dep.strip())
-                if match:
-                    name = match.group(1)
-                    version = match.group(2) if match.group(2) else ""
-                    deps[name] = version
-                else:
-                    # Fallback for packages without version constraints
-                    deps[dep.strip()] = ""
-                
+            deps = _parse_deps(deps_list)
         except KeyError:
             logger.warning(f'Could not generate dependencies for repo: "{repo.name}".')
-            return None
 
     return deps
 
@@ -177,7 +184,7 @@ def build_repo_page(repo: github.Repository.Repository) -> str:
     deps = get_dependencies(repo)
 
     # Append dependencies and documentation, if they're not empty
-    if deps is not None:
+    if deps:
         dep_table = get_dep_table(deps, get_repos(monarch_resource_file))
         page_contents += f"\n### Dependencies \n{dep_table}"
 
