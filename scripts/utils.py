@@ -4,6 +4,7 @@ import time
 import tomllib
 from datetime import datetime
 from pathlib import Path
+from typing import List
 
 import github
 import yaml
@@ -69,6 +70,20 @@ def get_dependencies(repo: github.Repository.Repository) -> dict | None:
     """
     Returns a dictionary of the dependencies of a GitHub Repository object
     """
+    def _parse_deps(dep_list: List[str]) -> dict:
+        deps = {}
+        for dep in deps_list:
+            # Split on version operators
+            match = re.match(r'^([a-zA-Z0-9_-]+)\s*([><=!~]+.*)?$', dep.strip())
+            if match:
+                name = match.group(1)
+                version = match.group(2) if match.group(2) else ""
+                deps[name] = version
+            else:
+                # Fallback for packages without version constraints
+                deps[dep.strip()] = ""
+        return deps
+
     try:
         project_toml = repo.get_contents("pyproject.toml").decoded_content.decode("UTF-8")
         pyproject = tomllib.loads(project_toml)
@@ -88,22 +103,14 @@ def get_dependencies(repo: github.Repository.Repository) -> dict | None:
             deps[d[0]] = "".join(d[1:])
         # dev_deps = pyproject['tool']['flit']['metadata']['requires-extra']['dev']
     elif "tool" in pyproject and "poetry" in pyproject["tool"].keys():
-        deps = pyproject["tool"]["poetry"]["dependencies"]
-        # dev_deps =  pyproject['tool']['poetry']['dev-dependencies']
+        try:
+            deps = pyproject["tool"]["poetry"]["dependencies"]
+        except KeyError:
+            deps = pyproject["project"]["dependencies"]
     else:
         try:
             deps_list = pyproject["project"]["dependencies"]
-            deps = {}
-            for dep in deps_list:
-                # Split on version operators
-                match = re.match(r'^([a-zA-Z0-9_-]+)\s*([><=!~]+.*)?$', dep.strip())
-                if match:
-                    name = match.group(1)
-                    version = match.group(2) if match.group(2) else ""
-                    deps[name] = version
-                else:
-                    # Fallback for packages without version constraints
-                    deps[dep.strip()] = ""
+            
                 
         except KeyError:
             logger.warning(f'Could not generate dependencies for repo: "{repo.name}".')
