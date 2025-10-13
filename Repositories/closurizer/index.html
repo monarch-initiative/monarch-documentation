@@ -4142,17 +4142,38 @@
 <h1 id="monarch-closurizer">Monarch Closurizer</h1>
 <p>Closurizer adds expansion fields to kgx files following the Golr pattern</p>
 <h2 id="usage">Usage</h2>
-<p>As a module
-<div class="highlight"><pre><span></span><code>from closurizer.closurizer import add_closure
+<h3 id="as-a-module">As a module</h3>
+<p><strong>Archive input (tar.gz file):</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">closurizer.closurizer</span><span class="w"> </span><span class="kn">import</span> <span class="n">add_closure</span>
 
-add_closure(node_file=f&quot;my-kg_nodes.tsv&quot;,
-            edge_file=f&quot;my-kg_edges.tsv&quot;,
-            kg_archive=f&quot;my-kg.tar.gz&quot;,
-            closure_file=&quot;my-relations-non-redundant.tsv&quot;,
-            path=&quot;output/&quot;,
-            output_file=f&quot;my-kg-denornalized_edges.tsv&quot;,
-            fields=[&quot;subject&quot;, &quot;object&quot;])
+<span class="n">add_closure</span><span class="p">(</span>
+    <span class="n">closure_file</span><span class="o">=</span><span class="s2">&quot;my-relations-non-redundant.tsv&quot;</span><span class="p">,</span>
+    <span class="n">nodes_output_file</span><span class="o">=</span><span class="s2">&quot;output/nodes-with-closures.tsv&quot;</span><span class="p">,</span> 
+    <span class="n">edges_output_file</span><span class="o">=</span><span class="s2">&quot;output/edges-denormalized.tsv&quot;</span><span class="p">,</span>
+    <span class="n">kg_archive</span><span class="o">=</span><span class="s2">&quot;my-kg.tar.gz&quot;</span><span class="p">,</span>
+    <span class="n">database_path</span><span class="o">=</span><span class="s2">&quot;working-database.duckdb&quot;</span><span class="p">,</span>  <span class="c1"># database where processing occurs</span>
+    <span class="n">edge_fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;subject&quot;</span><span class="p">,</span> <span class="s2">&quot;object&quot;</span><span class="p">]</span>
+<span class="p">)</span>
 </code></pre></div></p>
+<p><strong>Database input (existing DuckDB):</strong>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">closurizer.closurizer</span><span class="w"> </span><span class="kn">import</span> <span class="n">add_closure</span>
+
+<span class="n">add_closure</span><span class="p">(</span>
+    <span class="n">closure_file</span><span class="o">=</span><span class="s2">&quot;my-relations-non-redundant.tsv&quot;</span><span class="p">,</span>
+    <span class="n">nodes_output_file</span><span class="o">=</span><span class="s2">&quot;output/nodes-with-closures.tsv&quot;</span><span class="p">,</span>
+    <span class="n">edges_output_file</span><span class="o">=</span><span class="s2">&quot;output/edges-denormalized.tsv&quot;</span><span class="p">,</span> 
+    <span class="n">database_path</span><span class="o">=</span><span class="s2">&quot;existing-kg.duckdb&quot;</span><span class="p">,</span>  <span class="c1"># existing database with nodes/edges tables</span>
+    <span class="n">edge_fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;subject&quot;</span><span class="p">,</span> <span class="s2">&quot;object&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+</code></pre></div></p>
+<h3 id="as-a-command-line-tool">As a command line tool</h3>
+<p><strong>Archive input:</strong>
+<div class="highlight"><pre><span></span><code>closurizer<span class="w"> </span>--kg<span class="w"> </span>my-kg.tar.gz<span class="w"> </span>--database<span class="w"> </span>working.duckdb<span class="w"> </span>--closure<span class="w"> </span>relations.tsv<span class="w"> </span>--nodes-output<span class="w"> </span>nodes.tsv<span class="w"> </span>--edges-output<span class="w"> </span>edges.tsv
+</code></pre></div></p>
+<p><strong>Database input:</strong>
+<div class="highlight"><pre><span></span><code>closurizer<span class="w"> </span>--database<span class="w"> </span>existing.duckdb<span class="w"> </span>--closure<span class="w"> </span>relations.tsv<span class="w"> </span>--nodes-output<span class="w"> </span>nodes.tsv<span class="w"> </span>--edges-output<span class="w"> </span>edges.tsv
+</code></pre></div></p>
+<p>Note: If <code>--kg</code> is provided, the archive will be loaded into the specified database. If <code>--kg</code> is not provided, the database must already exist and contain <code>nodes</code> and <code>edges</code> tables.</p>
 <h2 id="example">Example</h2>
 <p>Closurizer will produce a denormalized edge file including subject namespace and category along with ID and label closures </p>
 <table>
