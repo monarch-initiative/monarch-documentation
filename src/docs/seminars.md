@@ -11,12 +11,13 @@ To join the Monarch Seminar Series, please email info@monarchinitiative.org with
 ### Schedule 
 | Date   | Topic   | Presenter(s) | Slides | Recording |
 | -- | -- | -- | -- | --|
+| December 2, 2025 | coming soon! |  |  | |
+| October 28, 2025 | NAMs | Aadra Bhatt |  | |
 | July to September 2025 | _No Meeting_ - Enjoy Summer Break!|  | | 
 | June 10, 2025 | Write your own PhEval runner | Yasemin Bridges | -- | [Here](https://youtu.be/GMYzQO4OcfU?si=bBW0zNzTzBixWs3z) |
 | May 13, 2025 | Introduction to Variant Prioritisation using Exomiser | Letizia Vestito | -- | [Here](https://youtu.be/Se5nRnbrWKs?si=kTI_TJstgrahF8TY) |
 | April 15, 2025 | Introduction to PhEval & How to run a simple benchmark | Yasemin Bridges | -- | [Here](https://youtu.be/nIPzVN99UWc?si=gnUjOewlFrtBgfKf) |
 | March 18, 2025 | Publication highlight: [An ontology-based rare disease common data model harmonising international registries, FHIR, and Phenopackets](https://www.nature.com/articles/s41597-025-04558-z) | Adam Graefe | -- | [here](https://youtu.be/0uytK1S4kKI?si=KUb0jSyNTl1V2ZYf)|
-| January to February 2025 | _No Meeting_ - Enjoy Winter Break! | |
 | Dec 10, 2024 | Rare Diseases and Ontology Use in Consumer Health Content | Eric Sid (NIH/NCATS) | -- | [Here](https://youtu.be/kWqDLtOW-TY?si=H58v5hVGrnk0NVhY) |
 | Nov 26, 2024 | An Introduction to the Mondo Disease Ontology  | Sabrina Toro & Chris Mungall  | [Link](https://docs.google.com/presentation/d/1yFwKudg8ShXRJmWQaO7LGW-D2EazgetSuVlWARFHhn8/edit#slide=id.g2e6f9305531_0_128) | [Here](https://youtu.be/f3aDoNmcR0M?si=B1Aa-4mMSLN6lF8j) |
 | Oct 29, 2024 | An Introduction to the Monarch Knowledge Graph & Services  | Kevin Schaper & Moni Munoz Torres  | [Link](https://docs.google.com/presentation/d/1_R6bjhiTXu9TemzqB2k770G2BndxE73aQZUH2LlnhEM/edit#slide=id.g2878b95946a_1_64)  | [Here](https://youtu.be/z11xZKBEO-U?si=B2VkbsgIz1irjm3H)   |
