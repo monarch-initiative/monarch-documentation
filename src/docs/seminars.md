@@ -12,7 +12,7 @@ To join the Monarch Seminar Series, please email info@monarchinitiative.org with
 | Date   | Topic   | Presenter(s) | Slides | Recording |
 | -- | -- | -- | -- | --|
 | December 2, 2025 | coming soon! |  |  | |
-| October 28, 2025 | NAMs | Aadra Bhatt |  | |
+| October 28, 2025 | NAMs at the Intersection of Bugs, Drugs and Guts: Advances in Precision Medicine | Aadra Bhatt |  | |
 | July to September 2025 | _No Meeting_ - Enjoy Summer Break!|  | | 
 | June 10, 2025 | Write your own PhEval runner | Yasemin Bridges | -- | [Here](https://youtu.be/GMYzQO4OcfU?si=bBW0zNzTzBixWs3z) |
 | May 13, 2025 | Introduction to Variant Prioritisation using Exomiser | Letizia Vestito | -- | [Here](https://youtu.be/Se5nRnbrWKs?si=kTI_TJstgrahF8TY) |
