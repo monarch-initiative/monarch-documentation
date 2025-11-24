@@ -4165,11 +4165,15 @@
 <img alt="Licence" src="https://img.shields.io/github/license/monarch-initiative/pheval.llm" />
 <img alt="Issues" src="https://img.shields.io/github/issues/monarch-initiative/pheval.llm" /></p>
 <h2 id="evaluate-llms-capability-at-performing-differential-diagnosis-for-rare-genetic-diseases-through-medical-vignette-like-prompts-created-with-phenopacket2prompt">Evaluate LLMs' capability at performing differential diagnosis for rare genetic diseases through medical-vignette-like prompts created with <a href="https://github.com/monarch-initiative/phenopacket2prompt">phenopacket2prompt</a>.</h2>
+<p align="center">
+<img src="assets/coverimage.jpg" alt="Cover Image of Multilingual Project" width="500">
+</p>
+
 <h3 id="description">Description</h3>
 <p>To systematically assess and evaluate an LLM's ability to perform differential diagnostics tasks, we employed prompts programatically created with <a href="https://github.com/monarch-initiative/phenopacket2prompt">phenopacket2prompt</a>, thereby avoiding any patient privacy issues. The original data are phenopackets located at <a href="https://github.com/monarch-initiative/phenopacket-store/">phenopacket-store</a>. A programmatic approach for scoring and grounding results is also developed, made possible thanks to the ontological structure of the <a href="https://mondo.monarchinitiative.org/">Mondo Disease Ontology</a>.</p>
 <p>Two main analyses are carried out:
 - A benchmark of some large language models against the state of the art tool for differential diagnostics, <a href="https://github.com/exomiser/Exomiser">Exomiser</a>. The bottom line, Exomiser clearly outperforms the LLMs as per our <a href="https://www.medrxiv.org/content/10.1101/2024.07.22.24310816v3">preprint</a>, <a href="https://doi.org/10.5281/zenodo.14008476">data at this zenodo</a>.
-- A comparison of gpt-4o's and <a href="https://huggingface.co/OpenMeditron/Meditron3-70B">Meditron3-70B</a> ability to carry out differential diagnosis when prompted in 10 different languages, results at this <a href="https://www.medrxiv.org/content/10.1101/2025.02.26.25322769v1">medRxiv</a> or <a href="https://doi.org/10.5281/zenodo.14804250">zenodo</a> (see also this related <a href="https://doi.org/10.5281/zenodo.15065293">link</a> for some more data). </p>
+- A comparison of GPT-4o's and <a href="https://huggingface.co/OpenMeditron/Meditron3-70B">Meditron3-70B</a>'s ability to carry out differential diagnosis when prompted in 10 different languages, results published in <a href="https://doi.org/10.1016/j.ebiom.2025.105957">eBioMedicine</a> (data in <a href="https://doi.org/10.5281/zenodo.14804250">zenodo</a>, see also this related <a href="https://doi.org/10.5281/zenodo.15065293">zenodo</a> with automatically updating patient case reports). </p>
 <h1 id="setup">Setup</h1>
 <h2 id="dependencies_1">Dependencies</h2>
 <div class="highlight"><pre><span></span><code>    poetry install
