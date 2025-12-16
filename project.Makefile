@@ -11,13 +11,10 @@ genindex:
 genrepodocs:
 	@$(RUN) python scripts/generate_repo_pages.py
 
-geningestdoc:
-	@$(RUN) python scripts/generate_ingest_page.py
-
 genschemadoc: $(DOCDIR)
 	@$(RUN) gen-doc -d $(DOCDIR)/Documentation-Schema $(SOURCE_SCHEMA_PATH)
 
-build-docs: genindex genpython genschemadoc genrepodocs geningestdoc gen-monarch-overview gen-monarch-resources registry-tables
+build-docs: genindex genpython genschemadoc genrepodocs gen-monarch-overview gen-monarch-resources registry-tables
 	@cp -r src/docs/* docs/
 	@echo
 	@echo "Documentation built! Run 'mkdocs serve' to view it locally, or check the 'docs' folder to see the generated files."
