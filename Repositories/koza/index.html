@@ -4121,16 +4121,24 @@
 </thead>
 <tbody>
 <tr>
-<td>python</td>
-<td>^3.10</td>
+<td>coverage</td>
+<td>&gt;=7.13.0</td>
 </tr>
 <tr>
 <td>duckdb</td>
-<td>*</td>
+<td></td>
 </tr>
 <tr>
 <td>loguru</td>
-<td>*</td>
+<td></td>
+</tr>
+<tr>
+<td>biolink-model</td>
+<td>&gt;=4.3.6</td>
+</tr>
+<tr>
+<td>mergedeep</td>
+<td>==1.3.4</td>
 </tr>
 <tr>
 <td>ordered-set</td>
@@ -4138,40 +4146,36 @@
 </tr>
 <tr>
 <td>pydantic</td>
-<td>^2.4</td>
+<td>&gt;=2.12.5</td>
 </tr>
 <tr>
 <td>pyyaml</td>
-<td>&gt;=5.0.0</td>
+<td>&gt;=6.0.3</td>
 </tr>
 <tr>
 <td>requests</td>
-<td>^2.24.0</td>
+<td>&gt;=2.32.5</td>
 </tr>
 <tr>
 <td>sssom</td>
 <td>&gt;=0.4</td>
 </tr>
 <tr>
-<td>typer</td>
-<td>&gt;=0.12.3</td>
-</tr>
-<tr>
-<td>mergedeep</td>
-<td>1.3.4</td>
-</tr>
-<tr>
 <td>tqdm</td>
-<td>^4.67.1</td>
+<td>&gt;=4.67.1</td>
 </tr>
 <tr>
-<td>coverage</td>
-<td>^7.6.10</td>
+<td>typer</td>
+<td>&gt;=0.20.0</td>
+</tr>
+<tr>
+<td>LinkML</td>
+<td>&gt;=1.9.0</td>
 </tr>
 </tbody>
 </table>
 <h3 id="documentation">Documentation</h3>
-<h1 id="koza-a-data-transformation-framework">Koza - a data transformation framework</h1>
+<h1 id="koza-knowledge-graph-transformation-and-operations-toolkit">Koza - Knowledge Graph Transformation and Operations Toolkit</h1>
 <p><a href="https://pypi.python.org/pypi/koza"><img alt="Pyversions" src="https://img.shields.io/pypi/pyversions/koza.svg" /></a>
 <a href="https://pypi.python.org/pypi/koza"><img alt="PyPi" src="https://img.shields.io/pypi/v/koza.svg" /></a>
 <img alt="Github Action" src="https://github.com/monarch-initiative/koza/actions/workflows/test.yaml/badge.svg" /></p>
@@ -4179,22 +4183,43 @@
 <p><a href="https://koza.monarchinitiative.org/"><strong>Documentation</strong></a></p>
 <p><em>Disclaimer</em>: Koza is in beta - we are looking for testers!</p>
 <h2 id="overview">Overview</h2>
-<ul>
-<li>Transform csv, json, yaml, jsonl, and xml and converting them to a target csv, json, or jsonl format based on your dataclass model.  </li>
-<li>Koza also can output data in the <a href="https://github.com/biolink/kgx/blob/master/specification/kgx-format.md#kgx-format-as-tsv">KGX format</a></li>
-<li>Write data transforms in semi-declarative Python</li>
-<li>Configure source files, expected columns/json properties and path filters, field filters, and metadata in yaml</li>
-<li>Create or import mapping files to be used in ingests (eg id mapping, type mappings)</li>
-<li>Create and use translation tables to map between source and target vocabularies</li>
-</ul>
+<p>Koza is a Python library and CLI tool for transforming biomedical data and performing graph operations on Knowledge Graph Exchange (KGX) files. It provides two main capabilities:</p>
+<h3 id="graph-operations-new">📊 <strong>Graph Operations</strong> (New!)</h3>
+<p>Powerful DuckDB-based operations for KGX knowledge graphs:
+- <strong>Join</strong> multiple KGX files with schema harmonization
+- <strong>Split</strong> files by field values with format conversion<br />
+- <strong>Prune</strong> dangling edges and handle singleton nodes
+- <strong>Append</strong> new data to existing databases with schema evolution
+- <strong>Multi-format support</strong> for TSV, JSONL, and Parquet files</p>
+<h3 id="data-transformation-core">🔄 <strong>Data Transformation</strong> (Core)</h3>
+<p>Transform biomedical data sources into KGX format:
+- Transform csv, json, yaml, jsonl, and xml to target formats
+- Output in <a href="https://github.com/biolink/kgx/blob/master/specification/kgx-format.md#kgx-format-as-tsv">KGX format</a>
+- Write data transforms in semi-declarative Python
+- Configure source files, columns/properties, and metadata in YAML
+- Create mapping files and translation tables between vocabularies</p>
 <h2 id="installation">Installation</h2>
 <p>Koza is available on PyPi and can be installed via pip/pipx:
 <div class="highlight"><pre><span></span><code>[pip|pipx] install koza
 </code></pre></div></p>
 <h2 id="usage">Usage</h2>
+<h3 id="quick-start-with-graph-operations">Quick Start with Graph Operations</h3>
+<p>Koza's graph operations work seamlessly across multiple KGX formats (TSV, JSONL, Parquet):</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Join multiple KGX files into a unified database</span>
+koza<span class="w"> </span>join<span class="w"> </span>--nodes<span class="w"> </span>genes.tsv<span class="w"> </span>pathways.jsonl<span class="w"> </span>--edges<span class="w"> </span>interactions.parquet<span class="w"> </span>--output<span class="w"> </span>merged_graph.duckdb
+
+<span class="c1"># Prune dangling edges and handle singleton nodes</span>
+koza<span class="w"> </span>prune<span class="w"> </span>--database<span class="w"> </span>merged_graph.duckdb<span class="w"> </span>--keep-singletons
+
+<span class="c1"># Append new data to existing database with schema evolution</span>
+koza<span class="w"> </span>append<span class="w"> </span>--database<span class="w"> </span>merged_graph.duckdb<span class="w"> </span>--nodes<span class="w"> </span>new_genes.tsv<span class="w"> </span>--edges<span class="w"> </span>new_interactions.jsonl
+
+<span class="c1"># Split database by source with format conversion</span>
+koza<span class="w"> </span>split<span class="w"> </span>--database<span class="w"> </span>merged_graph.duckdb<span class="w"> </span>--split-on<span class="w"> </span>provided_by<span class="w"> </span>--output-format<span class="w"> </span>parquet
+</code></pre></div>
 <p><strong>NOTE: As of version 0.2.0, there is a new method for getting your ingest's <code>KozaApp</code> instance. Please see the <a href="https://koza.monarchinitiative.org/Usage/configuring_ingests/#transform-code">updated documentation</a> for details.</strong></p>
-<p>See the <a href="https://koza.monarchinitiative.org/">Koza documentation</a> for usage information</p>
-<h3 id="try-the-examples">Try the Examples</h3>
+<p>See the <a href="https://koza.monarchinitiative.org/">Koza documentation</a> for complete usage information</p>
+<h3 id="examples">Examples</h3>
 <h4 id="validate">Validate</h4>
 <p>Give Koza a local or remote csv file, and get some basic information (headers, number of rows)</p>
 <div class="highlight"><pre><span></span><code>koza<span class="w"> </span>validate<span class="w"> </span><span class="se">\</span>
@@ -4231,6 +4256,66 @@ koza<span class="w"> </span>transform<span class="w"> </span><span class="se">\<
 │   └── some_translation_table.yaml
 └── ...
 </code></pre></div></p>
+<h4 id="graph-operations">Graph Operations</h4>
+<p>Create and manipulate knowledge graphs from existing KGX files:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Join heterogeneous KGX files with automatic schema harmonization</span>
+koza<span class="w"> </span>join<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--nodes<span class="w"> </span>genes.tsv<span class="w"> </span>proteins.jsonl<span class="w"> </span>pathways.parquet<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--edges<span class="w"> </span>gene_protein.tsv<span class="w"> </span>protein_pathway.jsonl<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output<span class="w"> </span>unified_graph.duckdb<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--schema-report
+
+<span class="c1"># Clean up graph integrity issues</span>
+koza<span class="w"> </span>prune<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--database<span class="w"> </span>unified_graph.duckdb<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--keep-singletons<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--dry-run<span class="w">  </span><span class="c1"># Preview changes before applying</span>
+
+<span class="c1"># Incrementally add new data with schema evolution</span>
+koza<span class="w"> </span>append<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--database<span class="w"> </span>unified_graph.duckdb<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--nodes<span class="w"> </span>new_genes.tsv<span class="w"> </span>updated_pathways.jsonl<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--deduplicate<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--show-progress
+
+<span class="c1"># Export subsets with format conversion</span>
+koza<span class="w"> </span>split<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--database<span class="w"> </span>unified_graph.duckdb<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--split-on<span class="w"> </span>provided_by<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output-format<span class="w"> </span>parquet<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output-dir<span class="w"> </span>./split_graphs
+</code></pre></div>
+<h2 id="key-features">Key Features</h2>
+<h3 id="multi-format-support">🔧 <strong>Multi-Format Support</strong></h3>
+<ul>
+<li>Native support for TSV, JSONL, and Parquet KGX files</li>
+<li>Automatic format detection and conversion</li>
+<li>Mixed-format operations in single commands</li>
+</ul>
+<h3 id="schema-flexibility">🛡️ <strong>Schema Flexibility</strong></h3>
+<ul>
+<li>Automatic schema harmonization across heterogeneous files</li>
+<li>Schema evolution with backward compatibility  </li>
+<li>Comprehensive schema reporting and validation</li>
+</ul>
+<h3 id="high-performance">⚡ <strong>High Performance</strong></h3>
+<ul>
+<li>DuckDB-powered operations for fast bulk processing</li>
+<li>Memory-efficient handling of large knowledge graphs</li>
+<li>Parallel processing and streaming where possible</li>
+</ul>
+<h3 id="rich-cli-experience">🔍 <strong>Rich CLI Experience</strong></h3>
+<ul>
+<li>Progress indicators for long-running operations</li>
+<li>Detailed statistics and operation summaries</li>
+<li>Dry-run modes for safe operation preview</li>
+</ul>
+<h3 id="data-integrity">🧹 <strong>Data Integrity</strong></h3>
+<ul>
+<li>Dangling edge detection and preservation</li>
+<li>Duplicate detection and removal strategies</li>
+<li>Non-destructive operations with data archiving</li>
+</ul>
 
 
 

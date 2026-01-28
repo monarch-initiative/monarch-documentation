@@ -4158,13 +4158,13 @@
 </tr>
 <tr>
 <td>pheval</td>
-<td>^0.6.1</td>
+<td>^0.7.0</td>
 </tr>
 </tbody>
 </table>
 <h3 id="documentation">Documentation</h3>
 <h1 id="exomiser-runner-for-pheval">Exomiser Runner for PhEval</h1>
-<p>This is the Exomiser plugin for PhEval. With this plugin, you can leverage the variant prioritisation tool, Exomiser, to run the PhEval pipeline seamlessly. Detailed documentation on how to set up and run the PhEval Makefile pipeline with the Exomiser runner can be found <a href="https://monarch-initiative.github.io/pheval/exomiser_pipeline/">here</a>. The setup process for running the full PhEval Makefile pipeline differs from setting up for a single run. The Makefile pipeline creates directory structures for corpora and configurations to handle multiple run configurations. Detailed instructions on setting up the appropriate directory layout, including the input directory and test data directory, can be found here.</p>
+<p>This is the Exomiser plugin for PhEval. With this plugin, you can leverage the variant prioritisation tool, Exomiser, to run the PhEval pipeline seamlessly. Instructions for setting up the appropriate directory layout, including the input directory and test data directory for a single PhEval run, can be found here.</p>
 <h2 id="installation">Installation</h2>
 <p>You can install the Exomiser directly with PyPi (recommended):</p>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>pheval.exomiser
@@ -4180,9 +4180,9 @@ poetry<span class="w"> </span>install
 <p>A <code>config.yaml</code> should be located in the input directory and formatted like so:</p>
 <p><div class="highlight"><pre><span></span><code><span class="nt">tool</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exomiser</span>
 <span class="nt">tool_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">13.2.0</span>
-<span class="nt">variant_analysis</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
-<span class="nt">gene_analysis</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">True</span>
-<span class="nt">disease_analysis</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
+<span class="nt">variant_analysis</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">gene_analysis</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">disease_analysis</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="nt">tool_specific_configuration_options</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local</span>
 <span class="w">  </span><span class="nt">exomiser_software_directory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exomiser-cli-13.2.0</span>
