@@ -1343,7 +1343,7 @@ tools:
   - id: openscientist
     name: OpenScientist
     short_name: OpenScientist
-    category: Data Analysis
+    category: Data Curation
     monarch_contribution: Lead
     monarch_role: Core
     website_include: true
@@ -1354,7 +1354,8 @@ tools:
     url: https://openscientist.io
     documentation: https://github.com/openscientist-io/openscientist#readme
     repository: https://github.com/openscientist-io/openscientist
-    see_also: https://doi.org/10.64898/2026.03.15.26348338
+    see_also:
+      - https://doi.org/10.64898/2026.03.15.26348338
     description: "<p>Given a research question and a dataset, OpenScientist plans an analysis, writes and executes code, searches the literature, and iterates towards testable hypotheses — producing a report with the reasoning trace and provenance behind every finding.</p> <p>Over successive iterations the agent can - </p> <ul> <li>profile a dataset and select appropriate statistical methods</li> <li>write and execute analysis code in an isolated per-job container</li> <li>search PubMed and ground claims in the published literature</li> <li>generate, score and prioritise candidate hypotheses</li> <li>revise its approach in light of intermediate results</li> <li>produce a final report with figures, citations and full provenance</li> </ul> <p>It runs against hosted or locally served models, and supports an air-gapped mode for sensitive data: literature search comes from a local copy of PubMed, tool calls cannot reach the internet, and inference is restricted to a local open-weight model — or, optionally, a single carve-out for a remote LLM endpoint.</p>"
     contact:
         name: Justin Reese
