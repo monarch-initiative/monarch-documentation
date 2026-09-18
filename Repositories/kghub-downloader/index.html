@@ -3711,29 +3711,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../pyphetools/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    pyphetools
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../relation-graph/" class="md-nav__link">
         
   
@@ -4122,7 +4099,7 @@
 <tbody>
 <tr>
 <td>python</td>
-<td>&gt;=3.9, &lt;4.0</td>
+<td>&gt;=3.10, &lt;4.0</td>
 </tr>
 <tr>
 <td>elasticsearch</td>
@@ -4226,7 +4203,13 @@ For an example, see <a href="example/download.yaml">example/download.yaml</a></p
 <h4 id="in-python">In Python</h4>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">kghub_downloader.download_utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">download_from_yaml</span>
 
-<span class="n">download_from_yaml</span><span class="p">(</span><span class="n">yaml_file</span><span class="o">=</span><span class="s2">&quot;download.yaml&quot;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="s2">&quot;data&quot;</span><span class="p">)</span>
+<span class="n">report</span> <span class="o">=</span> <span class="n">download_from_yaml</span><span class="p">(</span><span class="n">yaml_file</span><span class="o">=</span><span class="s2">&quot;download.yaml&quot;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="s2">&quot;data&quot;</span><span class="p">)</span>
+
+<span class="c1"># The returned DownloadReport lists the absolute path of each file that was</span>
+<span class="c1"># downloaded this run, skipped (already present, served from cache), or</span>
+<span class="c1"># failed (populated when fail_on_error is False)</span>
+<span class="k">if</span> <span class="n">report</span><span class="o">.</span><span class="n">any_downloaded</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Downloaded </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">report</span><span class="o">.</span><span class="n">downloaded</span><span class="p">)</span><span class="si">}</span><span class="s2"> files, skipped </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">report</span><span class="o">.</span><span class="n">skipped</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
 <h4 id="command-line">Command Line</h4>
 <p>To download files listed in a download.yaml file:</p>

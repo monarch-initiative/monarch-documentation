@@ -3711,29 +3711,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../pyphetools/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    pyphetools
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../relation-graph/" class="md-nav__link">
         
   
@@ -4164,138 +4141,181 @@
 </table>
 <h3 id="documentation">Documentation</h3>
 <h1 id="exomiser-runner-for-pheval">Exomiser Runner for PhEval</h1>
-<p>This is the Exomiser plugin for PhEval. With this plugin, you can leverage the variant prioritisation tool, Exomiser, to run the PhEval pipeline seamlessly. Instructions for setting up the appropriate directory layout, including the input directory and test data directory for a single PhEval run, can be found here.</p>
+<p>This is the <a href="https://github.com/exomiser/Exomiser">Exomiser</a> plugin for PhEval. With this plugin, you can leverage the variant prioritisation tool, Exomiser, to run the PhEval pipeline seamlessly. Instructions for setting up the appropriate directory layout, including the input directory and test data directory for a single PhEval run, can be found here</p>
+<hr />
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#quick-start-running-exomiser-with-pheval">Quick start</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#running-with-pheval-run">Running with <code>pheval run</code></a></li>
+<li><a href="#input-directory-structure">Input directory structure</a></li>
+<li><a href="#testdata-directory-structure">Test data directory structure</a></li>
+<li><a href="#post-processing-pre-generated-exomiser-results">Post-processing pre-generated Exomiser results</a></li>
+<li><a href="#generating-exomiser-batch-files">Generating Exomiser batch files</a></li>
+<li><a href="#outputs">Outputs</a></li>
+</ul>
+<hr />
+<h2 id="quick-start-running-exomiser-with-pheval">Quick start: running Exomiser with PhEval</h2>
+<div class="highlight"><pre><span></span><code>pheval<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--input-dir<span class="w"> </span>/path/to/input_dir<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--testdata-dir<span class="w"> </span>/path/to/testdata_dir<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--runner<span class="w"> </span>exomiserphevalrunner<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output-dir<span class="w"> </span>/path/to/output_dir<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--version<span class="w"> </span><span class="m">15</span>.0.0
+</code></pre></div>
+<p>This command will:</p>
+<ol>
+<li>Prepare Exomiser inputs </li>
+<li>Execute Exomiser  </li>
+<li>Post-process raw Exomiser outputs into <strong>PhEval-standardised Parquet results</strong> ready for benchmarking  </li>
+</ol>
+<hr />
 <h2 id="installation">Installation</h2>
-<p>You can install the Exomiser directly with PyPi (recommended):</p>
+<p>Install from PyPI (recommended):</p>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>pheval.exomiser
 </code></pre></div>
-<p>Alternatively you can clone the pheval.exomiser repo and set up the poetry environment:</p>
+<p>Or from source:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/monarch-initiative/pheval.exomiser.git
 <span class="nb">cd</span><span class="w"> </span>pheval.exomiser
-poetry<span class="w"> </span>shell
 poetry<span class="w"> </span>install
+poetry<span class="w"> </span>shell
 </code></pre></div>
-<h2 id="configuring-a-single-run">Configuring a <em>single</em> run:</h2>
-<h3 id="setting-up-the-input-directory">Setting up the input directory</h3>
-<p>A <code>config.yaml</code> should be located in the input directory and formatted like so:</p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">tool</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exomiser</span>
-<span class="nt">tool_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">13.2.0</span>
+<hr />
+<h2 id="running-with-pheval-run">Running with <code>pheval run</code></h2>
+<p>The <code>pheval run</code> command manages the full lifecycle:</p>
+<p>prepare → run → post-process.</p>
+<div class="highlight"><pre><span></span><code>pheval<span class="w"> </span>run<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--input-dir<span class="w"> </span>/path/to/input_dir<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--testdata-dir<span class="w"> </span>/path/to/testdata_dir<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--runner<span class="w"> </span>exomiserphevalrunner<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output-dir<span class="w"> </span>/path/to/output_dir<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--version<span class="w"> </span><span class="m">15</span>.0.0
+</code></pre></div>
+<hr />
+<h2 id="input-directory-structure">Input directory structure</h2>
+<p>The input directory contains <strong>all Exomiser configuration, databases, and software</strong>.</p>
+<h3 id="required-files">Required files</h3>
+<div class="highlight"><pre><span></span><code>input_dir/
+├── config.yaml
+├── exomiser-cli-15.0.0/
+│   └── exomiser-cli-15.0.0.jar
+├── preset-exome-analysis.yml
+├── 2512_phenotype/
+├── 2512_hg19/
+└── 2512_hg38/
+</code></pre></div>
+<h3 id="configyaml"><code>config.yaml</code></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">tool</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exomiser</span>
+<span class="nt">tool_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15.0.0</span>
+<span class="c1"># NOTE gene-only preset analysis should only be run with Exomiser versions &gt;= 13.2.0</span>
 <span class="nt">variant_analysis</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">gene_analysis</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">disease_analysis</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="nt">tool_specific_configuration_options</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">environment</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">local</span>
-<span class="w">  </span><span class="nt">exomiser_software_directory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exomiser-cli-13.2.0</span>
-<span class="w">  </span><span class="nt">analysis_configuration_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">preset-exome-analysis.yml</span>
+<span class="w">  </span><span class="nt">exomiser_software_directory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">exomiser-cli-15.0.0</span>
+<span class="w">  </span><span class="nt">analysis_configuration_file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">preset-exome-analysis.yml</span><span class="w"> </span><span class="c1"># can be blank if running without VCF, alternatively specify your own analysis configuration file for phenotype only</span>
 <span class="w">  </span><span class="nt">max_jobs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
 <span class="w">  </span><span class="nt">application_properties</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">remm_version</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">cadd_version</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">hg19_data_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2302</span>
-<span class="w">    </span><span class="nt">hg19_local_frequency_path</span><span class="p">:</span><span class="w"> </span><span class="c1"># name of hg19 local frequency file </span>
-<span class="w">    </span><span class="nt">hg19_whitelist_path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2302_hg19_clinvar_whitelist.tsv.gz</span><span class="w"> </span><span class="c1"># only required for Exomiser v13.3.0 and earlier, can be left blank for Exomiser v14.0.0 onwards.</span>
-<span class="w">    </span><span class="nt">hg38_data_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2302</span>
-<span class="w">    </span><span class="nt">hg38_local_frequency_path</span><span class="p">:</span><span class="w"> </span><span class="c1"># name of hg38 local frequency file </span>
+<span class="w">    </span><span class="nt">hg19_data_version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2512&quot;</span>
+<span class="w">    </span><span class="nt">hg19_local_frequency_path</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">hg19_whitelist_path</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">hg38_data_version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2512&quot;</span>
+<span class="w">    </span><span class="nt">hg38_local_frequency_path</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">hg38_whitelist_path</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">phenotype_data_version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2302</span>
-<span class="w">    </span><span class="nt">cache_type</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">phenotype_data_version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2512&quot;</span>
+<span class="w">    </span><span class="c1"># either none, simple, or caffeine</span>
+<span class="w">    </span><span class="nt">cache_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">none</span>
 <span class="w">    </span><span class="nt">cache_caffeine_spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">output_formats</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">JSON</span><span class="p p-Indicator">,</span><span class="nv">HTML</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># options include HTML, JSON, TSV_VARIANT, TSV_GENE, VCF</span>
+<span class="w">  </span><span class="nt">output_formats</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">PARQUET</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># options include HTML, JSON, PARQUET (v15.0.0 onwards), TSV_VARIANT, TSV_GENE, VCF</span>
 <span class="w">  </span><span class="nt">post_process</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">score_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">combinedScore</span>
+<span class="w">    </span><span class="c1"># For Exomiser &lt; 15.0.0, valid ranking methods include combinedScore, priorityScore, variantScore or pValue</span>
+<span class="w">    </span><span class="c1"># For Exomiser &gt;= 15.0.0, valid ranking methods include geneCombinedScore, geneVariantScore or pValue</span>
+<span class="w">    </span><span class="nt">score_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">geneCombinedScore</span>
+<span class="w">    </span><span class="c1"># sort order should be specified to either ASCENDING or DESCENDING</span>
+<span class="w">    </span><span class="c1"># ASCENDING orders results with the lowest values ranked first</span>
+<span class="w">    </span><span class="c1"># DESCENDING orders results with the highest values ranked first</span>
+<span class="w">    </span><span class="c1"># NOTE when changing the score_name ensure the sort_order is also correct</span>
 <span class="w">    </span><span class="nt">sort_order</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DESCENDING</span>
 </code></pre></div>
-The bare minimum fields are filled to give an idea on the requirements. This is so that the application.properties for Exomiser can be correctly configured. An example config has been provided <code>pheval.exomiser/config.yaml</code>.</p>
-<p>The Exomiser input data directories (phenotype database and variant database) should also be located in the input directory - or a symlink pointing to the location.</p>
-<p>The <code>exomiser_software_directory</code> points to the name of the Exomiser distribution directory located in the input directory.</p>
-<p>The analysis configuration file (in this case: <code>preset-exome-analysis.yml</code>) should be located within the input directory.</p>
-<p>The whitelist paths for the hg19 and hg38 dbs need only be specified for Exomiser v13.3.0 and earlier (unless specifying your own whitelist), as Exomiser v14.0.0 now includes this in the db.</p>
-<p>To save on diskspace we recommend limiting the Exomiser output to JSON, this can be specified by setting the <code>output_formats</code> field in the <code>config.yaml</code> to [JSON]</p>
-<p>If using optional databases, such as REMM/CADD/local frequency the optional data input should look like so in the input
-directory:</p>
-<div class="highlight"><pre><span></span><code>├── cadd
-│   └── {{CADD-VERSION}}
-│       ├── hg19
-│       │   ├── InDels.tsv.gz
-│       │   └── whole_genome_SNVs.tsv.gz
-│       └── hg38
-│           ├── InDels.tsv.gz
-│           └── whole_genome_SNVs.tsv.gz
-├── local
-│   ├── local_frequency_test_hg19.tsv.gz
-│   └── local_frequency_test_hg38.tsv.gz
-└── remm
+<h3 id="optional-databases">Optional databases</h3>
+<div class="highlight"><pre><span></span><code>input_dir/
+├── cadd/
+│   └── {{CADD-VERSION}}/
+│       ├── hg19/
+│       └── hg38/
+├── local/
+│   ├── local_frequency_test_hg19.tsv.gz
+│   └── local_frequency_test_hg38.tsv.gz
+└── remm/
     ├── ReMM.v{{REMM-VERSION}}.hg19.tsv.gz
     └── ReMM.v{{REMM-VERSION}}.hg38.tsv.gz
 </code></pre></div>
-<p>The overall structure of the input directory should look like this with the cadd, local and remm directories being optional, depending on the exomiser configuration:
-<div class="highlight"><pre><span></span><code>.
-├── 2302_hg19
-│   ├── 2302_hg19_clinvar_whitelist.tsv.gz
-│   ├── 2302_hg19_clinvar_whitelist.tsv.gz.tbi
-│   ├── 2302_hg19_genome.h2.db
-│   ├── 2302_hg19_transcripts_ensembl.ser
-│   ├── 2302_hg19_transcripts_refseq.ser
-│   ├── 2302_hg19_transcripts_ucsc.ser
-│   └── 2302_hg19_variants.mv.db
-├── 2302_phenotype
-│   ├── 2302_phenotype.h2.db
-│   ├── hp.obo
-│   ├── phenix
-│   │   ├── ALL_SOURCES_ALL_FREQUENCIES_genes_to_phenotype.txt
-│   │   ├── hp.obo
-│   │   └── out
-│   └── rw_string_10.mv
-├── config.yaml
-├── exomiser-cli-13.2.0
-│   ├── lib
-│   └── exomiser-cli-13.2.0.jar
-├── preset-exome-analysis.yml
-├── cadd
-│   └── {{CADD-VERSION}}
-│       ├── hg19
-│       │   ├── InDels.tsv.gz
-│       │   └── whole_genome_SNVs.tsv.gz
-│       └── hg38
-│           ├── InDels.tsv.gz
-│           └── whole_genome_SNVs.tsv.gz
-├── local
-│   ├── local_frequency_test_hg19.tsv.gz
-│   └── local_frequency_test_hg38.tsv.gz
-└── remm
-    ├── ReMM.v{{REMM-VERSION}}.hg19.tsv.gz
-    └── ReMM.v{{REMM-VERSION}}.hg38.tsv.gz
-</code></pre></div></p>
-<h3 id="setting-up-the-testdata-directory">Setting up the testdata directory</h3>
-<p>The Exomiser plugin for PhEval accepts phenopackets and vcf files as an input for running Exomiser. The plugin can be run in <code>phenotype_only</code> mode, where only phenopackets are required as an input, however, this <em>must</em> be specified in the <code>config.yaml</code> by setting <code>variant_analysis: False</code></p>
-<p>The testdata directory should include subdirectories named <code>phenopackets</code> and <code>vcf</code> if running with variant prioritisation.</p>
-<p>e.g., </p>
-<div class="highlight"><pre><span></span><code>├── testdata_dir
-   ├── phenopackets
-   └── vcf
+<hr />
+<h2 id="testdata-directory-structure">Testdata directory structure</h2>
+<div class="highlight"><pre><span></span><code>testdata_dir/
+├── phenopackets/
+└── vcf/            # optional
 </code></pre></div>
+<h3 id="phenotype-only-mode">Phenotype-only mode</h3>
+<p>Set:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">variant_analysis</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</code></pre></div>
+<p>Only <code>phenopackets/</code> is required.</p>
 <blockquote>
-<p>[!IMPORTANT]<br />
-If a <code>vcf</code> directory is not found in the testdata directory then the path to the VCF will be taken from the phenopacket if <code>variant_analysis</code> is set to True.</p>
+<p><strong>Important</strong><br />
+If <code>variant_analysis: true</code> and no <code>vcf/</code> directory exists, the VCF path
+will be taken from the Phenopacket.</p>
 </blockquote>
-<h2 id="run-command">Run command</h2>
-<p>Once the testdata and input directories are correctly configured for the run, the <code>pheval run</code> command can be executed.</p>
-<div class="highlight"><pre><span></span><code>pheval<span class="w"> </span>run<span class="w"> </span>--input-dir<span class="w"> </span>/path/to/input_dir<span class="w"> </span><span class="se">\</span>
---testdata-dir<span class="w"> </span>/path/to/testdata_dir<span class="w"> </span><span class="se">\</span>
---runner<span class="w"> </span>exomiserphevalrunner<span class="w"> </span><span class="se">\</span>
---output-dir<span class="w"> </span>/path/to/output_dir<span class="w"> </span><span class="se">\</span>
---version<span class="w"> </span><span class="m">13</span>.2.0
+<hr />
+<h2 id="post-processing-pre-generated-exomiser-results">Post-processing pre-generated Exomiser results</h2>
+<p>If Exomiser was run outside PhEval:</p>
+<div class="highlight"><pre><span></span><code>pheval-exomiser<span class="w"> </span>post-process-exomiser-results<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--results-dir<span class="w"> </span>/path/to/exomiser_results<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--phenopacket-dir<span class="w"> </span>/path/to/phenopackets<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output-dir<span class="w"> </span>/path/to/write/output<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--score-name<span class="w"> </span>geneCombinedScore<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--gene-analysis<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--variant-analysis<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--version<span class="w"> </span><span class="m">15</span>.0.0
 </code></pre></div>
-<h2 id="common-errors">Common errors</h2>
-<p>You may see an error that is related to the current <code>setuptools</code> being used:</p>
-<div class="highlight"><pre><span></span><code>pkg_resources.extern.packaging.requirements.InvalidRequirement:<span class="w"> </span>Expected<span class="w"> </span>closing<span class="w"> </span>RIGHT_PARENTHESIS
-<span class="w">    </span>requests<span class="w"> </span><span class="o">(</span>&lt;<span class="m">3</span>,&gt;<span class="o">=</span><span class="m">2</span>.12.*<span class="o">)</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="nv">extra</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;parse&#39;</span>
-<span class="w">             </span>~~~~~~~~~~^
+<p>Use <code>pheval-exomiser post-process-exomiser-results --help</code> for more options.</p>
+<h3 id="critical-file-naming-rule-stem-matching">⚠️ Critical file naming rule (stem matching)</h3>
+<p>PhEval matches results to cases using <strong>file stem equality</strong>.</p>
+<div class="highlight"><pre><span></span><code>Phenopacket: patient_001.json
+Result file: patient_001.json              ✅
+Result file: patient_001-exomiser.json     ✅ (auto-stripped)
+Result file: patient_001_run1.json         ❌
 </code></pre></div>
-<p>To fix the error, <code>setuptools</code> needs to be downgraded to version 66:</p>
-<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>uninstall<span class="w"> </span>setuptools
-pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span><span class="nv">setuptools</span><span class="o">==</span><span class="s2">&quot;66&quot;</span>
+<p><strong>Rule:</strong> the result filename stem <strong>must exactly match</strong> the phenopacket stem.</p>
+<hr />
+<h2 id="generating-exomiser-batch-files">Generating Exomiser batch files</h2>
+<p>Generate batch scripts without running Exomiser:</p>
+<div class="highlight"><pre><span></span><code>pheval-exomiser<span class="w"> </span>prepare-exomiser-batch<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--phenopacket-dir<span class="w"> </span>/phenopackets<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--vcf-dir<span class="w"> </span>/vcf<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--variant-analysis<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--analysis-yaml<span class="w"> </span>preset-exome-analysis.yml<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--output-dir<span class="w"> </span>/batch_files<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--results-dir<span class="w"> </span>/exomiser_results
+<span class="w">  </span>--exomiser-version<span class="w"> </span><span class="m">15</span>.0.0
+<span class="w">  </span>--output-formats<span class="w"> </span>PARQUET
+<span class="w">  </span>--output-formats<span class="w"> </span>HTML<span class="w"> </span>
 </code></pre></div>
+<p>Use <code>pheval-exomiser prepare-exomiser-batch --help</code> for more options.</p>
+<p>This writes batch files under <code>tool_input_commands/</code>.</p>
+<hr />
+<h2 id="outputs">Outputs</h2>
+<div class="highlight"><pre><span></span><code>output_dir/
+├── pheval_gene_results/
+├── pheval_variant_results/
+├── pheval_disease_results/
+├── raw_results/
+└── results.yml
+</code></pre></div>
+<p>These outputs are directly consumable by PhEval benchmarking utilities.</p>
 
 
 

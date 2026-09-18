@@ -3711,29 +3711,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../pyphetools/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    pyphetools
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../relation-graph/" class="md-nav__link">
         
   
@@ -4158,7 +4135,7 @@
 </tr>
 <tr>
 <td>linkml-owl</td>
-<td>&lt;1.0.0,&gt;=0.3.0</td>
+<td>&lt;1.0.0,&gt;=0.5.0</td>
 </tr>
 <tr>
 <td>oaklib</td>
@@ -4197,11 +4174,11 @@
 <td>&gt;=0.10.2</td>
 </tr>
 <tr>
-<td>frontend</td>
-<td>&gt;=0.0.3</td>
+<td>litellm[caching]&gt;=1.95.0,&lt;1.98; python_version &lt; "3.11"</td>
+<td></td>
 </tr>
 <tr>
-<td>litellm[caching]&gt;=1.44.28</td>
+<td>litellm[caching]&gt;=1.95.0; python_version &gt;= "3.11"</td>
 <td></td>
 </tr>
 <tr>
@@ -4214,11 +4191,15 @@
 </tr>
 <tr>
 <td>scipy</td>
-<td>&lt;2.0.0,&gt;=1.14.1; python_version &gt;= "3.13"</td>
+<td>&lt;2.0.0,&gt;=1.14.1</td>
 </tr>
 <tr>
 <td>numpy</td>
-<td>&gt;=2.0.0; python_version &gt;= "3.13"</td>
+<td>&gt;=2.0.0</td>
+</tr>
+<tr>
+<td>linkml-term-validator</td>
+<td>&gt;=0.4.5</td>
 </tr>
 </tbody>
 </table>
@@ -4230,10 +4211,29 @@
 <h2 id="introduction">Introduction</h2>
 <p><em>OntoGPT</em> is a Python package for extracting structured information from text with large language models (LLMs), <em>instruction prompts</em>, and ontology-based grounding.</p>
 <p><a href="https://monarch-initiative.github.io/ontogpt/">For more details, please see the full documentation.</a></p>
+<h2 id="why-ontogpt">Why OntoGPT?</h2>
+<p>A modern LLM can turn text into structured data on its own. OntoGPT exists for the parts of that job that LLMs, and the agents built on them, still get wrong or do inefficiently.</p>
+<ul>
+<li>
+<p><strong>Grounding without hallucination.</strong> Ask an LLM for an ontology identifier and it will often invent one, or attach a real identifier to the wrong term. OntoGPT does not ask the model for identifiers. It asks for names, grounds each name against the actual ontology through <a href="https://github.com/INCATools/ontology-access-kit">OAK</a> annotators, and then validates every grounded identifier against its source ontology. A name that cannot be grounded is marked with the <code>AUTO:</code> prefix instead of being guessed. The only identifiers in the output are ones that exist.</p>
+</li>
+<li>
+<p><strong>Schema adherence without loading the whole schema.</strong> A large data model does not fit well in a context window, and an agent that searches the model field by field for each document is slow and expensive. OntoGPT's SPIRES method walks a <a href="https://linkml.io">LinkML</a> schema recursively. The model is prompted for one class at a time, with only that class's fields, so each prompt stays small and the assembled output conforms to the full schema.</p>
+</li>
+<li>
+<p><strong>Repeatable, batchable extraction.</strong> A template plus a model gives the same procedure for every document. It runs from the command line or from Python over one abstract or thousands of papers, with prompt caching and output as YAML, JSON, RDF, or OWL, and with no agent in the loop deciding what to do next.</p>
+</li>
+<li>
+<p><strong>A library of ready templates.</strong> Dozens of bundled templates cover diseases, phenotypes, drugs, genes, GO terms, environmental samples, and more, each already wired to the right ontologies. A new template is a LinkML schema with a few annotations; see the <a href="docs/custom.md">documentation</a>.</p>
+</li>
+<li>
+<p><strong>Functions for agents.</strong> When an AI agent does need to extract and ground, the bundled <a href="skills/">Agent Skills</a> teach it to call OntoGPT for that step rather than reinvent grounding and schema-walking inside its own context.</p>
+</li>
+</ul>
 <h2 id="quick-start">Quick Start</h2>
 <p>OntoGPT runs on the command line, though there's also a minimal web app interface (see <code>Web Application</code> section below).</p>
 <ol>
-<li>Ensure you have Python 3.9 or greater installed.</li>
+<li>Ensure you have Python 3.10 or greater installed.</li>
 <li>
 <p>Install with <code>pip</code>:</p>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>ontogpt
@@ -4254,7 +4254,7 @@
 <div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;One treatment for high blood pressure is carvedilol.&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>example.txt
 ontogpt<span class="w"> </span>extract<span class="w"> </span>-i<span class="w"> </span>example.txt<span class="w"> </span>-t<span class="w"> </span>drug
 </code></pre></div>
-<p>OntoGPT will retrieve the necessary ontologies and output results to the command line. Your output will provide all extracted objects under the heading <code>extracted_object</code>.</p>
+<p>OntoGPT will retrieve the necessary ontologies and output results to the command line. Your output will provide all extracted objects under the heading <code>extracted_object</code>, and a <code>validation</code> section reporting whether each grounded identifier exists in its ontology and matches its label (invalid ones are replaced when a valid term can be found; see the <a href="docs/operation.md#term-validation">documentation</a>).</p>
 </li>
 </ol>
 <h2 id="web-application">Web Application</h2>
@@ -4267,13 +4267,19 @@ ontogpt<span class="w"> </span>extract<span class="w"> </span>-i<span class="w">
 </code></pre></div>
 <p>NOTE: We do not recommend hosting this webapp publicly without authentication.</p>
 <h2 id="model-apis">Model APIs</h2>
-<p>OntoGPT uses the <code>litellm</code> package (<a href="https://litellm.vercel.app/">https://litellm.vercel.app/</a>) to interface with LLMs.</p>
-<p>This means most APIs are supported, including OpenAI, Azure, Anthropic, Mistral, Replicate, and beyond.</p>
-<p>The model name to use may be found from the command <code>ontogpt list-models</code> - use the name in the first column with the <code>--model</code> option.</p>
-<p>In most cases, this will require setting the API key for a particular service as above:</p>
-<div class="highlight"><pre><span></span><code>runoak<span class="w"> </span>set-apikey<span class="w"> </span>-e<span class="w"> </span>anthropic-key<span class="w"> </span>&lt;your<span class="w"> </span>anthropic<span class="w"> </span>api<span class="w"> </span>key&gt;
+<p>OntoGPT uses <a href="https://docs.litellm.ai/docs/">LiteLLM</a> to interface with LLMs.</p>
+<p>This means OntoGPT can work with a much broader range of providers than just OpenAI. If a provider and model are supported by the installed LiteLLM version, they will generally work in OntoGPT as well. This includes OpenAI, Azure OpenAI, Anthropic, Mistral, Groq, Cohere, Vertex AI, Replicate, and many others.</p>
+<p>The model name to use may be found from the command <code>ontogpt list-models</code> - use the name in the first column with the <code>--model</code> option. In most cases, the most reliable form is a provider-qualified LiteLLM model name such as <code>openai/gpt-5.5</code>, <code>anthropic/claude-sonnet-5</code>, <code>groq/llama-3.1-8b-instant</code>, or <code>mistral/mistral-large-latest</code>. Without <code>--model</code>, OntoGPT uses <code>gpt-5.5</code>.</p>
+<p>Reasoning models, including the GPT-5 family and Claude Sonnet 5 and Opus 5, accept only their default temperature. If <code>--temperature</code> is set for one of these, OntoGPT logs a warning and retries the request without it.</p>
+<p>Credential handling now follows LiteLLM first. Standard LiteLLM environment variables such as <code>OPENAI_API_KEY</code>, <code>ANTHROPIC_API_KEY</code>, <code>GROQ_API_KEY</code>, <code>MISTRAL_API_KEY</code>, <code>AZURE_API_KEY</code>, <code>AZURE_API_BASE</code>, and <code>AZURE_API_VERSION</code> are supported directly. For backward compatibility, OntoGPT also checks Oaklib credentials created with <code>runoak set-apikey</code> and passes them through to LiteLLM when the corresponding provider settings are missing.</p>
+<p>Anthropic OAuth tokens (those beginning with <code>sk-ant-oat</code>) may be supplied in <code>ANTHROPIC_API_KEY</code> as well; LiteLLM sends them with the bearer authorization the API expects.</p>
+<p>Examples:</p>
+<div class="highlight"><pre><span></span><code>runoak<span class="w"> </span>set-apikey<span class="w"> </span>-e<span class="w"> </span>openai<span class="w"> </span>&lt;your<span class="w"> </span>openai<span class="w"> </span>api<span class="w"> </span>key&gt;
+runoak<span class="w"> </span>set-apikey<span class="w"> </span>-e<span class="w"> </span>anthropic-key<span class="w"> </span>&lt;your<span class="w"> </span>anthropic<span class="w"> </span>api<span class="w"> </span>key&gt;
+runoak<span class="w"> </span>set-apikey<span class="w"> </span>-e<span class="w"> </span>mistral-key<span class="w"> </span>&lt;your<span class="w"> </span>mistral<span class="w"> </span>api<span class="w"> </span>key&gt;
+runoak<span class="w"> </span>set-apikey<span class="w"> </span>-e<span class="w"> </span>groq-key<span class="w"> </span>&lt;your<span class="w"> </span>groq<span class="w"> </span>api<span class="w"> </span>key&gt;
 </code></pre></div>
-<p>Some endpoints, such as OpenAI models through Azure, require setting additional details. These may be set similarly:</p>
+<p>Some endpoints, such as Azure OpenAI, require additional details. These may be set similarly:</p>
 <div class="highlight"><pre><span></span><code>runoak<span class="w"> </span>set-apikey<span class="w"> </span>-e<span class="w"> </span>azure-key<span class="w"> </span>&lt;your<span class="w"> </span>azure<span class="w"> </span>api<span class="w"> </span>key&gt;
 runoak<span class="w"> </span>set-apikey<span class="w"> </span>-e<span class="w"> </span>azure-base<span class="w"> </span>&lt;your<span class="w"> </span>azure<span class="w"> </span>endpoint<span class="w"> </span>url&gt;
 runoak<span class="w"> </span>set-apikey<span class="w"> </span>-e<span class="w"> </span>azure-version<span class="w"> </span>&lt;your<span class="w"> </span>azure<span class="w"> </span>api<span class="w"> </span>version,<span class="w"> </span>e.g.<span class="w"> </span><span class="s2">&quot;2023-05-15&quot;</span>&gt;
@@ -4283,12 +4289,21 @@ runoak<span class="w"> </span>set-apikey<span class="w"> </span>-e<span class="w
 <span class="nb">export</span><span class="w"> </span><span class="nv">AZURE_API_BASE</span><span class="o">=</span><span class="s2">&quot;https://example-endpoint.openai.azure.com&quot;</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">AZURE_API_VERSION</span><span class="o">=</span><span class="s2">&quot;2023-05-15&quot;</span>
 </code></pre></div>
+<p>If the provider is not encoded in the model name, use <code>--model-provider</code> to specify it explicitly. This is most common for OpenAI-compatible proxy endpoints.</p>
+<p>Model routers work the same way. For OpenRouter, store the key as <code>runoak set-apikey -e openrouter-key &lt;key&gt;</code> (or set <code>OPENROUTER_API_KEY</code>) and prefix the model, e.g. <code>--model openrouter/anthropic/claude-sonnet-4.5</code>. The <code>runoak set-apikey</code> name must match the provider in the model name; see the <a href="docs/setup.md">setup docs</a> for the naming rule.</p>
+<p>For the current list of supported providers, model naming rules, and credential environment variables, see the LiteLLM docs:</p>
+<ul>
+<li><a href="https://docs.litellm.ai/docs/providers">https://docs.litellm.ai/docs/providers</a></li>
+<li><a href="https://docs.litellm.ai/docs/set_keys">https://docs.litellm.ai/docs/set_keys</a></li>
+</ul>
 <h2 id="open-models">Open Models</h2>
 <p>Open LLMs may be retrieved and run through the <code>ollama</code> package (<a href="https://ollama.com/">https://ollama.com/</a>).</p>
 <p>You will need to install <code>ollama</code> (see the <a href="https://github.com/ollama/ollama">GitHub repo</a>), and you may need to start it as a service with a command like <code>ollama serve</code> or <code>sudo systemctl start ollama</code>.</p>
 <p>Then retrieve a model with <code>ollama pull &lt;modelname&gt;</code>, e.g., <code>ollama pull llama3</code>.</p>
 <p>The model may then be used in OntoGPT by prefixing its name with <code>ollama/</code>, e.g., <code>ollama/llama3</code>, along with the <code>--model</code> option.</p>
 <p>Some ollama models may not be listed in <code>ontogpt list-models</code> but the full list of downloaded LLMs can be seen with <code>ollama list</code> command.</p>
+<h2 id="agent-skills">Agent Skills</h2>
+<p>The <a href="skills/"><code>skills/</code></a> directory holds four <a href="https://agentskills.io">Agent Skills</a> that teach an AI coding agent to operate OntoGPT: run extractions, select a template, write a new template and choose its ontologies, and troubleshoot outputs. In a Claude Code session opened in this repository they load automatically; see <a href="skills/README.md">skills/README.md</a> to install them elsewhere. Details in the <a href="docs/agent_skills.md">documentation</a>.</p>
 <h2 id="evaluations">Evaluations</h2>
 <p>OntoGPT's functions have been evaluated on test data. Please see the full documentation for details on these evaluations and how to reproduce them.</p>
 <h2 id="related-projects">Related Projects</h2>
